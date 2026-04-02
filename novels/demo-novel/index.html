@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>星际迷途 - AI 小说阅读器</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #f5f5f5; color: #333; }
+    a { color: #667eea; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .header-left { display: flex; align-items: center; gap: 1rem; }
+    .back-btn { background: rgba(255,255,255,0.2); color: white; padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.85rem; border: none; cursor: pointer; }
+    .back-btn:hover { background: rgba(255,255,255,0.3); text-decoration: none; }
+    .header h1 { font-size: 1.2rem; font-weight: 600; }
+    .main { display: flex; max-width: 1200px; margin: 0 auto; min-height: calc(100vh - 60px); }
+    .sidebar { width: 240px; background: white; border-right: 1px solid #eee; padding: 1rem 0; overflow-y: auto; position: sticky; top: 60px; height: calc(100vh - 60px); }
+    .sidebar-title { padding: 0.5rem 1rem; font-size: 0.75rem; color: #999; text-transform: uppercase; letter-spacing: 1px; }
+    .chapter-list { list-style: none; }
+    .chapter-item a { display: block; padding: 0.6rem 1rem; font-size: 0.9rem; color: #333; transition: background 0.15s; }
+    .chapter-item a:hover { background: #f5f5f5; text-decoration: none; }
+    .chapter-item.active a { background: #e8f0fe; color: #4285f4; border-left: 3px solid #4285f4; }
+    .content-area { flex: 1; padding: 2rem 3rem; background: white; max-width: 800px; }
+    .novel-title { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .novel-meta { font-size: 0.85rem; color: #999; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #eee; }
+    .chapter-title { font-size: 1.4rem; font-weight: 600; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid #667eea; display: inline-block; }
+    .chapter-content { font-size: 1.05rem; line-height: 1.9; color: #333; }
+    .chapter-content p { margin-bottom: 1.2rem; text-indent: 2em; }
+    .nav-btns { display: flex; justify-content: space-between; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee; }
+    .nav-btn { background: #667eea; color: white; padding: 0.6rem 1.2rem; border-radius: 6px; font-size: 0.9rem; border: none; cursor: pointer; }
+    .nav-btn:hover { background: #5568d3; }
+    .nav-btn:disabled { background: #ccc; cursor: not-allowed; }
+    .download-section { margin-top: 2rem; padding: 1rem; background: #f9f9f9; border-radius: 8px; }
+    .download-section h3 { font-size: 0.9rem; margin-bottom: 0.75rem; color: #666; }
+    .download-btns { display: flex; gap: 0.75rem; }
+    .download-btn { background: #34a853; color: white; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.85rem; border: none; cursor: pointer; }
+    .download-btn:hover { background: #2d8f4a; }
+    @media (max-width: 768px) {
+      .main { flex-direction: column; }
+      .sidebar { width: 100%; height: auto; position: relative; top: 0; border-right: none; border-bottom: 1px solid #eee; }
+      .content-area { padding: 1.5rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-left">
+      <a href="../../" class="back-btn">← 返回列表</a>
+      <h1>星际迷途</h1>
+    </div>
+    <div style="font-size:0.85rem;opacity:0.8;">AI 创作</div>
+  </div>
+  <div class="main">
+    <aside class="sidebar">
+      <div class="sidebar-title">目录</div>
+      <ul class="chapter-list">
+        <li class="chapter-item active"><a href="#ch1">第一章：迷失星域</a></li>
+        <li class="chapter-item"><a href="#ch2">第二章：神秘信号</a></li>
+        <li class="chapter-item"><a href="#ch3">第三章：抉择时刻</a></li>
+      </ul>
+    </aside>
+    <main class="content-area">
+      <h1 class="chapter-title" id="ch1">第一章：迷失星域</h1>
+      <div class="chapter-content">
+        <p>星际飞船"曙光号"在无尽的黑暗中缓缓漂流。舷窗外，不是熟悉的星空，而是一片混沌的星云——那里的星星排列方式，没有任何记录可循。</p>
+        <p>舰长林远站在控制台前，眉头紧锁。全息屏幕上，数十条警告信息闪烁着红光：引擎故障、能源不足、导航系统失灵。这艘承载着三千名殖民者的飞船，似乎真的迷失在了宇宙的尽头。</p>
+        <p>"舰长，"副官陈薇的声音从身后传来，"最新扫描结果显示，我们可能不在任何已知星域。"</p>
+        <p>林远没有回答。他的目光落在舷窗外那片诡异的星云上，心中涌起一种难以名状的预感——这次迷路，也许并非偶然。</p>
+        <p>就在这时，通讯官急匆匆地跑过来："舰长！收到一条不明信号！"</p>
+        <p>"什么信号？"</p>
+        <p>"无法解析，但它……它在重复，像是某种邀请。"</p>
+      </div>
+      <div class="nav-btns">
+        <button class="nav-btn" disabled>← 上一章</button>
+        <button class="nav-btn" onclick="location.href='#ch2'">下一章 →</button>
+      </div>
+      <div class="download-section">
+        <h3>📥 下载本书</h3>
+        <div class="download-btns">
+          <button class="download-btn" onclick="downloadTxt()">下载 TXT</button>
+          <button class="download-btn" onclick="downloadEpub()">下载 EPUB</button>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>
+    function downloadTxt() {
+      const content = `星际迷途
+
+第一章：迷失星域
+
+星际飞船"曙光号"在无尽的黑暗中缓缓漂流。舷窗外，不是熟悉的星空，而是一片混沌的星云——那里的星星排列方式，没有任何记录可循。
+
+舰长林远站在控制台前，眉头紧锁。全息屏幕上，数十条警告信息闪烁着红光：引擎故障、能源不足、导航系统失灵。这艘承载着三千名殖民者的飞船，似乎真的迷失在了宇宙的尽头。
+
+"舰长，"副官陈薇的声音从身后传来，"最新扫描结果显示，我们可能不在任何已知星域。"
+
+林远没有回答。他的目光落在舷窗外那片诡异的星云上，心中涌起一种难以名状的预感——这次迷路，也许并非偶然。
+
+就在这时，通讯官急匆匆地跑过来："舰长！收到一条不明信号！"
+
+"什么信号？"
+
+"无法解析，但它……它在重复，像是某种邀请。"
+
+第二章：神秘信号
+
+信号的内容让所有人都沉默了。它不是语言，不是数字，而是一串复杂的波形——但所有人都感觉到，这串波形里，蕴含着某种智慧。
+
+"这是……邀请函？"陈薇不确定地问。
+
+林远没有回答。他在思考另一个问题：在这个宇宙的角落，怎么会有人向他们发出邀请？他们的航线是保密的，他们的目的地是遥远的、半径数光年内的无人星域——
+
+除非，有人一直在监视他们。
+
+第三章：抉择时刻
+
+三天后，曙光号终于抵达了信号源。那是一颗蓝色的星球，悬浮在星云的中心，像一颗孤独的眼泪。
+
+星球上没有城市，没有灯光，只有一座巨大的建筑，建筑的形状像一扇门——一扇敞开的门。
+
+林远知道，这可能是陷阱。但他也知道，这是他们唯一的希望。
+
+"准备登陆。"他说。
+
+（全书中完）
+`;
+      const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = '星际迷途.txt';
+      a.click();
+    }
+
+    function downloadEpub() {
+      alert('EPUB 下载功能开发中，敬请期待！');
+    }
+  </script>
+</body>
+</html>

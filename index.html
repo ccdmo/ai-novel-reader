@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 小说阅读器</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #f5f5f5; color: #333; }
+    .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem 1rem; text-align: center; }
+    .header h1 { font-size: 2rem; font-weight: 700; }
+    .header p { opacity: 0.85; margin-top: 0.5rem; }
+    .container { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+    .novel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+    .novel-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; }
+    .novel-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+    .novel-cover { width: 100%; height: 160px; object-fit: cover; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; }
+    .novel-info { padding: 1rem; }
+    .novel-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .novel-desc { font-size: 0.85rem; color: #666; line-height: 1.5; margin-bottom: 0.75rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .novel-meta { font-size: 0.75rem; color: #999; }
+    .tag { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.7rem; background: #eee; color: #666; margin-right: 0.3rem; }
+    .tag.ai { background: #e8f0fe; color: #4285f4; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>📖 AI 小说阅读器</h1>
+    <p>发现、阅读、下载 AI 创作的精彩小说</p>
+  </div>
+  <div class="container">
+    <div class="novel-grid" id="novelGrid"></div>
+  </div>
+  <script>
+    const novels = [
+      {
+        id: 'demo-novel',
+        title: '星际迷途',
+        desc: '一艘迷失在宇宙深处的飞船，承载着人类最后的希望。船员们在面对未知文明时，将如何抉择？',
+        author: 'AI',
+        tags: ['科幻', '冒险'],
+        chapters: 3,
+        cover: '🚀'
+      },
+      {
+        id: 'demo-novel',
+        title: '时光当铺',
+        desc: '一家神秘的当铺，可以典当任何东西——除了记忆。一个少年踏入当铺，改变了自己的命运。',
+        author: 'AI',
+        tags: ['奇幻', '悬疑'],
+        chapters: 3,
+        cover: '⏳'
+      }
+    ];
+
+    const grid = document.getElementById('novelGrid');
+    novels.forEach(novel => {
+      grid.innerHTML += `
+        <div class="novel-card" onclick="location.href='/novels/${novel.id}/'">
+          <div class="novel-cover">${novel.cover}</div>
+          <div class="novel-info">
+            <div class="novel-title">${novel.title}</div>
+            <div class="novel-desc">${novel.desc}</div>
+            <div class="novel-meta">
+              ${novel.tags.map(t => `<span class="tag ai">${t}</span>`).join('')}
+              <span style="float:right">共 ${novel.chapters} 章</span>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>
