@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>让你拍烂片，你拍长津湖全网泪崩</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; background: #1a1a2e; color: #e0e0e0; min-height: 100vh; }
+    .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+    .header { text-align: center; margin-bottom: 40px; }
+    .cover { font-size: 80px; margin-bottom: 20px; }
+    h1 { font-size: 28px; color: #ffd700; margin-bottom: 10px; }
+    .meta { color: #888; font-size: 14px; margin-bottom: 20px; }
+    .tags { margin-bottom: 20px; }
+    .tag { display: inline-block; background: #2d2d4a; color: #b0b0b0; padding: 4px 12px; border-radius: 20px; font-size: 12px; margin: 4px; }
+    .desc { background: #16213e; padding: 20px; border-radius: 12px; line-height: 1.8; color: #c0c0c0; margin-bottom: 30px; }
+    .chapters { background: #16213e; border-radius: 12px; overflow: hidden; }
+    .chapter-title { background: #0f3460; padding: 15px 20px; font-size: 16px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .chapter-title:hover { background: #1a4a7a; }
+    .chapter-content { display: none; padding: 20px; line-height: 2; color: #d0d0d0; white-space: pre-wrap; font-size: 15px; }
+    .chapter-content.open { display: block; }
+    .status { display: inline-block; background: #e94560; color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; }
+    a { color: #ffd700; text-decoration: none; }
+    .back { text-align: center; margin-top: 30px; }
+    .back a { color: #888; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="cover">🎬</div>
+      <h1>让你拍烂片，你拍长津湖全网泪崩</h1>
+      <div class="meta">作者：AI（MiniMax仿写） | 状态：<span class="status">连载中</span></div>
+      <div class="tags">
+        <span class="tag">都市</span>
+        <span class="tag">脑洞</span>
+        <span class="tag">系统</span>
+        <span class="tag">影视</span>
+        <span class="tag">穿越</span>
+      </div>
+    </div>
+    <div class="desc">
+      主角周川，28岁三流影视院校毕业生，在剧组当免费劳动力，受尽行业潜规则打压。一天被当众羞辱赶出片场后，手机黑屏，绑定了一个"烂片拍摄系统"。系统强制派发荒诞离奇的任务——但越是烂到离谱的设定，越能催生出直击灵魂的史诗级作品！反套路神作，从这里开始！
+    </div>
+    <div class="chapters" id="chapters-list"></div>
+    <div class="back"><a href="../index.html">← 返回书库</a></div>
+  </div>
+  <script>
+    fetch('chapters.json').then(r => r.json()).then(data => {
+      const list = document.getElementById('chapters-list');
+      data.chapters.forEach(ch => {
+        const div = document.createElement('div');
+        div.className = 'chapter';
+        div.innerHTML = `<div class="chapter-title" onclick="toggle(this)">第${ch.num}章 ${ch.title} <span style="color:#888;font-size:12px">${ch.words}字</span></div><div class="chapter-content" id="ch${ch.num}"></div>`;
+        list.appendChild(div);
+      });
+    });
+    function toggle(el) {
+      const content = el.nextElementSibling;
+      if (content.classList.contains('open')) {
+        content.classList.remove('open');
+        return;
+      }
+      const num = el.parentElement.querySelector('.chapter-title').textContent.match(/第(\d+)章/)[1];
+      const id = 'ch' + num;
+      if (!document.getElementById(id).innerHTML || document.getElementById(id).innerHTML === '<p>加载中...</p>') {
+        fetch('chapter_' + String(num).padStart(4,'0') + '.json').then(r => r.json()).then(data => {
+          document.getElementById(id).innerHTML = data.content;
+          content.classList.add('open');
+        });
+      } else {
+        content.classList.add('open');
+      }
+    }
+  </script>
+</body>
+</html>

@@ -467,5 +467,34 @@
     "chapters": 1,
     "cover": "⚡",
     "status": "completed"
+  },
+  {
+    "id": "changjinchang",
+    "title": "让你拍烂片，你拍长津湖全网泪崩",
+    "desc": "主角周川被当众羞辱赶出剧组，绑定\"烂片拍摄系统\"。系统派发的荒诞任务——拍抗美援朝战争片？越是烂片设定，越催生神作！都市脑洞反套路爽文。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "都市",
+      "脑洞",
+      "系统",
+      "影视"
+    ],
+    "chapters": 1,
+    "cover": "🎬",
+    "status": "completed"
+  },
+  {
+    "id": "tianfu-cha",
+    "title": "天赋差？我一块钱买一年修为！",
+    "desc": "氪金即天才！当别人苦修二十年，主角直接氪金买修为。一块钱一年修为，明码标价，童叟无欺。都市高武爽文，爆款框架完全原创。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "都市",
+      "高武",
+      "系统"
+    ],
+    "chapters": 1,
+    "cover": "💰",
+    "status": "completed"
   }
 ]
