@@ -588,5 +588,20 @@
     "chapters": 1,
     "cover": "🏠",
     "status": "completed"
+  },
+  {
+    "id": "balingliuzi",
+    "title": "八零年代：冒牌留子另类报国",
+    "desc": "1985年，农村青年陈志远收到一封来自美国南加州大学的offer——然而他根本没申请过。神秘人为何暗中相助？「爱国情报系统」觉醒，另类报国之路就此开启！都市种田·系统流·年代文。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "都市种田",
+      "系统流",
+      "年代文",
+      "爱国情报"
+    ],
+    "chapters": 1,
+    "cover": "🎓",
+    "status": "completed"
   }
 ]
