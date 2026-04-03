@@ -46,7 +46,7 @@
           return;
         }
         grid.innerHTML = novels.map(novel => `
-          <div class="novel-card" onclick="location.href='/novels/${novel.id}/'">
+          <div class="novel-card" onclick="location.href='novels/${novel.id}/'">
             <div class="novel-cover">${novel.cover || '📖'}</div>
             <div class="novel-info">
               <div class="novel-title">${novel.title}</div>
