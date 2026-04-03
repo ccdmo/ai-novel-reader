@@ -128,6 +128,15 @@
     "status": "completed"
   },
   {
+    "id": "fanpai-xian",
+    "title": "反派：开局先刀主角",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市脑洞",
+    "heat": 21.1,
+    "status": "completed",
+    "chapters": 1
+  },
+  {
     "id": "los-angeles-exorcism",
     "title": "洛杉矶驱魔：烧点纸钱就好了",
     "desc": "都市玄幻文，主角在洛杉矶用东方法术驱魔，用烧纸钱的方式解决灵异事件。",

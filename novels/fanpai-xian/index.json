@@ -1,0 +1,19 @@
+{
+  "id": "fanpai-xian",
+  "title": "反派：开局先刀主角",
+  "author": "AI（MiniMax仿写）",
+  "genre": "都市脑洞",
+  "heat": 21.1,
+  "status": "连载中",
+  "description": "穿越成同名反派，开局觉醒「反派灭运系统」！击杀气运之子可获积分，积分兑换技能资产情报，还能预知剧本走向。主角林天是原著天命男主，陈无始决定先下手为强，趁他还没成长起来，一刀宰了他！",
+  "cover": "https://ccdmo.github.io/ai-novel-reader/assets/covers/default-urban.jpg",
+  "chapters": [
+    {
+      "num": 1,
+      "title": "第一章：穿越成反派？这剧本我不认",
+      "file": "chapters/1.md"
+    }
+  ],
+  "record_id": "recvfEM2nVbx2xI",
+  "created_at": "2026-04-03T22:06:00+08:00"
+}
