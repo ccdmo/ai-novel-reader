@@ -452,5 +452,20 @@
     "chapters": 1,
     "cover": "👑",
     "status": "completed"
+  },
+  {
+    "id": "gaowu-qiandao",
+    "title": "高武：开局签到武圣巅峰修为",
+    "desc": "都市高武文，普通高中生陆渊意外激活武神签到系统，体育馆签到直接获得武圣巅峰修为，全球震动！开局即巅峰，爽文之王！",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "都市",
+      "高武",
+      "系统",
+      "爽文"
+    ],
+    "chapters": 1,
+    "cover": "⚡",
+    "status": "completed"
   }
 ]
