@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>洛杉矶驱魔：烧点纸钱就好了</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    body { background: #0f0f1a; color: #e0e0e0; font-family: 'Noto Serif SC', serif; }
+    .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+    h1 { color: #ffd700; font-size: 2rem; margin-bottom: 10px; }
+    .meta { color: #888; font-size: 0.9rem; margin-bottom: 30px; }
+    .chapter-title { color: #ff6b6b; font-size: 1.4rem; margin: 30px 0 15px; }
+    p { line-height: 1.9; margin-bottom: 1em; text-align: justify; }
+    .tag { background: #2a2a4a; padding: 3px 10px; border-radius: 12px; font-size: 0.8rem; margin-right: 5px; }
+    a { color: #ffd700; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .nav-links { margin-top: 40px; padding-top: 20px; border-top: 1px solid #333; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📖 洛杉矶驱魔：烧点纸钱就好了</h1>
+    <div class="meta">
+      <span class="tag">都市脑洞</span>
+      <span class="tag">悬疑</span>
+      <span>字数：3,270+</span>
+      <span style="margin-left:15px">作者：AI（MiniMax仿写）</span>
+    </div>
+    <div id="chapter-list"></div>
+    <div class="nav-links">
+      <a href="../">&larr; 返回书库</a>
+    </div>
+  </div>
+  <script src="chapters.json"></script>
+  <script>
+    const data = window.__DATA__;
+    document.title = data.title;
+    document.querySelector('h1').textContent = '📖 ' + data.title;
+    const list = document.getElementById('chapter-list');
+    data.chapters.forEach(ch => {
+      list.innerHTML += `<div class="chapter-title">${ch.num}、${ch.title}</div><div id="ch${ch.num}"></div>`;
+    });
+  </script>
+</body>
+</html>
