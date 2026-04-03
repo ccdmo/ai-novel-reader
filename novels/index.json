@@ -699,5 +699,24 @@
     "record_id": "recvfEM2nVbzH3p",
     "genre": "都市日常",
     "heat": 20.6
+  },
+  {
+    "id": "zongwu-jiujian",
+    "title": "综武：酒剑仙嫁衣红，随机满级",
+    "author": "仿写AI",
+    "genre": "传统武侠",
+    "heat": 20.6,
+    "status": "连载中",
+    "desc": "穿越综武世界，绑定随机满级系统。开局被退婚的废物赘婿，实为三十年前名震天下的酒剑仙转世！随机满级嫁衣神功、独孤九剑、北冥神功……综武群雄荟萃，金庸古龙群雄争锋！",
+    "tags": [
+      "综武",
+      "武侠",
+      "系统",
+      "满级",
+      "酒剑仙"
+    ],
+    "chapters": 1,
+    "cover": "🍶",
+    "record_id": "recvfEM2nVbgQ1y"
   }
 ]
