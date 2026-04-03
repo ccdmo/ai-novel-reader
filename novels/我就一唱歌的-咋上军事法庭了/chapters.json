@@ -1,8 +1,1 @@
-[
-  {
-    "id": "0001",
-    "title": "第1章 边境商演",
-    "file": "chapter_0001.json",
-    "words": 3000
-  }
-]
+[{"num":1,"title":"第1章 边境商演","status":"done","words":3000}]
