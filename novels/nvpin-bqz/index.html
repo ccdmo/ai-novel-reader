@@ -1,369 +1,61 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>穿越女频后，女朋友总说我是霸总 - AI 小说阅读器</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #f5f5f5; color: #333; }
-    a { color: #667eea; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
-    .header-left { display: flex; align-items: center; gap: 1rem; }
-    .back-btn { background: rgba(255,255,255,0.2); color: white; padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.85rem; border: none; cursor: pointer; }
-    .back-btn:hover { background: rgba(255,255,255,0.3); text-decoration: none; }
-    .header h1 { font-size: 1.2rem; font-weight: 600; }
-    .main { display: flex; max-width: 1200px; margin: 0 auto; min-height: calc(100vh - 60px); }
-    .sidebar { width: 240px; background: white; border-right: 1px solid #eee; padding: 1rem 0; overflow-y: auto; position: sticky; top: 60px; height: calc(100vh - 60px); }
-    .sidebar-title { padding: 0.5rem 1rem; font-size: 0.75rem; color: #999; text-transform: uppercase; letter-spacing: 1px; }
-    .chapter-list { list-style: none; }
-    .chapter-item a { display: block; padding: 0.6rem 1rem; font-size: 0.9rem; color: #333; transition: background 0.15s; }
-    .chapter-item a:hover { background: #f5f5f5; text-decoration: none; }
-    .chapter-item.active a { background: #e8f0fe; color: #667eea; border-left: 3px solid #667eea; }
-    .content-area { flex: 1; padding: 2rem 3rem; background: white; max-width: 800px; }
-    .chapter-title { font-size: 1.4rem; font-weight: 600; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid #667eea; display: inline-block; }
-    .chapter-content { font-size: 1.05rem; line-height: 1.9; color: #333; }
-    .chapter-content p { margin-bottom: 1.2rem; text-indent: 2em; }
-    .nav-btns { display: flex; justify-content: space-between; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee; }
-    .nav-btn { background: #667eea; color: white; padding: 0.6rem 1.2rem; border-radius: 6px; font-size: 0.9rem; border: none; cursor: pointer; }
-    .nav-btn:hover { background: #5a67d2; }
-    .nav-btn:disabled { background: #ccc; cursor: not-allowed; }
-    .download-section { margin-top: 2rem; padding: 1rem; background: #f9f9f9; border-radius: 8px; }
-    .download-section h3 { font-size: 0.9rem; margin-bottom: 0.75rem; color: #666; }
-    .download-btns { display: flex; gap: 0.75rem; }
-    .download-btn { background: #667eea; color: white; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.85rem; border: none; cursor: pointer; }
-    .download-btn:hover { background: #5a67d2; }
-    @media (max-width: 768px) {
-      .main { flex-direction: column; }
-      .sidebar { width: 100%; height: auto; position: relative; top: 0; border-right: none; border-bottom: 1px solid #eee; }
-      .content-area { padding: 1.5rem 1rem; }
-    }
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第一章 穿越女频第一天，我就被叫了霸总</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;color:#333}
+.header{background:linear-gradient(135deg,#667eea,#764ba2);color:white;padding:1.5rem 1rem}
+.header h1{font-size:1.5rem}.meta{opacity:0.85;font-size:0.9rem;margin-top:0.3rem}
+.container{max-width:800px;margin:2rem auto;padding:0 1rem}
+.chapter-list{background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.chapter{padding:1rem 1.2rem;border-bottom:1px solid #f0f0f0;cursor:pointer;transition:background .15s}
+.chapter:hover{background:#f8f6ff}
+.chapter-num{color:#667eea;font-weight:600;font-size:.85rem}
+.chapter-title{margin-top:.3rem}
+.back-btn{display:inline-block;margin-bottom:1rem;color:#667eea;text-decoration:none;font-size:.9rem}
+.content-box{background:white;border-radius:12px;padding:2rem;margin-top:1rem;box-shadow:0 2px 8px rgba(0,0,0,.08);line-height:1.9;font-size:1.05rem;white-space:pre-wrap}
+.chapter-nav{margin-top:1.5rem;padding-top:1rem;border-top:1px solid #eee;display:flex;justify-content:space-between}
+.chapter-nav a{color:#667eea;text-decoration:none;font-size:.9rem}
+</style>
 </head>
 <body>
-  <div class="header">
-    <div class="header-left">
-      <a href="../../" class="back-btn">← 返回列表</a>
-      <h1>穿越女频后，女朋友总说我是霸总</h1>
-    </div>
-    <div style="font-size:0.85rem;opacity:0.8;">💜 AI 创作</div>
-  </div>
-  <div class="main">
-    <aside class="sidebar">
-      <div class="sidebar-title">目录</div>
-      <ul class="chapter-list">
-        <li class="chapter-item active"><a href="#ch1">第一章 穿越女频第一天，我就被叫了霸总</a></li>
-      </ul>
-    </aside>
-    <main class="content-area">
-      <h1 class="chapter-title" id="ch1">第一章 穿越女频第一天，我就被叫了霸总</h1>
-      <div class="chapter-content">
-        <p>"顾言！你到底有没有在听我说话？"</p>
-        <p>林诗雨站在床边，双手叉腰，眼眶微红，声音里带着压抑的委屈和愤怒。</p>
-        <p>顾言——也就是我——茫然地看着眼前这个漂亮得不像话的女人，大脑还在宕机状态。</p>
-        <p>我刚才明明在加班赶稿，怎么一睁眼就躺在了一张两米宽的大床上？</p>
-        <p>而且这床、这房间、这落地窗外的城市夜景……</p>
-        <p>这他妈是哪个五星级酒店？</p>
-        <p>"诗雨，你别激动，"我下意识开口，试图让局面稳定下来，"有话好好说——"</p>
-        <p>"好好说？"林诗雨冷笑一声，"你说要好好说？那你倒是说啊！为什么让人撤掉我的角色？是，我就是个十八线小演员，比不上你顾总的商业价值，你顾总一句话，我的资源全没了，我还能说什么？"</p>
-        <p>我："？？？"</p>
-        <p>什么角色？什么资源？什么顾总？</p>
-        <p>我明明是个网文作者啊！</p>
-        <p>"等等，"我揉了揉太阳穴，"你说我撤掉了你的角色？为什么？"</p>
-        <p>林诗雨的表情更委屈了："你还在装？你的人刚才不是来通知我了吗？让你投资的这部剧女主换成别人，让我这个'没背景的野模'滚出剧组——你敢说不是你授意的？"</p>
-        <p>我愣住了。</p>
-        <p>作为一个混迹网文圈多年的老作者，我瞬间意识到一个问题：</p>
-        <p>我好像，穿越了。</p>
-        <p>而且穿越到了某个霸道总裁爱上我的剧本里。</p>
-        <p>从林诗雨的话来分析，我现在应该是"顾言"，一个有钱有势的霸道总裁，而她是我的……女朋友？</p>
-        <p>不对，按这个剧情套路，应该是"前女友"或者"即将变成前女友"的状态。</p>
-        <p>我深吸一口气，开口："我没让人撤你的角色。"</p>
-        <p>林诗雨显然不信："你说没有就没有？顾言，你什么时候变得这么敢做不敢当了？"</p>
-        <p>"我说了没有就是没有。"</p>
-        <p>我站起身，试图用最直接的方式解决这个问题："我现在就打电话给剧组，让他们把角色还给你。"</p>
-        <p>林诗雨后退一步，眼神里闪过一丝复杂："你又想干什么？施舍我？还是想让我感激涕零，求你复合？"</p>
-        <p>我："？？？"</p>
-        <p>我只是想解决问题啊！</p>
-        <p>怎么到她嘴里就变成了霸总施压？</p>
-        <p>"你等一下，"我努力让自己的语气平稳，"你就不能好好听我说话吗？"</p>
-        <p>"好好听你说话？"林诗雨的声音突然尖锐起来，"顾言，你够了！你以为你是谁？你以为全世界都要围着你转吗？我告诉你，我林诗雨就算饿死，从这里跳下去，也不会求你——"</p>
-        <p>"砰！"</p>
-        <p>门突然被推开了。</p>
-        <p>一个穿着西装的中年男人快步走进来，看到我们剑拔弩张的气氛，脸上的表情更精彩了。</p>
-        <p>"顾总，"他先是对我恭敬地鞠了一躬，然后转向林诗雨，语气严肃，"林小姐，请您不要打扰顾总的工作。顾总的时间很宝贵，您的这点小事，完全不需要惊动他本人——"</p>
-        <p>"我打扰他？"林诗雨指着自己的鼻子，"是他让我来的好不好？我什么时候想见这个——"</p>
-        <p>"林小姐，"西装男打断她，"请您注意您的措辞。有些人，不是您能随便骂的。"</p>
-        <p>我瞬间明白了。</p>
-        <p>这应该是"顾总"的下属，而且是个不懂事的下属。</p>
-        <p>他刚才那番话，看似在维护我，实际上在林诗雨听来，完全就是霸总派人来羞辱她的意思。</p>
-        <p>"你闭嘴。"我皱眉。</p>
-        <p>西装男一愣："顾总？"</p>
-        <p>"我说让你出去。"</p>
-        <p>西装男脸色变了变，似乎想说什么，但最终还是低头退出去了。</p>
-        <p>门关上的瞬间，我转头看向林诗雨："那个傻X不是我的人，你信吗？"</p>
-        <p>林诗雨没说话，但她的眼神告诉我——她不信。</p>
-        <p>甚至，她更确定了。</p>
-        <p>"行吧，"我叹了口气，"你说的那个角色，我会帮你拿回来。不是施舍，是还你一个公道。"</p>
-        <p>"公道？"林诗雨冷笑，"顾言，你嘴里什么时候能吐出'公道'两个字了？以前我求你帮我争取角色的时候，你说那是在'侮辱我的尊严'，现在你自己倒贴上来帮我，你是不是觉得这样很有面子？"</p>
-        <p>我："……"</p>
-        <p>等等，这个"顾言"以前是怎么跟女朋友相处的？</p>
-        <p>帮她争取角色是侮辱她尊严？</p>
-        <p>这是什么逻辑？</p>
-        <p>"你等等，"我决定搞清楚状况，"我问你，以前你遇到困难的时候，我是怎么做的？"</p>
-        <p>林诗雨警惕地看着我："你又想套什么话？"</p>
-        <p>"我就是想知道，"我认真地看着她，"以前的我，在你需要帮助的时候，选择了袖手旁观？"</p>
-        <p>林诗雨的表情僵住了。</p>
-        <p>她显然没想到我会问这个问题。</p>
-        <p>"……你还有脸问？"她的声音突然低了下去，带着一丝颤抖，"顾言，你是真的不知道，还是在装？"</p>
-        <p>"我装什么？"</p>
-        <p>"那年我父亲住院，"林诗雨的眼眶红了，"差二十万，你明明有，你明明一句话就能借给我，但你说什么？你说'我不喜欢被人说闲话'，你说我家是'无底洞'，你让我自己想办法——"</p>
-        <p>我听得头皮发麻。</p>
-        <p>这原主是脑子有坑吗？</p>
-        <p>二十万对霸总来说算什么？</p>
-        <p>但他宁愿看着女朋友的父亲住院，也不愿意借钱？</p>
-        <p>"后来呢？"我问。</p>
-        <p>"后来我借遍了所有亲戚朋友，差点去借高利贷，"林诗雨惨笑一声，"你满意了？"</p>
-        <p>我沉默了。</p>
-        <p>这就是原主干的事？</p>
-        <p>难怪林诗雨这么恨他。</p>
-        <p>但问题是——我穿过来的这个人设，是不是有点太离谱了？</p>
-        <p>霸总人设是吧？</p>
-        <p>有钱是吧？</p>
-        <p>但是个渣男？</p>
-        <p>"对不起。"</p>
-        <p>我开口。</p>
-        <p>林诗雨愣住了。</p>
-        <p>"以前的事，是我的错。"我直视她的眼睛，"二十万，我现在就转给你。不，借给你。不要利息，什么时候有钱什么时候还。"</p>
-        <p>"……你在说什么？"林诗雨后退一步，"顾言，你又发什么疯？"</p>
-        <p>"我没发疯，"我掏出手机，"你把账号发我。"</p>
-        <p>林诗雨死死盯着我，仿佛要从我脸上找出一丝伪装的痕迹。</p>
-        <p>但我的表情太认真了，认真到让她心里发毛。</p>
-        <p>"你到底想干什么？"她的声音带着一丝不确定，"顾言，我警告你，别以为这样就能——"</p>
-        <p>"叮——"</p>
-        <p>我的手机响了。</p>
-        <p>低头一看，是银行转账到账的提示。</p>
-        <p>"二十万，已经转过去了，"我把手机屏幕转向她，"你自己看。"</p>
-        <p>林诗雨低头看了一眼，整个人都傻了。</p>
-        <p>"你、你——"</p>
-        <p>"还有，"我继续说，"你父亲住院的事，我不知道你当时没告诉我，但如果当时我知道，我会帮你。不是施舍，是作为男朋友应该做的事。"</p>
-        <p>林诗雨张了张嘴，却什么都说不出来。</p>
-        <p>她从来没见顾言这个样子。</p>
-        <p>以前的顾言，说什么都要端着架子，做了好事也要让别人感恩戴德。</p>
-        <p>但眼前这个人……</p>
-        <p>"顾言，"林诗雨突然问，"你真的变了？"</p>
-        <p>"变了？"我愣了一下，然后苦笑，"是啊，变了。可能是死过一次，所以看开了。"</p>
-        <p>林诗雨眉头一皱："什么死过——"</p>
-        <p>"没什么，"我打断她，"总之，从现在开始，我会做一个正常的男朋友。不端架子，不矫情，不搞那些有的没的。你信不信，随你。"</p>
-        <p>林诗雨沉默了很久。</p>
-        <p>就在我以为她要说什么的时候，她突然开口："你是不是被人下降头了？"</p>
-        <p>我："……你觉得呢？"</p>
-        <p>"我觉得，"林诗雨深吸一口气，"你现在有两种可能。第一，你在演戏，演一出让我感动的戏，等我上钩之后，再狠狠踩我一脚。第二——"</p>
-        <p>"第二？"</p>
-        <p>"第二，"林诗雨盯着我，"你真的被什么东西附身了。"</p>
-        <p>我："……"</p>
-        <p>她这个直觉，倒是挺准的。</p>
-        <p>"行吧，"我摆摆手，"随你怎么想。但有一件事，我必须现在告诉你——"</p>
-        <p>"什么事？"</p>
-        <p>"刚才那个西装男，"我正色道，"我会把他开除。不是因为你在场，而是因为他自作主张，擅自替你做了决定。这种人，我不需要。"</p>
-        <p>林诗雨又愣住了。</p>
-        <p>在她印象里，顾言从来不会为了任何人开除自己的下属。</p>
-        <p>他最爱说的话就是"能用的人就是好用的工具"。</p>
-        <p>"顾言，你——"</p>
-        <p>"还有，"我继续说，"你说的那个角色，我会帮你拿回来。但这次，不是施舍，是公平竞争。你有这个实力，你就上。你没有，我帮你找别的机会。"</p>
-        <p>"你……为什么要帮我？"</p>
-        <p>"为什么？"我想了想，"因为你是我的女朋友？"</p>
-        <p>林诗雨的表情微妙起来："你以前可从来不会这么叫我的。"</p>
-        <p>"那我该怎么叫？"</p>
-        <p>"你以前叫我'林小姐'，"林诗雨的语气带着一丝讽刺，"说是要保持'得体的距离'。顾总果然是顾总，连叫女朋友名字都要考虑'体面'问题。"</p>
-        <p>我嘴角抽了抽。</p>
-        <p>这个原主，真的是个人才。</p>
-        <p>"诗雨，"我尝试叫了一声。</p>
-        <p>林诗雨的肩膀明显抖了一下。</p>
-        <p>她难以置信地看着我："你叫我什么？"</p>
-        <p>"诗雨啊，有什么问题？"</p>
-        <p>"……没有，"林诗雨别过脸，"就是觉得恶心。"</p>
-        <p>我刚想说什么，我的手机又响了。</p>
-        <p>这次是微信消息。</p>
-        <p>我点开一看，是一个备注为"张导"的人发来的：</p>
-        <p>"顾总，剧组的选角已经按照您的意思改了。女主换成了沈佳怡，她今天晚上的档期已经空出来了，随时可以和您共进晚餐。"</p>
-        <p>我盯着这条消息，感觉脑子嗡的一下。</p>
-        <p>沈佳怡是谁？</p>
-        <p>共进晚餐是什么意思？</p>
-        <p>我下意识抬头看向林诗雨，发现她也正盯着我的手机屏幕。</p>
-        <p>她的表情，已经从刚才的复杂，变成了冷漠。</p>
-        <p>"看来，"林诗雨冷笑一声，"顾总今晚有约了。"</p>
-        <p>"等等，这个——"</p>
-        <p>"不用解释，"林诗雨转身就走，"打扰顾总的时间了，告辞。"</p>
-        <p>"诗雨！"</p>
-        <p>我想追上去，但手机又响了。</p>
-        <p>这次是一个陌生号码发来的短信：</p>
-        <p>"顾总，我是沈佳怡。今晚的晚餐我已经安排好了，地点在您最喜欢的江景餐厅，期待与您共度良宵。"</p>
-        <p>良宵？？？</p>
-        <p>我瞬间头皮发麻。</p>
-        <p>这个原主，到底给我挖了多大的坑？！</p>
-        <p>"诗雨，你听我解释——"</p>
-        <p>林诗雨已经走到门口了。</p>
-        <p>她回头看了我一眼，眼神里满是失望和讽刺：</p>
-        <p>"顾言，你果然还是那个顾言。"</p>
-        <p>门，重重地关上了。</p>
-        <p>我站在原地，看着手机屏幕上的两条消息，终于明白了这个世界的规则：</p>
-        <p>在女频小说里，你做的一切，都会被误解。</p>
-        <p>你只是想解决问题，他们觉得你在霸道宣誓。</p>
-        <p>你只是真心道歉，他们觉得你在欲擒故纵。</p>
-        <p>你只是正常恋爱，他们觉得你在玩弄感情。</p>
-        <p>这他妈是什么地狱开局？</p>
-        <p>我深吸一口气，打开手机通讯录，找到刚才那个张导的电话，直接拨了过去。</p>
-        <p>"顾总？"张导的声音带着谄媚。</p>
-        <p>"角色的事，你听谁的？"</p>
-        <p>"当然是听您的啊，顾总，您说换谁就换谁——"</p>
-        <p>"换回来。"</p>
-        <p>"……什么？"</p>
-        <p>"女主换成林诗雨，"我的语气不容置疑，"立刻，马上，否则这部剧的投资，我会全部撤回。"</p>
-        <p>电话那头沉默了三秒，然后传来一阵慌乱的翻文件声："好好好，顾总您放心，我马上改，马上改！"</p>
-        <p>挂掉电话，我又拨通了沈佳怡的号码。</p>
-        <p>"顾总～"沈佳怡的声音甜得发腻，"晚餐——"</p>
-        <p>"取消。"</p>
-        <p>"什、什么？"</p>
-        <p>"我说取消，"我冷冷道，"以后不要用这种语气给我发消息，很恶心。还有，告诉你的经纪人，别在我身上浪费时间，我对你没兴趣。"</p>
-        <p>说完，我直接挂断电话，然后把她拉黑。</p>
-        <p>做完这一切，我看了一眼时间。</p>
-        <p>现在是下午三点。</p>
-        <p>按照女频小说的套路，林诗雨应该不会走太远。</p>
-        <p>她肯定在某个地方等着我去追她，然后考验我是不是真的变了。</p>
-        <p>作为一个混迹网文圈多年的老作者，这点套路我还是懂的。</p>
-        <p>但是——</p>
-        <p>追，怎么追？</p>
-        <p>在女频世界里，追女生和男频完全不一样。</p>
-        <p>男频讲究的是直接果断，女频讲究的是暧昧拉扯。</p>
-        <p>你直接追，她说你太急躁。</p>
-        <p>你暧昧，她说你不够真诚。</p>
-        <p>你不追，她说你果然是渣男。</p>
-        <p>你追得太紧，她说你控制欲太强。</p>
-        <p>这题怎么解？</p>
-        <p>我揉了揉太阳穴，决定先按最朴素的方式来：</p>
-        <p>追上去，解释清楚，然后看她的反应。</p>
-        <p>如果她不信，我就用行动证明。</p>
-        <p>如果她还误会……</p>
-        <p>那就误会着吧。</p>
-        <p>反正我是来写爽文的，又不是来演虐恋的。</p>
-        <p>想到这里，我大步走出房门。</p>
-        <p>刚走到电梯口，就看到林诗雨正站在电梯里，准备关门。</p>
-        <p>"等一下！"</p>
-        <p>我伸手挡住电梯门，快步走了进去。</p>
-        <p>林诗雨警惕地看着我："你跟上来干什么？"</p>
-        <p>"送你回家。"</p>
-        <p>"不用。"</p>
-        <p>"路上有话要跟你说。"</p>
-        <p>林诗雨冷哼一声："有话在电话里说不行吗？还是顾总现在连私密空间都要掌控了？"</p>
-        <p>我："……"</p>
-        <p>这女人的嘴，是开过光的吧？</p>
-        <p>什么话都能给我扣帽子。</p>
-        <p>"诗雨，"我深吸一口气，决定直球，"我刚才把所有的事情都处理好了。角色是你的，沈佳怡我拉黑了，那个自作主张的西装男我开除了。"</p>
-        <p>林诗雨的表情微妙地变了变："……你说什么？"</p>
-        <p>"角色是你的，沈佳怡我拉黑了，那个自作主张的西装男我开除了。"我重复了一遍。</p>
-        <p>"你、你凭什么——"</p>
-        <p>"凭我是投资人，"我打断她，"投资人的权力，你不会不懂吧？"</p>
-        <p>林诗雨张了张嘴，一时语塞。</p>
-        <p>"还有，"我继续说，"以前的事，我真的很抱歉。二十万不够，我可以再追加。你父亲的医药费，以后我全包——"</p>
-        <p>"顾言！"林诗雨突然打断我，声音有些颤抖，"你到底想干什么？你这样，让我怎么恨你？"</p>
-        <p>我愣了一下。</p>
-        <p>这是什么反应？</p>
-        <p>"如果你真的变了，"林诗雨低下头，声音很轻，"那我以前受的那些委屈，算什么？"</p>
-        <p>我沉默了。</p>
-        <p>原来如此。</p>
-        <p>她不是不信我是真的变了。</p>
-        <p>她是害怕我是真的变了。</p>
-        <p>因为如果我变了，那她之前的坚持、之前的愤怒、之前的痛苦，就都变成了一个笑话。</p>
-        <p>"诗雨，"我认真地看着她，"你以前受的委屈，不会变成笑话。它们会变成一个标准，让我知道以后不能那么做。"</p>
-        <p>林诗雨抬起头，眼眶微红。</p>
-        <p>"还有，"我继续说，"你可以不原谅我。但给我一个机会，让我重新开始。"</p>
-        <p>林诗雨盯着我看了很久。</p>
-        <p>电梯里的空气安静得可怕。</p>
-        <p>终于，她开口了：</p>
-        <p>"顾言。"</p>
-        <p>"嗯？"</p>
-        <p>"你的眼睛里，没有以前那股傲气了。"</p>
-        <p>我愣了一下："是吗？"</p>
-        <p>"还有，"林诗雨的声音带着一丝疑惑，"你的眼睛里，好像多了一些……很复杂的东西。"</p>
-        <p>我没有说话。</p>
-        <p>因为我知道她说的"复杂的东西"是什么。</p>
-        <p>那是一个看了无数网文套路的老作者，在面对真实女频世界时的……</p>
-        <p>绝望。</p>
-        <p>"诗雨，"我突然问，"你觉得我现在像什么？"</p>
-        <p>林诗雨想了想："像什么？像个……霸总？"</p>
-        <p>我："……"</p>
-        <p>果然。</p>
-        <p>我只是想做个正常的男人，她都觉得我像霸总。</p>
-        <p>这个世界的规则，真的是太离谱了。</p>
-        <p>电梯到了一楼。</p>
-        <p>门打开的瞬间，我看到了大厅里站着一群人。</p>
-        <p>他们看到我的瞬间，齐刷刷地低下了头："顾总好！"</p>
-        <p>我嘴角抽了抽。</p>
-        <p>得，这个身份，还挺高调。</p>
-        <p>林诗雨看到这一幕，眼神又微妙地变了。</p>
-        <p>我叹了口气："走吧，我送你回家。路上，我们好好谈谈。"</p>
-        <p>林诗雨犹豫了一下，最终点了点头。</p>
-        <p>走出酒店大门的瞬间，我看到一个熟悉的身影——</p>
-        <p>是刚才那个西装男。</p>
-        <p>他看到我和林诗雨一起出来，脸色变了变，然后快步迎上来：</p>
-        <p>"顾总，您怎么亲自……林小姐也在这里？需要我安排车送林小姐回去吗？"</p>
-        <p>我看着他，突然想起来一件事。</p>
-        <p>林诗雨的角色被撤，应该就是这个人的手笔。</p>
-        <p>他为什么要这么做？</p>
-        <p>是自作主张？还是有人指使？</p>
-        <p>我决定试探一下。</p>
-        <p>"角色的事，"我盯着他，"是你办的？"</p>
-        <p>西装男的脸色变了一瞬："顾总，这、这是您的意思啊，上次您说不想让林小姐和别的男演员有亲密戏份——"</p>
-        <p>我瞬间明白了。</p>
-        <p>原来是"顾言"自己下的命令。</p>
-        <p>他不想让林诗雨演亲密戏，所以干脆把她的角色撤了。</p>
-        <p>这原主……真的是个人才。</p>
-        <p>"我改主意了，"我冷冷道，"角色还给她。以后这种事，不用你操心。"</p>
-        <p>西装男的脸色更难看了："可是顾总，您当时说——"</p>
-        <p>"我当时说什么，不重要。"我打断他，"重要的是，我现在想让她演。"</p>
-        <p>林诗雨站在一旁，听到这话，表情复杂到了极点。</p>
-        <p>她不知道该感动，还是该继续生气。</p>
-        <p>因为这个顾言，真的变了。</p>
-        <p>但是……</p>
-        <p>他为什么会变？</p>
-        <p>就在这时，我的手机又响了。</p>
-        <p>这次是一条新闻推送：</p>
-        <p>【劲爆！顾氏集团少东家顾言疑似与当红小花沈佳怡密会，知情人士透露，两人关系非同一般……】</p>
-        <p>我低头看了一眼屏幕，整个人都不好了。</p>
-        <p>这他妈是什么狗血剧情？！</p>
-        <p>林诗雨显然也看到了这条新闻。</p>
-        <p>她的脸色瞬间变得铁青。</p>
-        <p>"顾言，"她的声音冷得像冰，"你解释一下？"</p>
-        <p>我："……如果我说，这条新闻是假的，你信吗？"</p>
-        <p>林诗雨看着我，眼神里满是失望：</p>
-        <p>"顾言，我刚才还觉得你和以前不一样了。现在看来，是我太天真了。"</p>
-        <p>说完，她转身就走。</p>
-        <p>"诗雨！"</p>
-        <p>我想追上去，但西装男突然拦住了我：</p>
-        <p>"顾总，您要去哪？沈小姐还在餐厅等您呢——"</p>
-        <p>我看着西装男那张谄媚的脸，突然觉得有些不对劲。</p>
-        <p>这个家伙，好像一直在阻止我去追林诗雨。</p>
-        <p>他到底是什么人？</p>
-        <p>为什么要这么做？</p>
-        <p>我的脑海里闪过一个念头——</p>
-        <p>难道……这背后还有什么阴谋？</p>
-        <p>故事，才刚刚开始。</p>
-        <p style="text-align:center;color:#666;font-size:0.9rem;margin-top:2rem;">（第一章完）</p>
-        <p style="text-align:center;color:#888;font-size:0.85rem;">下一章预告：顾言发现西装男身份可疑，决定深入调查。与此同时，林诗雨回到住处，却收到了一个神秘人的短信——那个人知道顾言所有的秘密……</p>
-      </div>
-      <div class="nav-btns">
-        <button class="nav-btn" disabled>← 上一章</button>
-        <button class="nav-btn" disabled>下一章 →</button>
-      </div>
-      <div class="download-section">
-        <h3>📥 下载本书</h3>
-        <div class="download-btns">
-          <button class="download-btn" onclick="alert('TXT下载已集成到阅读器')">下载 TXT</button>
-          <button class="download-btn" onclick="alert('EPUB下载功能开发中')">下载 EPUB</button>
-        </div>
-      </div>
-    </main>
-  </div>
+<div class="header"><div class="container">
+<a href="../" class="back-btn">← 返回书库</a>
+<h1>📖 第一章 穿越女频第一天，我就被叫了霸总</h1>
+<div class="meta">都市 · AI仿写版</div>
+</div></div>
+<div class="container" id="app"></div>
+<script>
+var CHAPTERS = [{"num": 1, "title": "第一章 穿越女频第一天，我就被叫了霸总", "status": "done", "words": 3050}];
+var BOOK_ID = "nvpin-bqz";
+
+function renderList() {
+    var html = CHAPTERS.map(function(ch, i) {
+        return '<div class="chapter" onclick="renderChapter(' + i + ')"><div class="chapter-num">第' + ch.num + '章</div><div class="chapter-title">' + ch.title + '</div></div>';
+    }).join('');
+    document.getElementById("app").innerHTML = html;
+}
+
+function renderChapter(idx) {
+    var ch = CHAPTERS[idx];
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'chapter_' + String(idx+1).padStart(4,'0') + '.json', true);
+    xhr.onload = function() {
+        var data = JSON.parse(xhr.responseText);
+        var prev = idx > 0 ? '<a href="javascript:renderChapter(' + (idx-1) + ')">← 上一章</a>' : '<span></span>';
+        var next = idx < CHAPTERS.length - 1 ? '<a href="javascript:renderChapter(' + (idx+1) + ')">下一章 →</a>' : '<span></span>';
+        document.getElementById("app").innerHTML = '<a href="javascript:renderList()" class="back-btn">← 返回目录</a><div class="content-box"><h2 style="margin-bottom:1.5rem">第' + data.num + '章 · ' + data.title + '</h2>' + data.content + '</div><div class="chapter-nav">' + prev + next + '</div>';
+        window.scrollTo(0,0);
+    };
+    xhr.send();
+}
+
+// auto from URL param
+var params = new URLSearchParams(location.search);
+var c = params.get("c");
+if (c !== null) { renderChapter(parseInt(c)); } else { renderList(); }
+</script>
 </body>
 </html>

@@ -1,48 +1,61 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>名义之他们叫我汉大胆</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: #f5f5f5; }
-    .header { background: linear-gradient(135deg, #1a237e, #283593); color: white; padding: 1.5rem 1rem; }
-    .header h1 { font-size: 1.5rem; } .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
-    .chapter-list { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-    .chapter { padding: 1rem 1.2rem; border-bottom: 1px solid #f0f0f0; cursor: pointer; }
-    .chapter:hover { background: #f8f6ff; }
-    .chapter-num { color: #1a237e; font-weight: 600; font-size: 0.85rem; }
-    .chapter-title { margin-top: 0.3rem; font-size: 1rem; }
-    .writing-badge { display: inline-block; background: #fff3e0; color: #e65100; font-size: 0.7rem; padding: 0.15rem 0.5rem; border-radius: 10px; margin-left: 0.5rem; }
-    .back-btn { display: inline-block; margin-bottom: 1rem; color: #667eea; text-decoration: none; font-size: 0.9rem; }
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第一章</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;color:#333}
+.header{background:linear-gradient(135deg,#667eea,#764ba2);color:white;padding:1.5rem 1rem}
+.header h1{font-size:1.5rem}.meta{opacity:0.85;font-size:0.9rem;margin-top:0.3rem}
+.container{max-width:800px;margin:2rem auto;padding:0 1rem}
+.chapter-list{background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.chapter{padding:1rem 1.2rem;border-bottom:1px solid #f0f0f0;cursor:pointer;transition:background .15s}
+.chapter:hover{background:#f8f6ff}
+.chapter-num{color:#667eea;font-weight:600;font-size:.85rem}
+.chapter-title{margin-top:.3rem}
+.back-btn{display:inline-block;margin-bottom:1rem;color:#667eea;text-decoration:none;font-size:.9rem}
+.content-box{background:white;border-radius:12px;padding:2rem;margin-top:1rem;box-shadow:0 2px 8px rgba(0,0,0,.08);line-height:1.9;font-size:1.05rem;white-space:pre-wrap}
+.chapter-nav{margin-top:1.5rem;padding-top:1rem;border-top:1px solid #eee;display:flex;justify-content:space-between}
+.chapter-nav a{color:#667eea;text-decoration:none;font-size:.9rem}
+</style>
 </head>
 <body>
-  <div class="header">
-    <div class="container">
-      <a href="../" class="back-btn" style="color:#fff">← 返回书库</a>
-      <h1>🏛️ 名义之他们叫我汉大胆</h1>
-      <div class="meta">男频衍生 · AI 仿写版 · <span class="writing-badge">连载中</span></div>
-    </div>
-  </div>
-  <div class="container">
-    <div id="chapterList"></div>
-  </div>
-  <script>
-    async function loadChapters() {
-      try {
-        const res = await fetch('./chapters.json');
-        const chapters = await res.json();
-        document.getElementById('chapterList').innerHTML = chapters.map((ch, i) => `
-          <div class="chapter" onclick="location.href='./chapter_${String(ch.num).padStart(4,'0')}.html'">
-            <div class="chapter-num">第${ch.num}章</div>
-            <div class="chapter-title">${ch.title}</div>
-          </div>
-        `).join('');
-      } catch(e) { document.getElementById('chapterList').innerHTML = '<div style="padding:2rem;text-align:center;color:#999">章节加载中...</div>'; }
-    }
-    loadChapters();
-  </script>
+<div class="header"><div class="container">
+<a href="../" class="back-btn">← 返回书库</a>
+<h1>📖 第一章</h1>
+<div class="meta">都市 · AI仿写版</div>
+</div></div>
+<div class="container" id="app"></div>
+<script>
+var CHAPTERS = [{"num": 1, "title": "第一章", "status": "done", "words": 3867}];
+var BOOK_ID = "mingyi-han-daDan";
+
+function renderList() {
+    var html = CHAPTERS.map(function(ch, i) {
+        return '<div class="chapter" onclick="renderChapter(' + i + ')"><div class="chapter-num">第' + ch.num + '章</div><div class="chapter-title">' + ch.title + '</div></div>';
+    }).join('');
+    document.getElementById("app").innerHTML = html;
+}
+
+function renderChapter(idx) {
+    var ch = CHAPTERS[idx];
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'chapter_' + String(idx+1).padStart(4,'0') + '.json', true);
+    xhr.onload = function() {
+        var data = JSON.parse(xhr.responseText);
+        var prev = idx > 0 ? '<a href="javascript:renderChapter(' + (idx-1) + ')">← 上一章</a>' : '<span></span>';
+        var next = idx < CHAPTERS.length - 1 ? '<a href="javascript:renderChapter(' + (idx+1) + ')">下一章 →</a>' : '<span></span>';
+        document.getElementById("app").innerHTML = '<a href="javascript:renderList()" class="back-btn">← 返回目录</a><div class="content-box"><h2 style="margin-bottom:1.5rem">第' + data.num + '章 · ' + data.title + '</h2>' + data.content + '</div><div class="chapter-nav">' + prev + next + '</div>';
+        window.scrollTo(0,0);
+    };
+    xhr.send();
+}
+
+// auto from URL param
+var params = new URLSearchParams(location.search);
+var c = params.get("c");
+if (c !== null) { renderChapter(parseInt(c)); } else { renderList(); }
+</script>
 </body>
 </html>

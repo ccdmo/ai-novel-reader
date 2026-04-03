@@ -1,78 +1,61 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DNF：开局神级返利，碾压全服</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #f5f5f5; color: #333; }
-    .header { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; padding: 1.5rem 1rem; }
-    .header h1 { font-size: 1.5rem; font-weight: 700; }
-    .header .meta { font-size: 0.85rem; opacity: 0.85; margin-top: 0.3rem; }
-    .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
-    .chapter-list { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-    .chapter { padding: 1rem 1.2rem; border-bottom: 1px solid #f0f0f0; cursor: pointer; transition: background 0.15s; }
-    .chapter:last-child { border-bottom: none; }
-    .chapter:hover { background: #fff7ed; }
-    .chapter-num { color: #d97706; font-weight: 600; font-size: 0.85rem; }
-    .chapter-title { margin-top: 0.3rem; font-size: 1rem; }
-    .chapter-status { font-size: 0.75rem; color: #999; margin-top: 0.2rem; }
-    .back-btn { display: inline-block; margin-bottom: 1rem; color: #d97706; text-decoration: none; font-size: 0.9rem; }
-    .back-btn:hover { text-decoration: underline; }
-    .chapter-content { background: white; border-radius: 12px; padding: 2rem; margin-top: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); line-height: 1.8; font-size: 1rem; }
-    .chapter-nav { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #eee; display: flex; justify-content: space-between; }
-    .chapter-nav a { color: #d97706; text-decoration: none; font-size: 0.9rem; }
-    .chapter-nav a:hover { text-decoration: underline; }
-    .loading { text-align: center; padding: 3rem; color: #999; }
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第一章</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;color:#333}
+.header{background:linear-gradient(135deg,#667eea,#764ba2);color:white;padding:1.5rem 1rem}
+.header h1{font-size:1.5rem}.meta{opacity:0.85;font-size:0.9rem;margin-top:0.3rem}
+.container{max-width:800px;margin:2rem auto;padding:0 1rem}
+.chapter-list{background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.chapter{padding:1rem 1.2rem;border-bottom:1px solid #f0f0f0;cursor:pointer;transition:background .15s}
+.chapter:hover{background:#f8f6ff}
+.chapter-num{color:#667eea;font-weight:600;font-size:.85rem}
+.chapter-title{margin-top:.3rem}
+.back-btn{display:inline-block;margin-bottom:1rem;color:#667eea;text-decoration:none;font-size:.9rem}
+.content-box{background:white;border-radius:12px;padding:2rem;margin-top:1rem;box-shadow:0 2px 8px rgba(0,0,0,.08);line-height:1.9;font-size:1.05rem;white-space:pre-wrap}
+.chapter-nav{margin-top:1.5rem;padding-top:1rem;border-top:1px solid #eee;display:flex;justify-content:space-between}
+.chapter-nav a{color:#667eea;text-decoration:none;font-size:.9rem}
+</style>
 </head>
 <body>
-  <div class="header">
-    <div class="container">
-      <a href="../" class="back-btn">← 返回书库</a>
-      <h1>🎮 DNF：开局神级返利，碾压全服</h1>
-      <div class="meta">AI（MiniMax仿写） | 游戏体育·DNF·系统·爽文 | 连载中</div>
-    </div>
-  </div>
-  <div class="container">
-    <div id="content">
-      <div class="chapter-list" id="chapterList"></div>
-    </div>
-  </div>
-  <script>
-    const BOOK_ID = new URLSearchParams(location.search).get('book') || 'dnf-fanli';
-    const CHAPTER_FILE = new URLSearchParams(location.search).get('chapter');
+<div class="header"><div class="container">
+<a href="../" class="back-btn">← 返回书库</a>
+<h1>📖 第一章</h1>
+<div class="meta">都市 · AI仿写版</div>
+</div></div>
+<div class="container" id="app"></div>
+<script>
+var CHAPTERS = [{"num": 1, "title": "神级返利系统", "status": "done", "words": 3000}];
+var BOOK_ID = "dnf-fanli";
 
-    async function loadChapters() {
-      try {
-        const res = await fetch(`../${BOOK_ID}/chapters.json`);
-        const chapters = await res.json();
-        const list = document.getElementById('chapterList');
-        chapters.forEach(ch => {
-          const div = document.createElement('div');
-          div.className = 'chapter';
-          div.innerHTML = `<div class="chapter-num">第${ch.num}章</div><div class="chapter-title">${ch.title}</div><div class="chapter-status">${ch.status === 'done' ? '已完成 ' + (ch.words ? ch.words + '字' : '') : '<span class="writing-badge">写作中</span>'}</div>`;
-          div.onclick = () => { location.href = `?book=${BOOK_ID}&chapter=${String(ch.num).padStart(4,'0')}`; };
-          list.appendChild(div);
-        });
-      } catch(e) { console.error(e); }
-    }
+function renderList() {
+    var html = CHAPTERS.map(function(ch, i) {
+        return '<div class="chapter" onclick="renderChapter(' + i + ')"><div class="chapter-num">第' + ch.num + '章</div><div class="chapter-title">' + ch.title + '</div></div>';
+    }).join('');
+    document.getElementById("app").innerHTML = html;
+}
 
-    async function loadChapter() {
-      try {
-        const res = await fetch(`../${BOOK_ID}/chapter_${CHAPTER_FILE}.json`);
-        const ch = await res.json();
-        document.getElementById('content').innerHTML = `
-          <a href="?book=${BOOK_ID}" class="back-btn">← 返回目录</a>
-          <div class="chapter-content">
-            <h2 style="margin-bottom:1.5rem;color:#d97706;">第${ch.num}章 ${ch.title}</h2>
-            <div>${ch.content.replace(/\n/g,'<br>')}</div>
-          </div>`;
-      } catch(e) { document.getElementById('content').innerHTML = '<div class="loading">加载中...</div>'; }
-    }
+function renderChapter(idx) {
+    var ch = CHAPTERS[idx];
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'chapter_' + String(idx+1).padStart(4,'0') + '.json', true);
+    xhr.onload = function() {
+        var data = JSON.parse(xhr.responseText);
+        var prev = idx > 0 ? '<a href="javascript:renderChapter(' + (idx-1) + ')">← 上一章</a>' : '<span></span>';
+        var next = idx < CHAPTERS.length - 1 ? '<a href="javascript:renderChapter(' + (idx+1) + ')">下一章 →</a>' : '<span></span>';
+        document.getElementById("app").innerHTML = '<a href="javascript:renderList()" class="back-btn">← 返回目录</a><div class="content-box"><h2 style="margin-bottom:1.5rem">第' + data.num + '章 · ' + data.title + '</h2>' + data.content + '</div><div class="chapter-nav">' + prev + next + '</div>';
+        window.scrollTo(0,0);
+    };
+    xhr.send();
+}
 
-    if (CHAPTER_FILE) loadChapter(); else loadChapters();
-  </script>
+// auto from URL param
+var params = new URLSearchParams(location.search);
+var c = params.get("c");
+if (c !== null) { renderChapter(parseInt(c)); } else { renderList(); }
+</script>
 </body>
 </html>

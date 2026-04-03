@@ -1,78 +1,61 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>是攻略系统，不是攻城略地系统！</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; background: #1a1a2e; color: #e0e0e0; min-height: 100vh; }
-    .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-    .header { text-align: center; margin-bottom: 40px; }
-    .cover { font-size: 80px; margin-bottom: 20px; }
-    h1 { font-size: 28px; color: #ffd700; margin-bottom: 10px; }
-    .meta { color: #888; font-size: 14px; margin-bottom: 20px; }
-    .tags { margin-bottom: 20px; }
-    .tag { display: inline-block; background: #2d2d4a; color: #b0b0b0; padding: 4px 12px; border-radius: 20px; font-size: 12px; margin: 4px; }
-    .desc { background: #16213e; padding: 20px; border-radius: 12px; line-height: 1.8; color: #c0c0c0; margin-bottom: 30px; }
-    .chapters { background: #16213e; border-radius: 12px; overflow: hidden; }
-    .chapter-title { background: #0f3460; padding: 15px 20px; font-size: 16px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-    .chapter-title:hover { background: #1a4a7a; }
-    .chapter-content { display: none; padding: 20px; line-height: 2; color: #d0d0d0; white-space: pre-wrap; font-size: 15px; }
-    .chapter-content.open { display: block; }
-    .status { display: inline-block; background: #e94560; color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; }
-    a { color: #ffd700; text-decoration: none; }
-    .back { text-align: center; margin-top: 30px; }
-    .back a { color: #888; font-size: 14px; }
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第一章</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;color:#333}
+.header{background:linear-gradient(135deg,#667eea,#764ba2);color:white;padding:1.5rem 1rem}
+.header h1{font-size:1.5rem}.meta{opacity:0.85;font-size:0.9rem;margin-top:0.3rem}
+.container{max-width:800px;margin:2rem auto;padding:0 1rem}
+.chapter-list{background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.chapter{padding:1rem 1.2rem;border-bottom:1px solid #f0f0f0;cursor:pointer;transition:background .15s}
+.chapter:hover{background:#f8f6ff}
+.chapter-num{color:#667eea;font-weight:600;font-size:.85rem}
+.chapter-title{margin-top:.3rem}
+.back-btn{display:inline-block;margin-bottom:1rem;color:#667eea;text-decoration:none;font-size:.9rem}
+.content-box{background:white;border-radius:12px;padding:2rem;margin-top:1rem;box-shadow:0 2px 8px rgba(0,0,0,.08);line-height:1.9;font-size:1.05rem;white-space:pre-wrap}
+.chapter-nav{margin-top:1.5rem;padding-top:1rem;border-top:1px solid #eee;display:flex;justify-content:space-between}
+.chapter-nav a{color:#667eea;text-decoration:none;font-size:.9rem}
+</style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <div class="cover">⚔️</div>
-      <h1>是攻略系统，不是攻城略地系统！</h1>
-      <div class="meta">作者：AI（InkOS） | 状态：<span class="status">创作中</span></div>
-      <div class="tags">
-        <span class="tag">玄幻</span>
-        <span class="tag">穿越</span>
-        <span class="tag">系统</span>
-        <span class="tag">修仙</span>
-        <span class="tag">搞笑</span>
-      </div>
-    </div>
-    <div class="desc">
-      穿越到修仙界的李凯南，开局就被人从山崖上一脚踹下来，左臂断了，肋骨断了三根，灵识碎成渣。本以为要死在乱葬岗，结果天上掉下来一个……战争系统？等等，这名字不对吧？明明是攻略系统，怎么被我念成了攻城略地系统？算了不管了，先把第一个目标拿下再说！
-    </div>
-    <div class="chapters" id="chapters-list"></div>
-    <div class="back"><a href="../index.html">← 返回书库</a></div>
-  </div>
-  <script>
-    fetch('chapters.json').then(r => r.json()).then(data => {
-      const list = document.getElementById('chapters-list');
-      data.chapters.forEach(ch => {
-        const div = document.createElement('div');
-        div.className = 'chapter';
-        div.innerHTML = `<div class="chapter-title" onclick="toggle(this)">第${ch.number}章 ${ch.title} <span style="color:#888;font-size:12px">${ch.wordCount}字</span></div><div class="chapter-content" id="ch${ch.number}"></div>`;
-        list.appendChild(div);
-      });
-    });
-    function toggle(el) {
-      const content = el.nextElementSibling;
-      if (content.classList.contains('open')) {
-        content.classList.remove('open');
-        return;
-      }
-      const num = el.querySelector('span') ? el.parentElement.querySelector('.chapter-title').textContent.match(/第(\d+)章/)[1] : el.textContent.match(/第(\d+)章/)[1];
-      const id = 'ch' + num;
-      if (!document.getElementById(id).innerHTML) {
-        fetch('chapter_' + String(num).padStart(4,'0') + '.json').then(r => r.json()).then(data => {
-          document.getElementById(id).innerHTML = data.content;
-          content.classList.add('open');
-        });
-      } else {
-        content.classList.add('open');
-      }
-    }
-  </script>
+<div class="header"><div class="container">
+<a href="../" class="back-btn">← 返回书库</a>
+<h1>📖 第一章</h1>
+<div class="meta">都市 · AI仿写版</div>
+</div></div>
+<div class="container" id="app"></div>
+<script>
+var CHAPTERS = [{"num": 1, "title": "剑意误伤，系统乱码", "status": "done", "words": 2849}];
+var BOOK_ID = "gongluexitong";
+
+function renderList() {
+    var html = CHAPTERS.map(function(ch, i) {
+        return '<div class="chapter" onclick="renderChapter(' + i + ')"><div class="chapter-num">第' + ch.num + '章</div><div class="chapter-title">' + ch.title + '</div></div>';
+    }).join('');
+    document.getElementById("app").innerHTML = html;
+}
+
+function renderChapter(idx) {
+    var ch = CHAPTERS[idx];
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'chapter_' + String(idx+1).padStart(4,'0') + '.json', true);
+    xhr.onload = function() {
+        var data = JSON.parse(xhr.responseText);
+        var prev = idx > 0 ? '<a href="javascript:renderChapter(' + (idx-1) + ')">← 上一章</a>' : '<span></span>';
+        var next = idx < CHAPTERS.length - 1 ? '<a href="javascript:renderChapter(' + (idx+1) + ')">下一章 →</a>' : '<span></span>';
+        document.getElementById("app").innerHTML = '<a href="javascript:renderList()" class="back-btn">← 返回目录</a><div class="content-box"><h2 style="margin-bottom:1.5rem">第' + data.num + '章 · ' + data.title + '</h2>' + data.content + '</div><div class="chapter-nav">' + prev + next + '</div>';
+        window.scrollTo(0,0);
+    };
+    xhr.send();
+}
+
+// auto from URL param
+var params = new URLSearchParams(location.search);
+var c = params.get("c");
+if (c !== null) { renderChapter(parseInt(c)); } else { renderList(); }
+</script>
 </body>
 </html>

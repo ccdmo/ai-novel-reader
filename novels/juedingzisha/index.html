@@ -1,191 +1,61 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>决定自杀后，她们哭着找上门 - AI 小说阅读器</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #f5f5f5; color: #333; }
-    a { color: #667eea; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
-    .header-left { display: flex; align-items: center; gap: 1rem; }
-    .back-btn { background: rgba(255,255,255,0.2); color: white; padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.85rem; border: none; cursor: pointer; }
-    .back-btn:hover { background: rgba(255,255,255,0.3); text-decoration: none; }
-    .header h1 { font-size: 1.2rem; font-weight: 600; }
-    .main { display: flex; max-width: 1200px; margin: 0 auto; min-height: calc(100vh - 60px); }
-    .sidebar { width: 240px; background: white; border-right: 1px solid #eee; padding: 1rem 0; overflow-y: auto; position: sticky; top: 60px; height: calc(100vh - 60px); }
-    .sidebar-title { padding: 0.5rem 1rem; font-size: 0.75rem; color: #999; text-transform: uppercase; letter-spacing: 1px; }
-    .chapter-list { list-style: none; }
-    .chapter-item a { display: block; padding: 0.6rem 1rem; font-size: 0.9rem; color: #333; transition: background 0.15s; }
-    .chapter-item a:hover { background: #f5f5f5; text-decoration: none; }
-    .chapter-item.active a { background: #e8f0fe; color: #4285f4; border-left: 3px solid #4285f4; }
-    .content-area { flex: 1; padding: 2rem 3rem; background: white; max-width: 800px; }
-    .novel-title { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .novel-meta { font-size: 0.85rem; color: #999; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #eee; }
-    .chapter-title { font-size: 1.4rem; font-weight: 600; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid #667eea; display: inline-block; }
-    .chapter-content { font-size: 1.05rem; line-height: 1.9; color: #333; }
-    .chapter-content p { margin-bottom: 1.2rem; text-indent: 2em; }
-    .nav-btns { display: flex; justify-content: space-between; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee; }
-    .nav-btn { background: #667eea; color: white; padding: 0.6rem 1.2rem; border-radius: 6px; font-size: 0.9rem; border: none; cursor: pointer; }
-    .nav-btn:hover { background: #5568d3; }
-    .nav-btn:disabled { background: #ccc; cursor: not-allowed; }
-    .download-section { margin-top: 2rem; padding: 1rem; background: #f9f9f9; border-radius: 8px; }
-    .download-section h3 { font-size: 0.9rem; margin-bottom: 0.75rem; color: #666; }
-    .download-btns { display: flex; gap: 0.75rem; }
-    .download-btn { background: #34a853; color: white; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.85rem; border: none; cursor: pointer; }
-    .download-btn:hover { background: #2d8f4a; }
-    @media (max-width: 768px) {
-      .main { flex-direction: column; }
-      .sidebar { width: 100%; height: auto; position: relative; top: 0; border-right: none; border-bottom: 1px solid #eee; }
-      .content-area { padding: 1.5rem 1rem; }
-    }
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第一章</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;color:#333}
+.header{background:linear-gradient(135deg,#667eea,#764ba2);color:white;padding:1.5rem 1rem}
+.header h1{font-size:1.5rem}.meta{opacity:0.85;font-size:0.9rem;margin-top:0.3rem}
+.container{max-width:800px;margin:2rem auto;padding:0 1rem}
+.chapter-list{background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.chapter{padding:1rem 1.2rem;border-bottom:1px solid #f0f0f0;cursor:pointer;transition:background .15s}
+.chapter:hover{background:#f8f6ff}
+.chapter-num{color:#667eea;font-weight:600;font-size:.85rem}
+.chapter-title{margin-top:.3rem}
+.back-btn{display:inline-block;margin-bottom:1rem;color:#667eea;text-decoration:none;font-size:.9rem}
+.content-box{background:white;border-radius:12px;padding:2rem;margin-top:1rem;box-shadow:0 2px 8px rgba(0,0,0,.08);line-height:1.9;font-size:1.05rem;white-space:pre-wrap}
+.chapter-nav{margin-top:1.5rem;padding-top:1rem;border-top:1px solid #eee;display:flex;justify-content:space-between}
+.chapter-nav a{color:#667eea;text-decoration:none;font-size:.9rem}
+</style>
 </head>
 <body>
-  <div class="header">
-    <div class="header-left">
-      <a href="../../" class="back-btn">← 返回列表</a>
-      <h1>决定自杀后，她们哭着找上门</h1>
-    </div>
-    <div style="font-size:0.85rem;opacity:0.8;">AI 创作 · 都市脑洞</div>
-  </div>
-  <div class="main">
-    <aside class="sidebar">
-      <div class="sidebar-title">目录</div>
-      <ul class="chapter-list">
-        <li class="chapter-item active"><a href="#ch1">第一章：天台上的最后一刻</a></li>
-      </ul>
-    </aside>
-    <main class="content-area">
-      <h1 class="chapter-title" id="ch1">第一章：天台上的最后一刻</h1>
-      <div class="chapter-content">
-        <p>城市灯火在脚下如星河倒悬，二十九层的高度足以让人眩晕。</p>
-        <p>我站在天台边缘，寒风灌进衣领，刺骨的冷。身后是整个城市的喧嚣，身前是无尽的虚空。</p>
-        <p>我叫林默。这个名字如今想来真是讽刺——曾经我以为沉默是金，默默付出终会有回报。却不知道，在她们眼里，我从来只是一条召之即来挥之即去的狗。</p>
-        <p>苏婉晴，我的大学初恋，白富美，追我时轰轰烈烈，分手时头也不回。她说："林默，你太无趣了，和你在一起让我觉得丢脸。"</p>
-        <p>沈幼薇，我的同事，温柔小意，却在背地里和我说："你只是个工具，别把自己想得太重要。"然后转身和另一个男人进了酒店。</p>
-        <p>林念，我的青梅竹马，我为她付出了一切，最后她嫁给了别人，婚礼请柬送到我手上时还附带一句："谢谢你这些年的照顾。"</p>
-        <p>我曾经以为，真心可以换真心。后来才知道，在她们的世界里，我的真心连垃圾都不如。</p>
-        <p>十年的青春，换来的是一身的伤。</p>
-        <p>今天，公司倒闭，我被裁员。三十岁的我，一无所有。</p>
-        <p>站在天台边缘的那一刻，我突然觉得解脱了。</p>
-        <p>"再见了……"</p>
-        <p>我张开双臂，准备迎接最后的坠落。</p>
-        <p>"砰——"</p>
-        <p>身后的铁门被猛地撞开。</p>
-        <p>我愣住了，缓缓回头。</p>
-        <p>一个身影跌跌撞撞地冲上天台，妆容花了，眼眶通红，跪倒在地。</p>
-        <p>是苏婉晴。</p>
-        <p>我那个曾经高高在上、连多看我一眼都觉得浪费时间的前女友，此刻正跪在地上，哭得像个泪人。</p>
-        <p>"林默！你别跳！我求求你！"</p>
-        <p>她的声音嘶哑，带着哭腔："我错了，我真的错了！求你下来，求你……"</p>
-        <p>我静静地看着她，眼神平静得可怕。</p>
-        <p>这就是那个曾经对我说"你连给我提鞋都不配"的女人？</p>
-        <p>这就是那个在我喝到胃出血时连一句问候都没有的前任？</p>
-        <p>我笑了。</p>
-        <p>是那种没有温度的笑。</p>
-        <p>"苏婉晴，你怎么来了？"</p>
-        <p>"呜呜……林默，你……你不能死……"</p>
-        <p>"当初不是你说，和我在一起让你丢脸吗？"</p>
-        <p>她的身体僵住了。</p>
-        <p>我转身看向夜空，嘴角勾起一抹讽刺的弧度。</p>
-        <p>好戏，才刚刚开始。</p>
-      </div>
-      <div class="nav-btns">
-        <button class="nav-btn" disabled>← 上一章</button>
-        <button class="nav-btn" disabled>下一章 →</button>
-      </div>
-      <div class="download-section">
-        <h3>📥 下载本书</h3>
-        <div class="download-btns">
-          <button class="download-btn" onclick="downloadTxt()">下载 TXT</button>
-          <button class="download-btn" onclick="downloadEpub()">下载 EPUB</button>
-        </div>
-      </div>
-    </main>
-  </div>
-  <script>
-    function downloadTxt() {
-      const content = `决定自杀后，她们哭着找上门
+<div class="header"><div class="container">
+<a href="../" class="back-btn">← 返回书库</a>
+<h1>📖 第一章</h1>
+<div class="meta">都市 · AI仿写版</div>
+</div></div>
+<div class="container" id="app"></div>
+<script>
+var CHAPTERS = [{"chapter_number": 1, "title": "天台上的最后一刻", "file": "chapter_0001.json", "word_count": 2569}];
+var BOOK_ID = "juedingzisha";
 
-第一章：天台上的最后一刻
+function renderList() {
+    var html = CHAPTERS.map(function(ch, i) {
+        return '<div class="chapter" onclick="renderChapter(' + i + ')"><div class="chapter-num">第' + ch.num + '章</div><div class="chapter-title">' + ch.title + '</div></div>';
+    }).join('');
+    document.getElementById("app").innerHTML = html;
+}
 
-城市灯火在脚下如星河倒悬，二十九层的高度足以让人眩晕。
+function renderChapter(idx) {
+    var ch = CHAPTERS[idx];
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'chapter_' + String(idx+1).padStart(4,'0') + '.json', true);
+    xhr.onload = function() {
+        var data = JSON.parse(xhr.responseText);
+        var prev = idx > 0 ? '<a href="javascript:renderChapter(' + (idx-1) + ')">← 上一章</a>' : '<span></span>';
+        var next = idx < CHAPTERS.length - 1 ? '<a href="javascript:renderChapter(' + (idx+1) + ')">下一章 →</a>' : '<span></span>';
+        document.getElementById("app").innerHTML = '<a href="javascript:renderList()" class="back-btn">← 返回目录</a><div class="content-box"><h2 style="margin-bottom:1.5rem">第' + data.num + '章 · ' + data.title + '</h2>' + data.content + '</div><div class="chapter-nav">' + prev + next + '</div>';
+        window.scrollTo(0,0);
+    };
+    xhr.send();
+}
 
-我站在天台边缘，寒风灌进衣领，刺骨的冷。身后是整个城市的喧嚣，身前是无尽的虚空。
-
-我叫林默。这个名字如今想来真是讽刺——曾经我以为沉默是金，默默付出终会有回报。却不知道，在她们眼里，我从来只是一条召之即来挥之即去的狗。
-
-苏婉晴，我的大学初恋，白富美，追我时轰轰烈烈，分手时头也不回。她说："林默，你太无趣了，和你在一起让我觉得丢脸。"
-
-沈幼薇，我的同事，温柔小意，却在背地里和我说："你只是个工具，别把自己想得太重要。"然后转身和另一个男人进了酒店。
-
-林念，我的青梅竹马，我为她付出了一切，最后她嫁给了别人，婚礼请柬送到我手上时还附带一句："谢谢你这些年的照顾。"
-
-我曾经以为，真心可以换真心。后来才知道，在她们的世界里，我的真心连垃圾都不如。
-
-十年的青春，换来的是一身的伤。
-
-今天，公司倒闭，我被裁员。三十岁的我，一无所有。
-
-站在天台边缘的那一刻，我突然觉得解脱了。
-
-"再见了……"
-
-我张开双臂，准备迎接最后的坠落。
-
-"砰——"
-
-身后的铁门被猛地撞开。
-
-我愣住了，缓缓回头。
-
-一个身影跌跌撞撞地冲上天台，妆容花了，眼眶通红，跪倒在地。
-
-是苏婉晴。
-
-我那个曾经高高在上、连多看我一眼都觉得浪费时间的前女友，此刻正跪在地上，哭得像个泪人。
-
-"林默！你别跳！我求求你！"
-
-她的声音嘶哑，带着哭腔："我错了，我真的错了！求你下来，求你……"
-
-我静静地看着她，眼神平静得可怕。
-
-这就是那个曾经对我说"你连给我提鞋都不配"的女人？
-
-这就是那个在我喝到胃出血时连一句问候都没有的前任？
-
-我笑了。
-
-是那种没有温度的笑。
-
-"苏婉晴，你怎么来了？"
-
-"呜呜……林默，你……你不能死……"
-
-"当初不是你说，和我在一起让你丢脸吗？"
-
-她的身体僵住了。
-
-我转身看向夜空，嘴角勾起一抹讽刺的弧度。
-
-好戏，才刚刚开始。
-
-（第一章完）
-`;
-      const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = '决定自杀后，她们哭着找上门.txt';
-      a.click();
-    }
-
-    function downloadEpub() {
-      alert('EPUB 下载功能开发中，敬请期待！');
-    }
-  </script>
+// auto from URL param
+var params = new URLSearchParams(location.search);
+var c = params.get("c");
+if (c !== null) { renderChapter(parseInt(c)); } else { renderList(); }
+</script>
 </body>
 </html>

@@ -1,50 +1,61 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>火影：开局融合藤虎，瞎眼宇智波</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>黑暗中的微光</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:"Microsoft YaHei",sans-serif;background:#1a1a2e;color:#e0e0e0;line-height:1.8;padding:20px}
-.book-cover{text-align:center;padding:40px 0 20px}
-.book-cover h1{font-size:2em;color:#ff6b6b;margin-bottom:10px}
-.cover-sub{color:#888;font-size:0.9em;margin-bottom:20px}
-.cover-tags span{background:#333;padding:4px 12px;border-radius:4px;font-size:0.8em;margin:0 4px;display:inline-block;color:#aaa}
-.book-info{background:#16213e;border-radius:12px;padding:24px;margin:20px auto;max-width:800px}
-.meta{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:16px;font-size:0.9em}
-.meta-item{background:#0f3460;padding:8px 16px;border-radius:8px}
-.chapter-list{list-style:none;margin-top:20px}
-.chapter-list li{border-bottom:1px solid #333;padding:12px 0}
-.chapter-list li a{color:#ff6b6b;text-decoration:none;display:block}
-.chapter-list li a:hover{color:#ff8e8e}
-.chapter-num{color:#666;font-size:0.85em;margin-right:8px}
-.book-desc{background:#0f3460;padding:16px;border-radius:8px;margin-top:16px;color:#ccc}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;color:#333}
+.header{background:linear-gradient(135deg,#667eea,#764ba2);color:white;padding:1.5rem 1rem}
+.header h1{font-size:1.5rem}.meta{opacity:0.85;font-size:0.9rem;margin-top:0.3rem}
+.container{max-width:800px;margin:2rem auto;padding:0 1rem}
+.chapter-list{background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.chapter{padding:1rem 1.2rem;border-bottom:1px solid #f0f0f0;cursor:pointer;transition:background .15s}
+.chapter:hover{background:#f8f6ff}
+.chapter-num{color:#667eea;font-weight:600;font-size:.85rem}
+.chapter-title{margin-top:.3rem}
+.back-btn{display:inline-block;margin-bottom:1rem;color:#667eea;text-decoration:none;font-size:.9rem}
+.content-box{background:white;border-radius:12px;padding:2rem;margin-top:1rem;box-shadow:0 2px 8px rgba(0,0,0,.08);line-height:1.9;font-size:1.05rem;white-space:pre-wrap}
+.chapter-nav{margin-top:1.5rem;padding-top:1rem;border-top:1px solid #eee;display:flex;justify-content:space-between}
+.chapter-nav a{color:#667eea;text-decoration:none;font-size:.9rem}
 </style>
 </head>
 <body>
-<div class="book-cover">
-  <h1>火影：开局融合藤虎，瞎眼宇智波</h1>
-  <p class="cover-sub">动漫衍生 · 玄幻 · 男频</p>
-  <div class="cover-tags">
-    <span>火影同人</span>
-    <span>藤虎融合</span>
-    <span>重力果实</span>
-    <span>盲眼逆袭</span>
-  </div>
-</div>
-<div class="book-info">
-  <div class="meta">
-    <div class="meta-item">📖 热度：18.2万人在读</div>
-    <div class="meta-item">📝 字数：约3000字/章</div>
-    <div class="meta-item">🎬 更新：连载中</div>
-  </div>
-  <div class="book-desc">
-    <strong>简介：</strong>宇智波灭族之夜，遗孤昼见三岁失明被流放。濒死之际，融合海贼王藤虎一笑的意志与能力——重力果实觉醒！失明却能"看见"重力纹理，废物少年的逆袭之路，从今晚开始。
-  </div>
-  <ul class="chapter-list">
-    <li><a href="chapter_0001.json"><span class="chapter-num">第1章</span>黑暗中的微光</a></li>
-  </ul>
-</div>
+<div class="header"><div class="container">
+<a href="../" class="back-btn">← 返回书库</a>
+<h1>📖 黑暗中的微光</h1>
+<div class="meta">都市 · AI仿写版</div>
+</div></div>
+<div class="container" id="app"></div>
+<script>
+var CHAPTERS = [{"id": "chapter_0001", "number": 1, "title": "黑暗中的微光", "wordCount": 3371, "publishedAt": "2026-04-03"}];
+var BOOK_ID = "hokage-rokudao";
+
+function renderList() {
+    var html = CHAPTERS.map(function(ch, i) {
+        return '<div class="chapter" onclick="renderChapter(' + i + ')"><div class="chapter-num">第' + ch.num + '章</div><div class="chapter-title">' + ch.title + '</div></div>';
+    }).join('');
+    document.getElementById("app").innerHTML = html;
+}
+
+function renderChapter(idx) {
+    var ch = CHAPTERS[idx];
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'chapter_' + String(idx+1).padStart(4,'0') + '.json', true);
+    xhr.onload = function() {
+        var data = JSON.parse(xhr.responseText);
+        var prev = idx > 0 ? '<a href="javascript:renderChapter(' + (idx-1) + ')">← 上一章</a>' : '<span></span>';
+        var next = idx < CHAPTERS.length - 1 ? '<a href="javascript:renderChapter(' + (idx+1) + ')">下一章 →</a>' : '<span></span>';
+        document.getElementById("app").innerHTML = '<a href="javascript:renderList()" class="back-btn">← 返回目录</a><div class="content-box"><h2 style="margin-bottom:1.5rem">第' + data.num + '章 · ' + data.title + '</h2>' + data.content + '</div><div class="chapter-nav">' + prev + next + '</div>';
+        window.scrollTo(0,0);
+    };
+    xhr.send();
+}
+
+// auto from URL param
+var params = new URLSearchParams(location.search);
+var c = params.get("c");
+if (c !== null) { renderChapter(parseInt(c)); } else { renderList(); }
+</script>
 </body>
 </html>

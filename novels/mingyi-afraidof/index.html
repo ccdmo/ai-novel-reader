@@ -1,50 +1,61 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>名义，国家害怕我猝死 - AI小说</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第一章</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:"PingFang SC","Microsoft YaHei",sans-serif;background:#1a1a2e;color:#eee;min-height:100vh;padding:20px}
-.container{max-width:800px;margin:0 auto;padding:20px}
-.book-cover{text-align:center;margin-bottom:30px}
-.book-cover .emoji{font-size:80px}
-.book-title{font-size:2em;text-align:center;color:#ffd700;margin:15px 0 5px;text-shadow:0 0 10px rgba(255,215,0,.3)}
-.book-meta{text-align:center;color:#888;font-size:.9em;margin-bottom:20px}
-.tags{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:20px}
-.tag{background:rgba(255,215,0,.15);color:#ffd700;padding:4px 12px;border-radius:20px;font-size:.85em}
-.book-desc{background:rgba(255,255,255,.05);border-radius:12px;padding:20px;margin-bottom:25px;line-height:1.8;color:#ccc}
-.chapter-list{list-style:none}
-.chapter-list li{margin-bottom:8px}
-.chapter-list a{display:block;background:rgba(255,255,255,.05);padding:14px 20px;border-radius:8px;color:#ddd;text-decoration:none;transition:all .2s;border:1px solid transparent}
-.chapter-list a:hover{border-color:#ffd700;color:#ffd700;background:rgba(255,215,0,.08)}
-.chapter-list .lock{padding:14px 20px;background:rgba(255,255,255,.03);border-radius:8px;color:#555;text-align:center}
-.back{display:inline-block;margin-top:30px;color:#888;text-decoration:none;font-size:.9em}
-.back:hover{color:#ffd700}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;color:#333}
+.header{background:linear-gradient(135deg,#667eea,#764ba2);color:white;padding:1.5rem 1rem}
+.header h1{font-size:1.5rem}.meta{opacity:0.85;font-size:0.9rem;margin-top:0.3rem}
+.container{max-width:800px;margin:2rem auto;padding:0 1rem}
+.chapter-list{background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.chapter{padding:1rem 1.2rem;border-bottom:1px solid #f0f0f0;cursor:pointer;transition:background .15s}
+.chapter:hover{background:#f8f6ff}
+.chapter-num{color:#667eea;font-weight:600;font-size:.85rem}
+.chapter-title{margin-top:.3rem}
+.back-btn{display:inline-block;margin-bottom:1rem;color:#667eea;text-decoration:none;font-size:.9rem}
+.content-box{background:white;border-radius:12px;padding:2rem;margin-top:1rem;box-shadow:0 2px 8px rgba(0,0,0,.08);line-height:1.9;font-size:1.05rem;white-space:pre-wrap}
+.chapter-nav{margin-top:1.5rem;padding-top:1rem;border-top:1px solid #eee;display:flex;justify-content:space-between}
+.chapter-nav a{color:#667eea;text-decoration:none;font-size:.9rem}
 </style>
 </head>
 <body>
-<div class="container">
-<div class="book-cover">
-<div class="emoji">🏛️</div>
-<div class="book-title">名义，国家害怕我猝死</div>
-<div class="book-meta">作者：AI（MiniMax仿写） · 男频衍生 · 都市爽文 · 系统流</div>
-<div class="tags">
-<span class="tag">男频衍生</span><span class="tag">权谋</span><span class="tag">系统流</span><span class="tag">都市爽文</span>
-</div>
-</div>
-<div class="book-desc">
-改编自《人民的名义》的都市爽文·系统流力作！<br><br>
-陆晨，京州市政府一名普通的基层材料狗。连续加班三天三夜后，他在办公室倒下了——然后，他的命，被国家接管了。<br><br>
-"谁让主角加班太多，国家就怕主角猝死。主角越拼命，国家越慌。"<br><br>
-一个猝死预警系统，让小科员成为各方势力争夺的焦点。看他如何以"棋子"之身，搅动汉东反腐风暴！
-</div>
-<ul class="chapter-list">
-<li><a href="chapter_0001.html">第一章 猝死边缘，系统激活</a></li>
-<li class="lock">第二章 敬请期待…</li>
-</ul>
-<a class="back" href="../">&larr; 返回书库</a>
-</div>
+<div class="header"><div class="container">
+<a href="../" class="back-btn">← 返回书库</a>
+<h1>📖 第一章</h1>
+<div class="meta">都市 · AI仿写版</div>
+</div></div>
+<div class="container" id="app"></div>
+<script>
+var CHAPTERS = [{"num": 1, "title": "第一章", "status": "done", "words": 2914}];
+var BOOK_ID = "mingyi-afraidof";
+
+function renderList() {
+    var html = CHAPTERS.map(function(ch, i) {
+        return '<div class="chapter" onclick="renderChapter(' + i + ')"><div class="chapter-num">第' + ch.num + '章</div><div class="chapter-title">' + ch.title + '</div></div>';
+    }).join('');
+    document.getElementById("app").innerHTML = html;
+}
+
+function renderChapter(idx) {
+    var ch = CHAPTERS[idx];
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'chapter_' + String(idx+1).padStart(4,'0') + '.json', true);
+    xhr.onload = function() {
+        var data = JSON.parse(xhr.responseText);
+        var prev = idx > 0 ? '<a href="javascript:renderChapter(' + (idx-1) + ')">← 上一章</a>' : '<span></span>';
+        var next = idx < CHAPTERS.length - 1 ? '<a href="javascript:renderChapter(' + (idx+1) + ')">下一章 →</a>' : '<span></span>';
+        document.getElementById("app").innerHTML = '<a href="javascript:renderList()" class="back-btn">← 返回目录</a><div class="content-box"><h2 style="margin-bottom:1.5rem">第' + data.num + '章 · ' + data.title + '</h2>' + data.content + '</div><div class="chapter-nav">' + prev + next + '</div>';
+        window.scrollTo(0,0);
+    };
+    xhr.send();
+}
+
+// auto from URL param
+var params = new URLSearchParams(location.search);
+var c = params.get("c");
+if (c !== null) { renderChapter(parseInt(c)); } else { renderList(); }
+</script>
 </body>
 </html>

@@ -6,7 +6,7 @@
     "author": "AI（MiniMax仿写）",
     "genre": "东方仙侠",
     "heat": 17.8,
-    "status": "连载中",
+    "status": "completed",
     "chapters": 1,
     "cover": "🐉",
     "record_id": "recvfEM2nUAVoI"
@@ -25,7 +25,7 @@
     ],
     "chapters": 1,
     "cover": "🐉",
-    "status": "连载中",
+    "status": "completed",
     "genre": "传统武侠",
     "heat": 18.7,
     "record_id": "recvfEM2nVd9g6F"
@@ -44,7 +44,7 @@
     ],
     "chapters": 1,
     "cover": "📜",
-    "status": "连载中",
+    "status": "completed",
     "genre": "东方仙侠",
     "heat": 19.2,
     "record_id": "recvfEM2nVcP6b7"
@@ -84,8 +84,9 @@
     "author": "仿写AI",
     "genre": "玄幻脑洞",
     "heat": 22.7,
-    "status": "连载中",
-    "record_id": "recvfELVeavFdZ"
+    "status": "completed",
+    "record_id": "recvfELVeavFdZ",
+    "chapters": 1
   },
   {
     "id": "sanjiaozhou-wife",
@@ -199,7 +200,7 @@
     "author": "AI（MiniMax仿写）",
     "genre": "传统玄幻",
     "heat": 20.0,
-    "status": "连载中",
+    "status": "completed",
     "chapters": 1
   },
   {
@@ -530,7 +531,7 @@
     ],
     "chapters": 1,
     "cover": "💔",
-    "status": "连载中"
+    "status": "completed"
   },
   {
     "id": "dnf-fanli",
@@ -559,7 +560,7 @@
     ],
     "chapters": 1,
     "cover": "🏛️",
-    "status": "done"
+    "status": "completed"
   },
   {
     "id": "mingyi-afraidof",
@@ -574,7 +575,7 @@
     ],
     "chapters": 1,
     "cover": "🏛️",
-    "status": "连载中"
+    "status": "completed"
   },
   {
     "id": "nvzon-fallenhusband",
@@ -794,7 +795,7 @@
     "author": "仿写AI",
     "genre": "传统武侠",
     "heat": 20.6,
-    "status": "连载中",
+    "status": "completed",
     "desc": "穿越综武世界，绑定随机满级系统。开局被退婚的废物赘婿，实为三十年前名震天下的酒剑仙转世！随机满级嫁衣神功、独孤九剑、北冥神功……综武群雄荟萃，金庸古龙群雄争锋！",
     "tags": [
       "综武",
