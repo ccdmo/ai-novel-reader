@@ -424,5 +424,19 @@
     "chapters": 1,
     "cover": "🎮",
     "status": "completed"
+  },
+  {
+    "id": "mingyi-han-daDan",
+    "title": "名义之他们叫我汉大胆",
+    "desc": "男频衍生 · 权谋系统流 · 改编自《人民的名义》",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "男频衍生",
+      "权谋",
+      "系统流"
+    ],
+    "chapters": 1,
+    "cover": "🏛️",
+    "status": "done"
   }
 ]
