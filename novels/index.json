@@ -1,31 +1,398 @@
 [
-  {"id": "bingjiao-wife", "title": "被病娇老婆囚禁只好来写病娇文了", "desc": "被病娇老婆囚禁后，主人公决定写病娇文来自救，荒诞又真实的都市日常。", "author": "AI（MiniMax仿写）", "tags": ["都市", "日常"], "chapters": 1, "cover": "📖", "status": "completed"},
-  {"id": "changgeshalun", "title": "我就一唱歌的，咋上军事法庭了？", "desc": "只想摆烂的流行歌手，却成了影响国际战局的'战争教父'。极致反差的都市爽文。", "author": "AI（MiniMax仿写）", "tags": ["都市", "脑洞"], "chapters": 1, "cover": "🎤", "status": "completed"},
-  {"id": "gongluexitong", "title": "是攻略系统，不是攻城略地系统！", "desc": "乱码恋爱攻略系统被主角误认为战争系统。用战争思维执行恋爱任务的错位喜剧。", "author": "AI（MiniMax仿写）", "tags": ["玄幻"], "chapters": 1, "cover": "⚔️", "status": "completed"},
-  {"id": "history-immortal", "title": "历史赋我长生，我终苟成万朝元老", "desc": "历史穿越都市文，主角获得长生能力，在各个历史朝代中苟到最后成为万朝元老。", "author": "AI（MiniMax仿写）", "tags": ["历史", "穿越"], "chapters": 1, "cover": "🏛️", "status": "completed"},
-  {"id": "hokage-rokudao", "title": "火影：开局融合藤虎，瞎眼宇智波", "desc": "火影忍者同人，主角开局融合藤虎能力，却在宇智波的诅咒下走向黑暗。", "author": "AI（MiniMax仿写）", "tags": ["火影", "同人"], "chapters": 1, "cover": "🔥", "status": "completed"},
-  {"id": "honkai-star-rail-mirror", "title": "星穹模拟：开局成为镜流竹马", "desc": "崩坏星穹铁道同人，主角开局成为镜流的青梅竹马，在星穹列车上展开冒险。", "author": "AI（MiniMax仿写）", "tags": ["星穹铁道", "同人"], "chapters": 1, "cover": "🚂", "status": "completed"},
-  {"id": "juedingzisha", "title": "决定自杀后，她们哭着找上门", "desc": "都市日常文，主角决定自杀后，各路人物纷纷哭着找上门，荒诞又温馨。", "author": "AI（MiniMax仿写）", "tags": ["都市", "日常"], "chapters": 1, "cover": "💔", "status": "completed"},
-  {"id": "kaijug_shisigjing", "title": "开局十六境，骊珠洞天任我行", "desc": "玄幻修仙文，主角开局获得十六境修为，在骊珠洞天中肆意闯荡。", "author": "AI（MiniMax仿写）", "tags": ["玄幻", "修仙"], "chapters": 1, "cover": "⚡", "status": "completed"},
-  {"id": "los-angeles-exorcism", "title": "洛杉矶驱魔：烧点纸钱就好了", "desc": "都市玄幻文，主角在洛杉矶用东方法术驱魔，用烧纸钱的方式解决灵异事件。", "author": "AI（MiniMax仿写）", "tags": ["都市", "玄幻"], "chapters": 1, "cover": "👻", "status": "completed"},
-  {"id": "lottery-170million", "title": "我中奖一亿七千万，反手把家人送", "desc": "都市神豪文，主角中奖一亿七千万后，做出了一个让所有人震惊的决定。", "author": "AI（MiniMax仿写）", "tags": ["都市", "神豪"], "chapters": 1, "cover": "💰", "status": "completed"},
-  {"id": "luoshanji-zhuomo", "title": "洛神纪：绝美鲛人求我当海神", "desc": "都市玄幻文，主角意外成为鲛人之主，卷入海底世界的权力之争。", "author": "AI（MiniMax仿写）", "tags": ["都市", "玄幻"], "chapters": 1, "cover": "🌊", "status": "completed"},
-  {"id": "rule-horror-campus", "title": "规则怪谈：开局牢大整顿校园", "desc": "都市悬疑文，主角进入一个充满诡异规则的校园，必须遵守规则才能活下去。", "author": "AI（MiniMax仿写）", "tags": ["都市", "悬疑"], "chapters": 1, "cover": "🏫", "status": "completed"},
-  {"id": "sanjiaozhou-lie_sha", "title": "三角洲：可曾听闻天榜猎杀", "desc": "都市特种兵文，主角是三角洲部队退役，卷入一场跨国雇佣兵追杀。", "author": "AI（MiniMax仿写）", "tags": ["都市", "特种兵"], "chapters": 1, "cover": "🎯", "status": "completed"},
-  {"id": "shenhaoxitong", "title": "神豪系统：我的家乡是贫困县", "desc": "被裁员，口袋只剩800块，意外激活'贫困县振兴辅助系统'——钱必须花在本地才能滚雪球。", "author": "AI（InkOS）", "tags": ["都市", "神豪", "系统"], "chapters": 1, "cover": "🏘️", "status": "completed"},
-  {"id": "six-wing-angel", "title": "异能：觉醒六翼天使，我氪金变强", "desc": "都市异能文，主角觉醒六翼天使血脉，用氪金系统一路变强对抗黑暗势力。", "author": "AI（MiniMax仿写）", "tags": ["都市", "异能"], "chapters": 1, "cover": "👼", "status": "completed"},
-  {"id": "wanrenmidaxia", "title": "身为万人迷大师兄的我只想下班", "desc": "社畜穿书成完美大师兄，全年无休处理宗门大小事务。外在完美，内在疲惫的反差喜剧。", "author": "AI（InkOS）", "tags": ["玄幻", "脑洞"], "chapters": 1, "cover": "🗡️", "status": "completed"},
-  {"id": "zhongjiang_yi_qi_qi", "title": "中降：揭秘苗疆蛊术与茅山道术", "desc": "都市玄学文，主角意外卷入一场降头术与茅山道术的对决。", "author": "AI（MiniMax仿写）", "tags": ["都市", "玄学"], "chapters": 1, "cover": "🏮", "status": "completed"},
-  {"id": "sanguo-qinqin", "title": "三国：开局秦琼模板，曹营第一将", "desc": "历史穿越文，主角穿越到三国时期，获得秦琼模板，在曹营中崛起。", "author": "AI（MiniMax仿写）", "tags": ["历史", "三国"], "chapters": 1, "cover": "⚔️", "status": "completed"},
-  {"id": "caogao-zhuanmi", "title": "什么？！我的草稿纸成国家机密了", "desc": "都市脑洞文，主角的草稿纸意外成为国家机密，卷入一场意想不到的风波。", "author": "AI（MiniMax仿写）", "tags": ["都市", "脑洞"], "chapters": 1, "cover": "📜", "status": "completed"},
-  {"id": "chengxi-pilman", "title": "县城婆罗门，开局美妇求我办事", "desc": "都市日常文，县城小人物的家长里短，美妇上门求助引发一连串故事。", "author": "AI（MiniMax仿写）", "tags": ["都市", "日常"], "chapters": 1, "cover": "🏠", "status": "completed"},
-  {"id": "mingyi-diaoyu", "title": "名义：京都首调，由我打破棋局", "desc": "都市政治文，主角在京都权力斗争中破局，成为新一代的话事人。", "author": "AI（MiniMax仿写）", "tags": ["都市", "政治"], "chapters": 1, "cover": "🎭", "status": "completed"},
-  {"id": "siheyuan-liuhai", "title": "四合院，刘海中三叔二野副师转业", "desc": "年代文，四合院里的恩怨情仇，退伍军人在院里开启新生活。", "author": "AI（MiniMax仿写）", "tags": ["年代", "四合院"], "chapters": 1, "cover": "🏡", "status": "completed"},
-  {"id": "dayi-kaisystem", "title": "大一开学，系统每天送我一亿", "desc": "都市神豪文，大一新生获得每日送一亿的系统，在大学校园里展开逆袭人生。", "author": "AI（MiniMax仿写）", "tags": ["都市", "神豪"], "chapters": 1, "cover": "💎", "status": "completed"},
-  {"id": "honghuang-jinlong", "title": "洪荒：功德小金龙，你敢碰我？", "desc": "洪荒流小说，主角穿越成功德小金龙，在洪荒世界中以功德证道。", "author": "AI（MiniMax仿写）", "tags": ["洪荒", "玄幻"], "chapters": 1, "cover": "🐉", "status": "completed"},
-  {"id": "chaos-prince", "title": "玄幻：我，混沌神朝第一太子", "desc": "穿越太子携帝王系统觉醒，步步为营夺回主动权，在夺嫡之争中杀出血路，最终成为天下之主！", "author": "AI（MiniMax仿写）", "tags": ["东方仙侠", "玄幻", "穿越", "系统"], "chapters": 1, "cover": "👑", "status": "completed"},
-  {"id": "shenghua-weiji", "title": "生化危机：开局加油站遇见里昂", "desc": "生化危机同人，主角在浣熊市加油站遇见里昂，一起逃离末日之城。", "author": "AI（MiniMax仿写）", "tags": ["生化危机", "同人"], "chapters": 1, "cover": "🧟", "status": "completed"},
-  {"id": "peibai-guangchang", "title": "陪白月光庆生？这婚不结你急什么", "desc": "都市言情文，主角被迫陪白月光庆生，却意外卷入一场关于婚姻和真心的选择。", "author": "AI（MiniMax仿写）", "tags": ["都市", "言情"], "chapters": 1, "cover": "💑", "status": "completed"},
-  {"id": "tongwei-chief", "title": "重生祁同伟，问鼎总警监", "desc": "官场重生文，前世被权贵碾压的祁同伟重生回到大学时代，获得官场晋升系统，最终问鼎总警监。复仇打脸，步步高升！", "author": "AI（MiniMax仿写）", "tags": ["男频衍生", "官场", "重生", "系统"], "chapters": 1, "cover": "🎖️", "status": "completed"},
-  {"id": "apocalypse-food", "title": "末世：少女玉足踩出无限粮食", "desc": "末世降临，少女顾锦瑟的玉足触碰土地，脚下就会神奇地生长出粮食作物。少女的玉足是最珍贵的'产粮神器'，粮食即生存，即权力。", "author": "AI（MiniMax）", "tags": ["科幻末世", "末世", "粮食危机"], "chapters": 1, "cover": "🌾", "status": "completed"}
+  {
+    "id": "bingjiao-wife",
+    "title": "被病娇老婆囚禁只好来写病娇文了",
+    "desc": "被病娇老婆囚禁后，主人公决定写病娇文来自救，荒诞又真实的都市日常。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "都市",
+      "日常"
+    ],
+    "chapters": 1,
+    "cover": "📖",
+    "status": "completed"
+  },
+  {
+    "id": "changgeshalun",
+    "title": "我就一唱歌的，咋上军事法庭了？",
+    "desc": "只想摆烂的流行歌手，却成了影响国际战局的'战争教父'。极致反差的都市爽文。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "都市",
+      "脑洞"
+    ],
+    "chapters": 1,
+    "cover": "🎤",
+    "status": "completed"
+  },
+  {
+    "id": "gongluexitong",
+    "title": "是攻略系统，不是攻城略地系统！",
+    "desc": "乱码恋爱攻略系统被主角误认为战争系统。用战争思维执行恋爱任务的错位喜剧。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "玄幻"
+    ],
+    "chapters": 1,
+    "cover": "⚔️",
+    "status": "completed"
+  },
+  {
+    "id": "history-immortal",
+    "title": "历史赋我长生，我终苟成万朝元老",
+    "desc": "历史穿越都市文，主角获得长生能力，在各个历史朝代中苟到最后成为万朝元老。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "历史",
+      "穿越"
+    ],
+    "chapters": 1,
+    "cover": "🏛️",
+    "status": "completed"
+  },
+  {
+    "id": "hokage-rokudao",
+    "title": "火影：开局融合藤虎，瞎眼宇智波",
+    "desc": "火影忍者同人，主角开局融合藤虎能力，却在宇智波的诅咒下走向黑暗。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "火影",
+      "同人"
+    ],
+    "chapters": 1,
+    "cover": "🔥",
+    "status": "completed"
+  },
+  {
+    "id": "honkai-star-rail-mirror",
+    "title": "星穹模拟：开局成为镜流竹马",
+    "desc": "崩坏星穹铁道同人，主角开局成为镜流的青梅竹马，在星穹列车上展开冒险。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "星穹铁道",
+      "同人"
+    ],
+    "chapters": 1,
+    "cover": "🚂",
+    "status": "completed"
+  },
+  {
+    "id": "juedingzisha",
+    "title": "决定自杀后，她们哭着找上门",
+    "desc": "都市日常文，主角决定自杀后，各路人物纷纷哭着找上门，荒诞又温馨。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "都市",
+      "日常"
+    ],
+    "chapters": 1,
+    "cover": "💔",
+    "status": "completed"
+  },
+  {
+    "id": "kaijug_shisigjing",
+    "title": "开局十六境，骊珠洞天任我行",
+    "desc": "玄幻修仙文，主角开局获得十六境修为，在骊珠洞天中肆意闯荡。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "玄幻",
+      "修仙"
+    ],
+    "chapters": 1,
+    "cover": "⚡",
+    "status": "completed"
+  },
+  {
+    "id": "los-angeles-exorcism",
+    "title": "洛杉矶驱魔：烧点纸钱就好了",
+    "desc": "都市玄幻文，主角在洛杉矶用东方法术驱魔，用烧纸钱的方式解决灵异事件。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "都市",
+      "玄幻"
+    ],
+    "chapters": 1,
+    "cover": "👻",
+    "status": "completed"
+  },
+  {
+    "id": "lottery-170million",
+    "title": "我中奖一亿七千万，反手把家人送",
+    "desc": "都市神豪文，主角中奖一亿七千万后，做出了一个让所有人震惊的决定。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "都市",
+      "神豪"
+    ],
+    "chapters": 1,
+    "cover": "💰",
+    "status": "completed"
+  },
+  {
+    "id": "luoshanji-zhuomo",
+    "title": "洛神纪：绝美鲛人求我当海神",
+    "desc": "都市玄幻文，主角意外成为鲛人之主，卷入海底世界的权力之争。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "都市",
+      "玄幻"
+    ],
+    "chapters": 1,
+    "cover": "🌊",
+    "status": "completed"
+  },
+  {
+    "id": "rule-horror-campus",
+    "title": "规则怪谈：开局牢大整顿校园",
+    "desc": "都市悬疑文，主角进入一个充满诡异规则的校园，必须遵守规则才能活下去。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "都市",
+      "悬疑"
+    ],
+    "chapters": 1,
+    "cover": "🏫",
+    "status": "completed"
+  },
+  {
+    "id": "sanjiaozhou-lie_sha",
+    "title": "三角洲：可曾听闻天榜猎杀",
+    "desc": "都市特种兵文，主角是三角洲部队退役，卷入一场跨国雇佣兵追杀。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "都市",
+      "特种兵"
+    ],
+    "chapters": 1,
+    "cover": "🎯",
+    "status": "completed"
+  },
+  {
+    "id": "shenhaoxitong",
+    "title": "神豪系统：我的家乡是贫困县",
+    "desc": "被裁员，口袋只剩800块，意外激活'贫困县振兴辅助系统'——钱必须花在本地才能滚雪球。",
+    "author": "AI（InkOS）",
+    "tags": [
+      "都市",
+      "神豪",
+      "系统"
+    ],
+    "chapters": 1,
+    "cover": "🏘️",
+    "status": "completed"
+  },
+  {
+    "id": "six-wing-angel",
+    "title": "异能：觉醒六翼天使，我氪金变强",
+    "desc": "都市异能文，主角觉醒六翼天使血脉，用氪金系统一路变强对抗黑暗势力。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "都市",
+      "异能"
+    ],
+    "chapters": 1,
+    "cover": "👼",
+    "status": "completed"
+  },
+  {
+    "id": "wanrenmidaxia",
+    "title": "身为万人迷大师兄的我只想下班",
+    "desc": "社畜穿书成完美大师兄，全年无休处理宗门大小事务。外在完美，内在疲惫的反差喜剧。",
+    "author": "AI（InkOS）",
+    "tags": [
+      "玄幻",
+      "脑洞"
+    ],
+    "chapters": 1,
+    "cover": "🗡️",
+    "status": "completed"
+  },
+  {
+    "id": "zhongjiang_yi_qi_qi",
+    "title": "中降：揭秘苗疆蛊术与茅山道术",
+    "desc": "都市玄学文，主角意外卷入一场降头术与茅山道术的对决。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "都市",
+      "玄学"
+    ],
+    "chapters": 1,
+    "cover": "🏮",
+    "status": "completed"
+  },
+  {
+    "id": "sanguo-qinqin",
+    "title": "三国：开局秦琼模板，曹营第一将",
+    "desc": "历史穿越文，主角穿越到三国时期，获得秦琼模板，在曹营中崛起。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "历史",
+      "三国"
+    ],
+    "chapters": 1,
+    "cover": "⚔️",
+    "status": "completed"
+  },
+  {
+    "id": "caogao-zhuanmi",
+    "title": "什么？！我的草稿纸成国家机密了",
+    "desc": "都市脑洞文，主角的草稿纸意外成为国家机密，卷入一场意想不到的风波。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "都市",
+      "脑洞"
+    ],
+    "chapters": 1,
+    "cover": "📜",
+    "status": "completed"
+  },
+  {
+    "id": "chengxi-pilman",
+    "title": "县城婆罗门，开局美妇求我办事",
+    "desc": "都市日常文，县城小人物的家长里短，美妇上门求助引发一连串故事。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "都市",
+      "日常"
+    ],
+    "chapters": 1,
+    "cover": "🏠",
+    "status": "completed"
+  },
+  {
+    "id": "mingyi-diaoyu",
+    "title": "名义：京都首调，由我打破棋局",
+    "desc": "都市政治文，主角在京都权力斗争中破局，成为新一代的话事人。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "都市",
+      "政治"
+    ],
+    "chapters": 1,
+    "cover": "🎭",
+    "status": "completed"
+  },
+  {
+    "id": "siheyuan-liuhai",
+    "title": "四合院，刘海中三叔二野副师转业",
+    "desc": "年代文，四合院里的恩怨情仇，退伍军人在院里开启新生活。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "年代",
+      "四合院"
+    ],
+    "chapters": 1,
+    "cover": "🏡",
+    "status": "completed"
+  },
+  {
+    "id": "dayi-kaisystem",
+    "title": "大一开学，系统每天送我一亿",
+    "desc": "都市神豪文，大一新生获得每日送一亿的系统，在大学校园里展开逆袭人生。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "都市",
+      "神豪"
+    ],
+    "chapters": 1,
+    "cover": "💎",
+    "status": "completed"
+  },
+  {
+    "id": "honghuang-jinlong",
+    "title": "洪荒：功德小金龙，你敢碰我？",
+    "desc": "洪荒流小说，主角穿越成功德小金龙，在洪荒世界中以功德证道。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "洪荒",
+      "玄幻"
+    ],
+    "chapters": 1,
+    "cover": "🐉",
+    "status": "completed"
+  },
+  {
+    "id": "chaos-prince",
+    "title": "玄幻：我，混沌神朝第一太子",
+    "desc": "穿越太子携帝王系统觉醒，步步为营夺回主动权，在夺嫡之争中杀出血路，最终成为天下之主！",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "东方仙侠",
+      "玄幻",
+      "穿越",
+      "系统"
+    ],
+    "chapters": 1,
+    "cover": "👑",
+    "status": "completed"
+  },
+  {
+    "id": "shenghua-weiji",
+    "title": "生化危机：开局加油站遇见里昂",
+    "desc": "生化危机同人，主角在浣熊市加油站遇见里昂，一起逃离末日之城。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "生化危机",
+      "同人"
+    ],
+    "chapters": 1,
+    "cover": "🧟",
+    "status": "completed"
+  },
+  {
+    "id": "peibai-guangchang",
+    "title": "陪白月光庆生？这婚不结你急什么",
+    "desc": "都市言情文，主角被迫陪白月光庆生，却意外卷入一场关于婚姻和真心的选择。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "都市",
+      "言情"
+    ],
+    "chapters": 1,
+    "cover": "💑",
+    "status": "completed"
+  },
+  {
+    "id": "tongwei-chief",
+    "title": "重生祁同伟，问鼎总警监",
+    "desc": "官场重生文，前世被权贵碾压的祁同伟重生回到大学时代，获得官场晋升系统，最终问鼎总警监。复仇打脸，步步高升！",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "男频衍生",
+      "官场",
+      "重生",
+      "系统"
+    ],
+    "chapters": 1,
+    "cover": "🎖️",
+    "status": "completed"
+  },
+  {
+    "id": "apocalypse-food",
+    "title": "末世：少女玉足踩出无限粮食",
+    "desc": "末世降临，少女顾锦瑟的玉足触碰土地，脚下就会神奇地生长出粮食作物。少女的玉足是最珍贵的'产粮神器'，粮食即生存，即权力。",
+    "author": "AI（MiniMax）",
+    "tags": [
+      "科幻末世",
+      "末世",
+      "粮食危机"
+    ],
+    "chapters": 1,
+    "cover": "🌾",
+    "status": "completed"
+  },
+  {
+    "id": "pokemon-mofeng",
+    "title": "宝可梦：开局一只魔王蜂",
+    "desc": "林逸穿越宝可梦世界，开局获得魔王蜂——大针蜂变异体，超毒+超速双属性，种族值560准神级别！",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "宝可梦",
+      "动漫衍生",
+      "蜂群流"
+    ],
+    "chapters": 1,
+    "cover": "🐝",
+    "status": "completed"
+  }
 ]
