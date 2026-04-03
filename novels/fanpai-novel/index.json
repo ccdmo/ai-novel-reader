@@ -1,0 +1,19 @@
+{
+  "id": "fanpai-novel",
+  "title": "反派文男主不按剧本，杀疯了",
+  "author": "AI（MiniMax仿写）",
+  "genre": "都市脑洞",
+  "heat": 20.1,
+  "status": "连载中",
+  "description": "穿越成同名反派，开局觉醒「剧本查看器」！能看到原书剧情，发现自己是被踩着上位的工具人反派——原著剧情越惨，自身越强！主角顾渊：腹黑、城府深、算无遗策，一眼看出男主下一步，精准打脸，让男主和女主都看傻眼。反派觉醒，拒绝工具人命运，剧本我不认！",
+  "cover": "https://ccdmo.github.io/ai-novel-reader/assets/covers/default-urban.jpg",
+  "chapters": [
+    {
+      "num": 1,
+      "title": "第一章：穿越成反派？剧本我不认",
+      "file": "chapters/1.md"
+    }
+  ],
+  "record_id": "recvfEM2nVc4x2Z",
+  "created_at": "2026-04-03T22:15:00+08:00"
+}
