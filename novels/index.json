@@ -269,5 +269,21 @@
     "chapters": 1,
     "cover": "天使",
     "status": "writing"
+  },
+  {
+    "id": "honkai-star-rail-mirror",
+    "title": "星穹模拟：开局成为镜流竹马",
+    "desc": "穿越崩坏星穹铁道，成为镜流竹马。星穹模拟器激活，预知未来命运，改写悲剧结局。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "动漫衍生",
+      "星穹铁道",
+      "系统"
+    ],
+    "chapters": 1,
+    "cover": "🚀",
+    "status": "writing",
+    "genre": "动漫衍生",
+    "book_id": "honkai-star-rail-mirror"
   }
 ]
