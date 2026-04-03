@@ -1,0 +1,22 @@
+{
+  "id": "wuxia-npc",
+  "title": "武侠：我献祭满城NPC化龙",
+  "genre": "传统武侠",
+  "author": "AI创作",
+  "heat": 18.7,
+  "record_id": "recvfEM2nVd9g6F",
+  "description": "林渊，青阳城最底层的散修，被全城NPC欺辱七年。濒死之际，献祭化龙系统觉醒！从今往后，青阳城3421个NPC，皆是他通往真龙的垫脚石。杀伐果断，不圣母，献祭流武侠爽文。",
+  "cover": "https://cdn.jsdelivr.net/gh/ccdmo/ai-novel-reader@main/covers/wuxia-npc.jpg",
+  "chapters": [
+    {
+      "id": 1,
+      "title": "第一章：枯井沉尸",
+      "path": "chapters/001.txt",
+      "words": 3800
+    }
+  ],
+  "status": "连载中",
+  "tags": ["传统武侠", "系统流", "献祭", "化龙", "爽文"],
+  "created_at": "2026-04-03T22:30:00+08:00",
+  "updated_at": "2026-04-03T22:30:00+08:00"
+}

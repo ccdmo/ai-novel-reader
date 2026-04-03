@@ -1,0 +1,20 @@
+{
+  "id": "zongwu-zuxian",
+  "title": "综武：请老祖赴死",
+  "author": "AI（MiniMax）",
+  "genre": "传统武侠",
+  "heat": 19.5,
+  "status": "连载中",
+  "desc": "穿越综武世界，绑定「请老祖赴死系统」。开局被退婚沦为笑柄的废物赘婿，实为没落镖局少主！说出「请老祖赴死」四字，随机满级技能降临——独孤九剑、北冥神功、嫁衣神功……老祖追杀是危机，也是机缘！综武群雄荟萃，金庸古龙群雄争锋！",
+  "cover": "https://ccdmo.github.io/ai-novel-reader/assets/covers/default-wuxia.jpg",
+  "tags": ["综武", "武侠", "系统", "满级", "打脸"],
+  "chapters": [
+    {
+      "num": 1,
+      "title": "第一章：退婚羞辱日，系统初现时",
+      "file": "chapters/1.md"
+    }
+  ],
+  "record_id": "recvfEM2nVc6gAI",
+  "created_at": "2026-04-03T22:20:00+08:00"
+}
