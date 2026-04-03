@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>身为万人迷大师兄的我只想下班 - AI 小说阅读器</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #f5f5f5; color: #333; }
+    a { color: #667eea; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .header-left { display: flex; align-items: center; gap: 1rem; }
+    .back-btn { background: rgba(255,255,255,0.2); color: white; padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.85rem; border: none; cursor: pointer; }
+    .back-btn:hover { background: rgba(255,255,255,0.3); text-decoration: none; }
+    .header h1 { font-size: 1.2rem; font-weight: 600; }
+    .main { display: flex; max-width: 1200px; margin: 0 auto; min-height: calc(100vh - 60px); }
+    .sidebar { width: 240px; background: white; border-right: 1px solid #eee; padding: 1rem 0; overflow-y: auto; position: sticky; top: 60px; height: calc(100vh - 60px); }
+    .sidebar-title { padding: 0.5rem 1rem; font-size: 0.75rem; color: #999; text-transform: uppercase; letter-spacing: 1px; }
+    .chapter-list { list-style: none; }
+    .chapter-item a { display: block; padding: 0.6rem 1rem; font-size: 0.9rem; color: #333; transition: background 0.15s; }
+    .chapter-item a:hover { background: #f5f5f5; text-decoration: none; }
+    .chapter-item.active a { background: #e8f0fe; color: #4285f4; border-left: 3px solid #4285f4; }
+    .content-area { flex: 1; padding: 2rem 3rem; background: white; max-width: 800px; }
+    .novel-title { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .novel-meta { font-size: 0.85rem; color: #999; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #eee; }
+    .chapter-title { font-size: 1.4rem; font-weight: 600; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid #667eea; display: inline-block; }
+    .chapter-content { font-size: 1.05rem; line-height: 1.9; color: #333; }
+    .chapter-content p { margin-bottom: 1.2rem; text-indent: 2em; }
+    .nav-btns { display: flex; justify-content: space-between; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee; }
+    .nav-btn { background: #667eea; color: white; padding: 0.6rem 1.2rem; border-radius: 6px; font-size: 0.9rem; border: none; cursor: pointer; }
+    .nav-btn:hover { background: #5568d3; }
+    .nav-btn:disabled { background: #ccc; cursor: not-allowed; }
+    .download-section { margin-top: 2rem; padding: 1rem; background: #f9f9f9; border-radius: 8px; }
+    .download-section h3 { font-size: 0.9rem; margin-bottom: 0.75rem; color: #666; }
+    .download-btns { display: flex; gap: 0.75rem; }
+    .download-btn { background: #34a853; color: white; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.85rem; border: none; cursor: pointer; }
+    .download-btn:hover { background: #2d8f4a; }
+    @media (max-width: 768px) {
+      .main { flex-direction: column; }
+      .sidebar { width: 100%; height: auto; position: relative; top: 0; border-right: none; border-bottom: 1px solid #eee; }
+      .content-area { padding: 1.5rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-left">
+      <a href="../../" class="back-btn">← 返回列表</a>
+      <h1>身为万人迷大师兄的我只想下班</h1>
+    </div>
+    <div style="font-size:0.85rem;opacity:0.8;">AI 创作 · 连载中</div>
+  </div>
+  <div class="main">
+    <aside class="sidebar">
+      <div class="sidebar-title">目录</div>
+      <ul class="chapter-list" id="chapterList">
+        <li class="chapter-item active"><a href="#ch1" onclick="loadChapter(1)">第1章：掌门是门技术活</a></li>
+      </ul>
+    </aside>
+    <main class="content-area">
+      <h1 class="chapter-title" id="chapterTitle">第1章：掌门是门技术活</h1>
+      <div class="chapter-content" id="chapterContent">
+        <p>加载中...</p>
+      </div>
+      <div class="nav-btns">
+        <button class="nav-btn" id="prevBtn" disabled>← 上一章</button>
+        <button class="nav-btn" id="nextBtn" disabled>下一章 →</button>
+      </div>
+      <div class="download-section">
+        <h3>📥 下载本书</h3>
+        <div class="download-btns">
+          <button class="download-btn" onclick="downloadTxt()">下载 TXT</button>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>
+    const CHAPTERS_URL = './chapters.json';
+    const CHAPTER_PREFIX = './chapter_';
+    let chapters = [];
+    let currentChapter = 1;
+
+    async function loadChapters() {
+      try {
+        const res = await fetch(CHAPTERS_URL);
+        chapters = await res.json();
+        renderSidebar();
+      } catch (e) {
+        console.error('Failed to load chapters.json', e);
+      }
+    }
+
+    function renderSidebar() {
+      const list = document.getElementById('chapterList');
+      list.innerHTML = chapters.map(ch => {
+        const isActive = ch.number === currentChapter;
+        return `<li class="chapter-item${isActive ? ' active' : ''}"><a href="#ch${ch.number}" onclick="loadChapter(${ch.number})">第${ch.number}章：${ch.title}</a></li>`;
+      }).join('');
+      updateNavButtons();
+    }
+
+    async function loadChapter(num) {
+      currentChapter = num;
+      try {
+        const res = await fetch(`${CHAPTER_PREFIX}${String(num).padStart(4, '0')}.json`);
+        const data = await res.json();
+        document.getElementById('chapterTitle').textContent = `第${num}章：${data.title}`;
+        document.getElementById('chapterContent').innerHTML = data.content.map(p => `<p>${p}</p>`).join('');
+        document.querySelectorAll('.chapter-item').forEach((el, i) => {
+          el.classList.toggle('active', chapters[i] && chapters[i].number === num);
+        });
+        updateNavButtons();
+        window.scrollTo(0, 0);
+      } catch (e) {
+        document.getElementById('chapterContent').innerHTML = '<p>加载失败，请重试。</p>';
+      }
+    }
+
+    function updateNavButtons() {
+      const prev = document.getElementById('prevBtn');
+      const next = document.getElementById('nextBtn');
+      prev.disabled = currentChapter <= 1;
+      next.disabled = currentChapter >= chapters.length;
+      prev.onclick = currentChapter > 1 ? () => loadChapter(currentChapter - 1) : null;
+      next.onclick = currentChapter < chapters.length ? () => loadChapter(currentChapter + 1) : null;
+    }
+
+    async function downloadTxt() {
+      let content = '身为万人迷大师兄的我只想下班\n\n';
+      for (let i = 0; i < chapters.length; i++) {
+        const num = String(chapters[i].number).padStart(4, '0');
+        try {
+          const res = await fetch(`${CHAPTER_PREFIX}${num}.json`);
+          const data = await res.json();
+          content += `第${chapters[i].number}章：${data.title}\n\n`;
+          content += data.content.join('\n\n') + '\n\n';
+        } catch (e) {}
+      }
+      content += '\n（全书完）\n';
+      const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = '身为万人迷大师兄的我只想下班.txt';
+      a.click();
+    }
+
+    loadChapters().then(() => loadChapter(1));
+  </script>
+</body>
+</html>
