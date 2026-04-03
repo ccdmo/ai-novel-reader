@@ -656,5 +656,20 @@
     "cover": "🎬",
     "status": "completed",
     "record_id": "recvfELVeaBYnq"
+  },
+  {
+    "id": "shuihu-xixue",
+    "title": "水浒：满门被屠？那就血洗梁山！",
+    "desc": "北宋宣和年间，祝家庄少庄主祝长风满门被梁山贼寇屠戮，自己亦惨死狱中。苍天垂怜，他重生回到悲剧之夜。带着前世记忆与满腔仇恨，复仇者誓要血债血偿——梁山一百单八将，一个都别想逃！",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "水浒",
+      "穿越",
+      "复仇",
+      "历史古代"
+    ],
+    "chapters": 1,
+    "cover": "⚔️",
+    "status": "completed"
   }
 ]
