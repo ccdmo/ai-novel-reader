@@ -409,5 +409,20 @@
     "chapters": 1,
     "cover": "💔",
     "status": "连载中"
+  },
+  {
+    "id": "dnf-fanli",
+    "title": "DNF：开局神级返利，碾压全服",
+    "desc": "工地事故后失业的小人物，意外获得神级返利系统——DNF氪金越多，返利越多。从城中村的出租屋开始，搅动整个DNF江湖！",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "游戏体育",
+      "DNF",
+      "系统",
+      "爽文"
+    ],
+    "chapters": 1,
+    "cover": "🎮",
+    "status": "completed"
   }
 ]
