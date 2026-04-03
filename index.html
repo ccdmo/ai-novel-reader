@@ -21,6 +21,8 @@
     .novel-meta { font-size: 0.75rem; color: #999; }
     .tag { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.7rem; background: #eee; color: #666; margin-right: 0.3rem; }
     .tag.ai { background: #e8f0fe; color: #4285f4; }
+    .tag.writing { background: #fff3e0; color: #e65100; }
+    .loading { text-align: center; padding: 3rem; color: #999; }
   </style>
 </head>
 <body>
@@ -29,46 +31,39 @@
     <p>发现、阅读、下载 AI 创作的精彩小说</p>
   </div>
   <div class="container">
-    <div class="novel-grid" id="novelGrid"></div>
+    <div class="novel-grid" id="novelGrid">
+      <div class="loading">加载中...</div>
+    </div>
   </div>
   <script>
-    const novels = [
-      {
-        id: 'demo-novel',
-        title: '星际迷途',
-        desc: '一艘迷失在宇宙深处的飞船，承载着人类最后的希望。船员们在面对未知文明时，将如何抉择？',
-        author: 'AI',
-        tags: ['科幻', '冒险'],
-        chapters: 3,
-        cover: '🚀'
-      },
-      {
-        id: 'demo-novel',
-        title: '时光当铺',
-        desc: '一家神秘的当铺，可以典当任何东西——除了记忆。一个少年踏入当铺，改变了自己的命运。',
-        author: 'AI',
-        tags: ['奇幻', '悬疑'],
-        chapters: 3,
-        cover: '⏳'
-      }
-    ];
-
-    const grid = document.getElementById('novelGrid');
-    novels.forEach(novel => {
-      grid.innerHTML += `
-        <div class="novel-card" onclick="location.href='/novels/${novel.id}/'">
-          <div class="novel-cover">${novel.cover}</div>
-          <div class="novel-info">
-            <div class="novel-title">${novel.title}</div>
-            <div class="novel-desc">${novel.desc}</div>
-            <div class="novel-meta">
-              ${novel.tags.map(t => `<span class="tag ai">${t}</span>`).join('')}
-              <span style="float:right">共 ${novel.chapters} 章</span>
+    async function loadNovels() {
+      try {
+        const res = await fetch('novels/index.json');
+        const novels = await res.json();
+        const grid = document.getElementById('novelGrid');
+        if (!novels || novels.length === 0) {
+          grid.innerHTML = '<div class="loading">暂无小说，稍后再来看看吧～</div>';
+          return;
+        }
+        grid.innerHTML = novels.map(novel => `
+          <div class="novel-card" onclick="location.href='/novels/${novel.id}/'">
+            <div class="novel-cover">${novel.cover || '📖'}</div>
+            <div class="novel-info">
+              <div class="novel-title">${novel.title}</div>
+              <div class="novel-desc">${novel.desc}</div>
+              <div class="novel-meta">
+                ${(novel.tags||[]).map(t => `<span class="tag ai">${t}</span>`).join('')}
+                ${novel.status === 'writing' ? '<span class="tag writing">写作中</span>' : ''}
+                <span style="float:right">共 ${novel.chapters} 章</span>
+              </div>
             </div>
           </div>
-        </div>
-      `;
-    });
+        `).join('');
+      } catch(e) {
+        document.getElementById('novelGrid').innerHTML = '<div class="loading">加载失败，请刷新重试</div>';
+      }
+    }
+    loadNovels();
   </script>
 </body>
 </html>

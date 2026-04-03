@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>神豪系统：我的家乡是贫困县</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #f5f5f5; color: #333; }
+    .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem 1rem; }
+    .header h1 { font-size: 1.5rem; font-weight: 700; }
+    .header .meta { font-size: 0.85rem; opacity: 0.85; margin-top: 0.3rem; }
+    .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+    .chapter-list { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .chapter { padding: 1rem 1.2rem; border-bottom: 1px solid #f0f0f0; cursor: pointer; transition: background 0.15s; }
+    .chapter:last-child { border-bottom: none; }
+    .chapter:hover { background: #f8f6ff; }
+    .chapter-num { color: #667eea; font-weight: 600; font-size: 0.85rem; }
+    .chapter-title { margin-top: 0.3rem; font-size: 1rem; }
+    .chapter-status { font-size: 0.75rem; color: #999; margin-top: 0.2rem; }
+    .writing-badge { display: inline-block; background: #fff3e0; color: #e65100; font-size: 0.7rem; padding: 0.15rem 0.5rem; border-radius: 10px; margin-left: 0.5rem; }
+    .back-btn { display: inline-block; margin-bottom: 1rem; color: #667eea; text-decoration: none; font-size: 0.9rem; }
+    .back-btn:hover { text-decoration: underline; }
+    .chapter-content { background: white; border-radius: 12px; padding: 2rem; margin-top: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); line-height: 1.8; font-size: 1rem; }
+    .chapter-nav { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #eee; display: flex; justify-content: space-between; }
+    .chapter-nav a { color: #667eea; text-decoration: none; font-size: 0.9rem; }
+    .chapter-nav a:hover { text-decoration: underline; }
+    .loading { text-align: center; padding: 3rem; color: #999; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <a href="../" class="back-btn">← 返回书库</a>
+      <h1>🏘️ 神豪系统：我的家乡是贫困县</h1>
+      <div class="meta">AI（InkOS） | 都市·神豪·系统·种田 | 连载中 <span class="writing-badge">写作中</span></div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="content">
+      <div class="chapter-list" id="chapterList"></div>
+    </div>
+  </div>
+  <script>
+    const BOOK_ID = new URLSearchParams(location.search).get('book') || '神豪系统-我的家乡是贫困县';
+    const CHAPTER_FILE = new URLSearchParams(location.search).get('chapter');
+
+    async function loadChapters() {
+      try {
+        const res = await fetch(`../${BOOK_ID}/chapters.json`);
+        const chapters = await res.json();
+        const list = document.getElementById('chapterList');
+        list.innerHTML = chapters.map((ch, i) => `
+          <div class="chapter" onclick="loadChapter('${BOOK_ID}', ${i})">
+            <div class="chapter-num">第${ch.num}章</div>
+            <div class="chapter-title">${ch.title}</div>
+            ${ch.status === 'writing' ? '<div class="chapter-status">⏳ 写作中...</div>' : ''}
+          </div>
+        `).join('');
+      } catch(e) {
+        document.getElementById('chapterList').innerHTML = '<div class="loading">章节加载中...</div>';
+      }
+    }
+
+    async function loadChapter(bookId, idx) {
+      try {
+        const res = await fetch(`../${bookId}/chapter_${String(idx+1).padStart(4,'0')}.json`);
+        const ch = await res.json();
+        document.getElementById('content').innerHTML = `
+          <a href="?book=${bookId}" class="back-btn">← 返回目录</a>
+          <div class="chapter-content">
+            <h2 style="margin-bottom:1.5rem">第${ch.num}章 · ${ch.title}</h2>
+            <div style="white-space:pre-wrap">${ch.content}</div>
+          </div>
+          <div class="chapter-nav">
+            ${idx > 0 ? `<a href="?book=${bookId}&chapter=${idx-1}">← 上一章</a>` : '<span></span>'}
+            ${idx < 99 ? `<a href="?book=${bookId}&chapter=${idx+1}">下一章 →</a>` : '<span></span>'}
+          </div>
+        `;
+      } catch(e) {
+        document.getElementById('content').innerHTML = '<div class="loading">章节内容加载中...</div>';
+      }
+    }
+
+    if (CHAPTER_FILE !== null) {
+      loadChapter(BOOK_ID, parseInt(CHAPTER_FILE));
+    } else {
+      loadChapters();
+    }
+  </script>
+</body>
+</html>
