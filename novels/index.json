@@ -1,5 +1,11 @@
 [
   {
+    "title": "我中奖一亿七千万，反手把家人送",
+    "genre": "都市种田",
+    "book_id": "zhongjiang_yi_qi_qi",
+    "chapters": 1
+  },
+  {
     "id": "shenhaoxitong",
     "title": "神豪系统：我的家乡是贫困县",
     "desc": "被裁员，口袋只剩800块，意外激活'贫困县振兴辅助系统'——钱必须花在本地才能滚雪球。",
@@ -196,6 +202,19 @@
     ],
     "chapters": 1,
     "cover": "📖",
+    "status": "writing"
+  },
+  {
+    "id": "juedingzisha",
+    "title": "决定自杀后，她们哭着找上门",
+    "desc": "都市脑洞，主角决定自杀后，前女友们纷纷哭着来求复合，极致反转爽文。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "都市",
+      "脑洞"
+    ],
+    "chapters": 1,
+    "cover": "💔",
     "status": "writing"
   }
 ]

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我中奖一亿七千万，反手把家人送 - AI 小说阅读器</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #f5f5f5; color: #333; }
+    a { color: #667eea; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .header-left { display: flex; align-items: center; gap: 1rem; }
+    .back-btn { background: rgba(255,255,255,0.2); color: white; padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.85rem; border: none; cursor: pointer; }
+    .back-btn:hover { background: rgba(255,255,255,0.3); text-decoration: none; }
+    .header h1 { font-size: 1.2rem; font-weight: 600; }
+    .main { display: flex; max-width: 1200px; margin: 0 auto; min-height: calc(100vh - 60px); }
+    .sidebar { width: 240px; background: white; border-right: 1px solid #eee; padding: 1rem 0; overflow-y: auto; position: sticky; top: 60px; height: calc(100vh - 60px); }
+    .sidebar-title { padding: 0.5rem 1rem; font-size: 0.75rem; color: #999; text-transform: uppercase; letter-spacing: 1px; }
+    .chapter-list { list-style: none; }
+    .chapter-item a { display: block; padding: 0.6rem 1rem; font-size: 0.9rem; color: #333; transition: background 0.15s; }
+    .chapter-item a:hover { background: #f5f5f5; text-decoration: none; }
+    .chapter-item.active a { background: #e8f0fe; color: #4285f4; border-left: 3px solid #4285f4; }
+    .content-area { flex: 1; padding: 2rem 3rem; background: white; max-width: 800px; }
+    .novel-title { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .novel-meta { font-size: 0.85rem; color: #999; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #eee; }
+    .chapter-title { font-size: 1.4rem; font-weight: 600; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid #667eea; display: inline-block; }
+    .chapter-content { font-size: 1.05rem; line-height: 1.9; color: #333; }
+    .chapter-content p { margin-bottom: 1.2rem; text-indent: 2em; }
+    .nav-btns { display: flex; justify-content: space-between; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee; }
+    .nav-btn { background: #667eea; color: white; padding: 0.6rem 1.2rem; border-radius: 6px; font-size: 0.9rem; border: none; cursor: pointer; }
+    .nav-btn:hover { background: #5a71d4; text-decoration: none; }
+    .nav-btn.disabled { background: #ccc; cursor: not-allowed; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-left">
+      <button class="back-btn" onclick="location.href='../'">← 返回书库</button>
+      <h1 id="novelTitle">📖 加载中...</h1>
+    </div>
+  </div>
+  <div class="main">
+    <div class="sidebar">
+      <div class="sidebar-title">目录</div>
+      <ul class="chapter-list" id="chapterList"></ul>
+    </div>
+    <div class="content-area">
+      <div class="novel-title" id="novelTitle2">我中奖一亿七千万，反手把家人送</div>
+      <div class="novel-meta" id="novelMeta">都市种田 · AI 仿写版</div>
+      <div id="chapterContent">
+        <div style="text-align:center;padding:3rem;color:#999;">章节加载中...</div>
+      </div>
+      <div class="nav-btns">
+        <button class="nav-btn disabled" id="prevBtn" onclick="prevChapter()">← 上一章</button>
+        <button class="nav-btn" id="nextBtn" onclick="nextChapter()">下一章 →</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const BOOK_ID = 'zhongjiang_yi_qi_qi';
+    const BOOK_TITLE = '我中奖一亿七千万，反手把家人送';
+    let chapters = [];
+    let currentChapter = 0;
+
+    async function loadChapters() {
+      try {
+        const res = await fetch(`./chapters.json`);
+        chapters = await res.json();
+        renderChapterList();
+        const params = new URLSearchParams(location.search);
+        const chapterIdx = parseInt(params.get('chapter')) || 0;
+        loadChapter(chapterIdx);
+      } catch(e) {
+        document.getElementById('chapterContent').innerHTML = '<div style="text-align:center;padding:3rem;color:#f66;">章节加载失败，请刷新重试</div>';
+      }
+    }
+
+    function renderChapterList() {
+      const list = document.getElementById('chapterList');
+      list.innerHTML = chapters.map((ch, i) => {
+        const status = ch.status === 'done' ? '' : '🔒';
+        return `<li class="chapter-item${i === currentChapter ? ' active' : ''}"><a href="?chapter=${i}">${status} 第${ch.num}章 ${ch.title}</a></li>`;
+      }).join('');
+    }
+
+    async function loadChapter(idx) {
+      if (!chapters[idx]) return;
+      currentChapter = idx;
+      document.querySelectorAll('.chapter-item').forEach((el, i) => {
+        el.classList.toggle('active', i === idx);
+      });
+      const ch = chapters[idx];
+      document.title = `${ch.title} - ${BOOK_TITLE}`;
+      document.getElementById('chapterContent').innerHTML = `
+        <div class="chapter-title">第${ch.num}章 ${ch.title}</div>
+        <div class="chapter-content" id="chapterText"></div>
+      `;
+      if (ch.status === 'done') {
+        try {
+          const res = await fetch(`./chapter_${String(ch.num).padStart(4,'0')}.json`);
+          const data = await res.json();
+          const paragraphs = data.content.split('\n').filter(p => p.trim());
+          document.getElementById('chapterText').innerHTML = paragraphs.map(p => `<p>${p}</p>`).join('');
+        } catch(e) {
+          document.getElementById('chapterText').innerHTML = '<p style="color:#f66;">内容加载失败</p>';
+        }
+      } else {
+        document.getElementById('chapterText').innerHTML = '<p style="color:#999;text-align:center;">⏳ 此章节正在生成中，请稍后再来...</p>';
+      }
+      document.getElementById('prevBtn').classList.toggle('disabled', idx === 0);
+      document.getElementById('nextBtn').classList.toggle('disabled', idx === chapters.length - 1);
+      history.replaceState(null, '', `?chapter=${idx}`);
+    }
+
+    function prevChapter() {
+      if (currentChapter > 0) loadChapter(currentChapter - 1);
+    }
+    function nextChapter() {
+      if (currentChapter < chapters.length - 1) loadChapter(currentChapter + 1);
+    }
+    loadChapters();
+  </script>
+</body>
+</html>
