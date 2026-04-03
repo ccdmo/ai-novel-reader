@@ -144,6 +144,15 @@
     "status": "completed"
   },
   {
+    "id": "dao-qiang",
+    "title": "玄幻：我靠倒反天罡成最强暴君",
+    "author": "AI（MiniMax仿写）",
+    "genre": "传统玄幻",
+    "heat": 20.0,
+    "status": "连载中",
+    "chapters": 1
+  },
+  {
     "id": "kaijug_shisigjing",
     "title": "开局十六境，骊珠洞天任我行",
     "desc": "玄幻修仙文，主角开局获得十六境修为，在骊珠洞天中肆意闯荡。",
@@ -747,5 +756,24 @@
     "chapters": 1,
     "cover": "🍶",
     "record_id": "recvfEM2nVbgQ1y"
+  },
+  {
+    "id": "xianqi-jiandao",
+    "title": "玄幻：我只想安安静静签到",
+    "desc": "外门废物苏离被师兄陷害偷盗灵药，绝望之际签到系统突然降临！混沌灵根觉醒，修为从炼气三层直接跃升至炼气九层。躺平流爽文，扮猪吃虎，每日签到低调变强。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "东方仙侠",
+      "玄幻",
+      "系统",
+      "签到流",
+      "爽文"
+    ],
+    "chapters": 1,
+    "cover": "📿",
+    "status": "completed",
+    "genre": "东方仙侠",
+    "heat": 19.8,
+    "record_id": "recvfEM2nVcrq9g"
   }
 ]
