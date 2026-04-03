@@ -294,5 +294,21 @@
     "status": "writing",
     "genre": "动漫衍生",
     "book_id": "honkai-star-rail-mirror"
+  },
+  {
+    "id": "history-immortal",
+    "title": "历史赋我长生，我终苟成万朝元老",
+    "desc": "穿越获得长生能力，历经秦末至明清，活成活着的历史。历史赋命系统激活，每朝终结转世重生，保留记忆与天赋。",
+    "author": "AI（InkOS仿写）",
+    "tags": [
+      "历史脑洞",
+      "穿越",
+      "系统流"
+    ],
+    "chapters": 1,
+    "cover": "📜",
+    "status": "writing",
+    "genre": "历史脑洞",
+    "record_id": "recvfEM2nUQmBn"
   }
 ]
