@@ -216,5 +216,30 @@
     "chapters": 1,
     "cover": "💔",
     "status": "writing"
+  },
+  {
+    "id": "luoshanji-zhuomo",
+    "title": "洛杉矶驱魔：烧点纸钱就好了",
+    "desc": "主角在洛杉矶当驱魔师，用中国传统纸钱和符咒解决西方恶魔问题，极致文化反差",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "悬疑脑洞"
+    ],
+    "chapters": 1,
+    "cover": "📖",
+    "status": "writing"
+  },
+  {
+    "id": "kaijug_shisigjing",
+    "title": "开局十六境，骊珠洞天任我行",
+    "desc": "穿越到骊珠洞天，获得十六境修为，在修仙世界横着走。雪中悍刀行/剑来同人。",
+    "author": "AI（MiniMax仿写）",
+    "tags": [
+      "男频衍生",
+      "东方仙侠"
+    ],
+    "chapters": 1,
+    "cover": "🗡️",
+    "status": "writing"
   }
 ]
