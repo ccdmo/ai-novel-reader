@@ -26,9 +26,11 @@
     .novel-title { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; color: #333; }
     .novel-desc { font-size: 0.85rem; color: #888; line-height: 1.5; margin-bottom: 0.75rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     .novel-meta { font-size: 0.75rem; color: #aaa; display: flex; justify-content: space-between; align-items: center; }
-    .tag { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 20px; font-size: 0.7rem; background: #e8f0fe; color: #4285f4; }
+    .tag { display: inline-block; padding: 0.25rem 0.6rem; border-radius: 20px; font-size: 0.7rem; background: #e8f0fe; color: #4285f4; margin-right: 0.3rem; }
     .tag.writing { background: #fff3e0; color: #e65100; }
     .tag.drama { background: #f3e5f5; color: #7b1fa2; }
+    .tag.genre { background: #e8eaf6; color: #3f51b5; }
+    .novel-tags { margin-bottom: 0.5rem; min-height: 1.2rem; display: flex; flex-wrap: wrap; gap: 0.2rem; }
     .loading { text-align: center; padding: 3rem; color: #999; }
     
     /* Drama Factory */
@@ -200,13 +202,15 @@
           const doneCount = (novel.chapters || []).filter(c => c.status === 'done').length;
           const totalCount = doneCount > 0 ? doneCount : (novel.chapters || []).length;
           const statusLabel = novel.status === 'writing' ? '<span class="tag writing">写作中</span>' : '';
+          const genreTag = novel.genre ? `<span class="tag genre">${novel.genre}</span>` : '';
+          const tagsHtml = [statusLabel, genreTag].filter(t => t).join('');
           return `<div class="novel-card" onclick="location.href='novels/${novel.id}/'">
   <div class="novel-cover">${novel.cover || '📖'}</div>
   <div class="novel-info">
     <div class="novel-title">${novel.title}</div>
+    <div class="novel-tags">${tagsHtml}</div>
     <div class="novel-desc">${novel.desc}</div>
     <div class="novel-meta">
-      ${statusLabel}
       <span>${totalCount > 0 ? '共 ' + totalCount + ' 章' : '待生成'}</span>
     </div>
   </div>
