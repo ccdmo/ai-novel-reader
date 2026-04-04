@@ -54,7 +54,7 @@
               <div class="novel-meta">
                 ${(novel.tags||[]).map(t => `<span class="tag ai">${t}</span>`).join('')}
                 ${novel.status === 'writing' ? '<span class="tag writing">写作中</span>' : ''}
-                <span style="float:right">共 ${novel.chapters} 章</span>
+                <span style="float:right">共 ${Array.isArray(novel.chapters) ? novel.chapters.length : novel.chapters} 章</span>
               </div>
             </div>
           </div>

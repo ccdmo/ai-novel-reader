@@ -1,1 +1,165 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>反派：开局先刀主角</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:#f5f5f5}#app{max-width:800px;margin:2rem auto;padding:0 1rem}a{color:#667eea}</style></head><body><div id="app"></div><script>var C=[{"num":1,"title":"反派：开局先刀主角","status":"done","words":2872}];function r(i){var x=new XMLHttpRequest();x.open('GET','chapter_0001.json');x.onload=function(){var d=JSON.parse(x.responseText);document.getElementById('app').innerHTML='<pre style="white-space:pre-wrap;line-height:1.8">'+d.content+'</pre><p><a href="?">← 返回目录</a></p>'};x.send()}var p=new URLSearchParams(location.search);if(p.get('c')!==null){r()}else{document.getElementById('app').innerHTML=C.map(function(c,i){return'<div style="padding:1rem;border-bottom:1px solid #eee;cursor:pointer" onclick="r()"><b>第'+c.num+'章</b> - '+c.title+'</div>'}).join('')}<\/script></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>fanpai-xian - AI 小说阅读器</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;color:#333}
+a{color:#667eea;text-decoration:none}
+a:hover{text-decoration:underline}
+.header{background:linear-gradient(135deg,#667eea,#764ba2);color:white;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between}
+.header-left{display:flex;align-items:center;gap:1rem}
+.back-btn{background:rgba(255,255,255,0.2);color:white;padding:0.4rem 0.8rem;border-radius:6px;font-size:0.85rem;border:none;cursor:pointer}
+.back-btn:hover{background:rgba(255,255,255,0.3);text-decoration:none}
+.header h1{font-size:1.2rem;font-weight:600}
+.main{display:flex;max-width:1200px;margin:0 auto;min-height:calc(100vh - 60px)}
+.sidebar{width:240px;background:white;border-right:1px solid #eee;padding:1rem 0;overflow-y:auto;position:sticky;top:60px;height:calc(100vh - 60px)}
+.sidebar-title{padding:0.5rem 1rem;font-size:0.75rem;color:#999;text-transform:uppercase;letter-spacing:1px}
+.chapter-list{list-style:none}
+.chapter-item a{display:block;padding:0.6rem 1rem;font-size:0.9rem;color:#333;transition:background 0.15s}
+.chapter-item a:hover{background:#f5f5f5;text-decoration:none}
+.chapter-item.active a{background:#e8f0fe;color:#4285f4;border-left:3px solid #4285f4}
+.content-area{flex:1;padding:2rem 3rem;background:white;max-width:800px}
+.novel-title{font-size:1.8rem;font-weight:700;margin-bottom:0.5rem}
+.novel-meta{font-size:0.85rem;color:#999;margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid #eee}
+.chapter-title{font-size:1.4rem;font-weight:600;margin-bottom:1.5rem;padding-bottom:0.5rem;border-bottom:2px solid #667eea;display:inline-block}
+.chapter-content{font-size:1.05rem;line-height:1.9;color:#333}
+.chapter-content p{margin-bottom:1.2rem;text-indent:2em}
+.chapter-content h2{font-size:1.3rem;margin:1.5rem 0 1rem;border-bottom:1px solid #eee;padding-bottom:0.5rem}
+.chapter-content h3{font-size:1.1rem;margin:1.2rem 0 0.8rem}
+.nav-btns{display:flex;justify-content:space-between;margin-top:3rem;padding-top:2rem;border-top:1px solid #eee}
+.nav-btn{background:#667eea;color:white;padding:0.6rem 1.2rem;border-radius:6px;font-size:0.9rem;border:none;cursor:pointer}
+.nav-btn:hover{background:#5568d3}
+.nav-btn:disabled{background:#ccc;cursor:not-allowed}
+@media(max-width:768px){
+  .main{flex-direction:column}
+  .sidebar{width:100%;height:auto;position:relative;top:0;border-right:none;border-bottom:1px solid #eee}
+  .content-area{padding:1.5rem 1rem}
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="header-left">
+    <a href="../../" class="back-btn">← 返回列表</a>
+    <h1>fanpai-xian</h1>
+  </div>
+  <div style="font-size:0.85rem;opacity:0.8;">AI 创作</div>
+</div>
+<div class="main">
+  <aside class="sidebar">
+    <div class="sidebar-title">目录</div>
+    <ul class="chapter-list" id="chapterList"></ul>
+  </aside>
+  <main class="content-area" id="contentArea">
+    <div style="padding:2rem;text-align:center;color:#999">加载中...</div>
+  </main>
+</div>
+<script>
+var CHAPTERS = [{"num": 1, "title": "反派：开局先刀主角", "status": "done", "words": 2872, "file": "chapter_0001.json"}];
+var BOOK_ID = "fanpai-xian";
+
+function getChapterFile(idx) {
+  var ch = CHAPTERS[idx];
+  if (ch.file) return ch.file;
+  return 'chapter_' + String(idx+1).padStart(4,'0') + '.json';
+}
+
+function parseContent(content) {
+  if (!content) return '<p style="color:#999;text-align:center">暂无内容</p>';
+  content = content.trim();
+  var html = '';
+  var lines = content.split('\n');
+  var inParagraph = false;
+  var paragraphBuffer = [];
+
+  function flushParagraph() {
+    if (paragraphBuffer.length > 0) {
+      html += '<p>' + paragraphBuffer.join('') + '</p>';
+      paragraphBuffer = [];
+    }
+    inParagraph = false;
+  }
+
+  for (var i = 0; i < lines.length; i++) {
+    var line = lines[i].trim();
+    if (!line) {
+      flushParagraph();
+      continue;
+    }
+    if (line.startsWith('## ')) {
+      flushParagraph();
+      html += '<h2>' + line.substring(3) + '</h2>';
+    } else if (line.startsWith('# ')) {
+      flushParagraph();
+      html += '<h2>' + line.substring(2) + '</h2>';
+    } else if (line.startsWith('【') && line.endsWith('】')) {
+      flushParagraph();
+      html += '<p style="color:#667eea;font-weight:500">' + line + '</p>';
+    } else {
+      inParagraph = true;
+      paragraphBuffer.push(line);
+    }
+  }
+  flushParagraph();
+  return html;
+}
+
+function renderChapterList() {
+  var html = CHAPTERS.map(function(ch, i) {
+    var title = ch.title || '第' + (ch.num || ch.number || i+1) + '章';
+    var wordCount = ch.words || ch.wordCount || 0;
+    return '<li class="chapter-item"><a href="?c=' + i + '">' + title + '</a></li>';
+  }).join('');
+  document.getElementById('chapterList').innerHTML = html;
+}
+
+function renderChapter(idx) {
+  var ch = CHAPTERS[idx];
+  var title = ch.title || '第' + (ch.num || ch.number || idx+1) + '章';
+
+  document.querySelectorAll('.chapter-item').forEach(function(el, i) {
+    el.classList.toggle('active', i === idx);
+  });
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', getChapterFile(idx), true);
+  xhr.onload = function() {
+    try {
+      var data = JSON.parse(xhr.responseText);
+      var content = parseContent(data.content);
+      var prev = idx > 0 ? '<button class="nav-btn" onclick="renderChapter(' + (idx-1) + ')">← 上一章</button>' : '<button class="nav-btn" disabled>← 上一章</button>';
+      var next = idx < CHAPTERS.length - 1 ? '<button class="nav-btn" onclick="renderChapter(' + (idx+1) + ')">下一章 →</button>' : '<button class="nav-btn" disabled>下一章 →</button>';
+      document.getElementById('contentArea').innerHTML =
+        '<h1 class="chapter-title">' + title + '</h1>' +
+        '<div class="chapter-content">' + content + '</div>' +
+        '<div class="nav-btns">' + prev + next + '</div>';
+    } catch(e) {
+      document.getElementById('contentArea').innerHTML = '<div style="color:red;padding:2rem">加载失败: ' + e.message + '</div>';
+    }
+    window.scrollTo(0, 0);
+  };
+  xhr.onerror = function() {
+    document.getElementById('contentArea').innerHTML = '<div style="color:#999;padding:2rem">章节文件不存在</div>';
+  };
+  xhr.send();
+}
+
+var params = new URLSearchParams(location.search);
+var c = params.get("c");
+renderChapterList();
+if (c !== null) {
+  var idx = parseInt(c);
+  if (idx >= 0 && idx < CHAPTERS.length) {
+    renderChapter(idx);
+  } else {
+    renderChapter(0);
+  }
+} else {
+  renderChapter(0);
+}
+</script>
+</body>
+</html>

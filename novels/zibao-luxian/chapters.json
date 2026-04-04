@@ -1,1 +1,9 @@
-[{"num": 1, "title": "# 第一章 铁流", "status": "done", "words": 2161}]
+[
+  {
+    "num": 1,
+    "title": "第一章 铁流",
+    "status": "done",
+    "words": 2161,
+    "file": "chapter_0001.json"
+  }
+]

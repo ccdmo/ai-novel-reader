@@ -1,1 +1,9 @@
-[{"num":1,"title":"穷山恶水","status":"done","words":2800}]
+[
+  {
+    "num": 1,
+    "title": "穷山恶水",
+    "status": "done",
+    "words": 322,
+    "file": "chapter_0001.json"
+  }
+]

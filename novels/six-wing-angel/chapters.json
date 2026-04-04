@@ -1,3 +1,9 @@
 [
-  {"num": 1, "title": "废物与背叛", "status": "done", "words": 3700}
+  {
+    "num": 1,
+    "title": "废物与背叛",
+    "status": "done",
+    "words": 3700,
+    "file": "chapter_0001.json"
+  }
 ]

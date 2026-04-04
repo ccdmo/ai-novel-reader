@@ -1,1 +1,9 @@
-[{"num": 1, "title": "# 第一章：一张草稿纸引发的血案", "status": "done", "words": 3882}]
+[
+  {
+    "num": 1,
+    "title": "第一章：一张草稿纸引发的血案",
+    "status": "done",
+    "words": 3882,
+    "file": "chapter_0001.json"
+  }
+]

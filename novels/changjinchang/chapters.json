@@ -1,1 +1,16 @@
-[{"num":1,"title":"尊严碎了一地","status":"done","words":3200}]
+[
+  {
+    "num": 1,
+    "title": "尊严碎了一地",
+    "status": "done",
+    "words": 3200,
+    "file": "chapter_0001.json"
+  },
+  {
+    "num": 1,
+    "title": "尊严碎了一地",
+    "status": "done",
+    "words": 0,
+    "file": "chapter_0001_content.json"
+  }
+]

@@ -1,3 +1,9 @@
 [
-  {"id": "chapter_0001", "title": "第一章：十六境降世", "words": 2686}
+  {
+    "num": 1,
+    "title": "第一章：十六境降世",
+    "status": "done",
+    "words": 2167,
+    "file": "chapter_0001.json"
+  }
 ]

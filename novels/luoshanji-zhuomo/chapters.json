@@ -1,1 +1,9 @@
-[{"num":1,"title":"香烛铺开张第一天","status":"done","words":3079}]
+[
+  {
+    "num": 1,
+    "title": "香烛铺开张第一天",
+    "status": "done",
+    "words": 3079,
+    "file": "chapter_0001.json"
+  }
+]

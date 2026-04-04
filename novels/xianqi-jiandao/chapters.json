@@ -1,1 +1,9 @@
-[{"num": 1, "title": "青玄宗，外门。", "status": "done", "words": 3887}]
+[
+  {
+    "num": 1,
+    "title": "青玄宗，外门。",
+    "status": "done",
+    "words": 3887,
+    "file": "chapter_0001.json"
+  }
+]

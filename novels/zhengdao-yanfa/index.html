@@ -1,479 +1,165 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>玄幻：你们用词改，我直接证道 - AI 小说阅读器</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #f5f5f5; color: #333; }
-    a { color: #667eea; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
-    .header-left { display: flex; align-items: center; gap: 1rem; }
-    .back-btn { background: rgba(255,255,255,0.2); color: white; padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.85rem; border: none; cursor: pointer; }
-    .back-btn:hover { background: rgba(255,255,255,0.3); text-decoration: none; }
-    .header h1 { font-size: 1.2rem; font-weight: 600; }
-    .main { display: flex; max-width: 1200px; margin: 0 auto; min-height: calc(100vh - 60px); }
-    .sidebar { width: 240px; background: white; border-right: 1px solid #eee; padding: 1rem 0; overflow-y: auto; position: sticky; top: 60px; height: calc(100vh - 60px); }
-    .sidebar-title { padding: 0.5rem 1rem; font-size: 0.75rem; color: #999; text-transform: uppercase; letter-spacing: 1px; }
-    .chapter-list { list-style: none; }
-    .chapter-item a { display: block; padding: 0.6rem 1rem; font-size: 0.9rem; color: #333; transition: background 0.15s; }
-    .chapter-item a:hover { background: #f5f5f5; text-decoration: none; }
-    .chapter-item.active a { background: #e8f0fe; color: #4285f4; border-left: 3px solid #4285f4; }
-    .content-area { flex: 1; padding: 2rem 3rem; background: white; max-width: 800px; }
-    .novel-title { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .novel-meta { font-size: 0.85rem; color: #999; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid #eee; }
-    .chapter-title { font-size: 1.4rem; font-weight: 600; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid #667eea; display: inline-block; }
-    .chapter-content { font-size: 1.05rem; line-height: 1.9; color: #333; }
-    .chapter-content p { margin-bottom: 1.2rem; text-indent: 2em; }
-    .nav-btns { display: flex; justify-content: space-between; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee; }
-    .nav-btn { background: #667eea; color: white; padding: 0.6rem 1.2rem; border-radius: 6px; font-size: 0.9rem; border: none; cursor: pointer; }
-    .nav-btn:hover { background: #5568d3; }
-    .nav-btn:disabled { background: #ccc; cursor: not-allowed; }
-    .download-section { margin-top: 2rem; padding: 1rem; background: #f9f9f9; border-radius: 8px; }
-    .download-section h3 { font-size: 0.9rem; margin-bottom: 0.75rem; color: #666; }
-    .download-btns { display: flex; gap: 0.75rem; }
-    .download-btn { background: #34a853; color: white; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.85rem; border: none; cursor: pointer; }
-    .download-btn:hover { background: #2d8f4a; }
-    @media (max-width: 768px) {
-      .main { flex-direction: column; }
-      .sidebar { width: 100%; height: auto; position: relative; top: 0; border-right: none; border-bottom: 1px solid #eee; }
-      .content-area { padding: 1.5rem 1rem; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>玄幻：你们用词改，我直接证道 - AI 小说阅读器</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;color:#333}
+a{color:#667eea;text-decoration:none}
+a:hover{text-decoration:underline}
+.header{background:linear-gradient(135deg,#667eea,#764ba2);color:white;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between}
+.header-left{display:flex;align-items:center;gap:1rem}
+.back-btn{background:rgba(255,255,255,0.2);color:white;padding:0.4rem 0.8rem;border-radius:6px;font-size:0.85rem;border:none;cursor:pointer}
+.back-btn:hover{background:rgba(255,255,255,0.3);text-decoration:none}
+.header h1{font-size:1.2rem;font-weight:600}
+.main{display:flex;max-width:1200px;margin:0 auto;min-height:calc(100vh - 60px)}
+.sidebar{width:240px;background:white;border-right:1px solid #eee;padding:1rem 0;overflow-y:auto;position:sticky;top:60px;height:calc(100vh - 60px)}
+.sidebar-title{padding:0.5rem 1rem;font-size:0.75rem;color:#999;text-transform:uppercase;letter-spacing:1px}
+.chapter-list{list-style:none}
+.chapter-item a{display:block;padding:0.6rem 1rem;font-size:0.9rem;color:#333;transition:background 0.15s}
+.chapter-item a:hover{background:#f5f5f5;text-decoration:none}
+.chapter-item.active a{background:#e8f0fe;color:#4285f4;border-left:3px solid #4285f4}
+.content-area{flex:1;padding:2rem 3rem;background:white;max-width:800px}
+.novel-title{font-size:1.8rem;font-weight:700;margin-bottom:0.5rem}
+.novel-meta{font-size:0.85rem;color:#999;margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid #eee}
+.chapter-title{font-size:1.4rem;font-weight:600;margin-bottom:1.5rem;padding-bottom:0.5rem;border-bottom:2px solid #667eea;display:inline-block}
+.chapter-content{font-size:1.05rem;line-height:1.9;color:#333}
+.chapter-content p{margin-bottom:1.2rem;text-indent:2em}
+.chapter-content h2{font-size:1.3rem;margin:1.5rem 0 1rem;border-bottom:1px solid #eee;padding-bottom:0.5rem}
+.chapter-content h3{font-size:1.1rem;margin:1.2rem 0 0.8rem}
+.nav-btns{display:flex;justify-content:space-between;margin-top:3rem;padding-top:2rem;border-top:1px solid #eee}
+.nav-btn{background:#667eea;color:white;padding:0.6rem 1.2rem;border-radius:6px;font-size:0.9rem;border:none;cursor:pointer}
+.nav-btn:hover{background:#5568d3}
+.nav-btn:disabled{background:#ccc;cursor:not-allowed}
+@media(max-width:768px){
+  .main{flex-direction:column}
+  .sidebar{width:100%;height:auto;position:relative;top:0;border-right:none;border-bottom:1px solid #eee}
+  .content-area{padding:1.5rem 1rem}
+}
+</style>
 </head>
 <body>
-  <div class="header">
-    <div class="header-left">
-      <a href="../../" class="back-btn">← 返回列表</a>
-      <h1>玄幻：你们用词改，我直接证道</h1>
-    </div>
-    <div style="font-size:0.85rem;opacity:0.8;">东方仙侠 · AI 创作</div>
+<div class="header">
+  <div class="header-left">
+    <a href="../../" class="back-btn">← 返回列表</a>
+    <h1>玄幻：你们用词改，我直接证道</h1>
   </div>
-  <div class="main">
-    <aside class="sidebar">
-      <div class="sidebar-title">目录</div>
-      <ul class="chapter-list">
-        <li class="chapter-item active"><a href="#ch1">第一章 废灵根</a></li>
-      </ul>
-    </aside>
-    <main class="content-area">
-      <h1 class="chapter-title" id="ch1">第一章 废灵根</h1>
-      <div class="chapter-content">
-        <p>意识恢复的瞬间，顾长宁只觉得头痛欲裂。</p>
-        <p>无数陌生的记忆如潮水般涌入脑海——苍梧界、青云宗、外门弟子、验灵大典……这些碎片般的概念在脑海中翻涌，拼凑出一个他从未听闻过的世界。</p>
-        <p>他睁开眼，发现自己正站在一座巨大的石台之上。石台四周刻满了繁复的符文，八根玉柱环绕而立，每一根都散发着淡淡的光芒。</p>
-        <p>台下，数十名身着青色道袍的少年男女正窃窃私语，目光中带着或同情、或嘲讽的神色。</p>
-        <p>而在石台正前方，三名白袍长老端坐于案几之后，神情淡漠。</p>
-        <p>"顾长宁？"居中的长老翻开面前的玉简，声音清冷，"灵根测试——"</p>
-        <p>他的话音戛然而止，目光落在手中的测灵石上，眉头微微皱起。</p>
-        <p>台下顿时一片哗然。</p>
-        <p>"测灵石亮了？但这光芒……"</p>
-        <p>"灰暗如死灰，这是……废灵根？"</p>
-        <p>"废灵根也能修炼？那岂不是浪费宗门资源？"</p>
-        <p>顾长宁还未来得及理清脑海中的混乱，便听到身后传来一声轻蔑的嗤笑。</p>
-        <p>"顾长宁，你可真是给我们外门长脸。"一个锦衣少年越过人群走上前来，居高临下地打量着他，"入门三年，连聚气境都未能突破，今日更是被验出废灵根——我倒想问问，你这三年来究竟在做什么？"</p>
-        <p>顾长宁抬起头，看向眼前的少年。</p>
-        <p>从原主的记忆中他知道，这是外门第一人周子轩，天赋异禀，修为已至聚气九层，距离筑基仅一步之遥。更重要的是，周子轩出身世家，背后有着不俗的背景。</p>
-        <p>然而此刻的顾长宁，并非原来的顾长宁。</p>
-        <p>他是一个来自蓝星的文字学博士，专攻训诂学，对汉字的字源流变有着极深的研究。穿越带来的不仅是身体的更替，更是灵魂的融合——两个时代的记忆在脑海中交织，却并不冲突。</p>
-        <p>"周师兄说的是。"顾长宁平静地开口，声音不带一丝波澜，"我确实资质平庸。"</p>
-        <p>周子轩显然没料到他会如此坦然地承认，愣了一瞬，随即冷笑："知道就好。废灵根修士在青云宗毫无用处，宗门不会养一个废物——"</p>
-        <p>"周师弟慎言。"</p>
-        <p>居中的长老开口打断了他，目光在顾长宁身上停留了片刻："测灵石的结果确实显示灵根品阶极低，但最终裁决还需宗主定夺。在此之前，一切结论都为时尚早。"</p>
-        <p>周子轩脸色微变，悻悻地退到一旁。</p>
-        <p>顾长宁却在这时开口了。</p>
-        <p>"敢问长老，何为灵根？"</p>
-        <p>这句话问得莫名其妙，台下顿时响起一阵低笑。</p>
-        <p>"连灵根是什么都不知道？"</p>
-        <p>"果然是废物，连基础知识都不懂。"</p>
-        <p>"入门三年，这种问题都问得出来？"</p>
-        <p>周子轩更是毫不掩饰地嘲讽："顾长宁，你是读书读傻了吗？灵根乃是修士沟通天地灵气的根基，灵根品阶越高，沟通效率便越强，修行速度自然越快。这些基础知识，入门第一日便会教授——你该不会是睡过去了三年吧？"</p>
-        <p>顾长宁没有理会周子轩的嘲讽，只是静静地看着那位长老。</p>
-        <p>长老眉头微皱，显然觉得这个问题太过简单，但他还是耐着性子回答："灵根是天生之物，乃是修士与天地沟通的桥梁。灵根品阶决定修行上限，品阶越高，将来成就便越大。"</p>
-        <p>"那敢问长老，"顾长宁的语气依旧平静，"所谓'聚气'，又是何意？"</p>
-        <p>此言一出，满场寂静。</p>
-        <p>所有人都用看傻子的眼神看着他。</p>
-        <p>聚气境是修行第一境，几乎是每个修士的起点。这种问题，就如同问一个读书人"何为读书"一般荒谬。</p>
-        <p>但顾长宁的眼神中没有丝毫玩笑的意味，他只是静静地等待着，仿佛这个问题对他而言至关重要。</p>
-        <p>"顾长宁，你究竟想说什么？"长老沉声道。</p>
-        <p>"晚辈只是想确认一件事。"顾长宁缓缓开口，"所谓'聚气'，是聚拢天地灵气之意吗？"</p>
-        <p>"自然。"长老不耐烦地点头。</p>
-        <p>"若真是如此，"顾长宁顿了顿，"那为何修士们要修炼《聚气诀》，而非其他功法？为何境界名称必须是'聚气'，而非别的词？若灵气无处不在，只需吸纳即可，何必'聚'之？"</p>
-        <p>"你在说什么废话！"周子轩怒道，"聚气诀乃是青云宗开派祖师所创，专为初入修行者设计！境界之名更是历代先贤定下，岂是你一个废灵根能够质疑的？"</p>
-        <p>"历代先贤定下……"顾长宁低声重复着这几个字，忽然轻笑了一声，"所以周师兄的意思是，这些名称都是先贤们'创造'出来的，而非天地间本就存在的？"</p>
-        <p>周子轩一愣，不知该如何回答。</p>
-        <p>顾长宁却已转向那位长老，拱手道："长老，弟子斗胆问一句——在这个世界上，修行是否与'用词'有关？"</p>
-        <p>长老的脸色微微一变。</p>
-        <p>台下也响起了一阵骚动。</p>
-        <p>"你怎么知道这个？"左侧一位长老霍然站起，目光灼灼地盯着顾长宁，"这是宗门机密，你一个外门弟子，从何处得知？"</p>
-        <p>顾长宁心中一动。</p>
-        <p>果然如此。</p>
-        <p>在他融合的记忆中，这个世界确实与他所认知的仙侠世界不同。这里的修士通过"改词"来修炼——把"聚气"改成"凝元"，把"筑基"改成"筑灵"，以为换个好词就能加速修行。</p>
-        <p>但几乎没有人知道，他们修改的只是"名"，而非"字"背后的真正含义。</p>
-        <p>换言之，这个世界的修行体系，建立在"语言"之上。</p>
-        <p>语言的改变会影响现实，这在他前世的学术研究中被称为"语言决定论"——一种语言哲学中的假说。但在这个世界，它成为了真实的法则。</p>
-        <p>然而修士们并不知道的是，他们修改的仅仅是"名"。</p>
-        <p>"名"是语言的外壳，而"字"才是语言的核心。</p>
-        <p>每一个修行术语背后，都有一个最原始的"本字"。这个本字蕴含着该法则最纯粹、最本质的含义。</p>
-        <p>改词修行，就如同隔靴搔痒——他们触碰到了"名"，却从未触及真正的"字"。</p>
-        <p>但这些，顾长宁并不打算现在就说出来。</p>
-        <p>他只是微微一笑："弟子不知什么是机密。弟子只是想到，世间万物皆有其名，而名必有其字。字可变，名可变，但若要真正理解事物本质，恐怕还需追本溯源，探究本源。"</p>
-        <p>他顿了顿，目光落在测灵石上。</p>
-        <p>"比如这'灵根'二字。'灵'从'霝'，雨滴落于巫者之上，代表着一种超自然的感应。'根'从'艹''艮'，'艮'有止意，根是万物生长之止处，也是生机之起始。"</p>
-        <p>他念出这番话时，只是顺口提及，并不觉得有什么特别。</p>
-        <p>然而——</p>
-        <p>话音刚落，他的脑海中忽然响起一道声音。</p>
-        <p>【检测到宿主触及"灵根"本字真意。】</p>
-        <p>【"灵根"本字：灵，巫也，天神引出万物者也。根，万物之始，生机之本。】</p>
-        <p>【获得"本字领悟"，修为提升！】</p>
-        <p>【当前境界：凡人→聚气一层！】</p>
-        <p>与此同时——</p>
-        <p>天地变色。</p>
-        <p>原本晴朗的天空骤然阴沉，一团紫金色的云彩从四面八方汇聚而来，在青云宗上空形成了一个巨大的漩涡。漩涡中心，无数道紫金色的闪电交织缠绕，发出震耳欲聋的轰鸣。</p>
-        <p>整座青云宗都震动了。</p>
-        <p>无数道身影从各处殿宇中飞出，仰头望着这百年难遇的天象异变。</p>
-        <p>"这是……天地异象？"</p>
-        <p>"紫金云彩，雷霆如织——这是何种宝物出世？或是哪位前辈顿悟？"</p>
-        <p>"你们看那雷云的形状……像不像一个字？"</p>
-        <p>"什么字？"</p>
-        <p>"我看不清……但为何我看到那雷霆之时，心头会涌起一股莫名的悸动？仿佛有什么东西在呼唤我……"</p>
-        <p>消息如同长了翅膀一般，迅速传遍了整个青云宗。</p>
-        <p>山门之内，无数修士涌出洞府，抬头仰望。</p>
-        <p>而在那最高的山峰之上——青云殿中，一道身影骤然睁开眼睛。</p>
-        <p>那是一个鹤发童颜的老者，身着素白道袍，周身笼罩着淡淡的仙气。他的目光穿透重重云雾，直达外门的验灵台。</p>
-        <p>"紫金道云，万雷朝宗……"</p>
-        <p>他的声音苍老而悠远，却带着一丝难以掩饰的震惊："这不是宝物出世，也不是顿悟异象——这是……道音显化！有人在说……本字！"</p>
-        <p>他的身影一闪，便已出现在验灵台上空。</p>
-        <p>而此刻的顾长宁，正站在石台中央，神色平静。</p>
-        <p>他不知道发生了什么，只知道刚才那一瞬间，有什么东西在他体内觉醒了。</p>
-        <p>那是一种奇异的感觉——仿佛有一扇门在他面前打开，门后是一个他从未接触过的世界。</p>
-        <p>那个世界由"字"构成。</p>
-        <p>每一个字都是法则。</p>
-        <p>每一个字都是道。</p>
-        <p>他看向那漫天的紫金雷霆，忽然轻声说道：</p>
-        <p>"气本无形，聚而成象。"</p>
-        <p>八个字，如同惊雷。</p>
-        <p>刹那间——</p>
-        <p>紫金雷霆齐齐炸响！</p>
-        <p>一道粗壮的雷霆从天而降，却没有落在顾长宁身上，而是环绕在他周身，如同一条条游动的雷龙，将他衬托得如同雷神降世。</p>
-        <p>与此同时，一道玄奥的符文在他眉心浮现，旋即隐没不见。</p>
-        <p>满场死寂。</p>
-        <p>所有人都呆若木鸡地望着这一幕，脑海中一片空白。</p>
-        <p>那个方才还被称为"废灵根"的少年，此刻周身环绕雷霆，气势惊人，哪里还有半分废物的模样？</p>
-        <p>三位长老已经站了起来，脸上满是震惊与难以置信。</p>
-        <p>周子轩更是脸色惨白，连连后退，仿佛见了鬼一般。</p>
-        <p>而在众人上空，一道身影缓缓浮现。</p>
-        <p>那是一个白发白须的老者，周身仙气缭绕，气度超然。</p>
-        <p>青云宗宗主——李玄机。</p>
-        <p>他低头看向顾长宁，眼中满是复杂的神色。震惊、疑惑、思索……最终，都化作了两个字：</p>
-        <p>"道体。"</p>
-        <p>他的声音在天地间回荡，带着一丝颤抖：</p>
-        <p>"天生道体……他是能听到'本字'的人！"</p>
-        <p>这句话如同惊雷，在所有人心中炸响。</p>
-        <p>道体？本字？能听到本字的人？</p>
-        <p>这些词汇对大多数人而言太过陌生，但有一点他们很清楚——</p>
-        <p>在这个以"改词"修行的世界里，能够触及修行本质"本字"的人，意味着什么？</p>
-        <p>意味着——</p>
-        <p>无穷的潜力。</p>
-        <p>无限的可能。</p>
-        <p>以及，一个全新的修行时代。</p>
-        <p>而此刻站在验灵台上的顾长宁，嘴角微微上扬。</p>
-        <p>他终于明白自己穿越到了一个怎样的世界。</p>
-        <p>这不仅仅是一个仙侠世界。</p>
-        <p>这是一个"语言即法则"的高维世界。</p>
-        <p>而他，掌握了语言与现实的接口。</p>
-        <p>穿越废物？</p>
-        <p>不存在的。</p>
-        <p>这一世，他要让所有人知道——</p>
-        <p>你们用词改，我直接证道！</p>
-      </div>
-      <div class="nav-btns">
-        <button class="nav-btn" disabled>← 上一章</button>
-        <button class="nav-btn" disabled>下一章 →</button>
-      </div>
-      <div class="download-section">
-        <h3>📥 下载本书</h3>
-        <div class="download-btns">
-          <button class="download-btn" onclick="downloadTxt()">下载 TXT</button>
-          <button class="download-btn" onclick="downloadEpub()">下载 EPUB</button>
-        </div>
-      </div>
-    </main>
-  </div>
-  <script>
-    function downloadTxt() {
-      const content = `玄幻：你们用词改，我直接证道
-
-第一章 废灵根
-
-意识恢复的瞬间，顾长宁只觉得头痛欲裂。
-
-无数陌生的记忆如潮水般涌入脑海——苍梧界、青云宗、外门弟子、验灵大典……这些碎片般的概念在脑海中翻涌，拼凑出一个他从未听闻过的世界。
-
-他睁开眼，发现自己正站在一座巨大的石台之上。石台四周刻满了繁复的符文，八根玉柱环绕而立，每一根都散发着淡淡的光芒。
-
-台下，数十名身着青色道袍的少年男女正窃窃私语，目光中带着或同情、或嘲讽的神色。
-
-而在石台正前方，三名白袍长老端坐于案几之后，神情淡漠。
-
-"顾长宁？"居中的长老翻开面前的玉简，声音清冷，"灵根测试——"
-
-他的话音戛然而止，目光落在手中的测灵石上，眉头微微皱起。
-
-台下顿时一片哗然。
-
-"测灵石亮了？但这光芒……"
-
-"灰暗如死灰，这是……废灵根？"
-
-"废灵根也能修炼？那岂不是浪费宗门资源？"
-
-顾长宁还未来得及理清脑海中的混乱，便听到身后传来一声轻蔑的嗤笑。
-
-"顾长宁，你可真是给我们外门长脸。"一个锦衣少年越过人群走上前来，居高临下地打量着他，"入门三年，连聚气境都未能突破，今日更是被验出废灵根——我倒想问问，你这三年来究竟在做什么？"
-
-顾长宁抬起头，看向眼前的少年。
-
-从原主的记忆中他知道，这是外门第一人周子轩，天赋异禀，修为已至聚气九层，距离筑基仅一步之遥。更重要的是，周子轩出身世家，背后有着不俗的背景。
-
-然而此刻的顾长宁，并非原来的顾长宁。
-
-他是一个来自蓝星的文字学博士，专攻训诂学，对汉字的字源流变有着极深的研究。穿越带来的不仅是身体的更替，更是灵魂的融合——两个时代的记忆在脑海中交织，却并不冲突。
-
-"周师兄说的是。"顾长宁平静地开口，声音不带一丝波澜，"我确实资质平庸。"
-
-周子轩显然没料到他会如此坦然地承认，愣了一瞬，随即冷笑："知道就好。废灵根修士在青云宗毫无用处，宗门不会养一个废物——"
-
-"周师弟慎言。"
-
-居中的长老开口打断了他，目光在顾长宁身上停留了片刻："测灵石的结果确实显示灵根品阶极低，但最终裁决还需宗主定夺。在此之前，一切结论都为时尚早。"
-
-周子轩脸色微变，悻悻地退到一旁。
-
-顾长宁却在这时开口了。
-
-"敢问长老，何为灵根？"
-
-这句话问得莫名其妙，台下顿时响起一阵低笑。
-
-"连灵根是什么都不知道？"
-
-"果然是废物，连基础知识都不懂。"
-
-"入门三年，这种问题都问得出来？"
-
-周子轩更是毫不掩饰地嘲讽："顾长宁，你是读书读傻了吗？灵根乃是修士沟通天地灵气的根基，灵根品阶越高，沟通效率便越强，修行速度自然越快。这些基础知识，入门第一日便会教授——你该不会是睡过去了三年吧？"
-
-顾长宁没有理会周子轩的嘲讽，只是静静地看着那位长老。
-
-长老眉头微皱，显然觉得这个问题太过简单，但他还是耐着性子回答："灵根是天生之物，乃是修士与天地沟通的桥梁。灵根品阶决定修行上限，品阶越高，将来成就便越大。"
-
-"那敢问长老，"顾长宁的语气依旧平静，"所谓'聚气'，又是何意？"
-
-此言一出，满场寂静。
-
-所有人都用看傻子的眼神看着他。
-
-聚气境是修行第一境，几乎是每个修士的起点。这种问题，就如同问一个读书人"何为读书"一般荒谬。
-
-但顾长宁的眼神中没有丝毫玩笑的意味，他只是静静地等待着，仿佛这个问题对他而言至关重要。
-
-"顾长宁，你究竟想说什么？"长老沉声道。
-
-"晚辈只是想确认一件事。"顾长宁缓缓开口，"所谓'聚气'，是聚拢天地灵气之意吗？"
-
-"自然。"长老不耐烦地点头。
-
-"若真是如此，"顾长宁顿了顿，"那为何修士们要修炼《聚气诀》，而非其他功法？为何境界名称必须是'聚气'，而非别的词？若灵气无处不在，只需吸纳即可，何必'聚'之？"
-
-"你在说什么废话！"周子轩怒道，"聚气诀乃是青云宗开派祖师所创，专为初入修行者设计！境界之名更是历代先贤定下，岂是你一个废灵根能够质疑的？"
-
-"历代先贤定下……"顾长宁低声重复着这几个字，忽然轻笑了一声，"所以周师兄的意思是，这些名称都是先贤们'创造'出来的，而非天地间本就存在的？"
-
-周子轩一愣，不知该如何回答。
-
-顾长宁却已转向那位长老，拱手道："长老，弟子斗胆问一句——在这个世界上，修行是否与'用词'有关？"
-
-长老的脸色微微一变。
-
-台下也响起了一阵骚动。
-
-"你怎么知道这个？"左侧一位长老霍然站起，目光灼灼地盯着顾长宁，"这是宗门机密，你一个外门弟子，从何处得知？"
-
-顾长宁心中一动。
-
-果然如此。
-
-在他融合的记忆中，这个世界确实与他所认知的仙侠世界不同。这里的修士通过"改词"来修炼——把"聚气"改成"凝元"，把"筑基"改成"筑灵"，以为换个好词就能加速修行。
-
-但几乎没有人知道，他们修改的只是"名"，而非"字"背后的真正含义。
-
-换言之，这个世界的修行体系，建立在"语言"之上。
-
-语言的改变会影响现实，这在他前世的学术研究中被称为"语言决定论"——一种语言哲学中的假说。但在这个世界，它成为了真实的法则。
-
-然而修士们并不知道的是，他们修改的仅仅是"名"。
-
-"名"是语言的外壳，而"字"才是语言的核心。
-
-每一个修行术语背后，都有一个最原始的"本字"。这个本字蕴含着该法则最纯粹、最本质的含义。
-
-改词修行，就如同隔靴搔痒——他们触碰到了"名"，却从未触及真正的"字"。
-
-但这些，顾长宁并不打算现在就说出来。
-
-他只是微微一笑："弟子不知什么是机密。弟子只是想到，世间万物皆有其名，而名必有其字。字可变，名可变，但若要真正理解事物本质，恐怕还需追本溯源，探究本源。"
-
-他顿了顿，目光落在测灵石上。
-
-"比如这'灵根'二字。'灵'从'霝'，雨滴落于巫者之上，代表着一种超自然的感应。'根'从'艹''艮'，'艮'有止意，根是万物生长之止处，也是生机之起始。"
-
-他念出这番话时，只是顺口提及，并不觉得有什么特别。
-
-然而——
-
-话音刚落，他的脑海中忽然响起一道声音。
-
-【检测到宿主触及"灵根"本字真意。】
-
-【"灵根"本字：灵，巫也，天神引出万物者也。根，万物之始，生机之本。】
-
-【获得"本字领悟"，修为提升！】
-
-【当前境界：凡人→聚气一层！】
-
-与此同时——
-
-天地变色。
-
-原本晴朗的天空骤然阴沉，一团紫金色的云彩从四面八方汇聚而来，在青云宗上空形成了一个巨大的漩涡。漩涡中心，无数道紫金色的闪电交织缠绕，发出震耳欲聋的轰鸣。
-
-整座青云宗都震动了。
-
-无数道身影从各处殿宇中飞出，仰头望着这百年难遇的天象异变。
-
-"这是……天地异象？"
-
-"紫金云彩，雷霆如织——这是何种宝物出世？或是哪位前辈顿悟？"
-
-"你们看那雷云的形状……像不像一个字？"
-
-"什么字？"
-
-"我看不清……但为何我看到那雷霆之时，心头会涌起一股莫名的悸动？仿佛有什么东西在呼唤我……"
-
-消息如同长了翅膀一般，迅速传遍了整个青云宗。
-
-山门之内，无数修士涌出洞府，抬头仰望。
-
-而在那最高的山峰之上——青云殿中，一道身影骤然睁开眼睛。
-
-那是一个鹤发童颜的老者，身着素白道袍，周身笼罩着淡淡的仙气。他的目光穿透重重云雾，直达外门的验灵台。
-
-"紫金道云，万雷朝宗……"
-
-他的声音苍老而悠远，却带着一丝难以掩饰的震惊："这不是宝物出世，也不是顿悟异象——这是……道音显化！有人在说……本字！"
-
-他的身影一闪，便已出现在验灵台上空。
-
-而此刻的顾长宁，正站在石台中央，神色平静。
-
-他不知道发生了什么，只知道刚才那一瞬间，有什么东西在他体内觉醒了。
-
-那是一种奇异的感觉——仿佛有一扇门在他面前打开，门后是一个他从未接触过的世界。
-
-那个世界由"字"构成。
-
-每一个字都是法则。
-
-每一个字都是道。
-
-他看向那漫天的紫金雷霆，忽然轻声说道：
-
-"气本无形，聚而成象。"
-
-八个字，如同惊雷。
-
-刹那间——
-
-紫金雷霆齐齐炸响！
-
-一道粗壮的雷霆从天而降，却没有落在顾长宁身上，而是环绕在他周身，如同一条条游动的雷龙，将他衬托得如同雷神降世。
-
-与此同时，一道玄奥的符文在他眉心浮现，旋即隐没不见。
-
-满场死寂。
-
-所有人都呆若木鸡地望着这一幕，脑海中一片空白。
-
-那个方才还被称为"废灵根"的少年，此刻周身环绕雷霆，气势惊人，哪里还有半分废物的模样？
-
-三位长老已经站了起来，脸上满是震惊与难以置信。
-
-周子轩更是脸色惨白，连连后退，仿佛见了鬼一般。
-
-而在众人上空，一道身影缓缓浮现。
-
-那是一个白发白须的老者，周身仙气缭绕，气度超然。
-
-青云宗宗主——李玄机。
-
-他低头看向顾长宁，眼中满是复杂的神色。震惊、疑惑、思索……最终，都化作了两个字：
-
-"道体。"
-
-他的声音在天地间回荡，带着一丝颤抖：
-
-"天生道体……他是能听到'本字'的人！"
-
-这句话如同惊雷，在所有人心中炸响。
-
-道体？本字？能听到本字的人？
-
-这些词汇对大多数人而言太过陌生，但有一点他们很清楚——
-
-在这个以"改词"修行的世界里，能够触及修行本质"本字"的人，意味着什么？
-
-意味着——
-
-无穷的潜力。
-
-无限的可能。
-
-以及，一个全新的修行时代。
-
-而此刻站在验灵台上的顾长宁，嘴角微微上扬。
-
-他终于明白自己穿越到了一个怎样的世界。
-
-这不仅仅是一个仙侠世界。
-
-这是一个"语言即法则"的高维世界。
-
-而他，掌握了语言与现实的接口。
-
-穿越废物？
-
-不存在的。
-
-这一世，他要让所有人知道——
-
-你们用词改，我直接证道！
-
-（全书中完）
-`;
-      const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = '玄幻：你们用词改，我直接证道.txt';
-      a.click();
+  <div style="font-size:0.85rem;opacity:0.8;">AI 创作</div>
+</div>
+<div class="main">
+  <aside class="sidebar">
+    <div class="sidebar-title">目录</div>
+    <ul class="chapter-list" id="chapterList"></ul>
+  </aside>
+  <main class="content-area" id="contentArea">
+    <div style="padding:2rem;text-align:center;color:#999">加载中...</div>
+  </main>
+</div>
+<script>
+var CHAPTERS = [{"num": 1, "title": "第一章 一字之差", "status": "done", "words": 4349, "file": "chapter_0001.json"}];
+var BOOK_ID = "zhengdao-yanfa";
+
+function getChapterFile(idx) {
+  var ch = CHAPTERS[idx];
+  if (ch.file) return ch.file;
+  return 'chapter_' + String(idx+1).padStart(4,'0') + '.json';
+}
+
+function parseContent(content) {
+  if (!content) return '<p style="color:#999;text-align:center">暂无内容</p>';
+  content = content.trim();
+  var html = '';
+  var lines = content.split('\n');
+  var inParagraph = false;
+  var paragraphBuffer = [];
+
+  function flushParagraph() {
+    if (paragraphBuffer.length > 0) {
+      html += '<p>' + paragraphBuffer.join('') + '</p>';
+      paragraphBuffer = [];
     }
+    inParagraph = false;
+  }
 
-    function downloadEpub() {
-      alert('EPUB 下载功能开发中，敬请期待！');
+  for (var i = 0; i < lines.length; i++) {
+    var line = lines[i].trim();
+    if (!line) {
+      flushParagraph();
+      continue;
     }
-  </script>
+    if (line.startsWith('## ')) {
+      flushParagraph();
+      html += '<h2>' + line.substring(3) + '</h2>';
+    } else if (line.startsWith('# ')) {
+      flushParagraph();
+      html += '<h2>' + line.substring(2) + '</h2>';
+    } else if (line.startsWith('【') && line.endsWith('】')) {
+      flushParagraph();
+      html += '<p style="color:#667eea;font-weight:500">' + line + '</p>';
+    } else {
+      inParagraph = true;
+      paragraphBuffer.push(line);
+    }
+  }
+  flushParagraph();
+  return html;
+}
+
+function renderChapterList() {
+  var html = CHAPTERS.map(function(ch, i) {
+    var title = ch.title || '第' + (ch.num || ch.number || i+1) + '章';
+    var wordCount = ch.words || ch.wordCount || 0;
+    return '<li class="chapter-item"><a href="?c=' + i + '">' + title + '</a></li>';
+  }).join('');
+  document.getElementById('chapterList').innerHTML = html;
+}
+
+function renderChapter(idx) {
+  var ch = CHAPTERS[idx];
+  var title = ch.title || '第' + (ch.num || ch.number || idx+1) + '章';
+
+  document.querySelectorAll('.chapter-item').forEach(function(el, i) {
+    el.classList.toggle('active', i === idx);
+  });
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', getChapterFile(idx), true);
+  xhr.onload = function() {
+    try {
+      var data = JSON.parse(xhr.responseText);
+      var content = parseContent(data.content);
+      var prev = idx > 0 ? '<button class="nav-btn" onclick="renderChapter(' + (idx-1) + ')">← 上一章</button>' : '<button class="nav-btn" disabled>← 上一章</button>';
+      var next = idx < CHAPTERS.length - 1 ? '<button class="nav-btn" onclick="renderChapter(' + (idx+1) + ')">下一章 →</button>' : '<button class="nav-btn" disabled>下一章 →</button>';
+      document.getElementById('contentArea').innerHTML =
+        '<h1 class="chapter-title">' + title + '</h1>' +
+        '<div class="chapter-content">' + content + '</div>' +
+        '<div class="nav-btns">' + prev + next + '</div>';
+    } catch(e) {
+      document.getElementById('contentArea').innerHTML = '<div style="color:red;padding:2rem">加载失败: ' + e.message + '</div>';
+    }
+    window.scrollTo(0, 0);
+  };
+  xhr.onerror = function() {
+    document.getElementById('contentArea').innerHTML = '<div style="color:#999;padding:2rem">章节文件不存在</div>';
+  };
+  xhr.send();
+}
+
+var params = new URLSearchParams(location.search);
+var c = params.get("c");
+renderChapterList();
+if (c !== null) {
+  var idx = parseInt(c);
+  if (idx >= 0 && idx < CHAPTERS.length) {
+    renderChapter(idx);
+  } else {
+    renderChapter(0);
+  }
+} else {
+  renderChapter(0);
+}
+</script>
 </body>
 </html>

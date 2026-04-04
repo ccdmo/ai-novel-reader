@@ -2,7 +2,8 @@
   {
     "num": 1,
     "title": "一封来自大洋彼岸的信",
-    "status": "completed",
-    "words": 3859
+    "status": "done",
+    "words": 3859,
+    "file": "chapter_0001.json"
   }
 ]

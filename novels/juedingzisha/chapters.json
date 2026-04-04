@@ -1,8 +1,9 @@
 [
   {
-    "chapter_number": 1,
-    "title": "天台上的最后一刻",
-    "file": "chapter_0001.json",
-    "word_count": 2569
+    "num": 1,
+    "title": "第一章",
+    "status": "done",
+    "words": 950,
+    "file": "chapter_0001.json"
   }
 ]

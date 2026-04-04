@@ -1,8 +1,9 @@
 [
-    {
-        "num": 1,
-        "title": "大婚惊变",
-        "status": "done",
-        "words": 3000
-    }
+  {
+    "num": 1,
+    "title": "大婚惊变",
+    "status": "done",
+    "words": 3000,
+    "file": "chapter_0001.json"
+  }
 ]

@@ -1,7 +1,9 @@
 [
   {
-    "number": 1,
+    "num": 1,
     "title": "食堂惊变，当众表白",
+    "status": "done",
+    "words": 4457,
     "file": "chapter_0001.json"
   }
 ]

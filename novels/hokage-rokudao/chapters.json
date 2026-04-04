@@ -1,9 +1,9 @@
 [
   {
-    "id": "chapter_0001",
-    "number": 1,
+    "num": 1,
     "title": "黑暗中的微光",
-    "wordCount": 3371,
-    "publishedAt": "2026-04-03"
+    "status": "done",
+    "words": 4213,
+    "file": "chapter_0001.json"
   }
 ]

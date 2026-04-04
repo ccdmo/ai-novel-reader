@@ -1,1 +1,9 @@
-[{"num":1,"title":"中奖？不，是开始","status":"done","words":2623}]
+[
+  {
+    "num": 1,
+    "title": "中奖？不，是开始",
+    "status": "done",
+    "words": 2623,
+    "file": "chapter_0001.json"
+  }
+]

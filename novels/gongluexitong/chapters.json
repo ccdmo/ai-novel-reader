@@ -1,1 +1,9 @@
-[{"num":1,"title":"剑意误伤，系统乱码","status":"done","words":2849}]
+[
+  {
+    "num": 1,
+    "title": "第一章",
+    "status": "done",
+    "words": 3272,
+    "file": "chapter_0001.json"
+  }
+]

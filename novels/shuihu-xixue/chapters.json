@@ -1,1 +1,9 @@
-[{"num": 1, "title": "# 第一章：血夜重生", "status": "done", "words": 3921}]
+[
+  {
+    "num": 1,
+    "title": "第一章：血夜重生",
+    "status": "done",
+    "words": 3921,
+    "file": "chapter_0001.json"
+  }
+]

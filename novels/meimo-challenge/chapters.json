@@ -1,8 +1,9 @@
 [
   {
     "num": 1,
-    "title": "魅魔临凡",
+    "title": "第一章",
     "status": "done",
-    "words": 3500
+    "words": 3920,
+    "file": "chapter_0001.json"
   }
 ]

@@ -1,6 +1,9 @@
 [
   {
     "num": 1,
-    "title": "第一章 穿越异世"
+    "title": "第一章 穿越异世",
+    "status": "done",
+    "words": 2980,
+    "file": "chapter_0001.json"
   }
 ]
