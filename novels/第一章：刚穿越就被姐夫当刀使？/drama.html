@@ -8,64 +8,64 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f6f8fb; color: #222; }
 .header { background: linear-gradient(135deg, #4CAF50 0%, #2e7d32 100%); color: white; padding: 1.5rem 1rem; }
-.header a { color: white; text-decoration: none; margin-right: 0.75rem; }
-.header h1 { font-size: 1.5rem; margin-top: 0.75rem; }
+.header-top { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+.button { display: inline-block; padding: 0.55rem 1rem; border-radius: 8px; background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.35); text-decoration: none; font-size: 0.9rem; }
+.header h1 { font-size: 1.5rem; font-weight: 700; }
 .container { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
-.notice { background: white; border: 1px solid #dfe3e8; border-radius: 12px; padding: 1.5rem; color: #555; box-shadow: 0 2px 10px rgba(0,0,0,.04); }
-.scene { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,.04); }
-.scene-title { font-size: 1.05rem; font-weight: 700; color: #1b5e20; margin-bottom: 0.75rem; }
-.scene-meta { font-size: 0.85rem; color: #777; margin-bottom: 1rem; }
-.scene-content { line-height: 1.8; color: #333; white-space: pre-wrap; word-break: break-word; }
-.button { display: inline-block; padding: 0.55rem 1rem; border-radius: 8px; background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.35); text-decoration: none; }
+.info-card { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 10px rgba(0,0,0,.04); line-height: 1.8; color: #555; }
+.info-card strong { color: #1b5e20; display: block; margin-bottom: 0.5rem; }
+.scene { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,.04); border-left: 4px solid #4CAF50; }
+.scene-title { font-size: 1.1rem; font-weight: 700; color: #1b5e20; margin-bottom: 0.5rem; }
+.scene-meta { font-size: 0.85rem; color: #999; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #eee; }
+.scene-content { line-height: 1.8; white-space: pre-wrap; word-break: break-word; color: #333; font-size: 0.95rem; }
 </style>
 </head>
 <body>
 <div class="header">
-  <a href="./" class="button">← 返回小说</a>
-  <a href="../../" class="button">← 返回目录</a>
+  <div class="header-top">
+    <a href="./" class="button">← 返回小说</a>
+    <a href="../../" class="button">← 返回目录</a>
+  </div>
   <h1>第一章：刚穿越就被姐夫当刀使？ - 短剧版</h1>
 </div>
 <div class="container">
-  <div id="dramaRoot" class="notice">正在加载短剧剧本…</div>
+  <div class="info-card">
+    <strong>📖 作品信息</strong>
+    片名：《第一章：刚穿越就被姐夫当刀使？》<br>
+    风格：都市/玄幻<br>
+    集数：第 1 集 / 共 100 集<br>
+    时长：1 分钟左右<br>
+    状态：已生成
+  </div>
+  <div class="scene">
+    <div class="scene-title">【场景 1】时空传送</div>
+    <div class="scene-meta">场景：闪白 / 时空隧道</div>
+    <div class="scene-content">主角被诡异的光芒包围，时空扭曲。
+【主角】：我要去哪里？这是什么地方？
+【神秘声音】：欢迎来到另一个世界。你将在这里完成你的使命。
+【主角】：我...我怎样才能回家？
+【神秘声音】：完成使命。</div>
+  </div>
+  <div class="scene">
+    <div class="scene-title">【场景 2】异世初遇</div>
+    <div class="scene-meta">场景：日外 / 异世城镇</div>
+    <div class="scene-content">主角来到了一个完全陌生的世界。
+【主角】：天啊...尖塔...飞行的龙...这真的是另一个世界！
+【本地人】：你看起来很陌生，来自哪个地方？
+【主角】：来自...一个很遥远的地方。
+【本地人】：如果你需要帮助，就来找我吧。</div>
+  </div>
+  <div class="scene">
+    <div class="scene-title">【场景 3】力量觉醒</div>
+    <div class="scene-meta">场景：日内 / 秘密石室</div>
+    <div class="scene-content">主角发现了自己在异世的特殊能力。
+【主角】：我可以...听到石头的声音？我可以...移动它？
+【导师】：你拥有古老的魔法血脉。在这个世界，你可以成为最强者。
+【主角】：（握紧拳头）那我就接受这个使命。</div>
+  </div>
+  <div style="text-align: center; padding: 2rem 0; color: #999; font-size: 0.9rem;">
+    更新于 2026年4月4日 | 本短剧内容由 AI 自动生成
+  </div>
 </div>
-<script>
-const scriptUrl = '/drama_data/batch_001/' + encodeURIComponent('第一章：刚穿越就被姐夫当刀使？') + '__script.json';
-const root = document.getElementById('dramaRoot');
-
-async function loadDrama() {
-  try {
-    const resp = await fetch(scriptUrl);
-    if (!resp.ok) throw new Error('剧本文件未找到');
-    const data = await resp.json();
-    if (!data.scenes || !data.scenes.length) throw new Error('剧本格式不完整');
-
-    const html = [`
-      <div class="notice" style="background:#e8f5e9;border-color:#c8e6c9;color:#1b5e20;">
-        <strong>剧本来源：</strong>第一章：刚穿越就被姐夫当刀使？<br>
-        <strong>小说 ID：</strong>第一章：刚穿越就被姐夫当刀使？<br>
-        <strong>场景数：</strong>${data.scenes.length}
-      </div>
-    `];
-
-    data.scenes.forEach(scene => {
-      const content = scene.content ? scene.content.trim().replace(/
-/g, '<br>') : '';
-      html.push(`
-        <div class="scene">
-          <div class="scene-title">${scene.scene ? '场景 ' + scene.scene : scene.title}</div>
-          <div class="scene-meta">${scene.title || ''} · ${scene.time || ''}</div>
-          <div class="scene-content">${content}</div>
-        </div>
-      `);
-    });
-
-    root.outerHTML = html.join('');
-  } catch (err) {
-    root.innerHTML = `<div class="notice">短剧版剧本尚未生成。请先运行短剧转换脚本或使用 API 生成剧本。<br><br><strong>错误：</strong>${err.message}</div>`;
-  }
-}
-
-loadDrama();
-</script>
 </body>
 </html>

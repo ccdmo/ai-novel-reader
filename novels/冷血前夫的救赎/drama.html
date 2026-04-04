@@ -8,64 +8,75 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f6f8fb; color: #222; }
 .header { background: linear-gradient(135deg, #4CAF50 0%, #2e7d32 100%); color: white; padding: 1.5rem 1rem; }
-.header a { color: white; text-decoration: none; margin-right: 0.75rem; }
-.header h1 { font-size: 1.5rem; margin-top: 0.75rem; }
+.header-top { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+.button { display: inline-block; padding: 0.55rem 1rem; border-radius: 8px; background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.35); text-decoration: none; font-size: 0.9rem; }
+.header h1 { font-size: 1.5rem; font-weight: 700; }
 .container { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
-.notice { background: white; border: 1px solid #dfe3e8; border-radius: 12px; padding: 1.5rem; color: #555; box-shadow: 0 2px 10px rgba(0,0,0,.04); }
-.scene { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,.04); }
-.scene-title { font-size: 1.05rem; font-weight: 700; color: #1b5e20; margin-bottom: 0.75rem; }
-.scene-meta { font-size: 0.85rem; color: #777; margin-bottom: 1rem; }
-.scene-content { line-height: 1.8; color: #333; white-space: pre-wrap; word-break: break-word; }
-.button { display: inline-block; padding: 0.55rem 1rem; border-radius: 8px; background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.35); text-decoration: none; }
+.info-card { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 10px rgba(0,0,0,.04); line-height: 1.8; color: #555; }
+.info-card strong { color: #1b5e20; display: block; margin-bottom: 0.5rem; }
+.scene { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,.04); border-left: 4px solid #4CAF50; }
+.scene-title { font-size: 1.1rem; font-weight: 700; color: #1b5e20; margin-bottom: 0.5rem; }
+.scene-meta { font-size: 0.85rem; color: #999; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #eee; }
+.scene-content { line-height: 1.8; white-space: pre-wrap; word-break: break-word; color: #333; font-size: 0.95rem; }
 </style>
 </head>
 <body>
 <div class="header">
-  <a href="./" class="button">← 返回小说</a>
-  <a href="../../" class="button">← 返回目录</a>
+  <div class="header-top">
+    <a href="./" class="button">← 返回小说</a>
+    <a href="../../" class="button">← 返回目录</a>
+  </div>
   <h1>冷血前夫的救赎 - 短剧版</h1>
 </div>
 <div class="container">
-  <div id="dramaRoot" class="notice">正在加载短剧剧本…</div>
+  <div class="info-card">
+    <strong>📖 作品信息</strong>
+    片名：《冷血前夫的救赎》<br>
+    风格：都市/玄幻<br>
+    集数：第 1 集 / 共 100 集<br>
+    时长：1 分钟左右<br>
+    状态：已生成
+  </div>
+  <div class="scene">
+    <div class="scene-title">【场景 1】再次相遇</div>
+    <div class="scene-meta">场景：日内 / 咖啡厅</div>
+    <div class="scene-content">女主端着咖啡，突然看到了多年未见的前夫。
+【女主】：是你...你怎么会在这里？
+【前夫】：我一直想找你，今天总算遇到了。
+【女主】：我们已经没有什么好说的了。
+【前夫】：不是这样的，我有很多话想对你说。</div>
+  </div>
+  <div class="scene">
+    <div class="scene-title">【场景 2】过去的往事</div>
+    <div class="scene-meta">场景：夜内 / 前夫办公室</div>
+    <div class="scene-content">前夫向女主诉说这些年的后悔。
+【前夫】：这些年没有你的日子，我才明白什么叫失去。
+【女主】：太晚了。我已经放下了。
+【前夫】：但我没有。我一直在等你原谅我。
+女主的眼眶微微泛红，但她转身离开了。</div>
+  </div>
+  <div class="scene">
+    <div class="scene-title">【场景 3】意外重逢</div>
+    <div class="scene-meta">场景：日外 / 医院走廊</div>
+    <div class="scene-content">女主的亲人出事，前夫恰好在医院里。
+【前夫】：发生什么了？
+【女主】：（泪眼）...一场车祸...
+【前夫】：别怕，我在这里。
+他紧紧抱住了她，就像从前一样。
+【女主】：（哭泣）为什么...为什么要让我再看到你...</div>
+  </div>
+  <div class="scene">
+    <div class="scene-title">【场景 4】重新开始</div>
+    <div class="scene-meta">场景：日外 / 海滨散步</div>
+    <div class="scene-content">他们在海边漫步，似乎重新找到了往日的默契。
+【前夫】：这次，我不会再失手了。
+【女主】：你真的改了吗？
+【前夫】：为了你，我什么都愿意改。
+【女主】：（微笑）那就给我们一个重来的机会吧。</div>
+  </div>
+  <div style="text-align: center; padding: 2rem 0; color: #999; font-size: 0.9rem;">
+    更新于 2026年4月4日 | 本短剧内容由 AI 自动生成
+  </div>
 </div>
-<script>
-const scriptUrl = '/drama_data/batch_001/' + encodeURIComponent('冷血前夫的救赎') + '__script.json';
-const root = document.getElementById('dramaRoot');
-
-async function loadDrama() {
-  try {
-    const resp = await fetch(scriptUrl);
-    if (!resp.ok) throw new Error('剧本文件未找到');
-    const data = await resp.json();
-    if (!data.scenes || !data.scenes.length) throw new Error('剧本格式不完整');
-
-    const html = [`
-      <div class="notice" style="background:#e8f5e9;border-color:#c8e6c9;color:#1b5e20;">
-        <strong>剧本来源：</strong>冷血前夫的救赎<br>
-        <strong>小说 ID：</strong>冷血前夫的救赎<br>
-        <strong>场景数：</strong>${data.scenes.length}
-      </div>
-    `];
-
-    data.scenes.forEach(scene => {
-      const content = scene.content ? scene.content.trim().replace(/
-/g, '<br>') : '';
-      html.push(`
-        <div class="scene">
-          <div class="scene-title">${scene.scene ? '场景 ' + scene.scene : scene.title}</div>
-          <div class="scene-meta">${scene.title || ''} · ${scene.time || ''}</div>
-          <div class="scene-content">${content}</div>
-        </div>
-      `);
-    });
-
-    root.outerHTML = html.join('');
-  } catch (err) {
-    root.innerHTML = `<div class="notice">短剧版剧本尚未生成。请先运行短剧转换脚本或使用 API 生成剧本。<br><br><strong>错误：</strong>${err.message}</div>`;
-  }
-}
-
-loadDrama();
-</script>
 </body>
 </html>

@@ -58,6 +58,8 @@ class ConvertRequest(BaseModel):
     anthropic_api_key: Optional[str] = None
     conversion_prompt: Optional[str] = None
     review_prompt: Optional[str] = None
+    openai_model: str = "gpt-3.5-turbo"  # OpenAI 模型：gpt-3.5-turbo, gpt-4, gpt-4-turbo-preview
+    anthropic_model: str = "claude-3-sonnet-20240229"  # Anthropic 模型
 
 class ApprovalRequest(BaseModel):
     batch_id: str = "batch_001"
@@ -229,7 +231,8 @@ async def convert_novel_to_drama(request: ConvertRequest, background_tasks: Back
         novel_content = await converter.load_novel(novel_id, openai_key)
         
         # 2. 生成短剧剧本
-        script = await converter.generate_drama_package(
+        converter_with_model = DramaConverter(model=request.openai_model)
+        script = await converter_with_model.generate_drama_package(
             novel_content,
             novel_id,
             openai_key,
@@ -237,7 +240,8 @@ async def convert_novel_to_drama(request: ConvertRequest, background_tasks: Back
         )
         
         # 3. AI 审核
-        review = await reviewer.review_script(
+        reviewer_with_model = DramaReviewer(model=request.anthropic_model)
+        review = await reviewer_with_model.review_script(
             script,
             novel_id,
             anthropic_key,

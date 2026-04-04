@@ -12,9 +12,9 @@ import openai
 from typing import Any, Dict, List, Optional
 
 class DramaConverter:
-    def __init__(self):
+    def __init__(self, model: str = None):
         self.default_api_key = os.getenv("OPENAI_API_KEY", "")
-        self.model = "gpt-3.5-turbo"  # 或使用 gpt-4
+        self.model = model or os.getenv("OPENAI_MODEL", "gpt-3.5-turbo")
         
         # 数据路径
         self.novels_dir = Path(__file__).parent.parent.parent / "novels"
@@ -232,7 +232,22 @@ class DramaConverter:
                     analysis_text += f"章节{chapter.get('chapter', '')}：{chapter.get('chapter_title', '')}，概要：{chapter.get('summary', '')}，冲突：{chapter.get('major_conflict', '')}\n"
                 analysis_text += "\n"
 
-        return f"""请将以下小说内容改编为精炼的短剧剧本。
+        return f"""你是一位获奖的短剧编剧。请根据小说和分析数据，创作一部精彩的短剧剧本。
+
+创作约束：
+1. 保留核心冲突和人物关系
+2. 浓缩为 3-5 个高潮场景
+3. 每个场景一次对话转折
+4. 人物性格必须前后一致
+5. 对话要自然流畅，有各自的说话风格
+6. 场景之间有明确的逻辑连接
+7. 结尾要有冲击力或悬念
+
+剧本格式标准：
+- 场景描写用【】标注
+- 对话格式：角色名:说白内容
+- 角色动作用（）标注
+- 每个场景 200-400 字
 
 小说标题: {novel_data.get('title', '未知')}
 章节标题: {novel_data.get('chapter_title', '第一章')}
@@ -240,28 +255,133 @@ class DramaConverter:
 小说内容:
 {content}
 {analysis_text}
-转换要求:
-1. 创作3-5个精彩场景
-2. 每个场景包含: 场景号、场景标题、时间地点、详细内容
-3. 内容格式: 【场景描写】开头，然后是角色对话(格式: 角色名:对话内容)
-4. 突出戏剧冲突和人物对话
-5. 返回有效的 JSON 格式
-
-JSON 格式示例:
+输出格式（严格 JSON）:
 {{
-    "title": "剧本标题",
-    "genre": "类型",
+    "title": "短剧标题",
+    "genre": "主要类型",
     "episodes": 1,
     "scenes": [
         {{
             "scene": 1,
             "title": "场景标题",
-            "time": "时间地点",
-            "content": "【场景描写】...\\n角色A:对话\\n角色B:对话"
+            "time": "时空设定（如：黄昏，公寓客厅）",
+            "content": "【场景描写】描写\\n角色A:对话\\n（动作描述）\\n角色B:对话"
         }}
     ]
 }}
 """
+    
+    def _build_synopsis_prompt(self, novel_data: Dict) -> str:
+        """构建故事简介提取提示词"""
+        content = novel_data.get("content", "")[:1800]
+        return f"""你是一位资深出版编辑。请深入分析以下小说内容，提炼出核心要素，并返回严格 JSON。
+
+分析维度：
+1. 故事简介 - 用 1-2 句话概括核心故事
+2. 类型分类 - 主题类型（科幻/悬疑/言情/奇幻/都市等）
+3. 核心主题 - 故事要表达的深层意义（最多 5 个）
+4. 故事语气 - 整体基调（紧张/温暖/黑暗/搞笑/浪漫等）
+5. 核心冲突 - 驱动故事发展的最主要矛盾
+
+小说标题: {novel_data.get('title', '未知')}
+章节标题: {novel_data.get('chapter_title', '第一章')}
+
+小说内容:
+{content}
+
+输出格式（严格 JSON）:
+{{
+  "synopsis": "故事简介文字",
+  "genre": "主要类型",
+  "themes": ["主题1", "主题2", "主题3"],
+  "tone": "故事语气",
+  "key_conflict": "核心冲突描述"
+}}
+"""
+
+    def _build_characters_prompt(self, novel_data: Dict) -> str:
+        """构建角色提取提示词"""
+        content = novel_data.get("content", "")[:1400]
+        return f"""你是一位专业编剧顾问。请从小说内容中提取主要角色，构建完整的人物档案。
+
+角色提取标准：
+- 只列出对剧情有重要影响的角色（3-7 个）
+- 包含完整的人物设定信息
+- 明确角色之间的冲突和关系
+
+角色属性说明：
+- name: 角色名字
+- role: 角色定位（主角/反派/配角等）
+- age: 年龄或年龄段
+- traits: 核心性格特质（简短形容词组）
+- relationship: 与其他角色的关系
+- arc: 角色的成长/变化轨迹
+- conflict: 角色面临的主要内部或外部冲突
+
+小说标题: {novel_data.get('title', '未知')}
+章节标题: {novel_data.get('chapter_title', '第一章')}
+
+小说内容:
+{content}
+
+输出格式（严格 JSON）:
+{{
+  "main_characters": [
+    {{
+      "name": "角色名",
+      "role": "主角/反派/配角",
+      "age": "描述",
+      "traits": "性格特质",
+      "relationship": "与其他角色的关系",
+      "arc": "角色成长弧线",
+      "conflict": "主要冲突或困境"
+    }}
+  ]
+}}
+"""
+
+    def _build_chapter_analysis_prompt(self, novel_data: Dict) -> str:
+        """构建章节分析提示词"""
+        content = novel_data.get("content", "")[:1600]
+        return f"""你是一位资深剧本分析师。请按照故事结构化分析标准，逐章分析小说内容。
+
+章节分析维度：
+1. 章节概要 - 本章核心事件和转折点
+2. 关键人物 - 在本章中有重要作用的角色
+3. 场景地点 - 主要故事发生的地点
+4. 主干冲突 - 本章的核心矛盾或转折
+5. 场景拆解 - 将章节分解为 2-4 个清晰的场景
+
+小说标题: {novel_data.get('title', '未知')}
+章节标题: {novel_data.get('chapter_title', '第一章')}
+
+小说内容:
+{content}
+
+输出格式（严格 JSON）:
+{{
+  "chapter_outline": [
+    {{
+      "chapter": 1,
+      "chapter_title": "章节标题",
+      "summary": "章节概要（1-2 句）",
+      "key_characters": ["角色1", "角色2"],
+      "settings": "主要场景地点",
+      "major_conflict": "本章核心冲突",
+      "scene_breakdown": [
+        {{
+          "scene": 1,
+          "title": "场景标题",
+          "description": "场景描写",
+          "characters": ["角色A", "角色B"],
+          "conflict": "本场景的冲突或转折"
+        }}
+      ]
+    }}
+  ]
+}}
+"""
+
 
     def _parse_script_response(self, script_text: str, novel_data: Dict) -> Dict:
         """解析 LLM 返回的剧本文本"""

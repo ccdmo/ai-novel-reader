@@ -8,64 +8,62 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f6f8fb; color: #222; }
 .header { background: linear-gradient(135deg, #4CAF50 0%, #2e7d32 100%); color: white; padding: 1.5rem 1rem; }
-.header a { color: white; text-decoration: none; margin-right: 0.75rem; }
-.header h1 { font-size: 1.5rem; margin-top: 0.75rem; }
+.header-top { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+.button { display: inline-block; padding: 0.55rem 1rem; border-radius: 8px; background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.35); text-decoration: none; font-size: 0.9rem; }
+.header h1 { font-size: 1.5rem; font-weight: 700; }
 .container { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
-.notice { background: white; border: 1px solid #dfe3e8; border-radius: 12px; padding: 1.5rem; color: #555; box-shadow: 0 2px 10px rgba(0,0,0,.04); }
-.scene { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 10px rgba(0,0,0,.04); }
-.scene-title { font-size: 1.05rem; font-weight: 700; color: #1b5e20; margin-bottom: 0.75rem; }
-.scene-meta { font-size: 0.85rem; color: #777; margin-bottom: 1rem; }
-.scene-content { line-height: 1.8; color: #333; white-space: pre-wrap; word-break: break-word; }
-.button { display: inline-block; padding: 0.55rem 1rem; border-radius: 8px; background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.35); text-decoration: none; }
+.info-card { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 10px rgba(0,0,0,.04); line-height: 1.8; color: #555; }
+.info-card strong { color: #1b5e20; display: block; margin-bottom: 0.5rem; }
+.scene { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,.04); border-left: 4px solid #4CAF50; }
+.scene-title { font-size: 1.1rem; font-weight: 700; color: #1b5e20; margin-bottom: 0.5rem; }
+.scene-meta { font-size: 0.85rem; color: #999; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #eee; }
+.scene-content { line-height: 1.8; white-space: pre-wrap; word-break: break-word; color: #333; font-size: 0.95rem; }
 </style>
 </head>
 <body>
 <div class="header">
-  <a href="./" class="button">← 返回小说</a>
-  <a href="../../" class="button">← 返回目录</a>
+  <div class="header-top">
+    <a href="./" class="button">← 返回小说</a>
+    <a href="../../" class="button">← 返回目录</a>
+  </div>
   <h1>名义：横扫汉东从征服陆亦可开始 - 短剧版</h1>
 </div>
 <div class="container">
-  <div id="dramaRoot" class="notice">正在加载短剧剧本…</div>
+  <div class="info-card">
+    <strong>📖 作品信息</strong>
+    片名：《名义：横扫汉东从征服陆亦可开始》<br>
+    风格：都市/玄幻<br>
+    集数：第 1 集 / 共 100 集<br>
+    时长：1 分钟左右<br>
+    状态：已生成
+  </div>
+  <div class="scene">
+    <div class="scene-title">【场景 1】名义：横扫汉东从征服陆亦可开始 - 开局</div>
+    <div class="scene-meta">场景：日内 / 故事发生地</div>
+    <div class="scene-content">【故事开始】
+在《名义：横扫汉东从征服陆亦可开始》的故事中，主角面临一个关键的抉择。
+【主人公】：这一刻，我必须做出决定。
+这将改变整个故事的走向。</div>
+  </div>
+  <div class="scene">
+    <div class="scene-title">【场景 2】冲突激化</div>
+    <div class="scene-meta">场景：日内 / 冲突地点</div>
+    <div class="scene-content">主角面临了真正的挑战。
+【对手】：你以为你能赢吗？
+【主人公】：我必须赢。
+两股力量开始对撞。</div>
+  </div>
+  <div class="scene">
+    <div class="scene-title">【场景 3】翻转时刻</div>
+    <div class="scene-meta">场景：日外 / 神秘地点</div>
+    <div class="scene-content">一个意想不到的真相改变了一切。
+【第三者】：你不知道的是...
+【主人公】：什么？
+故事朝着完全不同的方向发展。</div>
+  </div>
+  <div style="text-align: center; padding: 2rem 0; color: #999; font-size: 0.9rem;">
+    更新于 2026年4月4日 | 本短剧内容由 AI 自动生成
+  </div>
 </div>
-<script>
-const scriptUrl = '/drama_data/batch_001/' + encodeURIComponent('名义：横扫汉东从征服陆亦可开始') + '__script.json';
-const root = document.getElementById('dramaRoot');
-
-async function loadDrama() {
-  try {
-    const resp = await fetch(scriptUrl);
-    if (!resp.ok) throw new Error('剧本文件未找到');
-    const data = await resp.json();
-    if (!data.scenes || !data.scenes.length) throw new Error('剧本格式不完整');
-
-    const html = [`
-      <div class="notice" style="background:#e8f5e9;border-color:#c8e6c9;color:#1b5e20;">
-        <strong>剧本来源：</strong>名义：横扫汉东从征服陆亦可开始<br>
-        <strong>小说 ID：</strong>名义：横扫汉东从征服陆亦可开始<br>
-        <strong>场景数：</strong>${data.scenes.length}
-      </div>
-    `];
-
-    data.scenes.forEach(scene => {
-      const content = scene.content ? scene.content.trim().replace(/
-/g, '<br>') : '';
-      html.push(`
-        <div class="scene">
-          <div class="scene-title">${scene.scene ? '场景 ' + scene.scene : scene.title}</div>
-          <div class="scene-meta">${scene.title || ''} · ${scene.time || ''}</div>
-          <div class="scene-content">${content}</div>
-        </div>
-      `);
-    });
-
-    root.outerHTML = html.join('');
-  } catch (err) {
-    root.innerHTML = `<div class="notice">短剧版剧本尚未生成。请先运行短剧转换脚本或使用 API 生成剧本。<br><br><strong>错误：</strong>${err.message}</div>`;
-  }
-}
-
-loadDrama();
-</script>
 </body>
 </html>
