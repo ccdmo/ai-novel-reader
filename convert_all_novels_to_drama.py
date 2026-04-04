@@ -53,7 +53,13 @@ async def convert_novels(novel_ids: List[str], openai_key: str, anthropic_key: s
     if use_fast:
         # 使用批处理器快速生成
         processor = BatchDramaProcessor(converter, max_concurrent)
-        results = await processor.process_novels_optimized(novel_ids, skip_cache=skip_cache)
+        results = await processor.process_novels_optimized(
+            novel_ids,
+            openai_key,
+            anthropic_key,
+            batch_id,
+            skip_cache=skip_cache
+        )
         
         # 保存所有结果
         for novel_id, result in results.items():

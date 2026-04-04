@@ -169,6 +169,28 @@
               <div style="font-size: 0.75rem; color: #999; margin-top: 0.3rem;">用于 AI 质量审核</div>
             </div>
           </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+            <div>
+              <label style="font-size: 0.85rem; color: #666;">OpenAI 模型</label>
+              <select id="openaiModel" style="width: 100%; padding: 0.6rem; border: 1px solid #ddd; border-radius: 6px; font-size: 0.85rem;">
+                <option value="gpt-4o">GPT-4o (推荐)</option>
+                <option value="gpt-4-turbo">GPT-4 Turbo</option>
+                <option value="gpt-4">GPT-4</option>
+                <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+              </select>
+              <div style="font-size: 0.75rem; color: #999; margin-top: 0.3rem;">选择用于转换的模型</div>
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; color: #666;">Anthropic 模型</label>
+              <select id="anthropicModel" style="width: 100%; padding: 0.6rem; border: 1px solid #ddd; border-radius: 6px; font-size: 0.85rem;">
+                <option value="claude-sonnet-4-20250514">Claude Sonnet 4 (推荐)</option>
+                <option value="claude-3-5-sonnet-20241022">Claude 3.5 Sonnet</option>
+                <option value="claude-3-opus-20240229">Claude 3 Opus</option>
+                <option value="claude-3-sonnet-20240229">Claude 3 Sonnet</option>
+              </select>
+              <div style="font-size: 0.75rem; color: #999; margin-top: 0.3rem;">选择用于审核的模型</div>
+            </div>
+          </div>
           <div style="display: flex; gap: 1rem; align-items: flex-end;">
             <div style="flex: 1;">
               <label style="font-size: 0.85rem; color: #666;">API 服务地址</label>
@@ -445,6 +467,8 @@
       const apiEndpoint = document.getElementById('apiEndpoint').value.trim();
       const openaiKey = document.getElementById('openaiApiKey').value.trim();
       const anthropicKey = document.getElementById('anthropicApiKey').value.trim();
+      const openaiModel = document.getElementById('openaiModel').value.trim();
+      const anthropicModel = document.getElementById('anthropicModel').value.trim();
       const conversionPrompt = document.getElementById('conversionPrompt').value.trim();
       const reviewPrompt = document.getElementById('reviewPrompt').value.trim();
       const batchSize = parseInt(document.getElementById('batchSize').value) || 5;
@@ -480,7 +504,7 @@
         if (!isConverting) break;
         
         const novel = novelList[i];
-        await convertNovel(novel, apiEndpoint, openaiKey, anthropicKey, conversionPrompt, reviewPrompt, i, batchSize, startTime);
+        await convertNovel(novel, apiEndpoint, openaiKey, anthropicKey, openaiModel, anthropicModel, conversionPrompt, reviewPrompt, i, batchSize, startTime);
       }
 
       isConverting = false;
@@ -488,7 +512,7 @@
       document.getElementById('pauseBtn').style.display = 'none';
     }
 
-    async function convertNovel(novel, apiEndpoint, openaiKey, anthropicKey, conversionPrompt, reviewPrompt, index, total, startTime) {
+    async function convertNovel(novel, apiEndpoint, openaiKey, anthropicKey, openaiModel, anthropicModel, conversionPrompt, reviewPrompt, index, total, startTime) {
       const row = document.createElement('tr');
       row.id = 'novel-' + novel.id;
       row.innerHTML = `
@@ -508,6 +532,8 @@
             novel_id: novel.id,
             openai_api_key: openaiKey,
             anthropic_api_key: anthropicKey,
+            openai_model: openaiModel,
+            anthropic_model: anthropicModel,
             conversion_prompt: conversionPrompt,
             review_prompt: reviewPrompt
           })
@@ -636,6 +662,8 @@
       const apiEndpoint = document.getElementById('apiEndpoint').value.trim();
       const openaiApiKey = document.getElementById('openaiApiKey').value.trim();
       const anthropicApiKey = document.getElementById('anthropicApiKey').value.trim();
+      const openaiModel = document.getElementById('openaiModel').value.trim();
+      const anthropicModel = document.getElementById('anthropicModel').value.trim();
       const conversionPrompt = document.getElementById('conversionPrompt').value.trim();
       const reviewPrompt = document.getElementById('reviewPrompt').value.trim();
       
@@ -647,13 +675,17 @@
       localStorage.setItem('apiEndpoint', apiEndpoint);
       localStorage.setItem('openaiApiKey', openaiApiKey);
       localStorage.setItem('anthropicApiKey', anthropicApiKey);
+      localStorage.setItem('openaiModel', openaiModel);
+      localStorage.setItem('anthropicModel', anthropicModel);
       localStorage.setItem('conversionPrompt', conversionPrompt);
       localStorage.setItem('reviewPrompt', reviewPrompt);
       
       alert('✅ 配置已保存！\n\n' +
             'API 地址: ' + apiEndpoint + '\n' +
             'OpenAI Key: ' + (openaiApiKey ? '***已设置***' : '未设置') + '\n' +
+            'OpenAI 模型: ' + openaiModel + '\n' +
             'Anthropic Key: ' + (anthropicApiKey ? '***已设置***' : '未设置') + '\n' +
+            'Anthropic 模型: ' + anthropicModel + '\n' +
             '转换提示词: ' + (conversionPrompt ? '已填写' : '未填写') + '\n' +
             '审核提示词: ' + (reviewPrompt ? '已填写' : '未填写'));
     }
@@ -817,6 +849,8 @@
       const savedEndpoint = localStorage.getItem('apiEndpoint') || '';
       const savedOpenaiKey = localStorage.getItem('openaiApiKey') || '';
       const savedAnthropicKey = localStorage.getItem('anthropicApiKey') || '';
+      const savedOpenaiModel = localStorage.getItem('openaiModel') || 'gpt-4o';
+      const savedAnthropicModel = localStorage.getItem('anthropicModel') || 'claude-sonnet-4-20250514';
       const savedConversionPrompt = localStorage.getItem('conversionPrompt') || '';
       const savedReviewPrompt = localStorage.getItem('reviewPrompt') || '';
       
@@ -829,6 +863,8 @@
       if (savedAnthropicKey) {
         document.getElementById('anthropicApiKey').value = savedAnthropicKey;
       }
+      document.getElementById('openaiModel').value = savedOpenaiModel;
+      document.getElementById('anthropicModel').value = savedAnthropicModel;
       if (savedConversionPrompt) {
         document.getElementById('conversionPrompt').value = savedConversionPrompt;
       }

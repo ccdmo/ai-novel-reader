@@ -14,10 +14,20 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .container { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
 .info-card { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 10px rgba(0,0,0,.04); line-height: 1.8; color: #555; }
 .info-card strong { color: #1b5e20; display: block; margin-bottom: 0.5rem; }
-.scene { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,.04); border-left: 4px solid #4CAF50; }
-.scene-title { font-size: 1.1rem; font-weight: 700; color: #1b5e20; margin-bottom: 0.5rem; }
-.scene-meta { font-size: 0.85rem; color: #999; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #eee; }
+.episode { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 10px rgba(0,0,0,.04); border-left: 4px solid #4CAF50; }
+.episode-title { font-size: 1.3rem; font-weight: 700; color: #1b5e20; margin-bottom: 0.5rem; }
+.episode-meta { font-size: 0.85rem; color: #999; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 2px solid #eee; }
+.scene { margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid #81c784; }
+.scene-header { font-size: 1rem; font-weight: 600; color: #2e7d32; margin-bottom: 0.5rem; }
 .scene-content { line-height: 1.8; white-space: pre-wrap; word-break: break-word; color: #333; font-size: 0.95rem; }
+.dialogue { margin: 0.5rem 0; }
+.dialogue-name { font-weight: 600; color: #1b5e20; }
+.dialogue-text { color: #333; }
+.narration { color: #666; font-style: italic; margin: 0.5rem 0; }
+.checklist { background: #f1f8e9; padding: 1rem; border-radius: 8px; margin-top: 1.5rem; }
+.checklist-title { font-weight: 700; color: #1b5e20; margin-bottom: 0.5rem; }
+.checklist-item { margin: 0.3rem 0; color: #555; }
+.checklist-item::before { content: "✓ "; color: #4CAF50; font-weight: bold; }
 </style>
 </head>
 <body>
@@ -32,35 +42,166 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
   <div class="info-card">
     <strong>📖 作品信息</strong>
     片名：《被病娇大小姐公开表白，我定型了》<br>
-    风格：都市/玄幻<br>
+    风格：都市/玄幻/病娇<br>
     集数：第 1 集 / 共 100 集<br>
-    时长：1 分钟左右<br>
+    时长：60-100秒<br>
     状态：已生成
   </div>
-  <div class="scene">
-    <div class="scene-title">【场景 1】被病娇大小姐公开表白，我定型了 - 开局</div>
-    <div class="scene-meta">场景：日内 / 故事发生地</div>
-    <div class="scene-content">【故事开始】
-在《被病娇大小姐公开表白，我定型了》的故事中，主角面临一个关键的抉择。
-【主人公】：这一刻，我必须做出决定。
-这将改变整个故事的走向。</div>
+
+  <div class="episode">
+    <div class="episode-title">【集数】第1集：食堂惊变，当众表白</div>
+    <div class="episode-meta">
+      【时间】中午 【地点】大学食堂 【内景】 【日】
+    </div>
+
+    <div class="scene">
+      <div class="scene-header">【场景1】食堂打饭窗口 - 冲突开场（0-10秒）</div>
+      <div class="scene-content">
+<div class="dialogue">
+  <span class="dialogue-name">陆辰：</span>
+  <span class="dialogue-text">阿姨，麻烦红烧肉多打点。</span>
+</div>
+<div class="narration">△ 食堂阿姨突然冲陆辰挤眼睛，陆辰一脸茫然。身后瞬间安静，所有人目光聚焦。</div>
+<div class="narration">△ 顾清璃穿过人群，高跟鞋声清脆，每一步都踩在陆辰心跳上。</div>
+<div class="dialogue">
+  <span class="dialogue-name">路人甲：</span>
+  <span class="dialogue-text">卧槽，那是顾清璃？她怎么会来食堂？</span>
+</div>
+<div class="dialogue">
+  <span class="dialogue-name">路人乙：</span>
+  <span class="dialogue-text">她在往陆辰那边走？？</span>
+</div>
+<div class="narration">△ 顾清璃在陆辰面前站定，居高临下，目光如X光扫描。</div>
+<div class="dialogue">
+  <span class="dialogue-name">顾清璃：</span>
+  <span class="dialogue-text">我喜欢你。</span>
+</div>
+<div class="dialogue">
+  <span class="dialogue-name">陆辰：</span>
+  <span class="dialogue-text">……啊？</span>
+</div>
+<div class="dialogue">
+  <span class="dialogue-name">顾清璃：</span>
+  <span class="dialogue-text">做我男朋友。</span>
+</div>
+      </div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-header">【场景2】食堂中央 - 爆发点（10-50秒）</div>
+      <div class="scene-content">
+<div class="narration">△ 食堂炸锅，议论声此起彼伏。</div>
+<div class="dialogue">
+  <span class="dialogue-name">路人丙：</span>
+  <span class="dialogue-text">啊啊啊啊校花当众表白！！！</span>
+</div>
+<div class="dialogue">
+  <span class="dialogue-name">路人丁：</span>
+  <span class="dialogue-text">那个男的是谁啊？凭什么啊？</span>
+</div>
+<div class="dialogue">
+  <span class="dialogue-name">路人戊：</span>
+  <span class="dialogue-text">那是陆辰？就那个天天泡图书馆的宅男？</span>
+</div>
+<div class="dialogue">
+  <span class="dialogue-name">陆辰：</span>
+  <span class="dialogue-text">对不起，我……</span>
+</div>
+<div class="narration">△ 冰冷机械音在陆辰脑海响起。</div>
+<div class="narration">△ 【叮——检测到强烈的情感投射行为。】</div>
+<div class="narration">△ 【「定格系统」激活中……】</div>
+<div class="narration">△ 【目标人物：顾清璃】</div>
+<div class="narration">△ 【情感类型：占有欲/爱情宣言】</div>
+<div class="narration">△ 【定型内容：「男朋友」】</div>
+<div class="narration">△ 【生效范围：全体认知】</div>
+<div class="narration">△ 【状态：已锁定】</div>
+<div class="narration">△ 【警告：定型期间，目标人物所有相关行为将被世界合理化解释。】</div>
+<div class="narration">△ 【当前任务：？？？（请先完成本次定型）】</div>
+<div class="narration">△ 【祝您……体验愉快。】</div>
+<div class="dialogue">
+  <span class="dialogue-name">陆辰：</span>
+  <span class="dialogue-text">？？？？？？</span>
+</div>
+      </div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-header">【场景3】食堂 - 爽点与反转（50-80秒）</div>
+      <div class="scene-content">
+<div class="narration">△ 奇异力量涌出，重新定义陆辰与世界的关系。周围人目光突变。</div>
+<div class="dialogue">
+  <span class="dialogue-name">路人甲：</span>
+  <span class="dialogue-text">看吧，顾清璃的男朋友果然很低调。</span>
+</div>
+<div class="dialogue">
+  <span class="dialogue-name">路人乙：</span>
+  <span class="dialogue-text">难怪从来不张扬，原来是怕给女朋友惹麻烦。</span>
+</div>
+<div class="dialogue">
+  <span class="dialogue-name">路人丙：</span>
+  <span class="dialogue-text">我就说那个陆辰肯定不简单！能被顾大小姐看上的人，能是普通人吗？</span>
+</div>
+<div class="narration">△ 陆辰张嘴想解释，却一个字都说不出来。所有人脸上都写着"我早就知道了"。</div>
+<div class="dialogue">
+  <span class="dialogue-name">顾清璃：</span>
+  <span class="dialogue-text">走吧。</span>
+</div>
+<div class="narration">△ 顾清璃伸出手，自然而然牵住陆辰。手很凉，握得很紧。</div>
+<div class="dialogue">
+  <span class="dialogue-name">陆辰：</span>
+  <span class="dialogue-text">诶？去、去哪？</span>
+</div>
+<div class="dialogue">
+  <span class="dialogue-name">顾清璃：</span>
+  <span class="dialogue-text">回家。</span>
+</div>
+<div class="dialogue">
+  <span class="dialogue-name">陆辰：</span>
+  <span class="dialogue-text">回、回谁的家？</span>
+</div>
+<div class="dialogue">
+  <span class="dialogue-name">顾清璃：</span>
+  <span class="dialogue-text">你问这种问题，不觉得多余吗？</span>
+</div>
+      </div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-header">【场景4】食堂门口 - 钩子结尾（80-100秒）</div>
+      <div class="scene-content">
+<div class="narration">△ 身后传来起哄声和口哨声。</div>
+<div class="dialogue">
+  <span class="dialogue-name">路人：</span>
+  <span class="dialogue-text">亲一个！亲一个！</span>
+</div>
+<div class="narration">△ 顾清璃回头，冰冷警告。起哄声瞬间消失。</div>
+<div class="narration">△ 黑色劳斯莱斯停在门口，顾清璃把陆辰塞进车内。</div>
+<div class="narration">△ 车内奢华得让陆辰窒息。</div>
+<div class="dialogue">
+  <span class="dialogue-name">顾清璃：</span>
+  <span class="dialogue-text">开车。</span>
+</div>
+<div class="narration">△ 顾清璃转向陆辰，近距离之下，五官精致如雕刻。</div>
+<div class="dialogue">
+  <span class="dialogue-name">顾清璃：</span>
+  <span class="dialogue-text">从今天开始，你就是我的了。</span>
+</div>
+<div class="narration">△ 顾清璃眼中燃烧着执念，陆辰后背发凉。</div>
+<div class="narration">△ 系统再次响起。</div>
+<div class="narration">△ 【任务更新：完成首次定型验证。】</div>
+<div class="narration">△ 【倒计时开始……】</div>
+      </div>
+    </div>
+
+    <div class="checklist">
+      <div class="checklist-title">【本集卡点标注】</div>
+      <div class="checklist-item">矛盾点：普通学生陆辰 vs 校花顾清璃当众表白</div>
+      <div class="checklist-item">爆发点：顾清璃当众表白"我喜欢你""做我男朋友"</div>
+      <div class="checklist-item">爽点：系统激活，世界认知瞬间改变，所有人理所当然接受</div>
+      <div class="checklist-item">钩子：系统任务倒计时开始，陆辰被带走，命运未知</div>
+    </div>
   </div>
-  <div class="scene">
-    <div class="scene-title">【场景 2】冲突激化</div>
-    <div class="scene-meta">场景：日内 / 冲突地点</div>
-    <div class="scene-content">主角面临了真正的挑战。
-【对手】：你以为你能赢吗？
-【主人公】：我必须赢。
-两股力量开始对撞。</div>
-  </div>
-  <div class="scene">
-    <div class="scene-title">【场景 3】翻转时刻</div>
-    <div class="scene-meta">场景：日外 / 神秘地点</div>
-    <div class="scene-content">一个意想不到的真相改变了一切。
-【第三者】：你不知道的是...
-【主人公】：什么？
-故事朝着完全不同的方向发展。</div>
-  </div>
+
   <div style="text-align: center; padding: 2rem 0; color: #999; font-size: 0.9rem;">
     更新于 2026年4月4日 | 本短剧内容由 AI 自动生成
   </div>

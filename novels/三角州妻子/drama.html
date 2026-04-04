@@ -3,66 +3,631 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>三角州妻子 - 短剧版</title>
+<title>三角州妻子 - 短剧剧本</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f6f8fb; color: #222; }
-.header { background: linear-gradient(135deg, #4CAF50 0%, #2e7d32 100%); color: white; padding: 1.5rem 1rem; }
-.header-top { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
-.button { display: inline-block; padding: 0.55rem 1rem; border-radius: 8px; background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.35); text-decoration: none; font-size: 0.9rem; }
-.header h1 { font-size: 1.5rem; font-weight: 700; }
-.container { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
-.info-card { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 10px rgba(0,0,0,.04); line-height: 1.8; color: #555; }
-.info-card strong { color: #1b5e20; display: block; margin-bottom: 0.5rem; }
-.scene { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,.04); border-left: 4px solid #4CAF50; }
-.scene-title { font-size: 1.1rem; font-weight: 700; color: #1b5e20; margin-bottom: 0.5rem; }
-.scene-meta { font-size: 0.85rem; color: #999; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #eee; }
-.scene-content { line-height: 1.8; white-space: pre-wrap; word-break: break-word; color: #333; font-size: 0.95rem; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+.header {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.header p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+.main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.episode {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid #667eea;
+}
+.episode-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+.episode-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+.episode-meta {
+  font-size: 0.85rem;
+  color: #666;
+}
+.scene {
+  margin-bottom: 1.5rem;
+  padding: 1.2rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border-left: 3px solid #764ba2;
+}
+.scene-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+.scene-content {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+.dialogue {
+  margin: 0.5rem 0;
+  padding-left: 1rem;
+  border-left: 2px solid #667eea;
+}
+.character {
+  font-weight: 600;
+  color: #667eea;
+  margin-bottom: 0.25rem;
+}
+.lines {
+  color: #333;
+  margin-left: 1rem;
+}
+.note {
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+  margin: 0.5rem 0;
+}
+.elements {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f0f4ff;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+.elements h4 {
+  color: #667eea;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+.elements ul {
+  list-style: none;
+  padding-left: 0.5rem;
+}
+.elements li {
+  margin-bottom: 0.25rem;
+  color: #555;
+}
+.elements li:before {
+  content: "• ";
+  color: #764ba2;
+}
+@media (max-width: 768px) {
+  .main {
+    padding: 0 0.5rem;
+  }
+  .episode {
+    padding: 1.5rem;
+  }
+  .scene {
+    padding: 1rem;
+  }
+}
 </style>
 </head>
 <body>
 <div class="header">
-  <div class="header-top">
-    <a href="./" class="button">← 返回小说</a>
-    <a href="../../" class="button">← 返回目录</a>
-  </div>
-  <h1>三角州妻子 - 短剧版</h1>
+  <h1>三角州妻子 - 短剧剧本</h1>
+  <p>改编自同名小说 | 每集60-100秒</p>
 </div>
-<div class="container">
-  <div class="info-card">
-    <strong>📖 作品信息</strong>
-    片名：《三角州妻子》<br>
-    风格：都市/玄幻<br>
-    集数：第 1 集 / 共 100 集<br>
-    时长：1 分钟左右<br>
-    状态：已生成
+
+<div class="main">
+  <!-- 第1集 -->
+  <div class="episode">
+    <div class="episode-header">
+      <div class="episode-title">第1集：绝境中的婚约</div>
+      <div class="episode-meta">时间：夜晚 | 地点：废弃工厂天台 | 场景：动作/悬疑</div>
+    </div>
+    
+    <div class="scene">
+      <div class="scene-title">场景1：生死危机</div>
+      <div class="scene-content">
+        <note>【火箭弹爆炸，火光冲天。顾北辰被冲击波掀飞，重重撞在水泥墙柱上。】</note>
+        
+        <div class="dialogue">
+          <div class="character">顾北辰（痛苦）：</div>
+          <div class="lines">呼叫指挥部，遭遇伏击，坐标……</div>
+        </div>
+        
+        <note>【耳麦传来电流杂音，顾北辰烦躁地捶墙。】</note>
+        
+        <div class="dialogue">
+          <div class="character">顾北辰（咬牙）：</div>
+          <div class="lines">该死！有内鬼！</div>
+        </div>
+        
+        <note>【顾北辰摸出最后一个弹匣，准备决一死战。】</note>
+        
+        <div class="dialogue">
+          <div class="character">系统（机械音）：</div>
+          <div class="lines">检测到宿主生命危急，绑定战魂婚姻系统。</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">顾北辰（震惊）：</div>
+          <div class="lines">什么鬼？</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">系统：</div>
+          <div class="lines">建议与适格者林若雪建立婚姻关系，获得战斗天赋加成。</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="scene">
+      <div class="scene-title">场景2：冰刃出现</div>
+      <div class="scene-content">
+        <note>【林若雪从通风管道跃下，手持科幻狙击枪，英姿飒爽。】</note>
+        
+        <div class="dialogue">
+          <div class="character">林若雪（清冷）：</div>
+          <div class="lines">北狼，你没死吧？</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">顾北辰（惊讶）：</div>
+          <div class="lines">冰刃？你怎么在这？</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">林若雪：</div>
+          <div class="lines">通讯被干扰，我摸过来了。好消息：干掉了两个狙击手。坏消息：他们的增援五分钟后到。</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="scene">
+      <div class="scene-title">场景3：疯狂的求婚</div>
+      <div class="scene-content">
+        <div class="dialogue">
+          <div class="character">顾北辰（认真）：</div>
+          <div class="lines">林若雪，你愿意和我结婚吗？</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">林若雪（错愕）：</div>
+          <div class="lines">你在开什么玩笑？我们才认识不到两小时！</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">顾北辰：</div>
+          <div class="lines">系统说，和你结婚我就能获得你的战斗天赋，我们才有机会活着离开！</div>
+        </div>
+        
+        <note>【林若雪举起枪对准顾北辰的脑袋。】</note>
+        
+        <div class="dialogue">
+          <div class="character">林若雪（冰冷）：</div>
+          <div class="lines">要么给我更好的理由，要么我现在就送你上路。</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="elements">
+      <h4>本集要素</h4>
+      <ul>
+        <li>矛盾点：顾北辰陷入绝境，需要与陌生人结婚才能获得战力</li>
+        <li>爆发点：林若雪举枪对准顾北辰，生死抉择</li>
+        <li>爽点：系统绑定，开启全新能力体系</li>
+        <li>钩子：林若雪会答应这个疯狂的请求吗？他们能活着离开吗？</li>
+      </ul>
+    </div>
   </div>
-  <div class="scene">
-    <div class="scene-title">【场景 1】三角州妻子 - 开局</div>
-    <div class="scene-meta">场景：日内 / 故事发生地</div>
-    <div class="scene-content">【故事开始】
-在《三角州妻子》的故事中，主角面临一个关键的抉择。
-【主人公】：这一刻，我必须做出决定。
-这将改变整个故事的走向。</div>
+  
+  <!-- 第2集 -->
+  <div class="episode">
+    <div class="episode-header">
+      <div class="episode-title">第2集：婚姻契约</div>
+      <div class="episode-meta">时间：夜晚 | 地点：废弃工厂天台 | 场景：动作/情感</div>
+    </div>
+    
+    <div class="scene">
+      <div class="scene-title">场景1：生死赌局</div>
+      <div class="scene-content">
+        <note>【顾北辰主动将脑袋抵在林若雪的枪口上。】</note>
+        
+        <div class="dialogue">
+          <div class="character">顾北辰（坚定）：</div>
+          <div class="lines">如果我不值得信任，那我就用命来证明我的诚意。与其一起死，不如赌一把。</div>
+        </div>
+        
+        <note>【林若雪盯着顾北辰，眼神复杂。远处传来敌人的脚步声。】</note>
+        
+        <div class="dialogue">
+          <div class="character">林若雪（犹豫）：</div>
+          <div class="lines">你真的相信那个系统？</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">顾北辰：</div>
+          <div class="lines">我不知道，但我没有选择了。</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="scene">
+      <div class="scene-title">场景2：契约达成</div>
+      <div class="scene-content">
+        <note>【林若雪缓缓放下枪。】</note>
+        
+        <div class="dialogue">
+          <div class="character">林若雪（冷漠）：</div>
+          <div class="lines">好，我答应你。不过别误会，我只是不想死在这里。如果你敢骗我——</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">顾北辰（松一口气）：</div>
+          <div class="lines">成交。</div>
+        </div>
+        
+        <note>【系统声音响起，顾北辰身体一震。】</note>
+        
+        <div class="dialogue">
+          <div class="character">系统：</div>
+          <div class="lines">婚姻契约建立。宿主获得战斗天赋共享，战力提升47%。</div>
+        </div>
+        
+        <note>【顾北辰感受着体内涌动的力量，眼神变得锐利。】</note>
+      </div>
+    </div>
+    
+    <div class="scene">
+      <div class="scene-title">场景3：突围行动</div>
+      <div class="scene-content">
+        <div class="dialogue">
+          <div class="character">顾北辰（自信）：</div>
+          <div class="lines">走，我知道一条路。</div>
+        </div>
+        
+        <note>【两人快速移动，顾北辰的感知变得异常敏锐。】</note>
+        
+        <div class="dialogue">
+          <div class="character">顾北辰（警惕）：</div>
+          <div class="lines">有狙击手，三点钟方向，四百米。</div>
+        </div>
+        
+        <note>【林若雪迅速举枪，精准射击。远处传来惨叫。】</note>
+        
+        <div class="dialogue">
+          <div class="character">林若雪（冷静）：</div>
+          <div class="lines">我的备用狙击点。青鸟，汇报情况。</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">青鸟（耳麦）：</div>
+          <div class="lines">冰刃姐，目标已救出，正在撤离。但撤离路线被封锁了。</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="elements">
+      <h4>本集要素</h4>
+      <ul>
+        <li>矛盾点：林若雪是否应该相信顾北辰的疯狂提议</li>
+        <li>爆发点：婚姻契约建立，顾北辰获得战力提升</li>
+        <li>爽点：系统激活，顾北辰感知增强，林若雪精准狙击</li>
+        <li>钩子：他们能成功突围吗？撤离路线被封锁后该怎么办？</li>
+      </ul>
+    </div>
   </div>
-  <div class="scene">
-    <div class="scene-title">【场景 2】冲突激化</div>
-    <div class="scene-meta">场景：日内 / 冲突地点</div>
-    <div class="scene-content">主角面临了真正的挑战。
-【对手】：你以为你能赢吗？
-【主人公】：我必须赢。
-两股力量开始对撞。</div>
+  
+  <!-- 第3集 -->
+  <div class="episode">
+    <div class="episode-header">
+      <div class="episode-title">第3集：神秘威胁</div>
+      <div class="episode-meta">时间：夜晚 | 地点：废弃工厂附近 | 场景：悬疑/动作</div>
+    </div>
+    
+    <div class="scene">
+      <div class="scene-title">场景1：诡异信号</div>
+      <div class="scene-content">
+        <note>【顾北辰突然停下脚步，表情凝重。】</note>
+        
+        <div class="dialogue">
+          <div class="character">林若雪（警觉）：</div>
+          <div class="lines">怎么了？</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">顾北辰（严肃）：</div>
+          <div class="lines">我感受到了危险。那边有个红点……不是瞄准镜。</div>
+        </div>
+        
+        <note>【系统声音响起。】</note>
+        
+        <div class="dialogue">
+          <div class="character">系统：</div>
+          <div class="lines">检测到重要剧情人物。黑暗异能觉醒者，危险等级S级。</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">系统：</div>
+          <div class="lines">格赫罗斯碎片正在接近……</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="scene">
+      <div class="scene-title">场景2：神秘声音</div>
+      <div class="scene-content">
+        <note>【红点消失，顾北辰脑海中响起诡异的笑声。】</note>
+        
+        <div class="dialogue">
+          <div class="character">神秘声音（邪魅）：</div>
+          <div class="lines">找到你了……北狼。还有那个女人……不错的气息。</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">神秘声音：</div>
+          <div class="lines">真是期待啊……当你获得力量之后……然后——亲手毁掉她。</div>
+        </div>
+        
+        <note>【顾北辰猛地抬头，四处张望，却什么也没看到。】</note>
+        
+        <div class="dialogue">
+          <div class="character">林若雪（担忧）：</div>
+          <div class="lines">你怎么了？</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">顾北辰（摇头）：</div>
+          <div class="lines">没什么，走吧，先离开这里再说。</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="scene">
+      <div class="scene-title">场景3：逃离</div>
+      <div class="scene-content">
+        <note>【远处火光冲天，枪声、爆炸声交织。两人在废墟中穿梭。】</note>
+        
+        <div class="dialogue">
+          <div class="character">林若雪：</div>
+          <div class="lines">我们得找辆车离开。</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">顾北辰（自信）：</div>
+          <div class="lines">我知道哪里有辆车，跟我来。</div>
+        </div>
+        
+        <note>【两人来到停车场，顾北辰熟练地撬开车门。】</note>
+        
+        <div class="dialogue">
+          <div class="character">林若雪（调侃）：</div>
+          <div class="lines">没想到你还有这手艺。</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">顾北辰（苦笑）：</div>
+          <div class="lines">特种部队必备技能。</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="elements">
+      <h4>本集要素</h4>
+      <ul>
+        <li>矛盾点：神秘敌人的出现，威胁顾北辰和林若雪</li>
+        <li>爆发点：神秘声音预言顾北辰会毁掉林若雪</li>
+        <li>爽点：顾北辰展现特种部队技能，成功找到车辆</li>
+        <li>钩子：神秘敌人是谁？格赫罗斯碎片意味着什么？他们能成功逃离吗？</li>
+      </ul>
+    </div>
   </div>
-  <div class="scene">
-    <div class="scene-title">【场景 3】翻转时刻</div>
-    <div class="scene-meta">场景：日外 / 神秘地点</div>
-    <div class="scene-content">一个意想不到的真相改变了一切。
-【第三者】：你不知道的是...
-【主人公】：什么？
-故事朝着完全不同的方向发展。</div>
+  
+  <!-- 第4集 -->
+  <div class="episode">
+    <div class="episode-header">
+      <div class="episode-title">第4集：婚姻生活开始</div>
+      <div class="episode-meta">时间：清晨 | 地点：安全屋 | 场景：日常/情感</div>
+    </div>
+    
+    <div class="scene">
+      <div class="scene-title">场景1：安全屋</div>
+      <div class="scene-content">
+        <note>【清晨阳光透过窗帘洒进房间，顾北辰和林若雪坐在沙发上，气氛尴尬。】</note>
+        
+        <div class="dialogue">
+          <div class="character">林若雪（打破沉默）：</div>
+          <div class="lines">我们现在算是夫妻了？</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">顾北辰（尴尬）：</div>
+          <div class="lines">按系统的说法，是的。</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">林若雪（冷漠）：</div>
+          <div class="lines">我丑话说在前，这只是临时合作关系。任务结束后，我们就解除婚约。</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="scene">
+      <div class="scene-title">场景2：系统任务</div>
+      <div class="scene-content">
+        <note>【系统声音突然响起。】</note>
+        
+        <div class="dialogue">
+          <div class="character">系统：</div>
+          <div class="lines">发布第一个任务：维护婚姻稳定，提升真心度。当前真心度：3%。</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">顾北辰（惊讶）：</div>
+          <div class="lines">还有任务？</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">系统：</div>
+          <div class="lines">真心度提升可解锁更多能力。当前共享效率：10%。</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">林若雪（嘲讽）：</div>
+          <div class="lines">看来我们得扮演好夫妻了。</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="scene">
+      <div class="scene-title">场景3：神秘女子</div>
+      <div class="scene-content">
+        <note>【门铃响起，顾北辰开门，看到一个气质出众的女子站在门外。】</note>
+        
+        <div class="dialogue">
+          <div class="character">神秘女子（微笑）：</div>
+          <div class="lines">北辰，好久不见。</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">顾北辰（震惊）：</div>
+          <div class="lines">苏晚晴？你怎么会在这里？</div>
+        </div>
+        
+        <note>【林若雪听到声音，从里屋出来，看到神秘女子，眼神变得警惕。】</note>
+        
+        <div class="dialogue">
+          <div class="character">林若雪（冷淡）：</div>
+          <div class="lines">这位是？</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">苏晚晴（打量林若雪）：</div>
+          <div class="lines">这位一定是北辰的妻子吧？真漂亮。</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="elements">
+      <h4>本集要素</h4>
+      <ul>
+        <li>矛盾点：林若雪对婚姻的抵触，只将其视为临时合作</li>
+        <li>爆发点：系统发布维护婚姻的任务，要求提升真心度</li>
+        <li>爽点：顾北辰和林若雪开始适应夫妻身份</li>
+        <li>钩子：苏晚晴是谁？她的出现会对顾北辰和林若雪的关系产生什么影响？</li>
+      </ul>
+    </div>
   </div>
-  <div style="text-align: center; padding: 2rem 0; color: #999; font-size: 0.9rem;">
-    更新于 2026年4月4日 | 本短剧内容由 AI 自动生成
+  
+  <!-- 第5集 -->
+  <div class="episode">
+    <div class="episode-header">
+      <div class="episode-title">第5集：身份危机</div>
+      <div class="episode-meta">时间：白天 | 地点：安全屋 | 场景：情感/悬疑</div>
+    </div>
+    
+    <div class="scene">
+      <div class="scene-title">场景1：尴尬会面</div>
+      <div class="scene-content">
+        <note>【苏晚晴走进安全屋，四处打量，眼神中带着深意。】</note>
+        
+        <div class="dialogue">
+          <div class="character">苏晚晴（感慨）：</div>
+          <div class="lines">没想到你现在过上了这样的生活，北辰。</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">顾北辰（谨慎）：</div>
+          <div class="lines">晚晴，你突然来找我，有什么事吗？</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">苏晚晴（严肃）：</div>
+          <div class="lines">我收到消息，黑蛇组织正在追查你的下落。他们知道你还活着。</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="scene">
+      <div class="scene-title">场景2：醋意翻涌</div>
+      <div class="scene-content">
+        <note>【林若雪看着顾北辰和苏晚晴的互动，脸色越来越冷。】</note>
+        
+        <div class="dialogue">
+          <div class="character">林若雪（打断）：</div>
+          <div class="lines">苏小姐，请问你和北辰是什么关系？</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">苏晚晴（微笑）：</div>
+          <div class="lines">我们是旧识。三年前，北辰在任务中受伤，是我照顾他的。</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">林若雪（挑眉）：</div>
+          <div class="lines">哦？这么说，你是他的旧情人？</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">顾北辰（慌忙解释）：</div>
+          <div class="lines">若雪，不是你想的那样！晚晴只是我的朋友。</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="scene">
+      <div class="scene-title">场景3：系统预警</div>
+      <div class="scene-content">
+        <note>【系统声音突然响起。】</note>
+        
+        <div class="dialogue">
+          <div class="character">系统：</div>
+          <div class="lines">警告：婚姻关系出现危机，真心度下降至1%。</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">顾北辰（紧张）：</div>
+          <div class="lines">若雪，你听我解释……</div>
+        </div>
+        
+        <div class="dialogue">
+          <div class="character">林若雪（冷笑）：</div>
+          <div class="lines">解释什么？我只是你的临时合作伙伴，你的过去与我无关。</div>
+        </div>
+        
+        <note>【林若雪转身走进房间，摔门而去。】</note>
+      </div>
+    </div>
+    
+    <div class="elements">
+      <h4>本集要素</h4>
+      <ul>
+        <li>矛盾点：苏晚晴的出现，引发林若雪的醋意和婚姻危机</li>
+        <li>爆发点：真心度下降至1%，系统发出警告</li>
+        <li>爽点：林若雪展现出对顾北辰的在意，情感升温</li>
+        <li>钩子：顾北辰会如何挽回林若雪？苏晚晴的真实目的是什么？</li>
+      </ul>
+    </div>
   </div>
 </div>
 </body>

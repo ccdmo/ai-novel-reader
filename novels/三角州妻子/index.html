@@ -72,7 +72,7 @@ a{color:#667eea;text-decoration:none}
 <script>
 var CHAPTERS = [{"num": 1, "title": "绝境：血与婚礼", "status": "done", "words": 4328, "file": "chapter_0001.json"}];
 var BOOK_ID = "三角州妻子";
-var DRAMA_SCRIPT_URL = '/drama_data/batch_001/' + encodeURIComponent(BOOK_ID) + '__script.json';
+var DRAMA_SCRIPT_URL = 'drama.html';
 var currentChapter = 0;
 var currentView = 'original';
 var dramaLoaded = false;
@@ -99,16 +99,7 @@ function loadDrama() {
       return;
     }
     try {
-      var data = JSON.parse(xhr.responseText);
-      if (!data.scenes || !data.scenes.length) throw new Error('剧本格式不完整');
-      var html = '<div class="drama-info"><strong>短剧改编自：</strong>三角州妻子<br><strong>场景数：</strong>' + data.scenes.length + '</div>';
-      data.scenes.forEach(function(scene) {
-        var content = scene.content ? scene.content.trim().replace(/\n/g, '<br>') : '';
-        html += '<div class="scene"><div class="scene-title">' + (scene.scene ? '场景 ' + scene.scene : scene.title) + '</div>' +
-          '<div class="scene-meta">' + (scene.title || '') + ' · ' + (scene.time || '') + '</div>' +
-          '<div class="scene-content">' + content + '</div></div>';
-      });
-      root.innerHTML = html;
+      root.innerHTML = xhr.responseText;
       dramaLoaded = true;
     } catch (e) {
       root.innerHTML = '<div style="padding:2rem;color:red">加载失败: ' + e.message + '</div>';

@@ -185,12 +185,16 @@ class ParallelDramaGenerator:
 
 class BatchDramaProcessor:
     """批处理优化 - 智能调度和速率限制"""
-    
+
     def __init__(self, converter, max_concurrent: int = 3):
+        from handlers.drama_reviewer import DramaReviewer
+        from handlers.batch_manager import BatchManager
         self.converter = converter
         self.max_concurrent = max_concurrent
         self.parallel_gen = ParallelDramaGenerator(converter)
         self.sem = asyncio.Semaphore(max_concurrent)
+        self._reviewer_class = DramaReviewer
+        self._batch_manager_class = BatchManager
     
     async def process_novels_optimized(
         self,
@@ -239,14 +243,10 @@ class BatchDramaProcessor:
                     use_cache=not skip_cache
                 )
                 
-                # 审核
-                from handlers.drama_reviewer import DramaReviewer
-                reviewer = DramaReviewer()
+                reviewer = self._reviewer_class()
                 review = await reviewer.review_script(script, novel_id, anthropic_key)
-                
-                # 保存
-                from handlers.batch_manager import BatchManager
-                batch_mgr = BatchManager()
+
+                batch_mgr = self._batch_manager_class()
                 await batch_mgr.save_drama_result(novel_id, script, review, batch_id)
                 
                 return {

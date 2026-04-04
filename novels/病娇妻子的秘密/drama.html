@@ -7,17 +7,25 @@
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f6f8fb; color: #222; }
-.header { background: linear-gradient(135deg, #4CAF50 0%, #2e7d32 100%); color: white; padding: 1.5rem 1rem; }
+.header { background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%); color: white; padding: 1.5rem 1rem; }
 .header-top { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
 .button { display: inline-block; padding: 0.55rem 1rem; border-radius: 8px; background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.35); text-decoration: none; font-size: 0.9rem; }
 .header h1 { font-size: 1.5rem; font-weight: 700; }
 .container { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
 .info-card { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 10px rgba(0,0,0,.04); line-height: 1.8; color: #555; }
-.info-card strong { color: #1b5e20; display: block; margin-bottom: 0.5rem; }
-.scene { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,.04); border-left: 4px solid #4CAF50; }
-.scene-title { font-size: 1.1rem; font-weight: 700; color: #1b5e20; margin-bottom: 0.5rem; }
-.scene-meta { font-size: 0.85rem; color: #999; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #eee; }
-.scene-content { line-height: 1.8; white-space: pre-wrap; word-break: break-word; color: #333; font-size: 0.95rem; }
+.info-card strong { color: #c2185b; display: block; margin-bottom: 0.5rem; }
+.episode { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,.04); border-left: 4px solid #e91e63; }
+.episode-title { font-size: 1.2rem; font-weight: 700; color: #c2185b; margin-bottom: 0.5rem; }
+.episode-meta { font-size: 0.85rem; color: #999; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #eee; }
+.episode-content { line-height: 1.8; white-space: pre-wrap; word-break: break-word; color: #333; font-size: 0.95rem; }
+.dialogue { margin: 0.8rem 0; }
+.dialogue-name { font-weight: 700; color: #c2185b; margin-bottom: 0.3rem; }
+.dialogue-text { color: #333; }
+.narrative { color: #666; font-style: italic; margin: 0.8rem 0; }
+.checklist { background: #fff8f8; border-radius: 8px; padding: 1rem; margin-top: 1rem; border: 1px solid #ffcdd2; }
+.checklist-title { font-weight: 700; color: #c2185b; margin-bottom: 0.5rem; }
+.checklist-item { margin: 0.3rem 0; padding-left: 1.2rem; position: relative; color: #555; }
+.checklist-item:before { content: "✓"; position: absolute; left: 0; color: #e91e63; font-weight: bold; }
 </style>
 </head>
 <body>
@@ -32,40 +40,178 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
   <div class="info-card">
     <strong>📖 作品信息</strong>
     片名：《病娇妻子的秘密》<br>
-    风格：都市/玄幻<br>
+    风格：都市/悬疑/病娇<br>
     集数：第 1 集 / 共 100 集<br>
-    时长：1 分钟左右<br>
+    时长：60-90秒<br>
     状态：已生成
   </div>
-  <div class="scene">
-    <div class="scene-title">【场景 1】闪婚事件</div>
-    <div class="scene-meta">场景：日内 / 公司大厅</div>
-    <div class="scene-content">总裁突然在全公司宣布。
-【总裁】：请大家注意，这位是我的妻子。以后谁欺负她，就是欺负我。
-【所有人】：（震惊）什么？闪婚了？
-【女主】：（脸红）你...你怎么突然说这个...
-【总裁】：我早就决定了。</div>
+
+  <div class="episode">
+    <div class="episode-title">【集数】第1集：门锁的秘密</div>
+    <div class="episode-meta">
+      【时间】清晨  【地点】卧室  【内景】  【日】
+    </div>
+    <div class="episode-content">
+<div class="dialogue">
+  <div class="dialogue-name">顾言：</div>
+  <div class="dialogue-text">（伸手摸床头，摸了个空）手机呢？</div>
+</div>
+
+<div class="narrative">
+  △ 顾言坐起身，环顾四周，目光落在紧闭的房门上。他下床走到门边，用力拧门把手。
+</div>
+
+<div class="dialogue">
+  <div class="dialogue-name">顾言：</div>
+  <div class="dialogue-text">（拧了几下，纹丝不动）打不开？</div>
+</div>
+
+<div class="narrative">
+  △ 门锁发出清脆的"咔咔"声，门始终无法打开。
+</div>
+
+<div class="dialogue">
+  <div class="dialogue-name">苏念念（画外音）：</div>
+  <div class="dialogue-text">早安，亲爱的。</div>
+</div>
+
+<div class="dialogue">
+  <div class="dialogue-name">顾言：</div>
+  <div class="dialogue-text">念念？门怎么打不开？</div>
+</div>
+
+<div class="dialogue">
+  <div class="dialogue-name">苏念念（画外音）：</div>
+  <div class="dialogue-text">锁着呢。今天天气不好，你就在家里休息吧。</div>
+</div>
+
+<div class="narrative">
+  △ 顾言走到窗边，猛地拉开窗帘——阳光明媚，天空湛蓝。
+</div>
+
+<div class="dialogue">
+  <div class="dialogue-name">顾言：</div>
+  <div class="dialogue-text">念念，外面晴空万里，哪来的天气不好？</div>
+</div>
+
+<div class="dialogue">
+  <div class="dialogue-name">苏念念（画外音）：</div>
+  <div class="dialogue-text">（沉默两秒）晴空万里……那不是更好吗？阳光这么好，你就在窗边晒晒太阳不好吗？外面那么热，出去会中暑的。</div>
+</div>
+
+<div class="dialogue">
+  <div class="dialogue-name">顾言：</div>
+  <div class="dialogue-text">现在是三月份。</div>
+</div>
+
+<div class="dialogue">
+  <div class="dialogue-name">苏念念（画外音）：</div>
+  <div class="dialogue-text">三月份也会中暑的呀。网上说全球变暖，现在三月份有时候都能到三十度了呢。我这是为你好，亲爱的。</div>
+</div>
+
+<div class="narrative">
+  ■ 顾言扶额，深吸一口气。
+</div>
+
+<div class="dialogue">
+  <div class="dialogue-name">顾言：</div>
+  <div class="dialogue-text">念念，我觉得我们需要谈谈。你先把门打开，我们好好聊聊。</div>
+</div>
+
+<div class="narrative">
+  △ 门外传来轻轻的脚步声，然后是钥匙插进锁孔的声音。"咔哒"一声，门开了。
+</div>
+
+<div class="narrative">
+  △ 苏念念站在门口，穿着淡粉色家居服，长发披散，脸上带着温柔的浅笑。她端着托盘，上面放着热气腾腾的早餐。
+</div>
+
+<div class="dialogue">
+  <div class="dialogue-name">苏念念：</div>
+  <div class="dialogue-text">（走进房间，把托盘放在床头柜上）早餐来了。你昨晚熬夜写稿子，今天多睡会儿也好的嘛。</div>
+</div>
+
+<div class="dialogue">
+  <div class="dialogue-name">顾言：</div>
+  <div class="dialogue-text">念念，你把手机还我吧，我今天想出去透透气。</div>
+</div>
+
+<div class="narrative">
+  △ 苏念念的笑容顿了一下，快得几乎让人察觉不到。她漂亮的眼睛里闪过一丝让人看不懂的情绪。
+</div>
+
+<div class="dialogue">
+  <div class="dialogue-name">苏念念：</div>
+  <div class="dialogue-text">（低下头，做出思考的样子）手机？啊，我想起来了，你的手机屏幕碎了，我拿去修了。</div>
+</div>
+
+<div class="dialogue">
+  <div class="dialogue-name">顾言：</div>
+  <div class="dialogue-text">屏幕碎了？我怎么不知道？</div>
+</div>
+
+<div class="dialogue">
+  <div class="dialogue-name">苏念念：</div>
+  <div class="dialogue-text">（抬起头，眼神无辜）你睡着之后碎的呀。你那天晚上熬夜太晚了，我怕吵醒你，就悄悄拿去修了。修手机的师傅说要三天才能修好，再过两天就能拿回来了。</div>
+</div>
+
+<div class="dialogue">
+  <div class="dialogue-name">顾言：</div>
+  <div class="dialogue-text">那我能用电脑吗？</div>
+</div>
+
+<div class="narrative">
+  △ 苏念念的眼睛微微眯起，笑容依旧温柔。
+</div>
+
+<div class="dialogue">
+  <div class="dialogue-name">苏念念：</div>
+  <div class="dialogue-text">当然可以呀。不过你今天不是休息吗？难得休息一天，就不要工作了吧。我陪你看电影好不好？你之前不是一直想看那部新上映的科幻片吗？我下载好了。</div>
+</div>
+
+<div class="narrative">
+  △ 顾言张了张嘴，想说什么，却又不知道从何说起。他发现自己竟然有点害怕。
+</div>
+
+<div class="dialogue">
+  <div class="dialogue-name">顾言：</div>
+  <div class="dialogue-text">（深吸一口气）我们还是谈谈吧。念念，我知道你担心我，但你这样……让我有点喘不过气来。</div>
+</div>
+
+<div class="narrative">
+  △ 苏念念的表情没有任何变化。她走到顾言面前，伸出手，轻轻捧住他的脸，眼神温柔得像是在看什么稀世珍宝。
+</div>
+
+<div class="dialogue">
+  <div class="dialogue-name">苏念念：</div>
+  <div class="dialogue-text">（轻声）亲爱的，你在说什么呀？我这么爱你，你怎么会觉得喘不过气呢？</div>
+</div>
+
+<div class="narrative">
+  △ 她的指尖轻轻划过顾言的脸颊，动作温柔，却让顾言感到一阵寒意。
+</div>
+
+<div class="dialogue">
+  <div class="dialogue-name">苏念念：</div>
+  <div class="dialogue-text">（凑近他的耳边，声音轻得像羽毛）外面很危险的，只有在我身边，你才是安全的。乖，听话，好不好？</div>
+</div>
+
+<div class="narrative">
+  △ 顾言看着她，喉咙发紧，说不出话来。
+</div>
+
+<div class="checklist">
+  <div class="checklist-title">【本集卡点标注】</div>
+  <div class="checklist-item">矛盾点：门被锁住，手机被拿走，苏念念用温柔的方式囚禁顾言</div>
+  <div class="checklist-item">爆发点：苏念念的温柔威胁"只有在我身边，你才是安全的"</div>
+  <div class="checklist-item">爽点：顾言意识到问题，开始反抗</div>
+  <div class="checklist-item">钩子：苏念念的真实面目逐渐暴露，顾言能否逃脱？</div>
+</div>
+    </div>
   </div>
-  <div class="scene">
-    <div class="scene-title">【场景 2】渣男下场</div>
-    <div class="scene-meta">场景：日内 / 总裁办公室</div>
-    <div class="scene-content">曾经骚扰女主的渣男来道歉。
-【渣男】：总...总裁，我不知道她是您的妻子...
-【总裁】：现在知道了。你被开除了。
-【渣男】：（跪下）求求您...给我一个机会...
-【总裁】：滚出我的公司。</div>
-  </div>
-  <div class="scene">
-    <div class="scene-title">【场景 3】总裁宠妻</div>
-    <div class="scene-meta">场景：夜内 / 豪宅客厅</div>
-    <div class="scene-content">总裁为女主精心准备了烛光晚餐。
-【总裁】：今晚是我们的新婚夜。
-【女主】：但我们还不认识啊...
-【总裁】：有我在，什么都不用怕。我会用一生去了解你、疼你。
-女主靠在他肩上，泪水悄然滑落。</div>
-  </div>
+
   <div style="text-align: center; padding: 2rem 0; color: #999; font-size: 0.9rem;">
-    更新于 2026年4月4日 | 本短剧内容由 AI 自动生成
+    更新于 2026年4月4日 | 本短剧内容由 AI 根据短剧创作原则自动生成
   </div>
 </div>
 </body>
