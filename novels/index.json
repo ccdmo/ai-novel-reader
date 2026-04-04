@@ -19,7 +19,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "第一章 一封来自大洋彼岸的信",
@@ -41,7 +47,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "一封来自大洋彼岸的信 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "被病娇大小姐公开表白，我定型了",
@@ -63,7 +75,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "食堂惊变，当众表白 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "病娇妻子的秘密",
@@ -85,7 +103,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章：门锁的秘密 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "我的草稿纸成了国家机密",
@@ -107,7 +131,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章：一张草稿纸引发的血案 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "第1章 边境商演",
@@ -129,7 +159,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第1章 边境商演 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "让你拍烂片，你拍长津湖全网泪崩",
@@ -157,7 +193,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "尊严碎了一地 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "混沌王子的诈尸",
@@ -179,7 +221,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 诈尸 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "凑数大叔的非凡人生",
@@ -201,7 +249,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 凑数的命运 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "废物逆袭：我的倒反天罡",
@@ -223,7 +277,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 废物？看我倒反天罡！ - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "第一章",
@@ -245,7 +305,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "天台上的系统 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "地下城的翻莉奇遇",
@@ -267,7 +333,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "多云借图",
@@ -289,7 +361,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章：混沌废体 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "七侠皇帝的野心",
@@ -311,7 +389,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章：朕刚登基，你就来刺杀？ - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "第一章：穿越成反派？剧本我不认",
@@ -333,7 +417,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "反派文男主不按剧本，杀疯了 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "反派前传",
@@ -355,7 +445,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章：穿越成反派？剧本我不认 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "第一章：穿越成反派？这剧本我不认",
@@ -377,7 +473,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "反派：开局先刀主角 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "冷血前夫的救赎",
@@ -399,7 +501,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "攻略高冷前妻第一章 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "第一章：体育馆被掀飞",
@@ -421,7 +529,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "都市高武：签到就能变强 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "战争系统征天下",
@@ -443,7 +557,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "名义：横扫汉东从征服陆亦可开始",
@@ -465,7 +585,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章：重生汉东 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "悬崖赋命",
@@ -487,7 +613,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第1章 悬崖赋命 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "黑暗中的微光",
@@ -509,7 +641,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "黑暗中的微光 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "第一章：星穹模拟器",
@@ -531,7 +669,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章：星穹模拟器 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "好感强制系统：我追不到的校花，她的好感度",
@@ -554,7 +698,12 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "drama": {
+      "title": "追了三年的冰山，居然对我产生情绪了？ - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "天台边的复仇",
@@ -576,7 +725,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "十六境之主",
@@ -598,7 +753,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章：十六境降世 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "洛杉矶驱魔事件",
@@ -620,7 +781,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "纸钱开路 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "彩票1.7亿的秘密",
@@ -642,7 +809,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "我中奖一亿七千万，反手把家人送 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "罗刹鸡着魔",
@@ -664,7 +837,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "香烛铺开张第一天 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "眉墨挑战",
@@ -686,7 +865,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "汉东省重大贪腐案件调查进展报告",
@@ -708,7 +893,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "名义之他们叫我汉大胆",
@@ -730,7 +921,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "名医K善",
@@ -752,7 +949,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "<think> - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "火影死亡轮",
@@ -774,7 +977,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "{ - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "女频白绮梓",
@@ -796,7 +1005,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 穿越女频第一天，我就被叫了霸总 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "第一章 穿越异世",
@@ -818,7 +1033,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 穿越异世 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "异世蜂鸣",
@@ -840,7 +1061,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "异世蜂鸣 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "第一章 奇怪的转学生",
@@ -862,7 +1089,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "奇怪的转学生 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "安全屋",
@@ -884,7 +1117,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 选了没人要的安全屋 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "三角州列杀",
@@ -906,7 +1145,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "天榜猎杀系统，激活！ - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "三角州妻子",
@@ -928,7 +1173,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "绝境：血与婚礼 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "贫困县振兴记",
@@ -950,7 +1201,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "穷山恶水 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "水浒西血",
@@ -972,7 +1229,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章：血夜重生 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "寺舍坊",
@@ -994,7 +1257,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "被迫结婚，社恐老婆初见面 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "六翼天使",
@@ -1016,7 +1285,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "废物与背叛 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "第一章：觉醒·新宿之战",
@@ -1038,7 +1313,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "觉醒·新宿之战 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "第一章 废物？老子氪金买修为！",
@@ -1060,7 +1341,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 废物？老子氪金买修为！ - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "第一章：死亡与重生",
@@ -1082,7 +1369,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "<think> - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "第一章 全年无休的大师兄想下班",
@@ -1104,7 +1397,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "万人迷系统：我的修为都是被迫营业来的 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "井龙",
@@ -1126,7 +1425,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "武侠NPC的逆袭",
@@ -1148,7 +1453,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章：枯井沉尸 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "洗髓丹",
@@ -1170,7 +1481,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "青玄宗，外门。 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "第一章：刚穿越就被姐夫当刀使？",
@@ -1192,7 +1509,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "西游，这个妹夫，我打不过 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "一一医生",
@@ -1214,7 +1537,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 开学第一天，收到一亿 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "第一章：毒舌影帝的逆袭",
@@ -1236,7 +1565,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "娱乐：演反派的我，全网求别死 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "第一章：青藏线上的意外直播",
@@ -1258,7 +1593,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "<think> - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "真北候",
@@ -1280,7 +1621,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章　婚礼惊变 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "真北侯待杖",
@@ -1302,7 +1649,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "大婚惊变 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "正道研发",
@@ -1324,7 +1677,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 一字之差 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "中奖一亿七",
@@ -1346,7 +1705,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "中奖？不，是开始 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "全家偷听我心声",
@@ -1368,7 +1733,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "<think> - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "自爆路仙",
@@ -1390,7 +1761,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 铁流 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "宗武九剑",
@@ -1412,7 +1789,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章：退婚风波起，嫁衣血染红 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "宗武祖仙",
@@ -1434,7 +1817,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章：退婚羞辱日，系统初现时 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "斩首前，我看到了皇帝的气运是黑的",
@@ -1456,7 +1845,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "死亡倒计时",
@@ -1478,7 +1873,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "死亡预警",
@@ -1500,7 +1901,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "命轮：我能看到你的死期",
@@ -1522,7 +1929,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "四合院，刘海中三叔二野副师转业",
@@ -1544,7 +1957,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "“周野，E级感知天赋，适合后勤岗位。” - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "我能听到万物的心声",
@@ -1566,7 +1985,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "我以本心斩仙途",
@@ -1588,7 +2013,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "火影：我能看见一切数据",
@@ -1610,7 +2041,13 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   },
   {
     "id": "我能看到好感度",
@@ -1632,6 +2069,12 @@
     ],
     "tags": [
       "都市"
-    ]
+    ],
+    "hasDrama": true,
+    "drama": {
+      "title": "第一章 - 短剧版",
+      "scenes": 3,
+      "status": "completed"
+    }
   }
 ]

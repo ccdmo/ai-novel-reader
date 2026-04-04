@@ -37,7 +37,7 @@ async def convert_novels(novel_ids: List[str], openai_key: str, anthropic_key: s
         print(f'开始转换: {novel_id}')
         try:
             novel_data = await converter.load_novel(novel_id, openai_key)
-            script = await converter.generate_script(novel_data, novel_id, openai_key)
+            script = await converter.generate_drama_package(novel_data, novel_id, openai_key)
             review = await reviewer.review_script(script, novel_id, anthropic_key)
             result = await batch_manager.save_drama_result(novel_id, script, review, batch_id)
             print(f'已保存：{result.get("script_url")}')

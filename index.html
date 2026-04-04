@@ -18,10 +18,18 @@
     .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
     
     /* Novel Grid */
+    .novel-controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; align-items: end; }
+    .control-block { display: flex; flex-direction: column; gap: 0.4rem; }
+    .control-block label { font-size: 0.9rem; color: #555; }
+    .control-block input, .control-block select { padding: 0.75rem 1rem; border: 1px solid #ddd; border-radius: 10px; font-size: 0.95rem; }
+    .cover-batch-btn { background: #ff7f50; color: white; border: none; padding: 0.85rem 1rem; border-radius: 10px; cursor: pointer; font-size: 0.95rem; font-weight: 600; }
+    .cover-batch-btn:hover { background: #f56b33; }
     .novel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
-    .novel-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.08); transition: transform .2s; cursor: pointer; }
+    .novel-card { position: relative; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.08); transition: transform .2s; cursor: pointer; }
     .novel-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.12); }
-    .novel-cover { width: 100%; height: 160px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+    .novel-cover { position: relative; width: 100%; height: 160px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; overflow: hidden; border-radius: 16px; }
+    .novel-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .cover-edit-btn { position: absolute; top: 10px; right: 10px; z-index: 2; background: rgba(0,0,0,0.6); color: white; border: none; padding: 0.35rem 0.6rem; border-radius: 999px; cursor: pointer; font-size: 0.75rem; }
     .novel-info { padding: 1rem; }
     .novel-title { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; color: #333; }
     .novel-desc { font-size: 0.85rem; color: #888; line-height: 1.5; margin-bottom: 0.75rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
@@ -35,6 +43,30 @@
     .tag.genre { background: #e8eaf6; color: #3f51b5; }
     .novel-tags { margin-bottom: 0.5rem; min-height: 1.2rem; display: flex; flex-wrap: wrap; gap: 0.2rem; }
     .loading { text-align: center; padding: 3rem; color: #999; }
+    .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.55); display: flex; align-items: center; justify-content: center; padding: 1rem; opacity: 0; pointer-events: none; transition: opacity 0.2s ease; }
+    .modal.visible { opacity: 1; pointer-events: auto; }
+    .modal-dialog { background: white; width: min(560px,100%); border-radius: 16px; overflow: hidden; box-shadow: 0 18px 60px rgba(0,0,0,.25); }
+    .modal-header { padding: 1rem 1.25rem; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
+    .modal-header h3 { margin: 0; font-size: 1.05rem; color: #222; }
+    .modal-close { background: none; border: none; font-size: 1.5rem; line-height: 1; cursor: pointer; color: #666; }
+    .modal-body { padding: 1.25rem; display: grid; gap: 1rem; }
+    .modal-body .preview { width: 100%; height: 220px; border-radius: 14px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+    .modal-body .preview img { width: 100%; height: 100%; object-fit: cover; }
+    .modal-body .preview::before { content: '当前封面预览'; position: absolute; top: 12px; left: 12px; font-size: 0.82rem; color: #555; background: rgba(255,255,255,0.92); padding: 0.2rem 0.45rem; border-radius: 999px; }
+    .modal-body .modal-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .modal-body .modal-actions button { flex: 1 1 140px; padding: 0.85rem 1rem; border: none; border-radius: 12px; font-size: 0.95rem; cursor: pointer; }
+    .upload-btn { background: #4caf50; color: white; }
+    .ai-btn { background: #667eea; color: white; }
+    .modal-footer { padding: 1rem 1.25rem 1.5rem; display: flex; justify-content: flex-end; gap: 0.75rem; background: #fafafa; }
+    .modal-footer button { padding: 0.8rem 1rem; border: none; border-radius: 10px; cursor: pointer; }
+    .modal-footer .cancel-btn { background: #eee; color: #333; }
+    @media(max-width:768px) {
+      .nav-tabs { overflow-x: auto; }
+      .tab-btn { padding: 1rem 1rem; font-size: 0.85rem; }
+      .drama-table { font-size: 0.85rem; }
+      .drama-table th, .drama-table td { padding: 0.75rem 0.5rem; }
+      .modal-body .preview { height: 180px; }
+    }
     
     /* Drama Factory */
     .drama-factory { background: white; padding: 2rem; border-radius: 12px; }
@@ -90,6 +122,31 @@
   <div class="container">
     <!-- 小说库标签页 -->
     <div class="tab-content active" id="novels-tab">
+      <div class="novel-controls">
+        <div class="control-block">
+          <label for="novelSearch">搜索小说</label>
+          <input id="novelSearch" type="search" placeholder="输入书名、作者、简介或风格" oninput="handleSearchInput()">
+        </div>
+        <div class="control-block">
+          <label for="novelGenre">筛选风格</label>
+          <select id="novelGenre" onchange="handleGenreChange()">
+            <option value="">全部风格</option>
+          </select>
+        </div>
+        <div class="control-block">
+          <label for="novelSort">排序方式</label>
+          <select id="novelSort" onchange="handleSortChange()">
+            <option value="title_asc">书名 A → Z</option>
+            <option value="title_desc">书名 Z → A</option>
+            <option value="heat_desc">热度 从高到低</option>
+            <option value="heat_asc">热度 从低到高</option>
+          </select>
+        </div>
+        <div class="control-block">
+          <label>&nbsp;</label>
+          <button class="cover-batch-btn" onclick="generateMissingCovers()">🖼️ 一键生成缺失封面</button>
+        </div>
+      </div>
       <div class="novel-grid" id="novelGrid"><div class="loading">加载中...</div></div>
     </div>
 
@@ -210,30 +267,50 @@
     </div>
   </div>
 
+  <div id="coverModal" class="modal" onclick="closeCoverModal()">
+    <div class="modal-dialog" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h3>更换封面</h3>
+        <button class="modal-close" onclick="closeCoverModal()">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="preview" id="coverPreview"><span style="font-size: 2rem;">📖</span></div>
+        <div id="coverPreviewText" style="color:#555; font-size:0.95rem;">请选择“上传封面”或“AI 生成封面”。</div>
+        <div class="modal-actions">
+          <label class="upload-btn" style="display:inline-flex; justify-content:center; align-items:center;">
+            上传封面<input id="coverFileInput" type="file" accept="image/*" style="display:none;" onchange="uploadCoverFromInput(event)">
+          </label>
+          <button class="ai-btn" onclick="generateCoverForNovel()">AI 生成封面</button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="cancel-btn" onclick="closeCoverModal()">取消</button>
+      </div>
+    </div>
+  </div>
+
   <script>
     const API_ENDPOINT = localStorage.getItem('apiEndpoint') || '';
     let isConverting = false;
     let novelList = [];
+    let currentSearchTerm = '';
+    let currentGenreFilter = '';
+    let currentSortKey = 'title_asc';
 
     // 标签页切换
     document.querySelectorAll('.tab-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', (event) => {
         const tab = btn.getAttribute('data-tab');
-        switchTab(tab);
+        switchTab(tab, event);
       });
     });
 
     function openDrama(novelId, event) {
       event.stopPropagation();
-      location.href = 'novels/' + novelId + '/?view=drama';
+      location.href = 'novels/' + encodeURIComponent(novelId) + '/drama.html';
     }
 
-    function openDrama(novelId, event) {
-      event.stopPropagation();
-      location.href = 'novels/' + novelId + '/?view=drama';
-    }
-
-    function switchTab(tabName) {
+    function switchTab(tabName, event) {
       document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
       document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
       
@@ -243,38 +320,121 @@
       if (tabName === 'audit') loadAuditData();
     }
 
-    // 加载小说列表
-    async function loadNovels() {
-      try {
-        const res = await fetch('novels/index.json');
-        novelList = await res.json();
-        const grid = document.getElementById('novelGrid');
-        if (!novelList || !novelList.length) {
-          grid.innerHTML = '<div class="loading">暂无小说，稍后再来看看吧～</div>';
-          return;
+    function handleSearchInput() {
+      currentSearchTerm = document.getElementById('novelSearch').value.trim().toLowerCase();
+      renderNovelList();
+    }
+
+    function handleGenreChange() {
+      currentGenreFilter = document.getElementById('novelGenre').value;
+      renderNovelList();
+    }
+
+    function handleSortChange() {
+      currentSortKey = document.getElementById('novelSort').value;
+      renderNovelList();
+    }
+
+    function getGenreOptions() {
+      const genreSet = new Set();
+      novelList.forEach(novel => {
+        if (!novel.genre) return;
+        novel.genre.split('/').forEach(g => {
+          const trimmed = g.trim();
+          if (trimmed) genreSet.add(trimmed);
+        });
+      });
+      return Array.from(genreSet).sort();
+    }
+
+    function updateGenreFilterOptions() {
+      const genreSelect = document.getElementById('novelGenre');
+      const genres = getGenreOptions();
+      genreSelect.innerHTML = '<option value="">全部风格</option>' + genres.map(g => `<option value="${g}">${g}</option>`).join('');
+      if (currentGenreFilter) genreSelect.value = currentGenreFilter;
+    }
+
+    function sortNovelList(list) {
+      return list.slice().sort((a, b) => {
+        const aHeat = Number.isFinite(a.heat) ? a.heat : 0;
+        const bHeat = Number.isFinite(b.heat) ? b.heat : 0;
+        const aTitle = (a.title || '').toLowerCase();
+        const bTitle = (b.title || '').toLowerCase();
+
+        switch (currentSortKey) {
+          case 'title_desc':
+            return bTitle.localeCompare(aTitle, 'zh-Hans-CN');
+          case 'heat_asc':
+            return aHeat - bHeat;
+          case 'heat_desc':
+            return bHeat - aHeat;
+          default:
+            return aTitle.localeCompare(bTitle, 'zh-Hans-CN');
         }
-        grid.innerHTML = novelList.map(novel => {
-          const doneCount = (novel.chapters || []).filter(c => c.status === 'done').length;
-          const totalCount = doneCount > 0 ? doneCount : (novel.chapters || []).length;
-          const statusLabel = novel.status === 'writing' ? '<span class="tag writing">写作中</span>' : '';
-          const genreTag = novel.genre ? `<span class="tag genre">${novel.genre}</span>` : '';
-          const dramaTag = novel.hasDrama ? `<span class="tag drama" onclick="openDrama('${encodeURIComponent(novel.id)}', event)">短剧</span>` : '';
-          const tagsHtml = [statusLabel, genreTag, dramaTag].filter(t => t).join('');
-          return `<div class="novel-card" onclick="location.href='novels/${encodeURIComponent(novel.id)}/'">
-  <div class="novel-cover">${novel.cover || '📖'}</div>
+      });
+    }
+
+    function renderNovelList() {
+      const grid = document.getElementById('novelGrid');
+      if (!novelList || !novelList.length) {
+        grid.innerHTML = '<div class="loading">暂无小说，稍后再来看看吧～</div>';
+        return;
+      }
+
+      let filtered = novelList.filter(novel => {
+        const title = (novel.title || '').toLowerCase();
+        const desc = (novel.desc || '').toLowerCase();
+        const author = (novel.author || '').toLowerCase();
+        const genreText = (novel.genre || '').toLowerCase();
+        const terms = [title, desc, author, genreText].join(' ');
+        const matchSearch = currentSearchTerm ? terms.includes(currentSearchTerm) : true;
+        const matchGenre = currentGenreFilter ? genreText.split('/').map(g => g.trim()).includes(currentGenreFilter) : true;
+        return matchSearch && matchGenre;
+      });
+
+      if (!filtered.length) {
+        grid.innerHTML = '<div class="loading">找不到符合条件的小说，请调整搜索或筛选条件。</div>';
+        return;
+      }
+
+      filtered = sortNovelList(filtered);
+      grid.innerHTML = filtered.map(novel => {
+        const doneCount = (novel.chapters || []).filter(c => c.status === 'done').length;
+        const totalCount = doneCount > 0 ? doneCount : (novel.chapters || []).length;
+        const statusLabel = novel.status === 'writing' ? '<span class="tag writing">写作中</span>' : '';
+        const genreTag = novel.genre ? `<span class="tag genre">${novel.genre}</span>` : '';
+        const tagsHtml = [statusLabel, genreTag].filter(t => t).join('');
+        const coverHtml = novel.cover && (novel.cover.startsWith('http://') || novel.cover.startsWith('https://') || novel.cover.startsWith('data:image') || novel.cover.startsWith('novels/'))
+          ? `<img src="${novel.cover}" alt="${novel.title} 封面">`
+          : (novel.cover || '📖');
+        return `<div class="novel-card" onclick="location.href='novels/${encodeURIComponent(novel.id)}/'">
+  <div class="novel-cover">${coverHtml}<button class="cover-edit-btn" onclick="openCoverModal('${encodeURIComponent(novel.id)}', event)">更换封面</button></div>
   <div class="novel-info">
     <div class="novel-title">${novel.title}</div>
     <div class="novel-tags">${tagsHtml}</div>
     <div class="novel-desc">${novel.desc}</div>
     <div class="novel-meta">
       <span>${totalCount > 0 ? '共 ' + totalCount + ' 章' : '待生成'}</span>
+      <span>${Number.isFinite(novel.heat) ? `热度：${novel.heat}` : ''}</span>
     </div>
     <div class="novel-actions">
       <a href="novels/${encodeURIComponent(novel.id)}/drama.html" class="action-btn" onclick="event.stopPropagation()">短剧版</a>
     </div>
   </div>
 </div>`;
-        }).join('');
+      }).join('');
+    }
+
+    async function loadNovels() {
+      try {
+        const res = await fetch('novels/index.json');
+        novelList = await res.json();
+        if (!novelList || !novelList.length) {
+          document.getElementById('novelGrid').innerHTML = '<div class="loading">暂无小说，稍后再来看看吧～</div>';
+          return;
+        }
+        updateGenreFilterOptions();
+        renderNovelList();
       } catch(e) {
         document.getElementById('novelGrid').innerHTML = '<div class="loading">加载失败</div>';
       }
@@ -519,6 +679,136 @@
               '1. API 地址是否正确\n' +
               '2. 后端服务是否已启动\n' +
               '3. 是否有跨域问题');
+      }
+    }
+
+    function getApiBase() {
+      const saved = localStorage.getItem('apiEndpoint') || '';
+      return saved.replace(/\/+$/, '');
+    }
+
+    function getApiUrl(path) {
+      const base = getApiBase();
+      return base ? `${base}${path}` : path;
+    }
+
+    function isCoverMissing(novel) {
+      return !novel.cover || novel.cover === '📖' || novel.cover === '📘' || novel.cover === '📙';
+    }
+
+    async function generateMissingCovers() {
+      const missingNovels = novelList.filter(isCoverMissing);
+      if (!missingNovels.length) {
+        alert('所有小说已经有封面，无需生成。');
+        return;
+      }
+
+      if (!confirm(`检测到 ${missingNovels.length} 本小说缺少封面，是否开始一键生成？`)) {
+        return;
+      }
+
+      try {
+        const response = await fetch(getApiUrl('/api/cover/generate/bulk'), {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ novel_ids: missingNovels.map(n => n.id) })
+        });
+
+        if (!response.ok) {
+          const errorData = await response.json().catch(() => ({}));
+          throw new Error(errorData.detail || `HTTP ${response.status}`);
+        }
+
+        const result = await response.json();
+        if (result.updated && Array.isArray(result.updated)) {
+          result.updated.forEach(item => {
+            const novel = novelList.find(n => n.id === item.novel_id || n.slug === item.novel_id);
+            if (novel) novel.cover = item.cover;
+          });
+          renderNovelList();
+        }
+
+        alert('✅ 已完成缺失封面生成，请查看最新封面。');
+      } catch (e) {
+        alert('❌ 一键生成失败：' + e.message);
+      }
+    }
+
+    let selectedCoverNovelId = null;
+
+    function openCoverModal(novelId, event) {
+      event.stopPropagation();
+      selectedCoverNovelId = decodeURIComponent(novelId);
+      const novel = novelList.find(n => n.id === selectedCoverNovelId || n.slug === selectedCoverNovelId);
+      if (!novel) return;
+
+      const preview = document.getElementById('coverPreview');
+      const previewText = document.getElementById('coverPreviewText');
+      const coverUrl = novel.cover && (novel.cover.startsWith('http://') || novel.cover.startsWith('https://') || novel.cover.startsWith('data:image') || novel.cover.startsWith('novels/'))
+        ? novel.cover : null;
+      preview.innerHTML = coverUrl ? `<img src="${coverUrl}" alt="${novel.title} 封面">` : '<span style="font-size: 2rem;">📖</span>';
+      previewText.textContent = `正在编辑：${novel.title}`;
+      document.getElementById('coverModal').classList.add('visible');
+    }
+
+    function closeCoverModal() {
+      selectedCoverNovelId = null;
+      document.getElementById('coverModal').classList.remove('visible');
+      document.getElementById('coverFileInput').value = '';
+    }
+
+    async function uploadCoverFromInput(event) {
+      if (!selectedCoverNovelId) return;
+      const file = event.target.files[0];
+      if (!file) return;
+      const formData = new FormData();
+      formData.append('novel_id', selectedCoverNovelId);
+      formData.append('file', file);
+
+      try {
+        const response = await fetch(getApiUrl('/api/cover/upload'), {
+          method: 'POST',
+          body: formData
+        });
+        if (!response.ok) {
+          const errorData = await response.json().catch(() => ({}));
+          throw new Error(errorData.detail || `HTTP ${response.status}`);
+        }
+        const result = await response.json();
+        const novel = novelList.find(n => n.id === selectedCoverNovelId || n.slug === selectedCoverNovelId);
+        if (novel) {
+          novel.cover = result.cover;
+          renderNovelList();
+        }
+        alert('✅ 上传成功，封面已更新。');
+        closeCoverModal();
+      } catch (e) {
+        alert('❌ 上传失败：' + e.message);
+      }
+    }
+
+    async function generateCoverForNovel() {
+      if (!selectedCoverNovelId) return;
+      try {
+        const response = await fetch(getApiUrl('/api/cover/generate'), {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ novel_id: selectedCoverNovelId })
+        });
+        if (!response.ok) {
+          const errorData = await response.json().catch(() => ({}));
+          throw new Error(errorData.detail || `HTTP ${response.status}`);
+        }
+        const result = await response.json();
+        const novel = novelList.find(n => n.id === selectedCoverNovelId || n.slug === selectedCoverNovelId);
+        if (novel) {
+          novel.cover = result.cover;
+          renderNovelList();
+        }
+        alert('✅ AI 已生成新封面。');
+        closeCoverModal();
+      } catch (e) {
+        alert('❌ 封面生成失败：' + e.message);
       }
     }
 
