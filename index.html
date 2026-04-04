@@ -42,22 +42,6 @@
           grid.innerHTML = '<div class="loading">暂无小说，稍后再来看看吧～</div>';
           return;
         }
-<<<<<<< HEAD
-        grid.innerHTML = novels.map(novel => `
-          <div class="novel-card" onclick="location.href='novels/${novel.id}/'">
-            <div class="novel-cover">${novel.cover || '📖'}</div>
-            <div class="novel-info">
-              <div class="novel-title">${novel.title}</div>
-              <div class="novel-desc">${novel.desc}</div>
-              <div class="novel-meta">
-                ${(novel.tags||[]).map(t => `<span class="tag ai">${t}</span>`).join('')}
-                ${novel.status === 'writing' ? '<span class="tag writing">写作中</span>' : ''}
-                <span style="float:right">共 ${Array.isArray(novel.chapters) ? novel.chapters.length : novel.chapters} 章</span>
-              </div>
-            </div>
-          </div>
-        `).join('');
-=======
         grid.innerHTML = novels.map(novel => {
           const doneCount = (novel.chapters || []).filter(c => c.status === 'done').length;
           const totalCount = doneCount > 0 ? doneCount : (novel.chapters || []).length;
@@ -69,12 +53,11 @@
     <div class="novel-desc">${novel.desc}</div>
     <div class="novel-meta">
       ${statusLabel}
-      <span>${doneCount > 0 ? '共 ' + doneCount + ' 章' : '待生成'}</span>
+      <span>${totalCount > 0 ? '共 ' + totalCount + ' 章' : '待生成'}</span>
     </div>
   </div>
 </div>`;
         }).join('');
->>>>>>> a2927eb7827502edbd5a9d7b452906a6403e42cd
       } catch(e) {
         document.getElementById('novelGrid').innerHTML = '<div class="loading">加载失败</div>';
       }
