@@ -13,14 +13,13 @@ from typing import Dict, List
 
 class DramaConverter:
     def __init__(self):
-        self.api_key = os.getenv("OPENAI_API_KEY", "")
+        self.default_api_key = os.getenv("OPENAI_API_KEY", "")
         self.model = "gpt-3.5-turbo"  # 或使用 gpt-4
-        openai.api_key = self.api_key
         
         # 数据路径
         self.novels_dir = Path(__file__).parent.parent.parent / "novels"
 
-    async def load_novel(self, novel_id: str) -> Dict:
+    async def load_novel(self, novel_id: str, api_key: str = None) -> Dict:
         """从 JSON 读取小说数据"""
         try:
             novel_dir = self.novels_dir / novel_id
@@ -52,7 +51,7 @@ class DramaConverter:
         except Exception as e:
             raise Exception(f"加载小说失败: {str(e)}")
 
-    async def generate_script(self, novel_data: Dict, novel_id: str) -> Dict:
+    async def generate_script(self, novel_data: Dict, novel_id: str, api_key: str = None) -> Dict:
         """
         使用 LLM 将小说转换为短剧剧本
         
@@ -70,6 +69,12 @@ class DramaConverter:
         }
         """
         try:
+            # 使用提交的 API Key 或者默认 Key
+            key_to_use = api_key or self.default_api_key
+            if not key_to_use:
+                raise ValueError("OpenAI API Key 未提供")
+            
+            openai.api_key = key_to_use
             prompt = self._build_conversion_prompt(novel_data)
             
             response = openai.ChatCompletion.create(

@@ -10,9 +10,9 @@ import anthropic
 
 class DramaReviewer:
     def __init__(self):
-        self.client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY", ""))
+        self.default_api_key = os.getenv("ANTHROPIC_API_KEY", "")
         
-    async def review_script(self, script: Dict, novel_id: str) -> Dict:
+    async def review_script(self, script: Dict, novel_id: str, api_key: str = None) -> Dict:
         """
         审核短剧剧本质量
         
@@ -23,11 +23,18 @@ class DramaReviewer:
         - 敏感词：是否包含不当内容
         """
         try:
+            # 使用提交的 API Key 或者默认 Key
+            key_to_use = api_key or self.default_api_key
+            if not key_to_use:
+                raise ValueError("Anthropic API Key 未提供")
+            
+            client = anthropic.Anthropic(api_key=key_to_use)
+            
             # 构建审核提示
             prompt = self._build_review_prompt(script)
             
             # 调用 Claude API
-            message = self.client.messages.create(
+            message = client.messages.create(
                 model="claude-3-haiku-20240307",
                 max_tokens=500,
                 messages=[

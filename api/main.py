@@ -52,6 +52,8 @@ github_storage = GitHubStorage()
 class ConvertRequest(BaseModel):
     novel_id: str
     batch_id: str = "batch_001"
+    openai_api_key: Optional[str] = None
+    anthropic_api_key: Optional[str] = None
 
 class ApprovalRequest(BaseModel):
     batch_id: str = "batch_001"
@@ -86,14 +88,23 @@ async def convert_novel_to_drama(request: ConvertRequest, background_tasks: Back
         novel_id = request.novel_id
         batch_id = request.batch_id
         
+        # 使用提交的 API Key，或者回退到环境变量
+        openai_key = request.openai_api_key or os.getenv("OPENAI_API_KEY", "")
+        anthropic_key = request.anthropic_api_key or os.getenv("ANTHROPIC_API_KEY", "")
+        
+        if not openai_key:
+            raise ValueError("OpenAI API Key 未提供")
+        if not anthropic_key:
+            raise ValueError("Anthropic API Key 未提供")
+        
         # 1. 读取小说数据
-        novel_content = await converter.load_novel(novel_id)
+        novel_content = await converter.load_novel(novel_id, openai_key)
         
         # 2. 生成短剧剧本
-        script = await converter.generate_script(novel_content, novel_id)
+        script = await converter.generate_script(novel_content, novel_id, openai_key)
         
         # 3. AI 审核
-        review = await reviewer.review_script(script, novel_id)
+        review = await reviewer.review_script(script, novel_id, anthropic_key)
         
         # 4. 保存结果
         result = await batch_mgr.save_drama_result(

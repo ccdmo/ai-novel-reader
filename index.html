@@ -95,11 +95,33 @@
       <div class="drama-factory">
         <h2 style="margin-bottom: 1.5rem;">🎬 短剧工厂</h2>
         
+        <div style="background: #f9f9f9; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; border: 1px solid #eee;">
+          <h3 style="font-size: 0.95rem; margin-bottom: 1rem; color: #667eea;">⚙️ 配置 API 密钥</h3>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+            <div>
+              <label style="font-size: 0.85rem; color: #666;">OpenAI API Key</label>
+              <input type="password" id="openaiApiKey" placeholder="sk-..." style="width: 100%; padding: 0.6rem; border: 1px solid #ddd; border-radius: 6px; font-size: 0.85rem;" value="">
+              <div style="font-size: 0.75rem; color: #999; margin-top: 0.3rem;">用于小说转剧本</div>
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; color: #666;">Anthropic API Key</label>
+              <input type="password" id="anthropicApiKey" placeholder="sk-ant-..." style="width: 100%; padding: 0.6rem; border: 1px solid #ddd; border-radius: 6px; font-size: 0.85rem;" value="">
+              <div style="font-size: 0.75rem; color: #999; margin-top: 0.3rem;">用于 AI 质量审核</div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 1rem; align-items: flex-end;">
+            <div style="flex: 1;">
+              <label style="font-size: 0.85rem; color: #666;">API 服务地址</label>
+              <input type="text" id="apiEndpoint" placeholder="http://localhost:8000 或云端地址" style="width: 100%; padding: 0.6rem; border: 1px solid #ddd; border-radius: 6px; font-size: 0.85rem;">
+            </div>
+            <button onclick="saveApiConfig()" style="padding: 0.6rem 1rem; background: #28a745; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem;">💾 保存配置</button>
+            <button onclick="testApiConnection()" style="padding: 0.6rem 1rem; background: #17a2b8; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem;">🔗 测试连接</button>
+          </div>
+        </div>
+
         <div class="batch-control">
           <label>每批处理数量：</label>
           <input type="number" id="batchSize" min="1" max="20" value="5" placeholder="5">
-          <label style="margin-left: 2rem;">API 服务地址：</label>
-          <input type="text" id="apiEndpoint" value="https://your-api-endpoint.com" placeholder="输入 API 地址" style="flex: 1;">
           <button id="startBtn" onclick="startDramaConversion()">🚀 开始转换</button>
           <button id="pauseBtn" onclick="pauseConversion()" style="display:none;">⏸ 暂停</button>
         </div>
@@ -224,14 +246,29 @@
     // 开始短剧转换
     async function startDramaConversion() {
       const apiEndpoint = document.getElementById('apiEndpoint').value.trim();
+      const openaiKey = document.getElementById('openaiApiKey').value.trim();
+      const anthropicKey = document.getElementById('anthropicApiKey').value.trim();
       const batchSize = parseInt(document.getElementById('batchSize').value) || 5;
       
-      if (!apiEndpoint || apiEndpoint === 'https://your-api-endpoint.com') {
-        alert('请先输入有效的 API 地址');
+      if (!apiEndpoint) {
+        alert('❌ 请先输入 API 服务地址');
+        return;
+      }
+      
+      if (!openaiKey) {
+        alert('❌ 请输入 OpenAI API Key');
+        return;
+      }
+      
+      if (!anthropicKey) {
+        alert('❌ 请输入 Anthropic API Key');
         return;
       }
       
       localStorage.setItem('apiEndpoint', apiEndpoint);
+      localStorage.setItem('openaiApiKey', openaiKey);
+      localStorage.setItem('anthropicApiKey', anthropicKey);
+      
       isConverting = true;
       document.getElementById('startBtn').disabled = true;
       document.getElementById('pauseBtn').style.display = 'inline-block';
@@ -242,7 +279,7 @@
         if (!isConverting) break;
         
         const novel = novelList[i];
-        await convertNovel(novel, apiEndpoint, i, batchSize, startTime);
+        await convertNovel(novel, apiEndpoint, openaiKey, anthropicKey, i, batchSize, startTime);
       }
 
       isConverting = false;
@@ -250,7 +287,7 @@
       document.getElementById('pauseBtn').style.display = 'none';
     }
 
-    async function convertNovel(novel, apiEndpoint, index, total, startTime) {
+    async function convertNovel(novel, apiEndpoint, openaiKey, anthropicKey, index, total, startTime) {
       const row = document.createElement('tr');
       row.id = 'novel-' + novel.id;
       row.innerHTML = `
@@ -266,10 +303,17 @@
         const response = await fetch(`${apiEndpoint}/api/drama/convert`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ novel_id: novel.id })
+          body: JSON.stringify({ 
+            novel_id: novel.id,
+            openai_api_key: openaiKey,
+            anthropic_api_key: anthropicKey
+          })
         });
 
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        if (!response.ok) {
+          const errorData = await response.json().catch(() => ({}));
+          throw new Error(errorData.detail || `HTTP ${response.status}`);
+        }
         
         const result = await response.json();
         
@@ -374,7 +418,71 @@
       alert('拒绝: ' + novelId);
     }
 
+    // ========== API 配置管理 ==========
+    function saveApiConfig() {
+      const apiEndpoint = document.getElementById('apiEndpoint').value.trim();
+      const openaiApiKey = document.getElementById('openaiApiKey').value.trim();
+      const anthropicApiKey = document.getElementById('anthropicApiKey').value.trim();
+      
+      if (!apiEndpoint) {
+        alert('❌ API 服务地址不能为空');
+        return;
+      }
+      
+      localStorage.setItem('apiEndpoint', apiEndpoint);
+      localStorage.setItem('openaiApiKey', openaiApiKey);
+      localStorage.setItem('anthropicApiKey', anthropicApiKey);
+      
+      alert('✅ 配置已保存！\n\n' +
+            'API 地址: ' + apiEndpoint + '\n' +
+            'OpenAI Key: ' + (openaiApiKey ? '***已设置***' : '未设置') + '\n' +
+            'Anthropic Key: ' + (anthropicApiKey ? '***已设置***' : '未设置'));
+    }
+
+    async function testApiConnection() {
+      const apiEndpoint = document.getElementById('apiEndpoint').value.trim();
+      
+      if (!apiEndpoint) {
+        alert('❌ 请先输入 API 服务地址');
+        return;
+      }
+      
+      try {
+        const response = await fetch(`${apiEndpoint}/health`);
+        if (response.ok) {
+          const data = await response.json();
+          alert('✅ 连接成功！\n\n' + JSON.stringify(data, null, 2));
+        } else {
+          alert('❌ 服务返回错误: ' + response.status);
+        }
+      } catch(e) {
+        alert('❌ 连接失败: ' + e.message + '\n\n请检查：\n' +
+              '1. API 地址是否正确\n' +
+              '2. 后端服务是否已启动\n' +
+              '3. 是否有跨域问题');
+      }
+    }
+
+    // ========== 页面初始化 ==========
+    function initApiConfig() {
+      const savedEndpoint = localStorage.getItem('apiEndpoint') || '';
+      const savedOpenaiKey = localStorage.getItem('openaiApiKey') || '';
+      const savedAnthropicKey = localStorage.getItem('anthropicApiKey') || '';
+      
+      if (savedEndpoint) {
+        document.getElementById('apiEndpoint').value = savedEndpoint;
+      }
+      if (savedOpenaiKey) {
+        document.getElementById('openaiApiKey').value = savedOpenaiKey;
+      }
+      if (savedAnthropicKey) {
+        document.getElementById('anthropicApiKey').value = savedAnthropicKey;
+      }
+    }
+
+    // 页面加载完成时运行
     loadNovels();
+    initApiConfig();
   </script>
 </body>
 </html>
