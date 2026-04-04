@@ -1,0 +1,49 @@
+name: Deploy Drama Converter to Lambda
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'api/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Build Lambda Package
+        run: |
+          cd api
+          mkdir -p build
+          pip install -r requirements.txt -t build/ --upgrade
+          cp main.py build/
+          cp -r handlers build/
+          cd build && zip -r ../lambda_deployment.zip . && cd ../..
+      
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      
+      - name: Deploy to Lambda
+        run: |
+          aws lambda update-function-code \
+            --function-name ai-novel-drama-converter \
+            --zip-file fileb://api/lambda_deployment.zip \
+            --region ${{ secrets.AWS_REGION }}
+      
+      - name: Update Environment Variables
+        run: |
+          aws lambda update-function-configuration \
+            --function-name ai-novel-drama-converter \
+            --environment Variables="OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }},ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }},GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}" \
+            --region ${{ secrets.AWS_REGION }}

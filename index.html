@@ -3,14 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI 小说阅读器</title>
+  <title>AI 小说创意平台</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f5; color: #333; }
-    .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem 1rem; text-align: center; }
-    .header h1 { font-size: 2rem; font-weight: 700; }
-    .header p { opacity: 0.85; margin-top: 0.5rem; }
-    .container { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+    .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem 1rem; }
+    .header-content { max-width: 1200px; margin: 0 auto; }
+    .header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .header p { opacity: 0.85; }
+    .nav-tabs { max-width: 1200px; margin: 0 auto; background: white; display: flex; border-bottom: 2px solid #eee; padding: 0 1rem; }
+    .tab-btn { background: none; border: none; padding: 1rem 1.5rem; cursor: pointer; font-size: 0.95rem; color: #666; border-bottom: 3px solid transparent; transition: all 0.2s; }
+    .tab-btn.active { color: #667eea; border-bottom-color: #667eea; font-weight: 600; }
+    .tab-btn:hover { color: #667eea; }
+    .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
+    
+    /* Novel Grid */
     .novel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
     .novel-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.08); transition: transform .2s; cursor: pointer; }
     .novel-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.12); }
@@ -21,28 +28,175 @@
     .novel-meta { font-size: 0.75rem; color: #aaa; display: flex; justify-content: space-between; align-items: center; }
     .tag { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 20px; font-size: 0.7rem; background: #e8f0fe; color: #4285f4; }
     .tag.writing { background: #fff3e0; color: #e65100; }
+    .tag.drama { background: #f3e5f5; color: #7b1fa2; }
     .loading { text-align: center; padding: 3rem; color: #999; }
+    
+    /* Drama Factory */
+    .drama-factory { background: white; padding: 2rem; border-radius: 12px; }
+    .batch-control { display: flex; gap: 1rem; margin-bottom: 2rem; align-items: flex-end; }
+    .batch-control input { padding: 0.6rem 1rem; border: 1px solid #ddd; border-radius: 6px; font-size: 0.9rem; }
+    .batch-control button { background: #667eea; color: white; border: none; padding: 0.6rem 1.5rem; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600; }
+    .batch-control button:hover { background: #5568d3; }
+    .batch-control button:disabled { background: #ccc; cursor: not-allowed; }
+    
+    .progress-container { margin-bottom: 2rem; }
+    .progress-bar-wrapper { background: #eee; border-radius: 8px; height: 24px; overflow: hidden; margin-bottom: 0.5rem; }
+    .progress-bar { background: linear-gradient(90deg, #667eea, #764ba2); height: 100%; width: 0%; transition: width 0.3s; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.7rem; font-weight: 600; }
+    .progress-text { font-size: 0.85rem; color: #666; }
+    
+    .drama-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
+    .drama-table th { background: #f5f5f5; padding: 1rem; text-align: left; font-weight: 600; border-bottom: 2px solid #eee; }
+    .drama-table td { padding: 1rem; border-bottom: 1px solid #eee; }
+    .drama-table tr:hover { background: #fafafa; }
+    .status-badge { display: inline-block; padding: 0.3rem 0.8rem; border-radius: 16px; font-size: 0.75rem; font-weight: 600; }
+    .status-pending { background: #fff3e0; color: #e65100; }
+    .status-done { background: #e8f5e9; color: #2e7d32; }
+    .status-error { background: #ffebee; color: #c62828; }
+    .score { font-weight: 600; color: #667eea; }
+    .action-btn { background: #667eea; color: white; border: none; padding: 0.4rem 0.8rem; border-radius: 4px; cursor: pointer; font-size: 0.75rem; margin: 0 0.25rem; }
+    .action-btn:hover { background: #5568d3; }
+    .action-btn.danger { background: #ef5350; }
+    
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    
+    @media(max-width:768px) {
+      .nav-tabs { overflow-x: auto; }
+      .tab-btn { padding: 1rem 1rem; font-size: 0.85rem; }
+      .drama-table { font-size: 0.85rem; }
+      .drama-table th, .drama-table td { padding: 0.75rem 0.5rem; }
+    }
   </style>
 </head>
 <body>
   <div class="header">
-    <h1>📖 AI 小说阅读器</h1>
-    <p>发现、阅读 AI 创作的精彩小说</p>
+    <div class="header-content">
+      <h1>🎬 AI 小说创意平台</h1>
+      <p>一站式小说创作、转换与审核服务</p>
+    </div>
   </div>
+
+  <div class="nav-tabs">
+    <button class="tab-btn active" data-tab="novels">📚 小说库</button>
+    <button class="tab-btn" data-tab="drama">🎬 短剧工厂</button>
+    <button class="tab-btn" data-tab="audit">✅ 审核中心</button>
+  </div>
+
   <div class="container">
-    <div class="novel-grid" id="novelGrid"><div class="loading">加载中...</div></div>
+    <!-- 小说库标签页 -->
+    <div class="tab-content active" id="novels-tab">
+      <div class="novel-grid" id="novelGrid"><div class="loading">加载中...</div></div>
+    </div>
+
+    <!-- 短剧工厂标签页 -->
+    <div class="tab-content" id="drama-tab">
+      <div class="drama-factory">
+        <h2 style="margin-bottom: 1.5rem;">🎬 短剧工厂</h2>
+        
+        <div class="batch-control">
+          <label>每批处理数量：</label>
+          <input type="number" id="batchSize" min="1" max="20" value="5" placeholder="5">
+          <label style="margin-left: 2rem;">API 服务地址：</label>
+          <input type="text" id="apiEndpoint" value="https://your-api-endpoint.com" placeholder="输入 API 地址" style="flex: 1;">
+          <button id="startBtn" onclick="startDramaConversion()">🚀 开始转换</button>
+          <button id="pauseBtn" onclick="pauseConversion()" style="display:none;">⏸ 暂停</button>
+        </div>
+
+        <div class="progress-container">
+          <div class="progress-bar-wrapper">
+            <div class="progress-bar" id="progressBar"></div>
+          </div>
+          <div class="progress-text">
+            <span id="progressText">已处理: 0/0</span>
+            <span id="progressTime" style="float:right; color:#999;"></span>
+          </div>
+        </div>
+
+        <table class="drama-table">
+          <thead>
+            <tr>
+              <th style="width:25%;">小说名称</th>
+              <th style="width:15%;">转换状态</th>
+              <th style="width:10%;">质量评分</th>
+              <th style="width:30%;">审核意见</th>
+              <th style="width:20%;">操作</th>
+            </tr>
+          </thead>
+          <tbody id="dramaTbody">
+            <tr><td colspan="5" class="loading" style="padding: 2rem;">等待开始转换...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 审核中心标签页 -->
+    <div class="tab-content" id="audit-tab">
+      <div class="drama-factory">
+        <h2 style="margin-bottom: 1.5rem;">✅ 审核中心</h2>
+        
+        <div style="margin-bottom: 1.5rem;">
+          <label>筛选状态：</label>
+          <select id="filterStatus" onchange="filterAuditTable()" style="padding:0.6rem; border:1px solid #ddd; border-radius:6px;">
+            <option value="">全部</option>
+            <option value="pending">待审核</option>
+            <option value="approved">已批准</option>
+            <option value="rejected">已拒绝</option>
+            <option value="modified">已修改</option>
+          </select>
+        </div>
+
+        <table class="drama-table">
+          <thead>
+            <tr>
+              <th style="width:25%;">小说名称</th>
+              <th style="width:12%;">质量评分</th>
+              <th style="width:20%;">问题描述</th>
+              <th style="width:15%;">审核状态</th>
+              <th style="width:28%;">操作</th>
+            </tr>
+          </thead>
+          <tbody id="auditTbody">
+            <tr><td colspan="5" class="loading" style="padding: 2rem;">加载审核数据...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
+
   <script>
+    const API_ENDPOINT = localStorage.getItem('apiEndpoint') || '';
+    let isConverting = false;
+    let novelList = [];
+
+    // 标签页切换
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tab = btn.getAttribute('data-tab');
+        switchTab(tab);
+      });
+    });
+
+    function switchTab(tabName) {
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      
+      document.getElementById(tabName + '-tab').classList.add('active');
+      event.target.classList.add('active');
+
+      if (tabName === 'audit') loadAuditData();
+    }
+
+    // 加载小说列表
     async function loadNovels() {
       try {
         const res = await fetch('novels/index.json');
-        const novels = await res.json();
+        novelList = await res.json();
         const grid = document.getElementById('novelGrid');
-        if (!novels || !novels.length) {
+        if (!novelList || !novelList.length) {
           grid.innerHTML = '<div class="loading">暂无小说，稍后再来看看吧～</div>';
           return;
         }
-        grid.innerHTML = novels.map(novel => {
+        grid.innerHTML = novelList.map(novel => {
           const doneCount = (novel.chapters || []).filter(c => c.status === 'done').length;
           const totalCount = doneCount > 0 ? doneCount : (novel.chapters || []).length;
           const statusLabel = novel.status === 'writing' ? '<span class="tag writing">写作中</span>' : '';
@@ -62,6 +216,160 @@
         document.getElementById('novelGrid').innerHTML = '<div class="loading">加载失败</div>';
       }
     }
+
+    // 开始短剧转换
+    async function startDramaConversion() {
+      const apiEndpoint = document.getElementById('apiEndpoint').value.trim();
+      const batchSize = parseInt(document.getElementById('batchSize').value) || 5;
+      
+      if (!apiEndpoint || apiEndpoint === 'https://your-api-endpoint.com') {
+        alert('请先输入有效的 API 地址');
+        return;
+      }
+      
+      localStorage.setItem('apiEndpoint', apiEndpoint);
+      isConverting = true;
+      document.getElementById('startBtn').disabled = true;
+      document.getElementById('pauseBtn').style.display = 'inline-block';
+      document.getElementById('dramaTbody').innerHTML = '';
+
+      const startTime = Date.now();
+      for (let i = 0; i < Math.min(batchSize, novelList.length); i++) {
+        if (!isConverting) break;
+        
+        const novel = novelList[i];
+        await convertNovel(novel, apiEndpoint, i, batchSize, startTime);
+      }
+
+      isConverting = false;
+      document.getElementById('startBtn').disabled = false;
+      document.getElementById('pauseBtn').style.display = 'none';
+    }
+
+    async function convertNovel(novel, apiEndpoint, index, total, startTime) {
+      const row = document.createElement('tr');
+      row.id = 'novel-' + novel.id;
+      row.innerHTML = `
+        <td>${novel.title || novel.id}</td>
+        <td><span class="status-badge status-pending">转换中...</span></td>
+        <td>-</td>
+        <td>正在处理...</td>
+        <td><button class="action-btn" disabled>处理中</button></td>
+      `;
+      document.getElementById('dramaTbody').appendChild(row);
+
+      try {
+        const response = await fetch(`${apiEndpoint}/api/drama/convert`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ novel_id: novel.id })
+        });
+
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        
+        const result = await response.json();
+        
+        row.innerHTML = `
+          <td>${novel.title || novel.id}</td>
+          <td><span class="status-badge status-done">已完成</span></td>
+          <td><span class="score">${result.score || '--'}/100</span></td>
+          <td>${(result.review_notes || '通过')}</td>
+          <td>
+            <a href="${result.script_url}" target="_blank" class="action-btn">查看</a>
+            <button class="action-btn" onclick="approveNovel('${novel.id}')">✅ 批准</button>
+          </td>
+        `;
+      } catch(e) {
+        row.innerHTML = `
+          <td>${novel.title || novel.id}</td>
+          <td><span class="status-badge status-error">失败</span></td>
+          <td>-</td>
+          <td>${e.message}</td>
+          <td><button class="action-btn danger" onclick="retryNovel('${novel.id}')">🔄 重试</button></td>
+        `;
+      }
+
+      updateProgress(index + 1, total, startTime);
+    }
+
+    function updateProgress(current, total, startTime) {
+      const percent = (current / total) * 100;
+      document.getElementById('progressBar').style.width = percent + '%';
+      document.getElementById('progressText').textContent = `已处理: ${current}/${total}`;
+      
+      const elapsed = Math.floor((Date.now() - startTime) / 1000);
+      const avgTime = elapsed / current;
+      const remaining = ((total - current) * avgTime);
+      document.getElementById('progressTime').textContent = `预计剩余: ${Math.floor(remaining)}s`;
+    }
+
+    function pauseConversion() {
+      isConverting = false;
+      document.getElementById('startBtn').disabled = false;
+      document.getElementById('pauseBtn').style.display = 'none';
+    }
+
+    async function loadAuditData() {
+      const tbody = document.getElementById('auditTbody');
+      try {
+        const response = await fetch(API_ENDPOINT + '/api/drama/audit-list');
+        const dramas = await response.json();
+        
+        if (!dramas || dramas.length === 0) {
+          tbody.innerHTML = '<tr><td colspan="5" class="loading">暂无审核数据</td></tr>';
+          return;
+        }
+
+        tbody.innerHTML = dramas.map(drama => `
+          <tr data-novel="${drama.novel_id}">
+            <td>${drama.title}</td>
+            <td><span class="score">${drama.score}/100</span></td>
+            <td>${drama.issues || '-'}</td>
+            <td><span class="status-badge status-${drama.status}">${drama.status_cn}</span></td>
+            <td>
+              <button class="action-btn" onclick="viewDrama('${drama.novel_id}')">查看</button>
+              <button class="action-btn" onclick="approveDrama('${drama.novel_id}')">✅ 批准</button>
+              <button class="action-btn danger" onclick="rejectDrama('${drama.novel_id}')">❌ 拒绝</button>
+            </td>
+          </tr>
+        `).join('');
+      } catch(e) {
+        tbody.innerHTML = `<tr><td colspan="5" class="loading">加载失败: ${e.message}</td></tr>`;
+      }
+    }
+
+    function filterAuditTable() {
+      const status = document.getElementById('filterStatus').value;
+      document.querySelectorAll('#auditTbody tr').forEach(row => {
+        if (!status) {
+          row.style.display = '';
+        } else {
+          const statusClass = 'status-' + status;
+          row.style.display = row.innerHTML.includes(statusClass) ? '' : 'none';
+        }
+      });
+    }
+
+    function approveNovel(novelId) {
+      alert('已批准: ' + novelId);
+    }
+
+    function retryNovel(novelId) {
+      alert('重试: ' + novelId);
+    }
+
+    function viewDrama(novelId) {
+      alert('查看: ' + novelId);
+    }
+
+    function approveDrama(novelId) {
+      alert('批准: ' + novelId);
+    }
+
+    function rejectDrama(novelId) {
+      alert('拒绝: ' + novelId);
+    }
+
     loadNovels();
   </script>
 </body>
