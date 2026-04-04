@@ -1,9 +1,9 @@
 [
   {
-    "id": "末世之粮",
-    "title": "末世之粮",
-    "slug": "末世之粮",
-    "desc": "共 1 章",
+    "id": "井龙",
+    "title": "\"book_id\": \"well-dragon\",",
+    "slug": "井龙",
+    "desc": "第一章",
     "author": "AI（MiniMax仿写）",
     "genre": "都市/玄幻",
     "heat": 0,
@@ -14,702 +14,16 @@
         "num": 1,
         "title": "第一章",
         "status": "done",
-        "words": 3052
+        "words": 6714,
+        "file": "chapter_0001.json"
       }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "第一章 一封来自大洋彼岸的信",
-    "title": "第一章 一封来自大洋彼岸的信",
-    "slug": "第一章 一封来自大洋彼岸的信",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "一封来自大洋彼岸的信",
-        "status": "done",
-        "words": 3859
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "一封来自大洋彼岸的信 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "被病娇大小姐公开表白，我定型了",
-    "title": "被病娇大小姐公开表白，我定型了",
-    "slug": "被病娇大小姐公开表白，我定型了",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "食堂惊变，当众表白",
-        "status": "done",
-        "words": 4457
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "食堂惊变，当众表白 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "病娇妻子的秘密",
-    "title": "病娇妻子的秘密",
-    "slug": "病娇妻子的秘密",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章：门锁的秘密",
-        "status": "done",
-        "words": 2950
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章：门锁的秘密 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "我的草稿纸成了国家机密",
-    "title": "我的草稿纸成了国家机密",
-    "slug": "我的草稿纸成了国家机密",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章：一张草稿纸引发的血案",
-        "status": "done",
-        "words": 3882
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章：一张草稿纸引发的血案 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "第1章 边境商演",
-    "title": "第1章 第1章 边境商演",
-    "slug": "第1章 边境商演",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第1章 边境商演",
-        "status": "done",
-        "words": 3000
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第1章 边境商演 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "让你拍烂片，你拍长津湖全网泪崩",
-    "title": "让你拍烂片，你拍长津湖全网泪崩",
-    "slug": "让你拍烂片，你拍长津湖全网泪崩",
-    "desc": "共 2 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "尊严碎了一地",
-        "status": "done",
-        "words": 3200
-      },
-      {
-        "num": 1,
-        "title": "尊严碎了一地",
-        "status": "done",
-        "words": 0
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "尊严碎了一地 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "混沌王子的诈尸",
-    "title": "混沌王子的诈尸",
-    "slug": "混沌王子的诈尸",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章 诈尸",
-        "status": "done",
-        "words": 3483
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 诈尸 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "凑数大叔的非凡人生",
-    "title": "凑数大叔的非凡人生",
-    "slug": "凑数大叔的非凡人生",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章 凑数的命运",
-        "status": "done",
-        "words": 3459
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 凑数的命运 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "废物逆袭：我的倒反天罡",
-    "title": "废物逆袭：我的倒反天罡",
-    "slug": "废物逆袭：我的倒反天罡",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章 废物？看我倒反天罡！",
-        "status": "done",
-        "words": 4120
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 废物？看我倒反天罡！ - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "第一章",
-    "title": "第一章",
-    "slug": "第一章",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "天台上的系统",
-        "status": "done",
-        "words": 4532
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "天台上的系统 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "地下城的翻莉奇遇",
-    "title": "地下城的翻莉奇遇",
-    "slug": "地下城的翻莉奇遇",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章",
-        "status": "done",
-        "words": 3324
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "多云借图",
-    "title": "多云借图",
-    "slug": "多云借图",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章：混沌废体",
-        "status": "done",
-        "words": 2915
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章：混沌废体 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "七侠皇帝的野心",
-    "title": "七侠皇帝的野心",
-    "slug": "七侠皇帝的野心",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章：朕刚登基，你就来刺杀？",
-        "status": "done",
-        "words": 2348
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章：朕刚登基，你就来刺杀？ - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "第一章：穿越成反派？剧本我不认",
-    "title": "第一章：穿越成反派？剧本我不认",
-    "slug": "第一章：穿越成反派？剧本我不认",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "反派文男主不按剧本，杀疯了",
-        "status": "done",
-        "words": 4557
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "反派文男主不按剧本，杀疯了 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "反派前传",
-    "title": "反派前传",
-    "slug": "反派前传",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章：穿越成反派？剧本我不认",
-        "status": "done",
-        "words": 2269
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章：穿越成反派？剧本我不认 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "第一章：穿越成反派？这剧本我不认",
-    "title": "第一章：穿越成反派？这剧本我不认",
-    "slug": "第一章：穿越成反派？这剧本我不认",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "反派：开局先刀主角",
-        "status": "done",
-        "words": 2872
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "反派：开局先刀主角 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "冷血前夫的救赎",
-    "title": "冷血前夫的救赎",
-    "slug": "冷血前夫的救赎",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "攻略高冷前妻第一章",
-        "status": "done",
-        "words": 6425
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "攻略高冷前妻第一章 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "第一章：体育馆被掀飞",
-    "title": "第一章：体育馆被掀飞",
-    "slug": "第一章：体育馆被掀飞",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "都市高武：签到就能变强",
-        "status": "done",
-        "words": 3304
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "都市高武：签到就能变强 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "战争系统征天下",
-    "title": "战争系统征天下",
-    "slug": "战争系统征天下",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章",
-        "status": "done",
-        "words": 3272
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "名义：横扫汉东从征服陆亦可开始",
-    "title": "名义：横扫汉东从征服陆亦可开始",
-    "slug": "名义：横扫汉东从征服陆亦可开始",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章：重生汉东",
-        "status": "done",
-        "words": 3119
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章：重生汉东 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "悬崖赋命",
-    "title": "第1章 悬崖赋命",
-    "slug": "悬崖赋命",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第1章 悬崖赋命",
-        "status": "done",
-        "words": 2800
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第1章 悬崖赋命 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "黑暗中的微光",
-    "title": "第1章 黑暗中的微光",
-    "slug": "黑暗中的微光",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "黑暗中的微光",
-        "status": "done",
-        "words": 4213
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "黑暗中的微光 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "第一章：星穹模拟器",
-    "title": "第一章：星穹模拟器",
-    "slug": "第一章：星穹模拟器",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章：星穹模拟器",
-        "status": "done",
-        "words": 3333
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章：星穹模拟器 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "好感强制系统：我追不到的校花，她的好感度",
-    "title": "好感强制系统：我追不到的校花，她的好感度在疯涨",
-    "slug": "好感强制系统：我追不到的校花，她的好感度",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "hasDrama": true,
-    "chapters": [
-      {
-        "num": 1,
-        "title": "追了三年的冰山，居然对我产生情绪了？",
-        "status": "done",
-        "words": 4096
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "drama": {
-      "title": "追了三年的冰山，居然对我产生情绪了？ - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
+    ]
   },
   {
     "id": "天台边的复仇",
-    "title": "天台边的复仇",
+    "title": "\"chapter_number\": 1,",
     "slug": "天台边的复仇",
-    "desc": "共 1 章",
+    "desc": "第一章",
     "author": "AI（MiniMax仿写）",
     "genre": "都市/玄幻",
     "heat": 0,
@@ -720,136 +34,16 @@
         "num": 1,
         "title": "第一章",
         "status": "done",
-        "words": 950
+        "words": 950,
+        "file": "chapter_0001.json"
       }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
+    ]
   },
   {
-    "id": "十六境之主",
-    "title": "十六境之主",
-    "slug": "十六境之主",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章：十六境降世",
-        "status": "done",
-        "words": 2167
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章：十六境降世 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "洛杉矶驱魔事件",
-    "title": "洛杉矶驱魔事件",
-    "slug": "洛杉矶驱魔事件",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "纸钱开路",
-        "status": "done",
-        "words": 3270
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "纸钱开路 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "彩票1.7亿的秘密",
-    "title": "彩票1.7亿的秘密",
-    "slug": "彩票1.7亿的秘密",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "我中奖一亿七千万，反手把家人送",
-        "status": "done",
-        "words": 5022
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "我中奖一亿七千万，反手把家人送 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "罗刹鸡着魔",
-    "title": "罗刹鸡着魔",
-    "slug": "罗刹鸡着魔",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "香烛铺开张第一天",
-        "status": "done",
-        "words": 3079
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "香烛铺开张第一天 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "眉墨挑战",
-    "title": "眉墨挑战",
-    "slug": "眉墨挑战",
-    "desc": "共 1 章",
+    "id": "地下城的翻莉奇遇",
+    "title": "\"num\": 1,",
+    "slug": "地下城的翻莉奇遇",
+    "desc": "第一章",
     "author": "AI（MiniMax仿写）",
     "genre": "都市/玄幻",
     "heat": 0,
@@ -860,108 +54,16 @@
         "num": 1,
         "title": "第一章",
         "status": "done",
-        "words": 3920
+        "words": 3324,
+        "file": "chapter_0001.json"
       }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "汉东省重大贪腐案件调查进展报告",
-    "title": "汉东省重大贪腐案件调查进展报告",
-    "slug": "汉东省重大贪腐案件调查进展报告",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章",
-        "status": "done",
-        "words": 5957
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "名义之他们叫我汉大胆",
-    "title": "名义之他们叫我汉大胆",
-    "slug": "名义之他们叫我汉大胆",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章",
-        "status": "done",
-        "words": 3867
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "名医K善",
-    "title": "名医K善",
-    "slug": "名医K善",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "<think>",
-        "status": "done",
-        "words": 9069
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "<think> - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
+    ]
   },
   {
     "id": "火影死亡轮",
-    "title": "火影死亡轮",
+    "title": "\"num\": 1,",
     "slug": "火影死亡轮",
-    "desc": "共 1 章",
+    "desc": "{",
     "author": "AI（MiniMax仿写）",
     "genre": "都市/玄幻",
     "heat": 0,
@@ -972,24 +74,16 @@
         "num": 1,
         "title": "{",
         "status": "done",
-        "words": 3492
+        "words": 3492,
+        "file": "chapter_0001.json"
       }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "{ - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
+    ]
   },
   {
-    "id": "女频白绮梓",
-    "title": "女频白绮梓",
-    "slug": "女频白绮梓",
-    "desc": "共 1 章",
+    "id": "眉墨挑战",
+    "title": "\"num\": 1,",
+    "slug": "眉墨挑战",
+    "desc": "第一章",
     "author": "AI（MiniMax仿写）",
     "genre": "都市/玄幻",
     "heat": 0,
@@ -998,26 +92,18 @@
     "chapters": [
       {
         "num": 1,
-        "title": "第一章 穿越女频第一天，我就被叫了霸总",
+        "title": "第一章",
         "status": "done",
-        "words": 3050
+        "words": 3920,
+        "file": "chapter_0001.json"
       }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 穿越女频第一天，我就被叫了霸总 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
+    ]
   },
   {
-    "id": "第一章 穿越异世",
-    "title": "第一章 穿越异世",
-    "slug": "第一章 穿越异世",
-    "desc": "共 1 章",
+    "id": "战争系统征天下",
+    "title": "\"number\": 1,",
+    "slug": "战争系统征天下",
+    "desc": "第一章",
     "author": "AI（MiniMax仿写）",
     "genre": "都市/玄幻",
     "heat": 0,
@@ -1026,362 +112,18 @@
     "chapters": [
       {
         "num": 1,
-        "title": "第一章 穿越异世",
+        "title": "第一章",
         "status": "done",
-        "words": 2980
+        "words": 3272,
+        "file": "chapter_0001.json"
       }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 穿越异世 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "异世蜂鸣",
-    "title": "第1章 异世蜂鸣",
-    "slug": "异世蜂鸣",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "异世蜂鸣",
-        "status": "done",
-        "words": 4921
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "异世蜂鸣 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "第一章 奇怪的转学生",
-    "title": "第一章 奇怪的转学生",
-    "slug": "第一章 奇怪的转学生",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "奇怪的转学生",
-        "status": "done",
-        "words": 3802
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "奇怪的转学生 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "安全屋",
-    "title": "安全屋",
-    "slug": "安全屋",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章 选了没人要的安全屋",
-        "status": "done",
-        "words": 2923
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 选了没人要的安全屋 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "三角州列杀",
-    "title": "三角州列杀",
-    "slug": "三角州列杀",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "天榜猎杀系统，激活！",
-        "status": "done",
-        "words": 3896
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "天榜猎杀系统，激活！ - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "三角州妻子",
-    "title": "三角州妻子",
-    "slug": "三角州妻子",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "绝境：血与婚礼",
-        "status": "done",
-        "words": 4328
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "绝境：血与婚礼 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "贫困县振兴记",
-    "title": "贫困县振兴记",
-    "slug": "贫困县振兴记",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "穷山恶水",
-        "status": "done",
-        "words": 322
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "穷山恶水 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "水浒西血",
-    "title": "水浒西血",
-    "slug": "水浒西血",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章：血夜重生",
-        "status": "done",
-        "words": 3921
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章：血夜重生 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "寺舍坊",
-    "title": "寺舍坊",
-    "slug": "寺舍坊",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "被迫结婚，社恐老婆初见面",
-        "status": "done",
-        "words": 4857
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "被迫结婚，社恐老婆初见面 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "六翼天使",
-    "title": "六翼天使",
-    "slug": "六翼天使",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "废物与背叛",
-        "status": "done",
-        "words": 3700
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "废物与背叛 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "第一章：觉醒·新宿之战",
-    "title": "第一章：觉醒·新宿之战",
-    "slug": "第一章：觉醒·新宿之战",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "觉醒·新宿之战",
-        "status": "done",
-        "words": 3120
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "觉醒·新宿之战 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "第一章 废物？老子氪金买修为！",
-    "title": "第一章 废物？老子氪金买修为！",
-    "slug": "第一章 废物？老子氪金买修为！",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章 废物？老子氪金买修为！",
-        "status": "done",
-        "words": 7168
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 废物？老子氪金买修为！ - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "第一章：死亡与重生",
-    "title": "第一章：死亡与重生",
-    "slug": "第一章：死亡与重生",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "<think>",
-        "status": "done",
-        "words": 4006
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "<think> - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
+    ]
   },
   {
     "id": "第一章 全年无休的大师兄想下班",
-    "title": "第一章 全年无休的大师兄想下班",
+    "title": "# 万人迷系统",
     "slug": "第一章 全年无休的大师兄想下班",
-    "desc": "共 1 章",
+    "desc": "万人迷系统：我的修为都是被迫营业来的",
     "author": "AI（MiniMax仿写）",
     "genre": "都市/玄幻",
     "heat": 0,
@@ -1392,24 +134,16 @@
         "num": 1,
         "title": "万人迷系统：我的修为都是被迫营业来的",
         "status": "done",
-        "words": 3514
+        "words": 3514,
+        "file": "chapter_0001.json"
       }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "万人迷系统：我的修为都是被迫营业来的 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
+    ]
   },
   {
-    "id": "井龙",
-    "title": "井龙",
-    "slug": "井龙",
-    "desc": "共 1 章",
+    "id": "第一章：体育馆被掀飞",
+    "title": "# 都市高武",
+    "slug": "第一章：体育馆被掀飞",
+    "desc": "都市高武：签到就能变强",
     "author": "AI（MiniMax仿写）",
     "genre": "都市/玄幻",
     "heat": 0,
@@ -1418,306 +152,18 @@
     "chapters": [
       {
         "num": 1,
-        "title": "第一章",
+        "title": "都市高武：签到就能变强",
         "status": "done",
-        "words": 6714
+        "words": 3304,
+        "file": "chapter_0001.json"
       }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "武侠NPC的逆袭",
-    "title": "武侠NPC的逆袭",
-    "slug": "武侠NPC的逆袭",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章：枯井沉尸",
-        "status": "done",
-        "words": 3879
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章：枯井沉尸 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "洗髓丹",
-    "title": "洗髓丹",
-    "slug": "洗髓丹",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "青玄宗，外门。",
-        "status": "done",
-        "words": 3887
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "青玄宗，外门。 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "第一章：刚穿越就被姐夫当刀使？",
-    "title": "第一章：刚穿越就被姐夫当刀使？",
-    "slug": "第一章：刚穿越就被姐夫当刀使？",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "西游，这个妹夫，我打不过",
-        "status": "done",
-        "words": 3233
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "西游，这个妹夫，我打不过 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "一一医生",
-    "title": "一一医生",
-    "slug": "一一医生",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章 开学第一天，收到一亿",
-        "status": "done",
-        "words": 3598
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 开学第一天，收到一亿 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "第一章：毒舌影帝的逆袭",
-    "title": "第一章：毒舌影帝的逆袭",
-    "slug": "第一章：毒舌影帝的逆袭",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "娱乐：演反派的我，全网求别死",
-        "status": "done",
-        "words": 3500
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "娱乐：演反派的我，全网求别死 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "第一章：青藏线上的意外直播",
-    "title": "第一章：青藏线上的意外直播",
-    "slug": "第一章：青藏线上的意外直播",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "<think>",
-        "status": "done",
-        "words": 2957
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "<think> - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "真北候",
-    "title": "真北候",
-    "slug": "真北候",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章　婚礼惊变",
-        "status": "done",
-        "words": 1761
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章　婚礼惊变 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "真北侯待杖",
-    "title": "真北侯待杖",
-    "slug": "真北侯待杖",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "大婚惊变",
-        "status": "done",
-        "words": 3000
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "大婚惊变 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "正道研发",
-    "title": "正道研发",
-    "slug": "正道研发",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章 一字之差",
-        "status": "done",
-        "words": 4349
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 一字之差 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "中奖一亿七",
-    "title": "中奖一亿七",
-    "slug": "中奖一亿七",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "中奖？不，是开始",
-        "status": "done",
-        "words": 2623
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "中奖？不，是开始 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
+    ]
   },
   {
     "id": "全家偷听我心声",
-    "title": "全家偷听我心声",
+    "title": "<think>",
     "slug": "全家偷听我心声",
-    "desc": "共 1 章",
+    "desc": "<think>",
     "author": "AI（MiniMax仿写）",
     "genre": "都市/玄幻",
     "heat": 0,
@@ -1728,24 +174,16 @@
         "num": 1,
         "title": "<think>",
         "status": "done",
-        "words": 6074
+        "words": 6074,
+        "file": "chapter_0001.json"
       }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "<think> - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
+    ]
   },
   {
-    "id": "自爆路仙",
-    "title": "自爆路仙",
-    "slug": "自爆路仙",
-    "desc": "共 1 章",
+    "id": "名医K善",
+    "title": "<think>",
+    "slug": "名医K善",
+    "desc": "<think>",
     "author": "AI（MiniMax仿写）",
     "genre": "都市/玄幻",
     "heat": 0,
@@ -1754,26 +192,18 @@
     "chapters": [
       {
         "num": 1,
-        "title": "第一章 铁流",
+        "title": "<think>",
         "status": "done",
-        "words": 2161
+        "words": 9069,
+        "file": "chapter_0001.json"
       }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 铁流 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
+    ]
   },
   {
-    "id": "宗武九剑",
-    "title": "宗武九剑",
-    "slug": "宗武九剑",
-    "desc": "共 1 章",
+    "id": "第一章：死亡与重生",
+    "title": "<think>",
+    "slug": "第一章：死亡与重生",
+    "desc": "<think>",
     "author": "AI（MiniMax仿写）",
     "genre": "都市/玄幻",
     "heat": 0,
@@ -1782,26 +212,18 @@
     "chapters": [
       {
         "num": 1,
-        "title": "第一章：退婚风波起，嫁衣血染红",
+        "title": "<think>",
         "status": "done",
-        "words": 3236
+        "words": 4006,
+        "file": "chapter_0001.json"
       }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章：退婚风波起，嫁衣血染红 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
+    ]
   },
   {
-    "id": "宗武祖仙",
-    "title": "宗武祖仙",
-    "slug": "宗武祖仙",
-    "desc": "共 1 章",
+    "id": "第一章：青藏线上的意外直播",
+    "title": "<think>",
+    "slug": "第一章：青藏线上的意外直播",
+    "desc": "<think>",
     "author": "AI（MiniMax仿写）",
     "genre": "都市/玄幻",
     "heat": 0,
@@ -1810,138 +232,18 @@
     "chapters": [
       {
         "num": 1,
-        "title": "第一章：退婚羞辱日，系统初现时",
+        "title": "<think>",
         "status": "done",
-        "words": 3853
+        "words": 2957,
+        "file": "chapter_0001.json"
       }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章：退婚羞辱日，系统初现时 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "斩首前，我看到了皇帝的气运是黑的",
-    "title": "斩首前，我看到了皇帝的气运是黑的",
-    "slug": "斩首前，我看到了皇帝的气运是黑的",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章",
-        "status": "done",
-        "words": 2578
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "死亡倒计时",
-    "title": "死亡倒计时",
-    "slug": "死亡倒计时",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章",
-        "status": "done",
-        "words": 2081
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "死亡预警",
-    "title": "死亡预警",
-    "slug": "死亡预警",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章",
-        "status": "done",
-        "words": 1773
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
-  },
-  {
-    "id": "命轮：我能看到你的死期",
-    "title": "命轮：我能看到你的死期",
-    "slug": "命轮：我能看到你的死期",
-    "desc": "共 1 章",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市/玄幻",
-    "heat": 0,
-    "status": "completed",
-    "cover": "📖",
-    "chapters": [
-      {
-        "num": 1,
-        "title": "第一章",
-        "status": "done",
-        "words": 3067
-      }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
+    ]
   },
   {
     "id": "四合院，刘海中三叔二野副师转业",
-    "title": "四合院，刘海中三叔二野副师转业",
+    "title": "“周野，E级感知天赋，适合后勤岗位。”",
     "slug": "四合院，刘海中三叔二野副师转业",
-    "desc": "共 1 章",
+    "desc": "“周野，E级感知天赋，适合后勤岗位。”",
     "author": "AI（MiniMax仿写）",
     "genre": "都市/玄幻",
     "heat": 0,
@@ -1952,24 +254,16 @@
         "num": 1,
         "title": "“周野，E级感知天赋，适合后勤岗位。”",
         "status": "done",
-        "words": 3227
+        "words": 3227,
+        "file": "chapter_0001.json"
       }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "“周野，E级感知天赋，适合后勤岗位。” - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
+    ]
   },
   {
-    "id": "我能听到万物的心声",
-    "title": "我能听到万物的心声",
-    "slug": "我能听到万物的心声",
-    "desc": "共 1 章",
+    "id": "末世之粮",
+    "title": "“往左边！”有人大喊。",
+    "slug": "末世之粮",
+    "desc": "第一章",
     "author": "AI（MiniMax仿写）",
     "genre": "都市/玄幻",
     "heat": 0,
@@ -1980,24 +274,543 @@
         "num": 1,
         "title": "第一章",
         "status": "done",
-        "words": 3289
+        "words": 3052,
+        "file": "chapter_0001.json"
       }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
+    ]
+  },
+  {
+    "id": "正道研发",
+    "title": "一字之差",
+    "slug": "正道研发",
+    "desc": "第一章 一字之差",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章 一字之差",
+        "status": "done",
+        "words": 4349,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "第一章 一封来自大洋彼岸的信",
+    "title": "一封来自大洋彼岸的信",
+    "slug": "第一章 一封来自大洋彼岸的信",
+    "desc": "一封来自大洋彼岸的信",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "一封来自大洋彼岸的信",
+        "status": "done",
+        "words": 3859,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "我的草稿纸成了国家机密",
+    "title": "什么？！我的草稿纸成国家机密了",
+    "slug": "我的草稿纸成了国家机密",
+    "desc": "第一章：一张草稿纸引发的血案",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章：一张草稿纸引发的血案",
+        "status": "done",
+        "words": 3882,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "凑数大叔的非凡人生",
+    "title": "凑数的命运",
+    "slug": "凑数大叔的非凡人生",
+    "desc": "第一章 凑数的命运",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章 凑数的命运",
+        "status": "done",
+        "words": 3459,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "十六境之主",
+    "title": "十六境降世",
+    "slug": "十六境之主",
+    "desc": "第一章：十六境降世",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章：十六境降世",
+        "status": "done",
+        "words": 2167,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "第一章：穿越成反派？剧本我不认",
+    "title": "反派文男主不按剧本，杀疯了",
+    "slug": "第一章：穿越成反派？剧本我不认",
+    "desc": "反派文男主不按剧本，杀疯了",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "反派文男主不按剧本，杀疯了",
+        "status": "done",
+        "words": 4557,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "第一章：穿越成反派？这剧本我不认",
+    "title": "反派：开局先刀主角",
+    "slug": "第一章：穿越成反派？这剧本我不认",
+    "desc": "反派：开局先刀主角",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "反派：开局先刀主角",
+        "status": "done",
+        "words": 2872,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "名义之他们叫我汉大胆",
+    "title": "名义之他们叫我汉大胆",
+    "slug": "名义之他们叫我汉大胆",
+    "desc": "第一章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章",
+        "status": "done",
+        "words": 3867,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "名义：横扫汉东从征服陆亦可开始",
+    "title": "名义：横扫汉东从征服陆亦可开始",
+    "slug": "名义：横扫汉东从征服陆亦可开始",
+    "desc": "第一章：重生汉东",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章：重生汉东",
+        "status": "done",
+        "words": 3119,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "命轮：我能看到你的死期",
+    "title": "命轮：我能看到你的死期",
+    "slug": "命轮：我能看到你的死期",
+    "desc": "第一章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章",
+        "status": "done",
+        "words": 3067,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "真北侯待杖",
+    "title": "大婚惊变",
+    "slug": "真北侯待杖",
+    "desc": "大婚惊变",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "大婚惊变",
+        "status": "done",
+        "words": 3000,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "第一章",
+    "title": "天台上的系统",
+    "slug": "第一章",
+    "desc": "天台上的系统",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "天台上的系统",
+        "status": "done",
+        "words": 4532,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "三角州列杀",
+    "title": "天榜猎杀系统，激活！",
+    "slug": "三角州列杀",
+    "desc": "天榜猎杀系统，激活！",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "天榜猎杀系统，激活！",
+        "status": "done",
+        "words": 3896,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "第一章 奇怪的转学生",
+    "title": "奇怪的转学生",
+    "slug": "第一章 奇怪的转学生",
+    "desc": "奇怪的转学生",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "奇怪的转学生",
+        "status": "done",
+        "words": 3802,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "好感强制系统：我追不到的校花，她的好感度",
+    "title": "好感强制系统：我追不到的校花，她的好感度在疯涨",
+    "slug": "好感强制系统：我追不到的校花，她的好感度",
+    "desc": "追了三年的冰山，居然对我产生情绪了？",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "追了三年的冰山，居然对我产生情绪了？",
+        "status": "done",
+        "words": 4096,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "第一章：毒舌影帝的逆袭",
+    "title": "娱乐：演反派的我，全网求别死",
+    "slug": "第一章：毒舌影帝的逆袭",
+    "desc": "娱乐：演反派的我，全网求别死",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "娱乐：演反派的我，全网求别死",
+        "status": "done",
+        "words": 3500,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "真北候",
+    "title": "婚礼惊变",
+    "slug": "真北候",
+    "desc": "第一章　婚礼惊变",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章　婚礼惊变",
+        "status": "done",
+        "words": 1761,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "让你拍烂片，你拍长津湖全网泪崩",
+    "title": "尊严碎了一地",
+    "slug": "让你拍烂片，你拍长津湖全网泪崩",
+    "desc": "尊严碎了一地",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "尊严碎了一地",
+        "status": "done",
+        "words": 3200,
+        "file": "chapter_0001.json"
+      },
+      {
+        "num": 1,
+        "title": "尊严碎了一地",
+        "status": "done",
+        "words": 0,
+        "file": "chapter_0001_content.json"
+      }
+    ]
+  },
+  {
+    "id": "六翼天使",
+    "title": "废物与背叛",
+    "slug": "六翼天使",
+    "desc": "废物与背叛",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "废物与背叛",
+        "status": "done",
+        "words": 3700,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "废物逆袭：我的倒反天罡",
+    "title": "废物？看我倒反天罡！",
+    "slug": "废物逆袭：我的倒反天罡",
+    "desc": "第一章 废物？看我倒反天罡！",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章 废物？看我倒反天罡！",
+        "status": "done",
+        "words": 4120,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "第一章 废物？老子氪金买修为！",
+    "title": "废物？老子氪金买修为！",
+    "slug": "第一章 废物？老子氪金买修为！",
+    "desc": "第一章 废物？老子氪金买修为！",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章 废物？老子氪金买修为！",
+        "status": "done",
+        "words": 7168,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "一一医生",
+    "title": "开学第一天，收到一亿",
+    "slug": "一一医生",
+    "desc": "第一章 开学第一天，收到一亿",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章 开学第一天，收到一亿",
+        "status": "done",
+        "words": 3598,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "异世蜂鸣",
+    "title": "异世蜂鸣",
+    "slug": "异世蜂鸣",
+    "desc": "异世蜂鸣",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "异世蜂鸣",
+        "status": "done",
+        "words": 4921,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "悬崖赋命",
+    "title": "悬崖赋命",
+    "slug": "悬崖赋命",
+    "desc": "第1章 悬崖赋命",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第1章 悬崖赋命",
+        "status": "done",
+        "words": 2800,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "中奖一亿七",
+    "title": "我中奖一亿七千万，反手把家人送",
+    "slug": "中奖一亿七",
+    "desc": "中奖？不，是开始",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "中奖？不，是开始",
+        "status": "done",
+        "words": 2623,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "彩票1.7亿的秘密",
+    "title": "我中奖一亿七千万，反手把家人送",
+    "slug": "彩票1.7亿的秘密",
+    "desc": "我中奖一亿七千万，反手把家人送",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "我中奖一亿七千万，反手把家人送",
+        "status": "done",
+        "words": 5022,
+        "file": "chapter_0001.json"
+      }
+    ]
   },
   {
     "id": "我以本心斩仙途",
     "title": "我以本心斩仙途",
     "slug": "我以本心斩仙途",
-    "desc": "共 1 章",
+    "desc": "第一章",
     "author": "AI（MiniMax仿写）",
     "genre": "都市/玄幻",
     "heat": 0,
@@ -2008,24 +821,16 @@
         "num": 1,
         "title": "第一章",
         "status": "done",
-        "words": 2761
+        "words": 2761,
+        "file": "chapter_0001.json"
       }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
+    ]
   },
   {
-    "id": "火影：我能看见一切数据",
-    "title": "火影：我能看见一切数据",
-    "slug": "火影：我能看见一切数据",
-    "desc": "共 1 章",
+    "id": "我能听到万物的心声",
+    "title": "我能听到万物的心声",
+    "slug": "我能听到万物的心声",
+    "desc": "第一章",
     "author": "AI（MiniMax仿写）",
     "genre": "都市/玄幻",
     "heat": 0,
@@ -2036,24 +841,16 @@
         "num": 1,
         "title": "第一章",
         "status": "done",
-        "words": 2983
+        "words": 3289,
+        "file": "chapter_0001.json"
       }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
+    ]
   },
   {
     "id": "我能看到好感度",
     "title": "我能看到好感度",
     "slug": "我能看到好感度",
-    "desc": "共 1 章",
+    "desc": "第一章",
     "author": "AI（MiniMax仿写）",
     "genre": "都市/玄幻",
     "heat": 0,
@@ -2064,17 +861,641 @@
         "num": 1,
         "title": "第一章",
         "status": "done",
-        "words": 2755
+        "words": 2755,
+        "file": "chapter_0001.json"
       }
-    ],
-    "tags": [
-      "都市"
-    ],
-    "hasDrama": true,
-    "drama": {
-      "title": "第一章 - 短剧版",
-      "scenes": 3,
-      "status": "completed"
-    }
+    ]
+  },
+  {
+    "id": "冷血前夫的救赎",
+    "title": "攻略高冷前妻第一章",
+    "slug": "冷血前夫的救赎",
+    "desc": "攻略高冷前妻第一章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "攻略高冷前妻第一章",
+        "status": "done",
+        "words": 6425,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "斩首前，我看到了皇帝的气运是黑的",
+    "title": "斩首前，我看到了皇帝的气运是黑的",
+    "slug": "斩首前，我看到了皇帝的气运是黑的",
+    "desc": "第一章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章",
+        "status": "done",
+        "words": 2578,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "第一章：星穹模拟器",
+    "title": "星穹模拟器",
+    "slug": "第一章：星穹模拟器",
+    "desc": "第一章：星穹模拟器",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章：星穹模拟器",
+        "status": "done",
+        "words": 3333,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "七侠皇帝的野心",
+    "title": "朕刚登基，你就来刺杀？",
+    "slug": "七侠皇帝的野心",
+    "desc": "第一章：朕刚登基，你就来刺杀？",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章：朕刚登基，你就来刺杀？",
+        "status": "done",
+        "words": 2348,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "武侠NPC的逆袭",
+    "title": "枯井沉尸",
+    "slug": "武侠NPC的逆袭",
+    "desc": "第一章：枯井沉尸",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章：枯井沉尸",
+        "status": "done",
+        "words": 3879,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "死亡倒计时",
+    "title": "死亡倒计时",
+    "slug": "死亡倒计时",
+    "desc": "第一章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章",
+        "status": "done",
+        "words": 2081,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "死亡预警",
+    "title": "死亡预警",
+    "slug": "死亡预警",
+    "desc": "第一章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章",
+        "status": "done",
+        "words": 1773,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "汉东省重大贪腐案件调查进展报告",
+    "title": "汉东省重大贪腐案件调查进展报告",
+    "slug": "汉东省重大贪腐案件调查进展报告",
+    "desc": "第一章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章",
+        "status": "done",
+        "words": 5957,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "洛杉矶驱魔事件",
+    "title": "洛杉矶驱魔：烧点纸钱就好了",
+    "slug": "洛杉矶驱魔事件",
+    "desc": "纸钱开路",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "纸钱开路",
+        "status": "done",
+        "words": 3270,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "多云借图",
+    "title": "混沌废体",
+    "slug": "多云借图",
+    "desc": "第一章：混沌废体",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章：混沌废体",
+        "status": "done",
+        "words": 2915,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "火影：我能看见一切数据",
+    "title": "火影：我能看见一切数据",
+    "slug": "火影：我能看见一切数据",
+    "desc": "第一章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章",
+        "status": "done",
+        "words": 2983,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "贫困县振兴记",
+    "title": "穷山恶水",
+    "slug": "贫困县振兴记",
+    "desc": "穷山恶水",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "穷山恶水",
+        "status": "done",
+        "words": 322,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "女频白绮梓",
+    "title": "穿越女频第一天，我就被叫了霸总",
+    "slug": "女频白绮梓",
+    "desc": "第一章 穿越女频第一天，我就被叫了霸总",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章 穿越女频第一天，我就被叫了霸总",
+        "status": "done",
+        "words": 3050,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "第一章 穿越异世",
+    "title": "穿越异世",
+    "slug": "第一章 穿越异世",
+    "desc": "第一章 穿越异世",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章 穿越异世",
+        "status": "done",
+        "words": 2980,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "反派前传",
+    "title": "穿越成反派？剧本我不认",
+    "slug": "反派前传",
+    "desc": "第一章：穿越成反派？剧本我不认",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章：穿越成反派？剧本我不认",
+        "status": "done",
+        "words": 2269,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "三角州妻子",
+    "title": "绝境：血与婚礼",
+    "slug": "三角州妻子",
+    "desc": "绝境：血与婚礼",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "绝境：血与婚礼",
+        "status": "done",
+        "words": 4328,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "水浒西血",
+    "title": "血夜重生",
+    "slug": "水浒西血",
+    "desc": "第一章：血夜重生",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章：血夜重生",
+        "status": "done",
+        "words": 3921,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "被病娇大小姐公开表白，我定型了",
+    "title": "被病娇大小姐公开表白，我定型了",
+    "slug": "被病娇大小姐公开表白，我定型了",
+    "desc": "食堂惊变，当众表白",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "食堂惊变，当众表白",
+        "status": "done",
+        "words": 4457,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "寺舍坊",
+    "title": "被迫结婚，社恐老婆初见面",
+    "slug": "寺舍坊",
+    "desc": "被迫结婚，社恐老婆初见面",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "被迫结婚，社恐老婆初见面",
+        "status": "done",
+        "words": 4857,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "第一章：刚穿越就被姐夫当刀使？",
+    "title": "西游，这个妹夫，我打不过",
+    "slug": "第一章：刚穿越就被姐夫当刀使？",
+    "desc": "西游，这个妹夫，我打不过",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "西游，这个妹夫，我打不过",
+        "status": "done",
+        "words": 3233,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "第一章：觉醒·新宿之战",
+    "title": "觉醒·新宿之战",
+    "slug": "第一章：觉醒·新宿之战",
+    "desc": "觉醒·新宿之战",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "觉醒·新宿之战",
+        "status": "done",
+        "words": 3120,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "混沌王子的诈尸",
+    "title": "诈尸",
+    "slug": "混沌王子的诈尸",
+    "desc": "第一章 诈尸",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章 诈尸",
+        "status": "done",
+        "words": 3483,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "第1章 边境商演",
+    "title": "边境商演",
+    "slug": "第1章 边境商演",
+    "desc": "第1章 边境商演",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第1章 边境商演",
+        "status": "done",
+        "words": 3000,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "宗武祖仙",
+    "title": "退婚羞辱日，系统初现时",
+    "slug": "宗武祖仙",
+    "desc": "第一章：退婚羞辱日，系统初现时",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章：退婚羞辱日，系统初现时",
+        "status": "done",
+        "words": 3853,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "宗武九剑",
+    "title": "退婚风波起，嫁衣血染红",
+    "slug": "宗武九剑",
+    "desc": "第一章：退婚风波起，嫁衣血染红",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章：退婚风波起，嫁衣血染红",
+        "status": "done",
+        "words": 3236,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "安全屋",
+    "title": "选了没人要的安全屋",
+    "slug": "安全屋",
+    "desc": "第一章 选了没人要的安全屋",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章 选了没人要的安全屋",
+        "status": "done",
+        "words": 2923,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "自爆路仙",
+    "title": "铁流",
+    "slug": "自爆路仙",
+    "desc": "第一章 铁流",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章 铁流",
+        "status": "done",
+        "words": 2161,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "病娇妻子的秘密",
+    "title": "门锁的秘密",
+    "slug": "病娇妻子的秘密",
+    "desc": "第一章：门锁的秘密",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章：门锁的秘密",
+        "status": "done",
+        "words": 2950,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "洗髓丹",
+    "title": "青玄宗，外门。",
+    "slug": "洗髓丹",
+    "desc": "青玄宗，外门。",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "青玄宗，外门。",
+        "status": "done",
+        "words": 3887,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "罗刹鸡着魔",
+    "title": "香烛铺开张第一天",
+    "slug": "罗刹鸡着魔",
+    "desc": "香烛铺开张第一天",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "香烛铺开张第一天",
+        "status": "done",
+        "words": 3079,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "黑暗中的微光",
+    "title": "黑暗中的微光",
+    "slug": "黑暗中的微光",
+    "desc": "黑暗中的微光",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "黑暗中的微光",
+        "status": "done",
+        "words": 4213,
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "好感强制系统：我追不到的校花，她的好感度在疯涨",
+    "title": "好感强制系统：我追不到的校花，她的好感度在疯涨",
+    "slug": "好感强制系统：我追不到的校花，她的好感度在疯涨",
+    "desc": "待生成",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "writing",
+    "cover": "📖",
+    "chapters": []
   }
 ]
