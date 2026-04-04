@@ -51,7 +51,7 @@ class DramaConverter:
         except Exception as e:
             raise Exception(f"加载小说失败: {str(e)}")
 
-    async def generate_script(self, novel_data: Dict, novel_id: str, api_key: str = None) -> Dict:
+    async def generate_script(self, novel_data: Dict, novel_id: str, api_key: str = None, prompt_override: str = None) -> Dict:
         """
         使用 LLM 将小说转换为短剧剧本
         
@@ -75,7 +75,7 @@ class DramaConverter:
                 raise ValueError("OpenAI API Key 未提供")
             
             openai.api_key = key_to_use
-            prompt = self._build_conversion_prompt(novel_data)
+            prompt = prompt_override or self._build_conversion_prompt(novel_data)
             
             response = openai.ChatCompletion.create(
                 model=self.model,

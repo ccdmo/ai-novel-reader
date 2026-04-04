@@ -543,6 +543,7 @@
     "heat": 0,
     "status": "completed",
     "cover": "📖",
+    "hasDrama": true,
     "chapters": [
       {
         "num": 1,

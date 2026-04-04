@@ -12,7 +12,7 @@ class DramaReviewer:
     def __init__(self):
         self.default_api_key = os.getenv("ANTHROPIC_API_KEY", "")
         
-    async def review_script(self, script: Dict, novel_id: str, api_key: str = None) -> Dict:
+    async def review_script(self, script: Dict, novel_id: str, api_key: str = None, prompt_override: str = None) -> Dict:
         """
         审核短剧剧本质量
         
@@ -31,7 +31,7 @@ class DramaReviewer:
             client = anthropic.Anthropic(api_key=key_to_use)
             
             # 构建审核提示
-            prompt = self._build_review_prompt(script)
+            prompt = prompt_override or self._build_review_prompt(script)
             
             # 调用 Claude API
             message = client.messages.create(

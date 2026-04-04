@@ -57,6 +57,7 @@ a:hover{{text-decoration:underline}}
 <div class="header">
   <div class="header-left">
     <a href="../../" class="back-btn">← 返回列表</a>
+    <a href="./drama.html" class="back-btn" style="margin-left:0.75rem;background:#4CAF50;">短剧版</a>
     <h1>{title}</h1>
   </div>
   <div style="font-size:0.85rem;opacity:0.8;">AI 创作</div>

@@ -54,6 +54,8 @@ class ConvertRequest(BaseModel):
     batch_id: str = "batch_001"
     openai_api_key: Optional[str] = None
     anthropic_api_key: Optional[str] = None
+    conversion_prompt: Optional[str] = None
+    review_prompt: Optional[str] = None
 
 class ApprovalRequest(BaseModel):
     batch_id: str = "batch_001"
@@ -101,10 +103,20 @@ async def convert_novel_to_drama(request: ConvertRequest, background_tasks: Back
         novel_content = await converter.load_novel(novel_id, openai_key)
         
         # 2. 生成短剧剧本
-        script = await converter.generate_script(novel_content, novel_id, openai_key)
+        script = await converter.generate_script(
+            novel_content,
+            novel_id,
+            openai_key,
+            request.conversion_prompt
+        )
         
         # 3. AI 审核
-        review = await reviewer.review_script(script, novel_id, anthropic_key)
+        review = await reviewer.review_script(
+            script,
+            novel_id,
+            anthropic_key,
+            request.review_prompt
+        )
         
         # 4. 保存结果
         result = await batch_mgr.save_drama_result(
