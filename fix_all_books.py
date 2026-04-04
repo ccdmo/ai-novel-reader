@@ -352,9 +352,19 @@ def fix_novel(novel_dir):
     return title, len(chapters)
 
 
+def get_script_dir():
+    """获取脚本所在目录"""
+    return Path(__file__).parent.resolve()
+
+
+def get_novels_dir():
+    """获取小说目录（相对于脚本位置）"""
+    return get_script_dir() / 'novels'
+
+
 def fix_main_index_json():
     """修复主 index.json 文件"""
-    novels_dir = Path('d:/003_True_Code/0.6小说Agent/ai-novel-reader/novels')
+    novels_dir = get_novels_dir()
     index_file = novels_dir / 'index.json'
 
     if not index_file.exists():
@@ -422,7 +432,7 @@ def fix_main_index_json():
 
 
 def main():
-    novels_dir = Path('d:/003_True_Code/0.6小说Agent/ai-novel-reader/novels')
+    novels_dir = get_novels_dir()
 
     print("=" * 50)
     print("开始修复小说阅读器...")
