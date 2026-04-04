@@ -8,12 +8,15 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;color:#333}
 a{color:#667eea;text-decoration:none}
-a:hover{text-decoration:underline}
 .header{background:linear-gradient(135deg,#667eea,#764ba2);color:white;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between}
 .header-left{display:flex;align-items:center;gap:1rem}
 .back-btn{background:rgba(255,255,255,0.2);color:white;padding:0.4rem 0.8rem;border-radius:6px;font-size:0.85rem;border:none;cursor:pointer}
 .back-btn:hover{background:rgba(255,255,255,0.3);text-decoration:none}
 .header h1{font-size:1.2rem;font-weight:600}
+.view-tabs{display:flex;gap:0.5rem;align-items:center;margin-top:0.5rem}
+.view-btn{background:rgba(255,255,255,0.15);color:white;border:1px solid rgba(255,255,255,0.3);padding:0.4rem 0.8rem;border-radius:6px;cursor:pointer;font-size:0.85rem;transition:all .2s}
+.view-btn.active{background:white;color:#667eea;border-color:rgba(102,126,234,0.8);font-weight:600}
+.view-btn:hover{background:rgba(255,255,255,0.25)}
 .main{display:flex;max-width:1200px;margin:0 auto;min-height:calc(100vh - 60px)}
 .sidebar{width:240px;background:white;border-right:1px solid #eee;padding:1rem 0;overflow-y:auto;position:sticky;top:60px;height:calc(100vh - 60px)}
 .sidebar-title{padding:0.5rem 1rem;font-size:0.75rem;color:#999;text-transform:uppercase;letter-spacing:1px}
@@ -22,21 +25,23 @@ a:hover{text-decoration:underline}
 .chapter-item a:hover{background:#f5f5f5;text-decoration:none}
 .chapter-item.active a{background:#e8f0fe;color:#4285f4;border-left:3px solid #4285f4}
 .content-area{flex:1;padding:2rem 3rem;background:white;max-width:800px}
-.novel-title{font-size:1.8rem;font-weight:700;margin-bottom:0.5rem}
-.novel-meta{font-size:0.85rem;color:#999;margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid #eee}
+#dramaArea{display:none;flex:1;padding:2rem 3rem;background:white;max-width:800px}
 .chapter-title{font-size:1.4rem;font-weight:600;margin-bottom:1.5rem;padding-bottom:0.5rem;border-bottom:2px solid #667eea;display:inline-block}
 .chapter-content{font-size:1.05rem;line-height:1.9;color:#333}
 .chapter-content p{margin-bottom:1.2rem;text-indent:2em}
-.chapter-content h2{font-size:1.3rem;margin:1.5rem 0 1rem;border-bottom:1px solid #eee;padding-bottom:0.5rem}
-.chapter-content h3{font-size:1.1rem;margin:1.2rem 0 0.8rem}
 .nav-btns{display:flex;justify-content:space-between;margin-top:3rem;padding-top:2rem;border-top:1px solid #eee}
 .nav-btn{background:#667eea;color:white;padding:0.6rem 1.2rem;border-radius:6px;font-size:0.9rem;border:none;cursor:pointer}
 .nav-btn:hover{background:#5568d3}
 .nav-btn:disabled{background:#ccc;cursor:not-allowed}
+.scene{background:#fff;border-radius:12px;padding:1.5rem;margin-bottom:1rem;box-shadow:0 2px 10px rgba(0,0,0,0.04)}
+.scene-title{font-size:1.05rem;font-weight:700;color:#1b5e20;margin-bottom:0.75rem}
+.scene-meta{font-size:0.9rem;color:#555;margin-bottom:1rem}
+.scene-content{line-height:1.8;color:#333;white-space:normal;word-break:break-word}
+.drama-info{margin-bottom:1.5rem;padding:1rem;border:1px solid #e8eaf6;border-radius:12px;background:#f5f7ff;color:#333}
 @media(max-width:768px){
   .main{flex-direction:column}
   .sidebar{width:100%;height:auto;position:relative;top:0;border-right:none;border-bottom:1px solid #eee}
-  .content-area{padding:1.5rem 1rem}
+  .content-area, #dramaArea{padding:1.5rem 1rem}
 }
 </style>
 </head>
@@ -44,22 +49,73 @@ a:hover{text-decoration:underline}
 <div class="header">
   <div class="header-left">
     <a href="../../" class="back-btn">← 返回列表</a>
-    <h1>斩首前，我看到了皇帝的气运是黑的</h1>
+    <div>
+      <h1>斩首前，我看到了皇帝的气运是黑的</h1>
+      <div class="view-tabs">
+        <button class="view-btn active" id="originalTabBtn" type="button" onclick="switchView('original')">原文</button>
+        <button class="view-btn" id="dramaTabBtn" type="button" onclick="switchView('drama')">短剧</button>
+      </div>
+    </div>
   </div>
   <div style="font-size:0.85rem;opacity:0.8;">AI 创作</div>
 </div>
 <div class="main">
-  <aside class="sidebar">
+  <aside class="sidebar" id="sidebar">
     <div class="sidebar-title">目录</div>
     <ul class="chapter-list" id="chapterList"></ul>
   </aside>
   <main class="content-area" id="contentArea">
     <div style="padding:2rem;text-align:center;color:#999">加载中...</div>
   </main>
+  <div id="dramaArea"></div>
 </div>
 <script>
 var CHAPTERS = [{"num": 1, "title": "第一章", "status": "done", "words": 2578, "file": "chapter_0001.json"}];
-var BOOK_ID = "三国：开局秦琼模板，曹营第一将";
+var BOOK_ID = "斩首前，我看到了皇帝的气运是黑的";
+var DRAMA_SCRIPT_URL = '/drama_data/batch_001/' + encodeURIComponent(BOOK_ID) + '__script.json';
+var currentChapter = 0;
+var currentView = 'original';
+var dramaLoaded = false;
+
+function switchView(view) {
+  currentView = view;
+  document.getElementById('originalTabBtn').classList.toggle('active', view === 'original');
+  document.getElementById('dramaTabBtn').classList.toggle('active', view === 'drama');
+  document.getElementById('sidebar').style.display = view === 'original' ? 'block' : 'none';
+  document.getElementById('contentArea').style.display = view === 'original' ? 'block' : 'none';
+  document.getElementById('dramaArea').style.display = view === 'drama' ? 'block' : 'none';
+  if (view === 'drama' && !dramaLoaded) loadDrama();
+  else if (view === 'original') renderChapter(currentChapter);
+}
+
+function loadDrama() {
+  var root = document.getElementById('dramaArea');
+  root.innerHTML = '<div style="padding:2rem;text-align:center;color:#999">正在加载短剧剧本…</div>';
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', DRAMA_SCRIPT_URL, true);
+  xhr.onload = function() {
+    if (xhr.status !== 200) {
+      root.innerHTML = '<div style="padding:2rem;color:#999">短剧脚本暂未生成。</div>';
+      return;
+    }
+    try {
+      var data = JSON.parse(xhr.responseText);
+      if (!data.scenes || !data.scenes.length) throw new Error('剧本格式不完整');
+      var html = '<div class="drama-info"><strong>短剧改编自：</strong>斩首前，我看到了皇帝的气运是黑的<br><strong>场景数：</strong>' + data.scenes.length + '</div>';
+      data.scenes.forEach(function(scene) {
+        var content = scene.content ? scene.content.trim().replace(/\n/g, '<br>') : '';
+        html += '<div class="scene"><div class="scene-title">' + (scene.scene ? '场景 ' + scene.scene : scene.title) + '</div>' +
+          '<div class="scene-meta">' + (scene.title || '') + ' · ' + (scene.time || '') + '</div>' +
+          '<div class="scene-content">' + content + '</div></div>';
+      });
+      root.innerHTML = html;
+      dramaLoaded = true;
+    } catch (e) {
+      root.innerHTML = '<div style="padding:2rem;color:red">加载失败: ' + e.message + '</div>';
+    }
+  };
+  xhr.send();
+}
 
 function getChapterFile(idx) {
   var ch = CHAPTERS[idx];
@@ -74,7 +130,6 @@ function parseContent(content) {
   var lines = content.split('\n');
   var inParagraph = false;
   var paragraphBuffer = [];
-
   function flushParagraph() {
     if (paragraphBuffer.length > 0) {
       html += '<p>' + paragraphBuffer.join('') + '</p>';
@@ -82,7 +137,6 @@ function parseContent(content) {
     }
     inParagraph = false;
   }
-
   for (var i = 0; i < lines.length; i++) {
     var line = lines[i].trim();
     if (!line) {
@@ -110,20 +164,18 @@ function parseContent(content) {
 function renderChapterList() {
   var html = CHAPTERS.map(function(ch, i) {
     var title = ch.title || '第' + (ch.num || ch.number || i+1) + '章';
-    var wordCount = ch.words || ch.wordCount || 0;
     return '<li class="chapter-item"><a href="?c=' + i + '">' + title + '</a></li>';
   }).join('');
   document.getElementById('chapterList').innerHTML = html;
 }
 
 function renderChapter(idx) {
+  currentChapter = idx;
   var ch = CHAPTERS[idx];
   var title = ch.title || '第' + (ch.num || ch.number || idx+1) + '章';
-
   document.querySelectorAll('.chapter-item').forEach(function(el, i) {
     el.classList.toggle('active', i === idx);
   });
-
   var xhr = new XMLHttpRequest();
   xhr.open('GET', getChapterFile(idx), true);
   xhr.onload = function() {
@@ -141,24 +193,23 @@ function renderChapter(idx) {
     }
     window.scrollTo(0, 0);
   };
-  xhr.onerror = function() {
-    document.getElementById('contentArea').innerHTML = '<div style="color:#999;padding:2rem">章节文件不存在</div>';
-  };
   xhr.send();
 }
 
 var params = new URLSearchParams(location.search);
 var c = params.get("c");
+var view = params.get("view") || 'original';
 renderChapterList();
-if (c !== null) {
-  var idx = parseInt(c);
-  if (idx >= 0 && idx < CHAPTERS.length) {
-    renderChapter(idx);
+if (view === 'drama') {
+  switchView('drama');
+} else {
+  if (c !== null) {
+    var idx = parseInt(c);
+    if (idx >= 0 && idx < CHAPTERS.length) renderChapter(idx);
+    else renderChapter(0);
   } else {
     renderChapter(0);
   }
-} else {
-  renderChapter(0);
 }
 </script>
 </body>

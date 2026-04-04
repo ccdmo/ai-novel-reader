@@ -29,7 +29,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
   <div id="dramaRoot" class="notice">正在加载短剧剧本…</div>
 </div>
 <script>
-const scriptUrl = '/drama_data/batch_001/汉东省重大贪腐案件调查进展报告__script.json';
+const scriptUrl = '/drama_data/batch_001/' + encodeURIComponent('汉东省重大贪腐案件调查进展报告') + '__script.json';
 const root = document.getElementById('dramaRoot');
 
 async function loadDrama() {

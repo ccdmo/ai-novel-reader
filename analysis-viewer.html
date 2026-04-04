@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多阶段分析结果 - AI 短剧工厂</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .breadcrumb a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb a:hover { color: #764ba2; }
+        .breadcrumb span { color: #999; }
+        
+        /* 标签页导航 */
+        .tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #e0e0e0;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            background: none;
+            border: none;
+            padding: 1rem 1.5rem;
+            font-size: 1.05rem;
+            cursor: pointer;
+            color: #666;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        .tab-btn.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+        
+        .tab-btn:hover {
+            color: #667eea;
+        }
+        
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s;
+        }
+        
+        .tab-content.active { display: block; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* 内容卡片 */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .card h2 {
+            color: #333;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .card h2::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: linear-gradient(180deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+        
+        /* 故事简介卡片 */
+        .synopsis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .synopsis-item {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .synopsis-item h3 {
+            color: #667eea;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .synopsis-item p {
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        
+        .tag {
+            background: #667eea;
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        /* 角色卡片 */
+        .characters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .character-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .character-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        .character-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .character-role {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .character-info {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+        
+        .character-info strong { display: block; font-weight: 600; margin-top: 0.75rem; }
+        
+        /* 章节分析 */
+        .chapters-list {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .chapter {
+            background: linear-gradient(to right, #f5f7fa 0%, white 100%);
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        
+        .chapter h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .chapter p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .chapter-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.95rem;
+            color: #999;
+        }
+        
+        .chapter-meta strong { color: #333; }
+        
+        .scenes {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e0e0e0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .scene {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            font-size: 0.9rem;
+        }
+        
+        .scene strong { color: #667eea; }
+        
+        /* 短剧剧本场景 */
+        .scenes-list {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .scene-card {
+            background: linear-gradient(to right, #f9fafb, white);
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            overflow: hidden;
+        }
+        
+        .scene-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .scene-number {
+            background: #667eea;
+            color: white;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: 700;
+        }
+        
+        .scene-titles h3 {
+            color: #333;
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .scene-meta {
+            color: #999;
+            font-size: 0.95rem;
+        }
+        
+        .scene-content {
+            color: #555;
+            line-height: 1.8;
+            font-size: 0.95rem;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        
+        /* 加载状态 */
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: white;
+        }
+        
+        .spinner {
+            border: 4px solid rgba(255,255,255,0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* 错误提示 */
+        .error {
+            background: #fee;
+            color: #c33;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #c33;
+        }
+        
+        /* 按钮 */
+        .btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.2s;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .header {
+                padding: 1.5rem;
+            }
+            
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .card {
+                padding: 1.5rem;
+            }
+            
+            .tab-btn {
+                padding: 0.75rem 1rem;
+                font-size: 0.95rem;
+            }
+            
+            .synopsis-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="breadcrumb">
+                <a href="./index.html">← 返回首页</a>
+                <span>/</span>
+                <span id="novelTitle">分析结果</span>
+            </div>
+            <h1>🎭 多阶段分析结果</h1>
+            <p>查看小说到短剧的完整转换分析</p>
+        </div>
+        
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('synopsis')">📋 故事简介</button>
+            <button class="tab-btn" onclick="switchTab('characters')">👥 主要角色</button>
+            <button class="tab-btn" onclick="switchTab('chapters')">📖 章节分析</button>
+            <button class="tab-btn" onclick="switchTab('script')">🎬 短剧剧本</button>
+        </div>
+        
+        <!-- 故事简介标签页 -->
+        <div id="synopsis" class="tab-content active">
+            <div class="card" id="synopsisCard">
+                <h2>故事简介</h2>
+                <div id="synopsisContent"></div>
+            </div>
+        </div>
+        
+        <!-- 主要角色标签页 -->
+        <div id="characters" class="tab-content">
+            <div class="card">
+                <h2>主要角色</h2>
+                <div class="characters-grid" id="charactersGrid"></div>
+            </div>
+        </div>
+        
+        <!-- 章节分析标签页 -->
+        <div id="chapters" class="tab-content">
+            <div class="card">
+                <h2>章节分析</h2>
+                <div class="chapters-list" id="chaptersList"></div>
+            </div>
+        </div>
+        
+        <!-- 短剧剧本标签页 -->
+        <div id="script" class="tab-content">
+            <div class="card">
+                <h2>短剧剧本</h2>
+                <div class="scenes-list" id="scriptScenes"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 从 URL 参数获取数据
+        function getQueryParam(name) {
+            const params = new URLSearchParams(window.location.search);
+            return params.get(name);
+        }
+        
+        // 标签页切换
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+        
+        // 渲染故事简介
+        function renderSynopsis(data) {
+            if (!data) return;
+            
+            const synopsis = data.synopsis || {};
+            const html = `
+                <div class="synopsis-grid">
+                    <div class="synopsis-item">
+                        <h3>📚 故事简介</h3>
+                        <p>${synopsis.synopsis || '暂无数据'}</p>
+                    </div>
+                    <div class="synopsis-item">
+                        <h3>🎬 类型与风格</h3>
+                        <p>
+                            <strong>类型：</strong> ${synopsis.genre || '未知'}<br>
+                            <strong>语气：</strong> ${synopsis.tone || '未知'}
+                        </p>
+                    </div>
+                    <div class="synopsis-item">
+                        <h3>⚡ 核心冲突</h3>
+                        <p>${synopsis.key_conflict || '暂无数据'}</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="color: #667eea; margin-bottom: 1rem;">🏷️ 主题</h3>
+                    <div class="tags">
+                        ${(synopsis.themes || []).map(t => `<span class="tag">${t}</span>`).join('')}
+                    </div>
+                </div>
+            `;
+            document.getElementById('synopsisContent').innerHTML = html;
+        }
+        
+        // 渲染角色列表
+        function renderCharacters(characters) {
+            if (!characters || characters.length === 0) {
+                document.getElementById('charactersGrid').innerHTML = '<p style="grid-column: 1/-1; color: #999;">暂无角色数据</p>';
+                return;
+            }
+            
+            const html = characters.map(char => `
+                <div class="character-card">
+                    <div class="character-name">${char.name || '未命名'}</div>
+                    <div class="character-role">${char.role || ''}</div>
+                    <div class="character-info">
+                        <strong>年龄：</strong> ${char.age || '未知'}<br>
+                        <strong>性格：</strong> ${char.traits || ''}<br>
+                        <strong>关系：</strong> ${char.relationship || ''}<br>
+                        <strong>冲突：</strong> ${char.conflict || ''}
+                    </div>
+                </div>
+            `).join('');
+            
+            document.getElementById('charactersGrid').innerHTML = html;
+        }
+        
+        // 渲染章节分析
+        function renderChapters(chapters) {
+            if (!chapters || chapters.length === 0) {
+                document.getElementById('chaptersList').innerHTML = '<p style="color: #999;">暂无章节数据</p>';
+                return;
+            }
+            
+            const html = chapters.map(ch => `
+                <div class="chapter">
+                    <h3>第 ${ch.chapter} 章 - ${ch.chapter_title || ''}</h3>
+                    <p>${ch.summary || ''}</p>
+                    <div class="chapter-meta">
+                        <div><strong>地点：</strong> ${ch.settings || ''}</div>
+                        <div><strong>人物：</strong> ${(ch.key_characters || []).join('、') || ''}</div>
+                    </div>
+                    <div class="chapter-meta" style="margin-top: 0.5rem;">
+                        <div><strong>核心冲突：</strong> ${ch.major_conflict || ''}</div>
+                    </div>
+                    ${ch.scene_breakdown && ch.scene_breakdown.length > 0 ? `
+                        <div class="scenes">
+                            ${ch.scene_breakdown.map(s => `
+                                <div class="scene">
+                                    <strong>${s.title}</strong><br>
+                                    ${s.description}
+                                </div>
+                            `).join('')}
+                        </div>
+                    ` : ''}
+                </div>
+            `).join('');
+            
+            document.getElementById('chaptersList').innerHTML = html;
+        }
+        
+        // 渲染短剧剧本
+        function renderScript(data) {
+            if (!data || !data.scenes || data.scenes.length === 0) {
+                document.getElementById('scriptScenes').innerHTML = '<p style="color: #999;">暂无剧本数据</p>';
+                return;
+            }
+            
+            const html = data.scenes.map((scene, i) => `
+                <div class="scene-card">
+                    <div class="scene-header">
+                        <div style="display: flex; gap: 1rem; flex: 1;">
+                            <div class="scene-number">${scene.scene || i + 1}</div>
+                            <div class="scene-titles">
+                                <h3>${scene.title || '场景'}</h3>
+                                <div class="scene-meta">⏱️ ${scene.time || '时间地点未知'}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scene-content">${scene.content || ''}</div>
+                </div>
+            `).join('');
+            
+            document.getElementById('scriptScenes').innerHTML = html;
+        }
+        
+        // 加载数据
+        async function loadAnalysisData() {
+            const novelId = getQueryParam('novel_id');
+            const batchId = getQueryParam('batch_id') || 'batch_001';
+            
+            if (!novelId) {
+                console.error('缺少 novel_id 参数');
+                return;
+            }
+            
+            try {
+                // 从本地 JSON 或 API 加载
+                const scriptUrl = `./drama_data/${batchId}/${novelId}_script.json`;
+                
+                const response = await fetch(scriptUrl);
+                if (!response.ok) throw new Error('加载失败');
+                
+                const data = await response.json();
+                
+                // 更新标题
+                document.getElementById('novelTitle').textContent = data.title || data.source_title || novelId;
+                
+                // 渲染各部分
+                renderSynopsis(data);
+                renderCharacters(data.main_characters || []);
+                renderChapters(data.chapter_outline || []);
+                renderScript(data);
+                
+            } catch (error) {
+                console.error('加载错误:', error);
+                alert(`无法加载分析数据: ${error.message}`);
+            }
+        }
+        
+        // 页面加载完成后执行
+        window.addEventListener('load', loadAnalysisData);
+    </script>
+</body>
+</html>

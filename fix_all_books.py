@@ -35,6 +35,11 @@ a:hover{{text-decoration:underline}}
 .chapter-item a:hover{{background:#f5f5f5;text-decoration:none}}
 .chapter-item.active a{{background:#e8f0fe;color:#4285f4;border-left:3px solid #4285f4}}
 .content-area{{flex:1;padding:2rem 3rem;background:white;max-width:800px}}
+.view-tabs{{display:flex;gap:0.5rem;align-items:center;margin-top:0.75rem}}
+.view-btn{{background:rgba(255,255,255,0.15);color:white;border:1px solid rgba(255,255,255,0.3);padding:0.45rem 0.85rem;border-radius:8px;cursor:pointer;font-size:0.9rem;transition:all .2s}}
+.view-btn.active{{background:white;color:#667eea;border-color:rgba(102,126,234,0.8);font-weight:600}}
+.view-btn:hover{{background:rgba(255,255,255,0.25)}}
+#dramaArea{{display:none;flex:1;padding:2rem 3rem;background:white;max-width:800px}}
 .novel-title{{font-size:1.8rem;font-weight:700;margin-bottom:0.5rem}}
 .novel-meta{{font-size:0.85rem;color:#999;margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid #eee}}
 .chapter-title{{font-size:1.4rem;font-weight:600;margin-bottom:1.5rem;padding-bottom:0.5rem;border-bottom:2px solid #667eea;display:inline-block}}
