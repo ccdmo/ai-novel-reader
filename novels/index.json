@@ -1,921 +1,1362 @@
 [
   {
-    "id": "emperor-qixia",
-    "title": "刚当皇帝，就被气运之子刺杀",
-    "desc": "大萧皇朝新帝萧烬登基大典，遭遇气运之子顾长歌刺杀！逆天改命系统觉醒，逆天改命时刻到来！",
-    "author": "AI（MiniMax仿写）",
-    "genre": "玄幻脑洞",
-    "heat": 20.1,
-    "status": "completed",
-    "chapters": 1,
-    "cover": "👑",
-    "record_id": "recvfELVeaThnb"
-  },
-  {
-    "id": "duoyun-jietu",
-    "title": "玄幻：我，混沌神朝第一太子",
-    "desc": "叶无道，混沌神朝第一太子，身负混沌祖血却遭人暗算，被封印为废物太子。三年隐忍，成年礼上混沌祖血觉醒，系统激活，太子归来！",
-    "author": "AI（MiniMax仿写）",
-    "genre": "东方仙侠",
-    "heat": 17.8,
-    "status": "completed",
-    "chapters": 1,
-    "cover": "🐉",
-    "record_id": "recvfEM2nUAVoI"
-  },
-  {
-    "id": "wuxia-npc",
-    "title": "武侠：我献祭满城NPC化龙",
-    "desc": "林渊，青阳城最底层的散修，被全城NPC欺辱七年。濒死之际，献祭化龙系统觉醒！从今往后，青阳城3421个NPC，皆是他通往真龙的垫脚石。杀伐果断，不圣母，献祭流武侠爽文。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "传统武侠",
-      "系统流",
-      "献祭",
-      "化龙",
-      "爽文"
-    ],
-    "chapters": 1,
-    "cover": "🐉",
-    "status": "completed",
-    "genre": "传统武侠",
-    "heat": 18.7,
-    "record_id": "recvfEM2nVd9g6F"
-  },
-  {
-    "id": "zhengdao-yanfa",
-    "title": "玄幻：你们用词改，我直接证道",
-    "desc": "穿越到以「字」修行的仙侠世界。世人只会替换词汇修炼，而主角能感知文字背后的「本字真意」。废灵根？不存在的——你们改词，我直接证道！言出法随·本字证道系统，让主角一眼看穿所有修士的认知盲区，降维打脸，认知碾压！",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "东方仙侠",
-      "玄幻",
-      "穿越",
-      "系统",
-      "语言即法则"
-    ],
-    "chapters": 1,
-    "cover": "📜",
-    "status": "completed",
-    "genre": "东方仙侠",
-    "heat": 19.2,
-    "record_id": "recvfEM2nVcP6b7"
-  },
-  {
-    "id": "fanpai-novel",
-    "title": "反派文男主不按剧本，杀疯了",
-    "author": "AI（MiniMax仿写）",
-    "genre": "都市脑洞",
-    "heat": 20.1,
-    "status": "completed",
-    "chapters": 1,
-    "record_id": "recvfEM2nVc4x2Z"
-  },
-  {
-    "id": "diss-world",
-    "title": "让你做主角，你来diss全世界",
-    "desc": "顾言行重生到同名同姓的loser身上，获得【毒舌diss系统】。开口diss任何人，根据精准度和杀伤力获得奖励。毒舌打脸，diss变强，都市爽文。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "脑洞",
-      "毒舌",
-      "系统",
-      "爽文"
-    ],
-    "chapters": 1,
-    "cover": "🎤",
-    "status": "completed",
-    "genre": "都市脑洞",
-    "heat": 20.6,
-    "record_id": "recvfEM2nVbW3jO"
-  },
-  {
-    "id": "xiyou-meifu",
-    "title": "西游，这个妹夫，我打不过",
-    "author": "仿写AI",
-    "genre": "玄幻脑洞",
-    "heat": 22.7,
-    "status": "completed",
-    "record_id": "recvfELVeavFdZ",
-    "chapters": 1
-  },
-  {
-    "id": "sanjiaozhou-wife",
-    "title": "三角洲：娶妻变强我化身格赫罗斯",
-    "desc": "前三角洲特种兵顾北辰在绝境中觉醒「战魂婚姻系统」，与冷艳女狙击手林若雪达成荒诞婚姻契约。婚姻即力量，真心才是最强觉醒秘钥！神秘格赫罗斯碎片正在逼近……",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "三角洲",
-      "特种兵",
-      "娶妻变强",
-      "系统流",
-      "动漫衍生"
-    ],
-    "chapters": 1,
-    "cover": "🎯",
-    "status": "completed"
-  },
-  {
-    "id": "yule-fanpai",
-    "title": "娱乐：演反派的我，全网求别死",
-    "desc": "穿越成毒舌影帝，接盘全网黑的反派演员。反派演技系统激活，将反派演到极致，让观众恨得牙痒、感动到哭、震撼到沉默。演反派演成全网白月光，观众嘴上骂反派，心里求他别死！",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "脑洞",
-      "系统",
-      "演技",
-      "反派",
-      "逆袭"
-    ],
-    "chapters": 1,
-    "cover": "🎭",
-    "status": "连载中",
-    "genre": "都市脑洞",
-    "heat": 20.7,
-    "record_id": "recvfELVeaJSzk"
-  },
-  {
-    "id": "bingjiao-wife",
-    "title": "被病娇老婆囚禁只好来写病娇文了",
-    "desc": "被病娇老婆囚禁后，主人公决定写病娇文来自救，荒诞又真实的都市日常。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "日常"
-    ],
-    "chapters": 1,
-    "cover": "📖",
-    "status": "completed"
-  },
-  {
-    "id": "changgeshalun",
-    "title": "我就一唱歌的，咋上军事法庭了？",
-    "desc": "只想摆烂的流行歌手，却成了影响国际战局的'战争教父'。极致反差的都市爽文。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "脑洞"
-    ],
-    "chapters": 1,
-    "cover": "🎤",
-    "status": "completed"
-  },
-  {
-    "id": "gongluexitong",
-    "title": "是攻略系统，不是攻城略地系统！",
-    "desc": "乱码恋爱攻略系统被主角误认为战争系统。用战争思维执行恋爱任务的错位喜剧。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "玄幻"
-    ],
-    "chapters": 1,
-    "cover": "⚔️",
-    "status": "completed"
-  },
-  {
-    "id": "history-immortal",
-    "title": "历史赋我长生，我终苟成万朝元老",
-    "desc": "历史穿越都市文，主角获得长生能力，在各个历史朝代中苟到最后成为万朝元老。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "历史",
-      "穿越"
-    ],
-    "chapters": 1,
-    "cover": "🏛️",
-    "status": "completed"
-  },
-  {
-    "id": "hokage-rokudao",
-    "title": "火影：开局融合藤虎，瞎眼宇智波",
-    "desc": "火影忍者同人，主角开局融合藤虎能力，却在宇智波的诅咒下走向黑暗。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "火影",
-      "同人"
-    ],
-    "chapters": 1,
-    "cover": "🔥",
-    "status": "completed"
-  },
-  {
-    "id": "honkai-star-rail-mirror",
-    "title": "星穹模拟：开局成为镜流竹马",
-    "desc": "崩坏星穹铁道同人，主角开局成为镜流的青梅竹马，在星穹列车上展开冒险。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "星穹铁道",
-      "同人"
-    ],
-    "chapters": 1,
-    "cover": "🚂",
-    "status": "completed"
-  },
-  {
-    "id": "juedingzisha",
-    "title": "决定自杀后，她们哭着找上门",
-    "desc": "都市日常文，主角决定自杀后，各路人物纷纷哭着找上门，荒诞又温馨。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "日常"
-    ],
-    "chapters": 1,
-    "cover": "💔",
-    "status": "completed"
-  },
-  {
-    "id": "dao-qiang",
-    "title": "玄幻：我靠倒反天罡成最强暴君",
-    "author": "AI（MiniMax仿写）",
-    "genre": "传统玄幻",
-    "heat": 20.0,
-    "status": "completed",
-    "chapters": 1
-  },
-  {
-    "id": "kaijug_shisigjing",
-    "title": "开局十六境，骊珠洞天任我行",
-    "desc": "玄幻修仙文，主角开局获得十六境修为，在骊珠洞天中肆意闯荡。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "玄幻",
-      "修仙"
-    ],
-    "chapters": 1,
-    "cover": "⚡",
-    "status": "completed"
-  },
-  {
     "id": "fanpai-xian",
-    "title": "反派：开局先刀主角",
+    "title": "fanpai-xian",
+    "slug": "fanpai-xian",
+    "desc": "共 1 章",
     "author": "AI（MiniMax仿写）",
-    "genre": "都市脑洞",
-    "heat": 21.1,
+    "genre": "都市/玄幻",
+    "heat": 0,
     "status": "completed",
-    "chapters": 1
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "陈无始猛地睁开眼睛。",
+        "status": "done",
+        "words": 2839
+      }
+    ]
   },
   {
-    "id": "los-angeles-exorcism",
-    "title": "洛杉矶驱魔：烧点纸钱就好了",
-    "desc": "都市玄幻文，主角在洛杉矶用东方法术驱魔，用烧纸钱的方式解决灵异事件。",
+    "id": "三国：开局秦琼模板，曹营第一将",
+    "title": "📖 第一章",
+    "slug": "三国：开局秦琼模板，曹营第一将",
+    "desc": "共 1 章",
     "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "玄幻"
-    ],
-    "chapters": 1,
-    "cover": "👻",
-    "status": "completed"
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章",
+        "status": "done",
+        "words": 2578
+      }
+    ]
   },
   {
-    "id": "lottery-170million",
-    "title": "我中奖一亿七千万，反手把家人送",
-    "desc": "都市神豪文，主角中奖一亿七千万后，做出了一个让所有人震惊的决定。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "神豪"
-    ],
-    "chapters": 1,
-    "cover": "💰",
-    "status": "completed"
-  },
-  {
-    "id": "luoshanji-zhuomo",
-    "title": "洛神纪：绝美鲛人求我当海神",
-    "desc": "都市玄幻文，主角意外成为鲛人之主，卷入海底世界的权力之争。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "玄幻"
-    ],
-    "chapters": 1,
-    "cover": "🌊",
-    "status": "completed"
-  },
-  {
-    "id": "rule-horror-campus",
-    "title": "规则怪谈：开局牢大整顿校园",
-    "desc": "都市悬疑文，主角进入一个充满诡异规则的校园，必须遵守规则才能活下去。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "悬疑"
-    ],
-    "chapters": 1,
-    "cover": "🏫",
-    "status": "completed"
+    "id": "zhuan-sheng-chose",
+    "title": "zhuan-sheng-chose",
+    "slug": "zhuan-sheng-chose",
+    "desc": "章节待生成",
+    "author": "AI",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "writing",
+    "cover": "📖",
+    "chapters": []
   },
   {
     "id": "sanjiaozhou-lie_sha",
-    "title": "三角洲：可曾听闻天榜猎杀",
-    "desc": "都市特种兵文，主角是三角洲部队退役，卷入一场跨国雇佣兵追杀。",
+    "title": "📖 天榜猎杀系统，激活！",
+    "slug": "sanjiaozhou-lie_sha",
+    "desc": "共 1 章",
     "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "特种兵"
-    ],
-    "chapters": 1,
-    "cover": "🎯",
-    "status": "completed"
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "天榜猎杀系统，激活！",
+        "status": "done",
+        "words": 4849
+      }
+    ]
   },
   {
-    "id": "shenhaoxitong",
-    "title": "神豪系统：我的家乡是贫困县",
-    "desc": "被裁员，口袋只剩800块，意外激活'贫困县振兴辅助系统'——钱必须花在本地才能滚雪球。",
-    "author": "AI（InkOS）",
-    "tags": [
-      "都市",
-      "神豪",
-      "系统"
-    ],
-    "chapters": 1,
-    "cover": "🏘️",
-    "status": "completed"
+    "id": "zhenbei-hou",
+    "title": "📖 第一章",
+    "slug": "zhenbei-hou",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章　婚礼惊变",
+        "status": "done",
+        "words": 1761
+      }
+    ]
+  },
+  {
+    "id": "hokage-rokudao",
+    "title": "📖 黑暗中的微光",
+    "slug": "hokage-rokudao",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "writing",
+    "cover": "📖",
+    "chapters": [
+      {
+        "id": "chapter_0001",
+        "number": 1,
+        "title": "黑暗中的微光",
+        "wordCount": 3371,
+        "publishedAt": "2026-04-03"
+      }
+    ]
+  },
+  {
+    "id": "meimo-challenge",
+    "title": "📖 第一章",
+    "slug": "meimo-challenge",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "魅魔临凡",
+        "status": "done",
+        "words": 3500
+      }
+    ]
   },
   {
     "id": "six-wing-angel",
-    "title": "异能：觉醒六翼天使，我氪金变强",
-    "desc": "都市异能文，主角觉醒六翼天使血脉，用氪金系统一路变强对抗黑暗势力。",
+    "title": "📖 废物与背叛",
+    "slug": "six-wing-angel",
+    "desc": "共 1 章",
     "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "异能"
-    ],
-    "chapters": 1,
-    "cover": "👼",
-    "status": "completed"
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "废物与背叛",
+        "status": "done",
+        "words": 3700
+      }
+    ]
   },
   {
-    "id": "wanrenmidaxia",
-    "title": "身为万人迷大师兄的我只想下班",
-    "desc": "社畜穿书成完美大师兄，全年无休处理宗门大小事务。外在完美，内在疲惫的反差喜剧。",
-    "author": "AI（InkOS）",
-    "tags": [
-      "玄幻",
-      "脑洞"
-    ],
-    "chapters": 1,
-    "cover": "🗡️",
-    "status": "completed"
-  },
-  {
-    "id": "zhongjiang_yi_qi_qi",
-    "title": "中降：揭秘苗疆蛊术与茅山道术",
-    "desc": "都市玄学文，主角意外卷入一场降头术与茅山道术的对决。",
+    "id": "naruto-deadth",
+    "title": "naruto-deadth",
+    "slug": "naruto-deadth",
+    "desc": "共 1 章",
     "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "玄学"
-    ],
-    "chapters": 1,
-    "cover": "🏮",
-    "status": "completed"
-  },
-  {
-    "id": "sanguo-qinqin",
-    "title": "三国：开局秦琼模板，曹营第一将",
-    "desc": "历史穿越文，主角穿越到三国时期，获得秦琼模板，在曹营中崛起。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "历史",
-      "三国"
-    ],
-    "chapters": 1,
-    "cover": "⚔️",
-    "status": "completed"
-  },
-  {
-    "id": "caogao-zhuanmi",
-    "title": "什么？！我的草稿纸成国家机密了",
-    "desc": "都市脑洞文，主角的草稿纸意外成为国家机密，卷入一场意想不到的风波。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "脑洞"
-    ],
-    "chapters": 1,
-    "cover": "📜",
-    "status": "completed"
-  },
-  {
-    "id": "chengxi-pilman",
-    "title": "县城婆罗门，开局美妇求我办事",
-    "desc": "都市日常文，县城小人物的家长里短，美妇上门求助引发一连串故事。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "日常"
-    ],
-    "chapters": 1,
-    "cover": "🏠",
-    "status": "completed"
-  },
-  {
-    "id": "mingyi-diaoyu",
-    "title": "名义：京都首调，由我打破棋局",
-    "desc": "都市政治文，主角在京都权力斗争中破局，成为新一代的话事人。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "政治"
-    ],
-    "chapters": 1,
-    "cover": "🎭",
-    "status": "completed"
-  },
-  {
-    "id": "siheyuan-liuhai",
-    "title": "四合院，刘海中三叔二野副师转业",
-    "desc": "年代文，四合院里的恩怨情仇，退伍军人在院里开启新生活。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "年代",
-      "四合院"
-    ],
-    "chapters": 1,
-    "cover": "🏡",
-    "status": "completed"
-  },
-  {
-    "id": "dayi-kaisystem",
-    "title": "大一开学，系统每天送我一亿",
-    "desc": "都市神豪文，大一新生获得每日送一亿的系统，在大学校园里展开逆袭人生。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "神豪"
-    ],
-    "chapters": 1,
-    "cover": "💎",
-    "status": "completed"
-  },
-  {
-    "id": "honghuang-jinlong",
-    "title": "洪荒：功德小金龙，你敢碰我？",
-    "desc": "洪荒流小说，主角穿越成功德小金龙，在洪荒世界中以功德证道。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "洪荒",
-      "玄幻"
-    ],
-    "chapters": 1,
-    "cover": "🐉",
-    "status": "completed"
-  },
-  {
-    "id": "chaos-prince",
-    "title": "玄幻：我，混沌神朝第一太子",
-    "desc": "穿越太子携帝王系统觉醒，步步为营夺回主动权，在夺嫡之争中杀出血路，最终成为天下之主！",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "东方仙侠",
-      "玄幻",
-      "穿越",
-      "系统"
-    ],
-    "chapters": 1,
-    "cover": "👑",
-    "status": "completed"
-  },
-  {
-    "id": "shenghua-weiji",
-    "title": "生化危机：开局加油站遇见里昂",
-    "desc": "生化危机同人，主角在浣熊市加油站遇见里昂，一起逃离末日之城。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "生化危机",
-      "同人"
-    ],
-    "chapters": 1,
-    "cover": "🧟",
-    "status": "completed"
-  },
-  {
-    "id": "peibai-guangchang",
-    "title": "陪白月光庆生？这婚不结你急什么",
-    "desc": "都市言情文，主角被迫陪白月光庆生，却意外卷入一场关于婚姻和真心的选择。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "言情"
-    ],
-    "chapters": 1,
-    "cover": "💑",
-    "status": "completed"
-  },
-  {
-    "id": "tongwei-chief",
-    "title": "重生祁同伟，问鼎总警监",
-    "desc": "官场重生文，前世被权贵碾压的祁同伟重生回到大学时代，获得官场晋升系统，最终问鼎总警监。复仇打脸，步步高升！",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "男频衍生",
-      "官场",
-      "重生",
-      "系统"
-    ],
-    "chapters": 1,
-    "cover": "🎖️",
-    "status": "completed"
-  },
-  {
-    "id": "apocalypse-food",
-    "title": "末世：少女玉足踩出无限粮食",
-    "desc": "末世降临，少女顾锦瑟的玉足触碰土地，脚下就会神奇地生长出粮食作物。少女的玉足是最珍贵的'产粮神器'，粮食即生存，即权力。",
-    "author": "AI（MiniMax）",
-    "tags": [
-      "科幻末世",
-      "末世",
-      "粮食危机"
-    ],
-    "chapters": 1,
-    "cover": "🌾",
-    "status": "completed"
-  },
-  {
-    "id": "pokemon-mofeng",
-    "title": "宝可梦：开局一只魔王蜂",
-    "desc": "林逸穿越宝可梦世界，开局获得魔王蜂——大针蜂变异体，超毒+超速双属性，种族值560准神级别！",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "宝可梦",
-      "动漫衍生",
-      "蜂群流"
-    ],
-    "chapters": 1,
-    "cover": "🐝",
-    "status": "completed"
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "writing",
+    "cover": "📖",
+    "chapters": [
+      {
+        "id": "chapter_0001",
+        "number": 1,
+        "title": "反派扮演系统，启动！",
+        "wordCount": 3200,
+        "publishedAt": "2026-04-03"
+      }
+    ]
   },
   {
     "id": "gaoleng-exwife",
-    "title": "攻略高冷前妻",
-    "desc": "陈轩重生回离婚当天，获得好感修复系统，任务是重新攻略高冷前妻林若雪！完成任务奖励一亿现金。",
+    "title": "📖 攻略高冷前妻第一章",
+    "slug": "gaoleng-exwife",
+    "desc": "共 1 章",
     "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "脑洞",
-      "系统",
-      "重生"
-    ],
-    "chapters": 1,
-    "cover": "💔",
-    "status": "completed"
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "攻略高冷前妻第一章",
+        "status": "done",
+        "words": 6425
+      }
+    ]
   },
   {
-    "id": "dnf-fanli",
-    "title": "DNF：开局神级返利，碾压全服",
-    "desc": "工地事故后失业的小人物，意外获得神级返利系统——DNF氪金越多，返利越多。从城中村的出租屋开始，搅动整个DNF江湖！",
+    "id": "pokemon-mofeng",
+    "title": "📖 异世蜂鸣",
+    "slug": "pokemon-mofeng",
+    "desc": "共 1 章",
     "author": "AI（MiniMax仿写）",
-    "tags": [
-      "游戏体育",
-      "DNF",
-      "系统",
-      "爽文"
-    ],
-    "chapters": 1,
-    "cover": "🎮",
-    "status": "completed"
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "writing",
+    "cover": "📖",
+    "chapters": [
+      {
+        "id": "chapter_0001",
+        "number": 1,
+        "title": "异世蜂鸣",
+        "wordCount": 4921,
+        "publishedAt": "2026-04-03"
+      }
+    ]
   },
   {
-    "id": "mingyi-han-daDan",
-    "title": "名义之他们叫我汉大胆",
-    "desc": "男频衍生 · 权谋系统流 · 改编自《人民的名义》",
+    "id": "名义：京都首调，由我打破棋局",
+    "title": "📖 第一章",
+    "slug": "名义：京都首调，由我打破棋局",
+    "desc": "共 1 章",
     "author": "AI（MiniMax仿写）",
-    "tags": [
-      "男频衍生",
-      "权谋",
-      "系统流"
-    ],
-    "chapters": 1,
-    "cover": "🏛️",
-    "status": "completed"
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章",
+        "status": "done",
+        "words": 3067
+      }
+    ]
   },
   {
-    "id": "mingyi-afraidof",
-    "title": "名义，国家害怕我猝死",
-    "desc": "改编自《人民的名义》的都市爽文·系统流！陆晨，京州市政府普通材料狗，加班三天三夜倒下后，竟触发国家猝死预警系统——国家顶级资源护体，各方势力争相拉拢！越拼命，国家越慌；国家越慌，主角越强！",
+    "id": "emperor-qixia",
+    "title": "📖 刚当皇帝，就被气运之子刺杀",
+    "slug": "emperor-qixia",
+    "desc": "共 1 章",
     "author": "AI（MiniMax仿写）",
-    "tags": [
-      "男频衍生",
-      "权谋",
-      "系统流",
-      "都市爽文"
-    ],
-    "chapters": 1,
-    "cover": "🏛️",
-    "status": "completed"
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章：朕刚登基，你就来刺杀？",
+        "status": "done",
+        "words": 1860
+      }
+    ]
   },
   {
-    "id": "nvzon-fallenhusband",
-    "title": "女尊：开局沦为堕落人夫",
-    "desc": "现代社畜穿越女尊世界，成了全城闻名的废物赌狗正夫。人妻好感系统激活，却绑定了错误的目标——正夫冷砚好感度仅剩3，且已被打瞎双眼。三千两赌债压顶，看主角如何逆天改命！",
+    "id": "zibao-luxian",
+    "title": "📖 第一章",
+    "slug": "zibao-luxian",
+    "desc": "共 1 章",
     "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "女尊",
-      "系统"
-    ],
-    "chapters": 1,
-    "cover": "👑",
-    "status": "completed"
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "# 第一章 铁流",
+        "status": "done",
+        "words": 2161
+      }
+    ]
+  },
+  {
+    "id": "什么？！我的草稿纸成国家机密了",
+    "title": "📖 第一章",
+    "slug": "什么？！我的草稿纸成国家机密了",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章",
+        "status": "done",
+        "words": 2081
+      }
+    ]
   },
   {
     "id": "gaowu-qiandao",
     "title": "高武：开局签到武圣巅峰修为",
-    "desc": "都市高武文，普通高中生陆渊意外激活武神签到系统，体育馆签到直接获得武圣巅峰修为，全球震动！开局即巅峰，爽文之王！",
+    "slug": "gaowu-qiandao",
+    "desc": "共 1 章",
     "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "高武",
-      "系统",
-      "爽文"
-    ],
-    "chapters": 1,
-    "cover": "⚡",
-    "status": "completed"
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "# 都市高武：签到就能变强",
+        "status": "done",
+        "words": 3304
+      }
+    ]
   },
   {
-    "id": "changjinchang",
-    "title": "让你拍烂片，你拍长津湖全网泪崩",
-    "desc": "主角周川被当众羞辱赶出剧组，绑定\"烂片拍摄系统\"。系统派发的荒诞任务——拍抗美援朝战争片？越是烂片设定，越催生神作！都市脑洞反套路爽文。",
+    "id": "history-immortal",
+    "title": "📖 第1章 悬崖赋命",
+    "slug": "history-immortal",
+    "desc": "共 1 章",
     "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "脑洞",
-      "系统",
-      "影视"
-    ],
-    "chapters": 1,
-    "cover": "🎬",
-    "status": "completed"
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "writing",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第1章 悬崖赋命",
+        "status": "published",
+        "words": 2800,
+        "updatedAt": "2026-04-03T19:50:00+08:00"
+      }
+    ]
   },
   {
-    "id": "tianfu-cha",
-    "title": "天赋差？我一块钱买一年修为！",
-    "desc": "氪金即天才！当别人苦修二十年，主角直接氪金买修为。一块钱一年修为，明码标价，童叟无欺。都市高武爽文，爆款框架完全原创。",
+    "id": "gongluexitong",
+    "title": "📖 第一章",
+    "slug": "gongluexitong",
+    "desc": "共 1 章",
     "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "高武",
-      "系统"
-    ],
-    "chapters": 1,
-    "cover": "💰",
-    "status": "completed"
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "剑意误伤，系统乱码",
+        "status": "done",
+        "words": 2849
+      }
+    ]
+  },
+  {
+    "id": "生化危机：开局加油站遇见里昂",
+    "title": "📖 第一章",
+    "slug": "生化危机：开局加油站遇见里昂",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章",
+        "status": "done",
+        "words": 2983
+      }
+    ]
+  },
+  {
+    "id": "honkai-star-rail-mirror",
+    "title": "📖 第一章：星穹模拟器",
+    "slug": "honkai-star-rail-mirror",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章：星穹模拟器",
+        "status": "done",
+        "words": 3333
+      }
+    ]
+  },
+  {
+    "id": "chaos-prince",
+    "title": "📖 第一章 诈尸",
+    "slug": "chaos-prince",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章 诈尸",
+        "status": "done",
+        "words": 3483
+      }
+    ]
+  },
+  {
+    "id": "zhenbeihou-daizha",
+    "title": "我堂堂镇北侯，你给我玩代嫁？",
+    "slug": "zhenbeihou-daizha",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "大婚惊变",
+        "status": "done",
+        "words": 3000
+      }
+    ]
+  },
+  {
+    "id": "duoyun-jietu",
+    "title": "duoyun-jietu",
+    "slug": "duoyun-jietu",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "天穹之上，紫微星动，混沌神朝的皇都笼罩在一片肃杀之气中。",
+        "status": "done",
+        "words": 2885
+      }
+    ]
   },
   {
     "id": "nvpin-bqz",
-    "title": "穿越女频后，女朋友总说我是霸总",
-    "desc": "男频作者顾言穿越到女频小说世界，用务实理性的男频思维应对各种女频套路，却总被误解为\"霸道总裁\"行为。开局就是霸总误会，看他如何用最朴素的方式追回女朋友。",
-    "author": "方拾月（AI仿写）",
-    "tags": [
-      "都市",
-      "日常",
-      "穿越",
-      "女频"
-    ],
-    "chapters": 1,
-    "cover": "💜",
-    "status": "completed"
+    "title": "📖 第一章 穿越女频第一天，我就被叫了霸总",
+    "slug": "nvpin-bqz",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章 穿越女频第一天，我就被叫了霸总",
+        "status": "done",
+        "words": 3050
+      }
+    ]
   },
   {
-    "id": "haneast-luyike",
-    "title": "名义：横扫汉东从征服陆亦可开始",
-    "desc": "穿越到《人民的名义》世界，法学院学生林远航携政治权谋系统觉醒。系统赋能意图感知，周旋于侯亮平、陆亦可之间，从省检实习生起步，横扫汉东政坛！",
+    "id": "mingyi-afraidof",
+    "title": "📖 第一章",
+    "slug": "mingyi-afraidof",
+    "desc": "共 1 章",
     "author": "AI（MiniMax仿写）",
-    "tags": [
-      "男频衍生",
-      "人民的名义",
-      "系统流",
-      "政治权谋"
-    ],
-    "chapters": 1,
-    "cover": "🏛️",
-    "status": "completed"
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章",
+        "status": "done",
+        "words": 2914
+      }
+    ]
   },
   {
-    "id": "well-dragon",
-    "title": "转生井龙王，我被我妈上交国家",
-    "desc": "敖渊转生为井底龙王，亲妈为200元奖金将他举报。荒诞开局，国家超自然事物管理局介入，井龙王传承系统激活——每管辖一口井可获修为功德。亲妈举报亲儿子求奖金，最终发现真相后悔不迭，而敖渊已成为国家供奉真龙。玄幻脑洞反套路喜剧！",
+    "id": "fanpai-novel",
+    "title": "fanpai-novel",
+    "slug": "fanpai-novel",
+    "desc": "共 1 章",
     "author": "AI（MiniMax仿写）",
-    "tags": [
-      "玄幻",
-      "脑洞",
-      "系统",
-      "国家力量",
-      "反套路"
-    ],
-    "chapters": 1,
-    "cover": "🐉",
-    "status": "completed"
-  },
-  {
-    "id": "safe-house",
-    "title": "我选安全屋，人类联盟后悔了",
-    "desc": "末世降临，陆沉获得【安全屋抉择系统】，每次选择都能获得最优解。所有人都嘲笑他选择的安全屋，三天后联盟避难所遭遇毁灭性打击，而陆沉的安全屋成为最后的诺亚方舟。系统流末世爽文，爆款框架完全原创！",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "科幻末世",
-      "末世",
-      "系统流",
-      "安全屋"
-    ],
-    "chapters": 1,
-    "cover": "🏠",
-    "status": "completed"
-  },
-  {
-    "id": "balingliuzi",
-    "title": "八零年代：冒牌留子另类报国",
-    "desc": "1985年，农村青年陈志远收到一封来自美国南加州大学的offer——然而他根本没申请过。神秘人为何暗中相助？「爱国情报系统」觉醒，另类报国之路就此开启！都市种田·系统流·年代文。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市种田",
-      "系统流",
-      "年代文",
-      "爱国情报"
-    ],
-    "chapters": 1,
-    "cover": "🎓",
-    "status": "completed"
-  },
-  {
-    "id": "meimo-challenge",
-    "title": "魅魔挑战：小同志你可愿跟我走？",
-    "desc": "社畜程序员林深深夜被红衣魅魔阿璃拦路，共享单车诡异涌来证明异能存在。魅魔契约系统降临，荒诞挑战任务换取超能力——让奶茶店免单、让冰山女总监笑一次？契约代价未知，林深的开挂人生就此开启！都市脑洞·魅魔系统·异能流。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市脑洞",
-      "魅魔",
-      "系统流",
-      "异能",
-      "反差"
-    ],
-    "chapters": 1,
-    "cover": "🔥",
-    "status": "completed"
-  },
-  {
-    "id": "coushu-dashu",
-    "title": "让你去凑数，你拐跑京圈大小姐？",
-    "desc": "穷小子陆星河意外觉醒「身份弹幕系统」，能看穿所有人身份。生日宴上被富二代嘲讽\"凑数的\"，下一秒黑卡一出全场寂静。京圈大小姐顾清婉，却对他产生了兴趣……身份反转打脸爽文，都市神豪新设定！",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "脑洞",
-      "系统流",
-      "身份反转",
-      "打脸",
-      "大小姐"
-    ],
-    "chapters": 1,
-    "cover": "🎴",
-    "status": "completed"
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "\"顾总，林小姐在楼上等您。\"",
+        "status": "done",
+        "words": 4521
+      }
+    ]
   },
   {
     "id": "zangqing救人",
-    "title": "首播青藏线救人，怎么惊动军方了",
+    "title": "zangqing救人",
+    "slug": "zangqing救人",
+    "desc": "共 1 章",
     "author": "AI（MiniMax仿写）",
-    "genre": "都市脑洞",
-    "heat": 21.7,
-    "chapters": 1,
-    "cover": "🎬",
-    "status": "completed",
-    "record_id": "recvfELVeaBYnq"
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "writing",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "青藏线上的意外直播",
+        "status": "completed",
+        "words": 2957
+      }
+    ]
   },
   {
-    "id": "shuihu-xixue",
-    "title": "水浒：满门被屠？那就血洗梁山！",
-    "desc": "北宋宣和年间，祝家庄少庄主祝长风满门被梁山贼寇屠戮，自己亦惨死狱中。苍天垂怜，他重生回到悲剧之夜。带着前世记忆与满腔仇恨，复仇者誓要血债血偿——梁山一百单八将，一个都别想逃！",
+    "id": "tengu-tokyo",
+    "title": "tengu-tokyo",
+    "slug": "tengu-tokyo",
+    "desc": "共 1 章",
     "author": "AI（MiniMax仿写）",
-    "tags": [
-      "水浒",
-      "穿越",
-      "复仇",
-      "历史古代"
-    ],
-    "chapters": 1,
-    "cover": "⚔️",
-    "status": "completed"
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "觉醒·新宿之战",
+        "status": "done",
+        "words": 3120
+      }
+    ]
   },
   {
-    "id": "bingjiao-dashu",
-    "title": "被病娇大小姐公开表白，我定型了",
-    "desc": "陆辰食堂排队，被校花顾清璃当众表白。「定格系统」突然激活——他被整个世界认定为顾清璃的男朋友，无法否认。病娇大小姐三年的秘密调查，别墅第一夜的契约……他究竟该如何破局？",
+    "id": "大一开学，系统每天送我一亿",
+    "title": "📖 第一章",
+    "slug": "大一开学，系统每天送我一亿",
+    "desc": "共 1 章",
     "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "日常",
-      "系统",
-      "病娇",
-      "爽文"
-    ],
-    "chapters": 1,
-    "cover": "💕",
+    "genre": "都市/玄幻",
+    "heat": 0,
     "status": "completed",
-    "record_id": "recvfEM2nVbzH3p",
-    "genre": "都市日常",
-    "heat": 20.6
-  },
-  {
-    "id": "zongwu-jiujian",
-    "title": "综武：酒剑仙嫁衣红，随机满级",
-    "author": "仿写AI",
-    "genre": "传统武侠",
-    "heat": 20.6,
-    "status": "completed",
-    "desc": "穿越综武世界，绑定随机满级系统。开局被退婚的废物赘婿，实为三十年前名震天下的酒剑仙转世！随机满级嫁衣神功、独孤九剑、北冥神功……综武群雄荟萃，金庸古龙群雄争锋！",
-    "tags": [
-      "综武",
-      "武侠",
-      "系统",
-      "满级",
-      "酒剑仙"
-    ],
-    "chapters": 1,
-    "cover": "🍶",
-    "record_id": "recvfEM2nVbgQ1y"
-  },
-  {
-    "id": "xianqi-jiandao",
-    "title": "玄幻：我只想安安静静签到",
-    "desc": "外门废物苏离被师兄陷害偷盗灵药，绝望之际签到系统突然降临！混沌灵根觉醒，修为从炼气三层直接跃升至炼气九层。躺平流爽文，扮猪吃虎，每日签到低调变强。",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "东方仙侠",
-      "玄幻",
-      "系统",
-      "签到流",
-      "爽文"
-    ],
-    "chapters": 1,
-    "cover": "📿",
-    "status": "completed",
-    "genre": "东方仙侠",
-    "heat": 19.8,
-    "record_id": "recvfEM2nVcrq9g"
-  },
-  {
-    "id": "zhenbei-hou",
-    "title": "我堂堂镇北侯，你给我玩代嫁？",
-    "author": "AI仿写（MiniMax）",
-    "genre": "传统玄幻",
-    "heat": 21.3,
-    "status": "completed",
-    "desc": "镇北侯萧景琰大婚当日发现新娘竟是代嫁！三皇子与丞相暗中勾结，欲借婚事将侯府卷入夺嫡之争。代嫁新娘苏瑶，身世成谜，愿以命相搏。一场惊天阴谋，一段欢喜冤家，萧景琰能否力挽狂澜？",
-    "tags": [
-      "玄幻",
-      "代嫁",
-      "权谋",
-      "先婚后爱"
-    ],
-    "chapters": 1,
-    "cover": "🎋",
-    "record_id": "recvfELVeaLp2W"
-  },
-  {
-    "title": "喰种：我，天与暴君，杀穿东京！",
-    "author": "川香毛豆焖鸡饭",
-    "genre": "动漫衍生",
-    "heat": "20.2万",
-    "words": "15.8万",
-    "rank": "男频新书榜第25名",
-    "site_id": "tengu-tokyo",
-    "record_id": "recvfELVeaWEru"
-  },
-  {
-    "id": "jiaqian-ice",
-    "title": "强制加好感，冰山女神乖乖沉沦",
-    "desc": "陆子轩追了冰山校花苏映雪三年无果，意外激活「好感强制系统」——原来不需要讨好，只需要让她产生情绪！图书馆被困，意外肢体接触，好感度+3；三句话让她主动问名字，好感度再涨。从无感到好奇，从冷漠到注意，游戏才刚刚开始……",
-    "author": "AI（MiniMax仿写）",
-    "tags": [
-      "都市",
-      "脑洞",
-      "系统",
-      "追妻火葬场",
-      "冰山崩塌"
-    ],
-    "chapters": 1,
-    "cover": "❄️",
-    "status": "completed",
-    "genre": "都市脑洞",
-    "heat": 19.9,
-    "record_id": "recvfELVeaNseE"
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章",
+        "status": "done",
+        "words": 3289
+      }
+    ]
   },
   {
     "id": "fanpai-qian",
-    "title": "我是反派？可女主们是我前女友啊",
-    "desc": "陆沉穿越进小说成了同名反派，原书最惨工具人被男主踩着上位。但女主们竟都是他前女友！记忆被改写的她们只记得男主。觉醒剧情修正系统，修正漏洞夺回女主，反杀男主！",
+    "title": "fanpai-qian",
+    "slug": "fanpai-qian",
+    "desc": "共 1 章",
     "author": "AI（MiniMax仿写）",
-    "genre": "都市脑洞",
-    "heat": 20.1,
-    "status": "writing",
-    "chapters": 1,
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
     "cover": "📖",
-    "record_id": "recvfELVeanyda"
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章：穿越成反派？剧本我不认",
+        "status": "done",
+        "words": 2269
+      }
+    ]
+  },
+  {
+    "id": "bingjiao-wife",
+    "title": "📖 第一章：门锁的秘密",
+    "slug": "bingjiao-wife",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "writing",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章：门锁的秘密"
+      }
+    ]
+  },
+  {
+    "id": "四合院，刘海中三叔二野副师转业",
+    "title": "📖 “周野，E级感知天赋，适合后勤岗位。”",
+    "slug": "四合院，刘海中三叔二野副师转业",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "“周野，E级感知天赋，适合后勤岗位。”",
+        "status": "done",
+        "words": 3227
+      }
+    ]
+  },
+  {
+    "id": "zongwu-zuxian",
+    "title": "zongwu-zuxian",
+    "slug": "zongwu-zuxian",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "春风料峭，慕容世家大门前，人头攒动。",
+        "status": "done",
+        "words": 3833
+      }
+    ]
+  },
+  {
+    "id": "kaijug_shisigjing",
+    "title": "📖 第一章：十六境降世",
+    "slug": "kaijug_shisigjing",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "writing",
+    "cover": "📖",
+    "chapters": [
+      {
+        "id": "chapter_0001",
+        "title": "第一章：十六境降世",
+        "words": 2686
+      }
+    ]
+  },
+  {
+    "id": "changjinchang",
+    "title": "📖 尊严碎了一地",
+    "slug": "changjinchang",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "尊严碎了一地",
+        "status": "done",
+        "words": 3200
+      }
+    ]
+  },
+  {
+    "id": "zhongjiang_yi_qi_qi",
+    "title": "📖 中奖？不，是开始",
+    "slug": "zhongjiang_yi_qi_qi",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "中奖？不，是开始",
+        "status": "done",
+        "words": 2623
+      }
+    ]
+  },
+  {
+    "id": "mingyi-kshan",
+    "title": "mingyi-kshan",
+    "slug": "mingyi-kshan",
+    "desc": "章节待生成",
+    "author": "AI",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "writing",
+    "cover": "📖",
+    "chapters": []
+  },
+  {
+    "id": "xianqi-jiandao",
+    "title": "📖 第一章",
+    "slug": "xianqi-jiandao",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "青玄宗，外门。",
+        "status": "done",
+        "words": 3887
+      }
+    ]
+  },
+  {
+    "id": "haneast-luyike",
+    "title": "📖 第一章：重生汉东",
+    "slug": "haneast-luyike",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章：重生汉东",
+        "status": "done",
+        "words": 3119
+      }
+    ]
+  },
+  {
+    "id": "陪白月光庆生？这婚不结你急什么",
+    "title": "📖 第一章",
+    "slug": "陪白月光庆生？这婚不结你急什么",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章",
+        "status": "done",
+        "words": 2755
+      }
+    ]
+  },
+  {
+    "id": "safe-house",
+    "title": "📖 第一章",
+    "slug": "safe-house",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "# 第一章 选了没人要的安全屋",
+        "status": "done",
+        "words": 2923
+      }
+    ]
+  },
+  {
+    "id": "caogaozhi",
+    "title": "📖 第一章",
+    "slug": "caogaozhi",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "# 第一章：一张草稿纸引发的血案",
+        "status": "done",
+        "words": 3882
+      }
+    ]
+  },
+  {
+    "id": "los-angeles-exorcism",
+    "title": "los-angeles-exorcism",
+    "slug": "los-angeles-exorcism",
+    "desc": "章节待生成",
+    "author": "AI",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "writing",
+    "cover": "📖",
+    "chapters": []
+  },
+  {
+    "id": "bingjiao-dashu",
+    "title": "📖 食堂惊变，当众表白",
+    "slug": "bingjiao-dashu",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "writing",
+    "cover": "📖",
+    "chapters": [
+      {
+        "number": 1,
+        "title": "食堂惊变，当众表白",
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "shuihu-xixue",
+    "title": "📖 # 第一章：血夜重生",
+    "slug": "shuihu-xixue",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "# 第一章：血夜重生",
+        "status": "done",
+        "words": 3921
+      }
+    ]
+  },
+  {
+    "id": "rule-horror-campus",
+    "title": "rule-horror-campus",
+    "slug": "rule-horror-campus",
+    "desc": "章节待生成",
+    "author": "AI",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "writing",
+    "cover": "📖",
+    "chapters": []
+  },
+  {
+    "id": "dnf-fanli",
+    "title": "📖 第一章",
+    "slug": "dnf-fanli",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "神级返利系统",
+        "status": "done",
+        "words": 3000
+      }
+    ]
+  },
+  {
+    "id": "yule-fanpai",
+    "title": "yule-fanpai",
+    "slug": "yule-fanpai",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "毒舌影帝的逆袭",
+        "status": "done",
+        "words": 3500
+      }
+    ]
+  },
+  {
+    "id": "县城婆罗门，开局美妇求我办事",
+    "title": "📖 第一章",
+    "slug": "县城婆罗门，开局美妇求我办事",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章",
+        "status": "done",
+        "words": 1773
+      }
+    ]
+  },
+  {
+    "id": "dao-qiang",
+    "title": "dao-qiang",
+    "slug": "dao-qiang",
+    "desc": "章节待生成",
+    "author": "AI",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "writing",
+    "cover": "📖",
+    "chapters": []
+  },
+  {
+    "id": "sanjiaozhou-wife",
+    "title": "📖 绝境：血与婚礼",
+    "slug": "sanjiaozhou-wife",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "绝境：血与婚礼",
+        "status": "done",
+        "words": 3200
+      }
+    ]
+  },
+  {
+    "id": "shenhaoxitong",
+    "title": "📖 穷山恶水",
+    "slug": "shenhaoxitong",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "穷山恶水",
+        "status": "done",
+        "words": 2800
+      }
+    ]
+  },
+  {
+    "id": "changgeshalun",
+    "title": "📖 第1章 边境商演",
+    "slug": "changgeshalun",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第1章 边境商演",
+        "status": "done",
+        "words": 3000
+      }
+    ]
+  },
+  {
+    "id": "jiaqian-ice",
+    "title": "📖 追了三年的冰山，居然对我产生情绪了？",
+    "slug": "jiaqian-ice",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "writing",
+    "cover": "📖",
+    "chapters": [
+      {
+        "number": 1,
+        "title": "追了三年的冰山，居然对我产生情绪了？",
+        "file": "chapter_0001.json"
+      }
+    ]
+  },
+  {
+    "id": "diss-world",
+    "title": "📖 天台上的系统",
+    "slug": "diss-world",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "天台上的系统",
+        "status": "done",
+        "words": 3000
+      }
+    ]
+  },
+  {
+    "id": "juedingzisha",
+    "title": "📖 第一章",
+    "slug": "juedingzisha",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "writing",
+    "cover": "📖",
+    "chapters": [
+      {
+        "chapter_number": 1,
+        "title": "天台上的最后一刻",
+        "file": "chapter_0001.json",
+        "word_count": 2569
+      }
+    ]
+  },
+  {
+    "id": "sishe-fang",
+    "title": "📖 被迫结婚，社恐老婆初见面",
+    "slug": "sishe-fang",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "被迫结婚，社恐老婆初见面",
+        "status": "done",
+        "words": 3052
+      }
+    ]
+  },
+  {
+    "id": "zongwu-jiujian",
+    "title": "zongwu-jiujian",
+    "slug": "zongwu-jiujian",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "青石长街，落日熔金。",
+        "status": "done",
+        "words": 3224
+      }
+    ]
+  },
+  {
+    "id": "tongwei-chief",
+    "title": "tongwei-chief",
+    "slug": "tongwei-chief",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "死亡与重生",
+        "status": "done",
+        "words": 4006
+      }
+    ]
+  },
+  {
+    "id": "wanrenmidaxia",
+    "title": "📖 掌门是门技术活",
+    "slug": "wanrenmidaxia",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "# 万人迷系统：我的修为都是被迫营业来的",
+        "status": "done",
+        "words": 3514
+      }
+    ]
+  },
+  {
+    "id": "nvzon-fallenhusband",
+    "title": "📖 第一章 穿越异世",
+    "slug": "nvzon-fallenhusband",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "writing",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章 穿越异世"
+      }
+    ]
+  },
+  {
+    "id": "lottery-170million",
+    "title": "📖 我中奖一亿七千万，反手把家人送",
+    "slug": "lottery-170million",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "writing",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "我中奖一亿七千万，反手把家人送"
+      }
+    ]
+  },
+  {
+    "id": "luoshanji-zhuomo",
+    "title": "📖 香烛铺开张第一天",
+    "slug": "luoshanji-zhuomo",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "香烛铺开张第一天",
+        "status": "done",
+        "words": 3079
+      }
+    ]
+  },
+  {
+    "id": "wuxia-npc",
+    "title": "wuxia-npc",
+    "slug": "wuxia-npc",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "writing",
+    "cover": "📖",
+    "chapters": [
+      {
+        "id": "chapter_0001",
+        "number": 1,
+        "title": "第一章：枯井沉尸",
+        "wordCount": 3891,
+        "publishedAt": "2026-04-03"
+      }
+    ]
+  },
+  {
+    "id": "yiyi-yisheng",
+    "title": "📖 第一章",
+    "slug": "yiyi-yisheng",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "# 第一章 开学第一天，收到一亿",
+        "status": "done",
+        "words": 3598
+      }
+    ]
+  },
+  {
+    "id": "apocalypse-food",
+    "title": "📖 第一章",
+    "slug": "apocalypse-food",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章",
+        "status": "done",
+        "words": 3052
+      }
+    ]
+  },
+  {
+    "id": "洪荒：功德小金龙，你敢碰我？",
+    "title": "📖 第一章",
+    "slug": "洪荒：功德小金龙，你敢碰我？",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章",
+        "status": "done",
+        "words": 2761
+      }
+    ]
+  },
+  {
+    "id": "coushu-dashu",
+    "title": "📖 第一章",
+    "slug": "coushu-dashu",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "# 第一章 凑数的命运",
+        "status": "done",
+        "words": 3459
+      }
+    ]
+  },
+  {
+    "id": "well-dragon",
+    "title": "well-dragon",
+    "slug": "well-dragon",
+    "desc": "章节待生成",
+    "author": "AI",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "writing",
+    "cover": "📖",
+    "chapters": []
+  },
+  {
+    "id": "tianfu-cha",
+    "title": "📖 第一章 废物？老子氪金买修为！",
+    "slug": "tianfu-cha",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章 废物？老子氪金买修为！",
+        "status": "done",
+        "words": 7168
+      }
+    ]
+  },
+  {
+    "id": "mingyi-han-daDan",
+    "title": "📖 第一章",
+    "slug": "mingyi-han-daDan",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "第一章",
+        "status": "done",
+        "words": 3867
+      }
+    ]
+  },
+  {
+    "id": "zhengdao-yanfa",
+    "title": "玄幻：你们用词改，我直接证道",
+    "slug": "zhengdao-yanfa",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "# 第一章 一字之差",
+        "status": "done",
+        "words": 4349
+      }
+    ]
+  },
+  {
+    "id": "balingliuzi",
+    "title": "📖 一封来自大洋彼岸的信",
+    "slug": "balingliuzi",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "writing",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "一封来自大洋彼岸的信",
+        "status": "completed",
+        "words": 3859
+      }
+    ]
+  },
+  {
+    "id": "xiyou-meifu",
+    "title": "xiyou-meifu",
+    "slug": "xiyou-meifu",
+    "desc": "共 1 章",
+    "author": "AI（MiniMax仿写）",
+    "genre": "都市/玄幻",
+    "heat": 0,
+    "status": "completed",
+    "cover": "📖",
+    "chapters": [
+      {
+        "num": 1,
+        "title": "\"轰——\"",
+        "status": "done",
+        "words": 3206
+      }
+    ]
   }
 ]
