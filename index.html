@@ -1,68 +1,685 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI 小说阅读器</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f5; color: #333; }
-    .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem 1rem; text-align: center; }
-    .header h1 { font-size: 2rem; font-weight: 700; }
-    .header p { opacity: 0.85; margin-top: 0.5rem; }
-    .container { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
-    .novel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
-    .novel-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.08); transition: transform .2s; cursor: pointer; }
-    .novel-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.12); }
-    .novel-cover { width: 100%; height: 160px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
-    .novel-info { padding: 1rem; }
-    .novel-title { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; color: #333; }
-    .novel-desc { font-size: 0.85rem; color: #888; line-height: 1.5; margin-bottom: 0.75rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-    .novel-meta { font-size: 0.75rem; color: #aaa; display: flex; justify-content: space-between; align-items: center; }
-    .tag { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 20px; font-size: 0.7rem; background: #e8f0fe; color: #4285f4; }
-    .tag.writing { background: #fff3e0; color: #e65100; }
-    .loading { text-align: center; padding: 3rem; color: #999; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI技术赋能型大学生内部创业孵化平台全流程落地方案</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --primary-light: #16213e;
+            --accent: #e94560;
+            --accent2: #0f3460;
+            --bg: #f8f9fc;
+            --white: #ffffff;
+            --text: #2d2d2d;
+            --text-light: #6b7280;
+            --border: #e5e7eb;
+            --card-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            --card-shadow-hover: 0 8px 40px rgba(0,0,0,0.15);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        nav {
+            position: fixed; top: 0; left: 0; right: 0;
+            background: rgba(26,26,46,0.97);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 0 40px; height: 64px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .nav-logo { color: white; font-weight: 700; font-size: 16px; letter-spacing: 0.5px; }
+        .nav-logo span { color: var(--accent); }
+        .nav-links { display: flex; gap: 32px; list-style: none; }
+        .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+        .nav-links a:hover { color: white; }
+
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center;
+            padding: 120px 40px 80px;
+            position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .hero-badge {
+            display: inline-block; background: rgba(233,69,96,0.15);
+            border: 1px solid rgba(233,69,96,0.3); color: var(--accent);
+            padding: 6px 20px; border-radius: 50px; font-size: 13px;
+            font-weight: 500; margin-bottom: 32px; letter-spacing: 1px;
+        }
+        .hero h1 {
+            color: white; font-size: clamp(32px, 5vw, 58px);
+            font-weight: 900; line-height: 1.2; margin-bottom: 24px; max-width: 860px;
+        }
+        .hero h1 em { font-style: normal; color: var(--accent); }
+        .hero-desc {
+            color: rgba(255,255,255,0.6); font-size: 18px;
+            max-width: 620px; margin-bottom: 48px; line-height: 1.8;
+        }
+        .hero-stats { display: flex; gap: 56px; flex-wrap: wrap; justify-content: center; }
+        .hero-stat { text-align: center; }
+        .hero-stat .num { color: var(--accent); font-size: 42px; font-weight: 900; }
+        .hero-stat .label { color: rgba(255,255,255,0.5); font-size: 13px; margin-top: 4px; }
+        .scroll-hint {
+            position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+            color: rgba(255,255,255,0.3); font-size: 12px; animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(8px); }
+        }
+
+        .section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
+        .section-label {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent), #ff6b6b);
+            color: white; padding: 4px 16px; border-radius: 4px;
+            font-size: 12px; font-weight: 700; letter-spacing: 2px;
+            text-transform: uppercase; margin-bottom: 16px;
+        }
+        .section-title {
+            font-size: clamp(26px, 4vw, 40px); font-weight: 900;
+            color: var(--primary); margin-bottom: 20px; line-height: 1.3;
+        }
+        .section-desc {
+            color: var(--text-light); font-size: 17px;
+            max-width: 700px; margin-bottom: 56px; line-height: 1.8;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .feature-card {
+            background: white; border-radius: 16px; padding: 32px;
+            box-shadow: var(--card-shadow); transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px); box-shadow: var(--card-shadow-hover);
+            border-color: var(--accent);
+        }
+        .feature-icon {
+            width: 56px; height: 56px; border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 24px; margin-bottom: 20px;
+            background: linear-gradient(135deg, #fff0f0, #ffe0e0);
+        }
+        .feature-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 12px; color: var(--primary); }
+        .feature-card p { color: var(--text-light); font-size: 14px; line-height: 1.7; }
+
+        .arch-container { position: relative; padding: 40px 0; }
+        .arch-layer {
+            display: flex; align-items: stretch; gap: 0;
+            margin-bottom: 16px; border-radius: 16px;
+            overflow: hidden; box-shadow: var(--card-shadow);
+        }
+        .arch-label {
+            min-width: 200px; padding: 28px 24px;
+            display: flex; flex-direction: column; justify-content: center;
+            color: white; font-weight: 700; font-size: 14px;
+        }
+        .arch-label .layer-name { font-size: 16px; margin-bottom: 4px; }
+        .arch-label .layer-sub { font-size: 12px; opacity: 0.7; font-weight: 400; }
+        .arch-content {
+            flex: 1; background: white; padding: 24px 32px;
+            display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+        }
+        .arch-tag { padding: 6px 16px; border-radius: 8px; font-size: 13px; font-weight: 500; }
+        .layer-1 .arch-label { background: linear-gradient(135deg, var(--accent), #ff6b6b); }
+        .layer-2 .arch-label { background: linear-gradient(135deg, var(--accent2), #1a5276); }
+        .layer-3 .arch-label { background: linear-gradient(135deg, #2d3436, #636e72); }
+        .arch-tag.green { background: #e8f5e9; color: #2e7d32; }
+        .arch-tag.blue { background: #e3f2fd; color: #1565c0; }
+        .arch-tag.purple { background: #f3e5f5; color: #7b1fa2; }
+        .arch-tag.orange { background: #fff3e0; color: #e65100; }
+        .arch-tag.gray { background: #f5f5f5; color: #424242; }
+
+        .timeline { position: relative; padding-left: 40px; }
+        .timeline::before {
+            content: ''; position: absolute; left: 8px; top: 0; bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent), var(--accent2));
+            border-radius: 2px;
+        }
+        .timeline-item { position: relative; margin-bottom: 48px; }
+        .timeline-item::before {
+            content: ''; position: absolute; left: -40px; top: 4px;
+            width: 18px; height: 18px; border-radius: 50%;
+            background: var(--accent); border: 3px solid white;
+            box-shadow: 0 0 0 3px var(--accent);
+        }
+        .timeline-phase {
+            background: var(--accent); color: white;
+            padding: 4px 14px; border-radius: 6px; font-size: 12px;
+            font-weight: 700; display: inline-block; margin-bottom: 8px;
+        }
+        .timeline-item h3 { font-size: 20px; font-weight: 700; color: var(--primary); margin-bottom: 12px; }
+        .timeline-item p { color: var(--text-light); font-size: 15px; line-height: 1.8; }
+
+        .data-table { width: 100%; border-collapse: collapse; background: white; border-radius: 16px; overflow: hidden; box-shadow: var(--card-shadow); }
+        .data-table th { background: var(--primary); color: white; padding: 16px 20px; font-weight: 600; font-size: 14px; text-align: left; }
+        .data-table td { padding: 14px 20px; border-bottom: 1px solid var(--border); font-size: 14px; color: var(--text); }
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table tr:hover td { background: #fafafa; }
+
+        .cost-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px; margin-bottom: 48px;
+        }
+        .cost-card {
+            background: white; border-radius: 16px; padding: 28px;
+            box-shadow: var(--card-shadow); text-align: center;
+            border: 2px solid transparent;
+        }
+        .cost-card.highlight { border-color: var(--accent); background: linear-gradient(135deg, #fff8f8, #ffffff); }
+        .cost-amount { font-size: 36px; font-weight: 900; color: var(--accent); margin-bottom: 4px; }
+        .cost-label { font-size: 14px; color: var(--text-light); margin-bottom: 16px; }
+        .cost-items { list-style: none; text-align: left; font-size: 14px; color: var(--text); }
+        .cost-items li { padding: 6px 0; border-bottom: 1px dashed var(--border); display: flex; justify-content: space-between; }
+        .cost-items li:last-child { border: none; }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary), var(--accent2));
+            border-radius: 20px; padding: 56px 48px; color: white;
+            text-align: center; margin: 60px 0;
+        }
+        .highlight-box h2 { font-size: clamp(24px, 3.5vw, 36px); font-weight: 900; margin-bottom: 16px; }
+        .highlight-box p { font-size: 17px; opacity: 0.8; max-width: 600px; margin: 0 auto; line-height: 1.8; }
+
+        .protocol-list {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .protocol-item {
+            background: white; border-radius: 12px; padding: 24px;
+            box-shadow: var(--card-shadow); display: flex; gap: 16px; align-items: flex-start;
+        }
+        .protocol-num {
+            min-width: 40px; height: 40px; border-radius: 10px;
+            background: linear-gradient(135deg, var(--accent), #ff6b6b);
+            color: white; font-weight: 900; font-size: 18px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .protocol-item h4 { font-size: 15px; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+        .protocol-item p { font-size: 13px; color: var(--text-light); line-height: 1.6; }
+
+        .risk-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;
+        }
+        .risk-card {
+            background: white; border-radius: 16px; padding: 28px;
+            box-shadow: var(--card-shadow); border-left: 4px solid var(--accent);
+        }
+        .risk-card h4 { font-size: 16px; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+        .risk-card .risk-point { font-size: 13px; color: var(--accent); font-weight: 600; margin-bottom: 10px; }
+        .risk-card p { font-size: 14px; color: var(--text-light); line-height: 1.7; }
+
+        .phase-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;
+        }
+        .phase-card {
+            background: white; border-radius: 16px; padding: 28px;
+            box-shadow: var(--card-shadow); position: relative;
+            border-top: 4px solid var(--accent);
+        }
+        .phase-card.phase-2 { border-top-color: #1565c0; }
+        .phase-card.phase-3 { border-top-color: #2e7d32; }
+        .phase-card.phase-4 { border-top-color: #7b1fa2; }
+        .phase-badge {
+            display: inline-block; background: var(--accent); color: white;
+            padding: 2px 12px; border-radius: 6px; font-size: 12px;
+            font-weight: 700; margin-bottom: 12px;
+        }
+        .phase-card.phase-2 .phase-badge { background: #1565c0; }
+        .phase-card.phase-3 .phase-badge { background: #2e7d32; }
+        .phase-card.phase-4 .phase-badge { background: #7b1fa2; }
+        .phase-card h4 { font-size: 16px; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+        .phase-card .phase-time { font-size: 12px; color: var(--text-light); margin-bottom: 14px; }
+        .phase-card ul { list-style: none; font-size: 13px; color: var(--text-light); line-height: 1.9; }
+        .phase-card ul li::before { content: '✓ '; color: #2e7d32; font-weight: 700; }
+
+        footer {
+            background: var(--primary); color: rgba(255,255,255,0.5);
+            text-align: center; padding: 48px 40px; font-size: 14px;
+        }
+        .section-divider { height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); max-width: 1200px; margin: 0 auto; }
+
+        @media (max-width: 768px) {
+            nav { padding: 0 20px; }
+            .nav-links { display: none; }
+            .section { padding: 60px 20px; }
+            .hero { padding: 100px 20px 60px; }
+            .hero-stats { gap: 24px; }
+            .arch-label { min-width: 120px; padding: 20px 16px; }
+            .arch-content { padding: 16px; }
+            .highlight-box { padding: 32px 24px; }
+        }
+        html { scroll-behavior: smooth; }
+    </style>
 </head>
 <body>
-  <div class="header">
-    <h1>📖 AI 小说阅读器</h1>
-    <p>发现、阅读 AI 创作的精彩小说</p>
-  </div>
-  <div class="container">
-    <div class="novel-grid" id="novelGrid"><div class="loading">加载中...</div></div>
-  </div>
-  <script>
-    async function loadNovels() {
-      try {
-        const res = await fetch('novels/index.json');
-        const novels = await res.json();
-        const grid = document.getElementById('novelGrid');
-        if (!novels || !novels.length) {
-          grid.innerHTML = '<div class="loading">暂无小说，稍后再来看看吧～</div>';
-          return;
-        }
-        grid.innerHTML = novels.map(novel => {
-          const doneCount = (novel.chapters || []).filter(c => c.status === 'done').length;
-          const totalCount = doneCount > 0 ? doneCount : (novel.chapters || []).length;
-          const statusLabel = novel.status === 'writing' ? '<span class="tag writing">写作中</span>' : '';
-          return `<div class="novel-card" onclick="location.href='novels/${novel.id}/'">
-  <div class="novel-cover">${novel.cover || '📖'}</div>
-  <div class="novel-info">
-    <div class="novel-title">${novel.title}</div>
-    <div class="novel-desc">${novel.desc}</div>
-    <div class="novel-meta">
-      ${statusLabel}
-      <span>${doneCount > 0 ? '共 ' + doneCount + ' 章' : '待生成'}</span>
+
+<nav>
+    <div class="nav-logo">AI创业孵化<span>.</span></div>
+    <ul class="nav-links">
+        <li><a href="#core">核心定位</a></li>
+        <li><a href="#arch">组织架构</a></li>
+        <li><a href="#mechanism">创业机制</a></li>
+        <li><a href="#profit">分配体系</a></li>
+        <li><a href="#contract">合同体系</a></li>
+        <li><a href="#risk">风险防控</a></li>
+        <li><a href="#plan">执行计划</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="hero-badge">🤖 AI × 大学生创业</div>
+    <h1>AI技术赋能型<br><em>大学生内部创业孵化平台</em><br>全流程落地方案</h1>
+    <p class="hero-desc">以AI技术为核心降本工具，以大学生技术人才为核心资产，通过三层弹性组织架构实现「全员可创业、平台全赋能、收益共分享、风险可管控」的良性自循环体系</p>
+    <div class="hero-stats">
+        <div class="hero-stat"><div class="num">3层</div><div class="label">弹性组织架构</div></div>
+        <div class="hero-stat"><div class="num">6类</div><div class="label">全合规合同体系</div></div>
+        <div class="hero-stat"><div class="num">4阶段</div><div class="label">落地执行计划</div></div>
+        <div class="hero-stat"><div class="num">&lt;1万</div><div class="label">元启动成本</div></div>
     </div>
-  </div>
-</div>`;
-        }).join('');
-      } catch(e) {
-        document.getElementById('novelGrid').innerHTML = '<div class="loading">加载失败</div>';
-      }
-    }
-    loadNovels();
-  </script>
+    <div class="scroll-hint">↓ 向下滚动</div>
+</section>
+
+<!-- PART 01: CORE -->
+<section class="section" id="core">
+    <div class="section-label">PART 01</div>
+    <h2 class="section-title">方案核心定位与设计理念</h2>
+    <p class="section-desc">打造「现金流托底+创新孵化放大」双轮驱动的大学生AI创业生态平台，从根源上解决传统团队权责模糊、分配不均、增长乏力、人员流失等核心痛点。</p>
+
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">🏗️</div>
+            <h3>三层组织架构</h3>
+            <p>顶层创新决策层定战略、中层履约交付层做承接保现金流、基层柔性执行层弹性扩容，无固定成本压力</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h3>全员创业机制</h3>
+            <p>平台所有成员均可提报项目，内部组队、平台赋能，零风险启动，项目跑通后按约定分润</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>AI全链路降本</h3>
+            <p>用AI替代80%重复劳动，覆盖前端开发、自动化营销、API封装、客户运营全流程</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📋</div>
+            <h3>规则前置透明合规</h3>
+            <p>所有权责、分配、退出机制全部白纸黑字写入协议，提前公示、全员确认，从根源规避纠纷</p>
+        </div>
+    </div>
+
+    <div style="margin-top:60px">
+        <h3 style="font-size:20px;font-weight:700;color:var(--primary);margin-bottom:24px">核心盈利逻辑</h3>
+        <div class="features-grid">
+            <div class="feature-card" style="border-left:4px solid #4caf50">
+                <h3 style="color:#2e7d32">💰 基础盘 — 现金流奶牛</h3>
+                <p>标准化AI网站开发、自动化营销代运营、免费API封装商业化，轻资产、快交付、高周转，为平台提供稳定现金流</p>
+            </div>
+            <div class="feature-card" style="border-left:4px solid var(--accent)">
+                <h3 style="color:var(--accent)">🚀 增长盘 — 超额收益</h3>
+                <p>内部创业项目孵化，通过平台资源赋能，快速验证MVP、跑通商业模式，优质项目可独立拆分放大，实现股权增值</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PART 02: ARCHITECTURE -->
+<section class="section" id="arch">
+    <div class="section-label">PART 02</div>
+    <h2 class="section-title">三层闭环组织架构</h2>
+    <p class="section-desc">「小核心、大外围、强中台」的极简架构，无冗余岗位，极致控制固定成本，搭建完整人才上升通道，实现团队自驱动成长。</p>
+
+    <div class="arch-container">
+        <div class="arch-layer layer-1">
+            <div class="arch-label">
+                <div class="layer-name">第一层：顶层核心层</div>
+                <div class="layer-sub">创新孵化委员会 · 3-5人</div>
+            </div>
+            <div class="arch-content">
+                <span class="arch-tag green">创始人</span>
+                <span class="arch-tag green">核心技术负责人</span>
+                <span class="arch-tag green">商业化负责人</span>
+                <span class="arch-tag green">风控合规负责人</span>
+                <span class="arch-tag blue">战略定方向</span>
+                <span class="arch-tag blue">孵化控规则</span>
+                <span class="arch-tag blue">中台建壁垒</span>
+            </div>
+        </div>
+        <div class="arch-layer layer-2">
+            <div class="arch-label">
+                <div class="layer-name">第二层：中层履约层</div>
+                <div class="layer-sub">交付中心+孵化中心 · 10-20人</div>
+            </div>
+            <div class="arch-content">
+                <span class="arch-tag purple">大二/大三学生</span>
+                <span class="arch-tag purple">稳定合作1-2年</span>
+                <span class="arch-tag blue">标准化交付部</span>
+                <span class="arch-tag blue">项目孵化部</span>
+                <span class="arch-tag orange">前端开发组</span>
+                <span class="arch-tag orange">后端/API组</span>
+                <span class="arch-tag orange">AI自动化组</span>
+            </div>
+        </div>
+        <div class="arch-layer layer-3">
+            <div class="arch-label">
+                <div class="layer-name">第三层：基层执行池</div>
+                <div class="layer-sub">柔性扩容 · 按单结算</div>
+            </div>
+            <div class="arch-content">
+                <span class="arch-tag gray">切图/素材整理</span>
+                <span class="arch-tag gray">视频剪辑</span>
+                <span class="arch-tag gray">数据标注</span>
+                <span class="arch-tag gray">客服回复</span>
+                <span class="arch-tag gray">基础推广</span>
+                <span class="arch-tag gray">按件计费</span>
+                <span class="arch-tag gray">多劳多得</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PART 03: MECHANISM -->
+<section class="section" id="mechanism">
+    <div class="section-label">PART 03</div>
+    <h2 class="section-title">内部创业孵化全流程闭环</h2>
+    <p class="section-desc">彻底解决「员工有创意没资源、有项目没团队」的痛点，实现创意快速落地、收益合理分配、风险平台兜底。</p>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-phase">STEP 1</div>
+            <h3>项目提报与准入</h3>
+            <p>平台所有成员均可提报《内部创业项目立项申请书》，需包含：项目名称、赛道方向、市场痛点、AI赋能点、MVP方案、验证周期（最长不超过3个月）、所需资源、启动资金预算（单个项目最高不超过5000元）。</p>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-phase">STEP 2</div>
+            <h3>项目评审机制</h3>
+            <p>初审（3个工作日内反馈）→ 终审路演 → 投票立项（2/3以上委员通过）。核心标准：轻资产启动（≤5000元）、可借助AI工具快速落地、MVP验证周期≤3个月、有明确盈利模式。</p>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-phase">STEP 3</div>
+            <h3>平台全维度赋能支持</h3>
+            <p>签订《内部孵化项目合作协议》，平台提供：技术支持（AI中台/代码库/API池）、资金支持（500-5000元孵化资金，发起人无需出资）、人员支持、商业化支持（客户资源/自媒体矩阵）、合规支持（合同模板/知识产权指导）。</p>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-phase">STEP 4</div>
+            <h3>项目孵化全流程节点管控</h3>
+            <p><strong>立项期（1周内）</strong>：完成评审、签订协议、拨付启动资金 → <strong>MVP验证期（1-3个月）</strong>：完成最小可行性产品 → <strong>成长期（3-6个月）</strong>：项目跑通盈利 → <strong>成熟期（6个月+）</strong>：纳入平台主体或独立拆分。</p>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-phase">STEP 5</div>
+            <h3>项目失败处理</h3>
+            <p>若MVP验证期内项目未达预期，确认无法跑通，终止项目。<strong>所有资金亏损由平台承担，发起人无需承担任何赔偿责任。</strong>相关知识产权归平台所有，彻底打消成员试错顾虑。</p>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PART 04: PROFIT -->
+<section class="section" id="profit">
+    <div class="section-label">PART 04</div>
+    <h2 class="section-title">全场景透明化利益分配体系</h2>
+    <p class="section-desc">所有分配规则全部前置、白纸黑字、全员公示、量化核算，杜绝暗箱操作，实现「多劳多得、优绩优酬、风险与收益匹配」。</p>
+
+    <h3 style="font-size:18px;font-weight:700;color:var(--primary);margin-bottom:20px">贡献度量化核算四维度</h3>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>核算维度</th>
+                <th>权重</th>
+                <th>核算标准</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>项目责任权重</strong></td><td><span style="color:var(--accent);font-weight:700">40%</span></td><td>项目负责人40%、核心开发25%、辅助开发15%、执行人员10%、获客人10%</td></tr>
+            <tr><td><strong>工作量完成度</strong></td><td><span style="color:var(--accent);font-weight:700">30%</span></td><td>按项目管理工具登记的任务完成量、工时、交付时效核算，全员可查</td></tr>
+            <tr><td><strong>技术难度系数</strong></td><td><span style="color:var(--accent);font-weight:700">20%</span></td><td>核心功能开发20%、常规功能开发10%、基础执行5%</td></tr>
+            <tr><td><strong>项目结果贡献</strong></td><td><span style="color:var(--accent);font-weight:700">10%</span></td><td>提前交付/客户好评/转介绍加分；延期/验收不通过相应减分</td></tr>
+        </tbody>
+    </table>
+
+    <div style="margin-top:56px">
+        <h3 style="font-size:18px;font-weight:700;color:var(--primary);margin-bottom:20px">三大场景分润规则</h3>
+        <div class="features-grid">
+            <div class="feature-card" style="border-top:4px solid #4caf50">
+                <h3>场景一：标准化交付业务</h3>
+                <p>项目回款到账后，先扣除直接成本，剩余利润按：<br>• 执行团队 <strong style="color:#2e7d32">60%</strong>（按贡献度分配）<br>• 平台主体 <strong style="color:#1565c0">30%</strong>（运营10%/孵化基金10%/风险备用金10%）<br>• 获客推荐人 <strong style="color:#e65100">10%</strong></p>
+            </div>
+            <div class="feature-card" style="border-top:4px solid var(--accent)">
+                <h3>场景二：内部孵化项目</h3>
+                <p>MVP验证期盈利：发起团队<strong style="color:var(--accent)">70%</strong>/平台30%<br>成长期模式A：团队51%/平台49%<br>成长期模式B：团队51-60%/平台30-40%/人才激励池10%（独立拆分）</p>
+            </div>
+            <div class="feature-card" style="border-top:4px solid #7b1fa2">
+                <h3>场景三：基层执行池</h3>
+                <p>标准化执行任务：按件计费（视频剪辑10-50元/条、素材整理50-200元/单），任务验收合格后24小时内结算，不拖欠。参与项目按分润规则结算。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="highlight-box">
+    <h2>规则前置 · 量化核算 · 透明结算</h2>
+    <p>从制度上杜绝分配不均、扯皮纠纷、人员流失等核心痛点，用数据说话，让每一个贡献都被看见。</p>
+</div>
+
+<!-- PART 05: CONTRACT -->
+<section class="section" id="contract">
+    <div class="section-label">PART 05</div>
+    <h2 class="section-title">全合规合同体系</h2>
+    <p class="section-desc">所有合作必须签订书面协议，口头约定无效，协议模板提前经律师审核，平台统一归档管理，覆盖全场景，规避99%的法律与合同纠纷。</p>
+
+    <div class="protocol-list">
+        <div class="protocol-item">
+            <div class="protocol-num">1</div>
+            <div>
+                <h4>《核心合伙人合作协议》</h4>
+                <p>股权比例/出资方式/决策机制/分红机制/退出机制/竞业禁止/知识产权归属</p>
+            </div>
+        </div>
+        <div class="protocol-item">
+            <div class="protocol-num">2</div>
+            <div>
+                <h4>《中长期团队成员合作协议》</h4>
+                <p>合作期限/岗位职责/考核标准/薪酬分润/知识产权/保密条款/退出机制</p>
+            </div>
+        </div>
+        <div class="protocol-item">
+            <div class="protocol-num">3</div>
+            <div>
+                <h4>《内部孵化项目合作协议》</h4>
+                <p>项目信息/资源支持/分润比例/知识产权归属/决策权划分/失败处理/竞业禁止</p>
+            </div>
+        </div>
+        <div class="protocol-item">
+            <div class="protocol-num">4</div>
+            <div>
+                <h4>《劳务合作协议》</h4>
+                <p>明确劳务关系（非劳动关系）/任务要求/验收标准/单价结算/知识产权/违约责任</p>
+            </div>
+        </div>
+        <div class="protocol-item">
+            <div class="protocol-num">5</div>
+            <div>
+                <h4>《保密与竞业限制协议》</h4>
+                <p>保密内容/保密期限/竞业限制范围/补偿标准/违约责任</p>
+            </div>
+        </div>
+        <div class="protocol-item">
+            <div class="protocol-num">6</div>
+            <div>
+                <h4>《客户开发服务合同》</h4>
+                <p>项目需求/交付周期/验收标准/付款节点（预付50%/验收50%）/违约责任</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PART 06: RISK -->
+<section class="section" id="risk">
+    <div class="section-label">PART 06</div>
+    <h2 class="section-title">全维度风险防控体系</h2>
+    <p class="section-desc">提前规避你想到的、未想到的所有风险，从人员、利益、合规、知识产权到现金流，形成全链路风险管控。</p>
+
+    <div class="risk-grid">
+        <div class="risk-card">
+            <h4>🧑‍💻 人员与组织风险</h4>
+            <div class="risk-point">大学生考试/放假/毕业导致人员流失</div>
+            <p>分层绑定（顶层股权/中层分润+晋升/基层弹性）+ 文档标准化归档 + 时间适配（避开考试周）+ 激励留存（期权）</p>
+        </div>
+        <div class="risk-card">
+            <h4>💰 利益分配纠纷风险</h4>
+            <div class="risk-point">贡献与分配不匹配、回款不按时结算</div>
+            <p>规则前置 + 结算透明化（全员可查）+ 量化核算 + 纠纷调解机制</p>
+        </div>
+        <div class="risk-card">
+            <h4>⚖️ 合规与法律风险</h4>
+            <div class="risk-point">劳务关系被认定为劳动关系引发劳动仲裁</div>
+            <p>主体合规（注册公司）+ 劳动合规（兼职签劳务协议）+ 业务合规（API/网站/营销）+ 税务合规 + 协议合规（律师审核）</p>
+        </div>
+        <div class="risk-card">
+            <h4>🧠 知识产权风险</h4>
+            <div class="risk-point">团队成员带走核心代码/项目商用</div>
+            <p>协议明确知识产权归属 + AI生成内容二次原创优化 + 软件著作权申请 + 核心技术及时保护</p>
+        </div>
+        <div class="risk-card">
+            <h4>💵 现金流与经营风险</h4>
+            <div class="risk-point">回款不及时、孵化项目投入过多导致现金流断裂</div>
+            <p>现金流优先原则 + 项目付款管控（预付50%）+ 孵化资金严控（≤5000元/项目）+ 风险备用金（6个月运营资金储备）</p>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PART 07: PLAN -->
+<section class="section" id="plan">
+    <div class="section-label">PART 07</div>
+    <h2 class="section-title">分阶段落地执行计划</h2>
+    <p class="section-desc">全流程跑通，一步到位不踩坑，从0到1启动期到稳定运营期，每一步都有明确验收标准。</p>
+
+    <div class="phase-grid">
+        <div class="phase-card">
+            <div class="phase-badge">第一阶段</div>
+            <h4>0-1 启动期</h4>
+            <div class="phase-time">⏱️ 1个月 · 核心：搭架子、定规则、跑通最小闭环</div>
+            <ul>
+                <li>完成有限责任公司注册，开通对公账户、税务登记</li>
+                <li>确定3-5人核心合伙人团队，签订《核心合伙人协议》</li>
+                <li>完成所有合同模板、分润规则、孵化机制制定</li>
+                <li>完成中层履约层10人以内外骨干招募</li>
+                <li>完成1个demo网站、1个API产品封装，拿到首单回款</li>
+            </ul>
+        </div>
+        <div class="phase-card phase-2">
+            <div class="phase-badge">第二阶段</div>
+            <h4>1-10 成长期</h4>
+            <div class="phase-time">⏱️ 2-3个月 · 核心：稳现金流、验证孵化机制</div>
+            <ul>
+                <li>月稳定营收5万+，净利润2万+，完全覆盖运营成本</li>
+                <li>搭建20-30人基层柔性执行池</li>
+                <li>完成3-5个项目评审立项，至少1个项目MVP验证盈利</li>
+                <li>搭建平台官网与自媒体矩阵</li>
+                <li>完成首批基层到中层晋升</li>
+            </ul>
+        </div>
+        <div class="phase-card phase-3">
+            <div class="phase-badge">第三阶段</div>
+            <h4>10-100 放大期</h4>
+            <div class="phase-time">⏱️ 4-6个月 · 核心：完善生态、放大规模</div>
+            <ul>
+                <li>月营收10万+，把网站开发/自动化营销做成标准化产品</li>
+                <li>孵化项目达10-20个，成功跑通3-5个</li>
+                <li>孵化项目利润占比达30%以上</li>
+                <li>对接外部孵化器、投资机构、政府创业补贴</li>
+                <li>打造区域性大学生AI创业孵化平台品牌</li>
+            </ul>
+        </div>
+        <div class="phase-card phase-4">
+            <div class="phase-badge">第四阶段</div>
+            <h4>稳定运营期</h4>
+            <div class="phase-time">⏱️ 6个月以上 · 核心：生态化、资本化</div>
+            <ul>
+                <li>稳定现金流业务，打造行业壁垒</li>
+                <li>优质孵化项目独立拆分，成立子公司，对接外部融资</li>
+                <li>对接更多高校，打造区域性孵化基地</li>
+                <li>完善平台治理结构，实现规模化、规范化运营</li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="margin-top:60px">
+        <h3 style="font-size:20px;font-weight:700;color:var(--primary);margin-bottom:24px">启动成本与现金流预测</h3>
+        <div class="cost-grid">
+            <div class="cost-card highlight">
+                <div class="cost-amount">&lt;1万</div>
+                <div class="cost-label">启动期总投入</div>
+                <ul class="cost-items">
+                    <li><span>公司注册</span><span>0-500元</span></li>
+                    <li><span>域名+服务器</span><span>1000元/年</span></li>
+                    <li><span>AI工具会员</span><span>1000元/年</span></li>
+                    <li><span>核心团队补贴</span><span>3000元</span></li>
+                    <li><span>风险备用金</span><span>3500元</span></li>
+                </ul>
+            </div>
+            <div class="cost-card">
+                <div class="cost-amount">5万+</div>
+                <div class="cost-label">成长期月均营收目标</div>
+                <ul class="cost-items">
+                    <li><span>标准化业务规模化</span><span>✓</span></li>
+                    <li><span>月净利润目标</span><span>2万+</span></li>
+                    <li><span>孵化基金累计</span><span>3万+</span></li>
+                    <li><span>团队规模</span><span>30人</span></li>
+                </ul>
+            </div>
+            <div class="cost-card">
+                <div class="cost-amount">10万+</div>
+                <div class="cost-label">放大期月均营收目标</div>
+                <ul class="cost-items">
+                    <li><span>标准化产品批量复制</span><span>✓</span></li>
+                    <li><span>月净利润</span><span>4万+</span></li>
+                    <li><span>累计净利润</span><span>24万+</span></li>
+                    <li><span>孵化基金累计</span><span>10万+</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="highlight-box">
+    <h2>极致轻资产 · 零风险启动 · 全员可创业</h2>
+    <p>启动投入仅万元以内，无固定人力成本，现金流优先，哪怕项目试错失败，也不会产生大额亏损，完全适配创业初期的风险承受能力。</p>
+</div>
+
+<footer>
+    <p>AI技术赋能型大学生内部创业孵化平台方案 · 全部内容受版权保护</p>
+</footer>
+
 </body>
 </html>

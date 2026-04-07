@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 小说阅读器</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f5; color: #333; }
+    .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem 1rem; text-align: center; }
+    .header h1 { font-size: 2rem; font-weight: 700; }
+    .header p { opacity: 0.85; margin-top: 0.5rem; }
+    .container { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+    .novel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+    .novel-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.08); transition: transform .2s; cursor: pointer; }
+    .novel-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+    .novel-cover { width: 100%; height: 160px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+    .novel-info { padding: 1rem; }
+    .novel-title { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; color: #333; }
+    .novel-desc { font-size: 0.85rem; color: #888; line-height: 1.5; margin-bottom: 0.75rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .novel-meta { font-size: 0.75rem; color: #aaa; display: flex; justify-content: space-between; align-items: center; }
+    .tag { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 20px; font-size: 0.7rem; background: #e8f0fe; color: #4285f4; }
+    .tag.writing { background: #fff3e0; color: #e65100; }
+    .loading { text-align: center; padding: 3rem; color: #999; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>📖 AI 小说阅读器</h1>
+    <p>发现、阅读 AI 创作的精彩小说</p>
+  </div>
+  <div class="container">
+    <div class="novel-grid" id="novelGrid"><div class="loading">加载中...</div></div>
+  </div>
+  <script>
+    async function loadNovels() {
+      try {
+        const res = await fetch('novels/index.json');
+        const novels = await res.json();
+        const grid = document.getElementById('novelGrid');
+        if (!novels || !novels.length) {
+          grid.innerHTML = '<div class="loading">暂无小说，稍后再来看看吧～</div>';
+          return;
+        }
+        grid.innerHTML = novels.map(novel => {
+          const doneCount = (novel.chapters || []).filter(c => c.status === 'done').length;
+          const totalCount = doneCount > 0 ? doneCount : (novel.chapters || []).length;
+          const statusLabel = novel.status === 'writing' ? '<span class="tag writing">写作中</span>' : '';
+          return `<div class="novel-card" onclick="location.href='novels/${novel.id}/'">
+  <div class="novel-cover">${novel.cover || '📖'}</div>
+  <div class="novel-info">
+    <div class="novel-title">${novel.title}</div>
+    <div class="novel-desc">${novel.desc}</div>
+    <div class="novel-meta">
+      ${statusLabel}
+      <span>${doneCount > 0 ? '共 ' + doneCount + ' 章' : '待生成'}</span>
+    </div>
+  </div>
+</div>`;
+        }).join('');
+      } catch(e) {
+        document.getElementById('novelGrid').innerHTML = '<div class="loading">加载失败</div>';
+      }
+    }
+    loadNovels();
+  </script>
+</body>
+</html>
